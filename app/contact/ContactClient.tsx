@@ -17,11 +17,24 @@ export default function ContactClient() {
     message: "",
   });
 
-  // Load Calendly widget script
+  // Load Cal.com embed
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://app.cal.com/embed/embed.js";
     script.async = true;
+    script.onload = () => {
+      // @ts-ignore
+      window.Cal("init", {origin: "https://app.cal.com"});
+      // @ts-ignore
+      window.Cal("inline", {
+        elementOrSelector: "#cal-booking",
+        calLink: "chriseverist/vdc-structural-diagnostic",
+        config: {
+          layout: "month_view",
+          theme: "dark",
+        }
+      });
+    };
     document.head.appendChild(script);
     return () => {
       document.head.removeChild(script);
@@ -69,10 +82,9 @@ export default function ContactClient() {
     >
       {/* Left: Calendly + what to expect */}
       <div>
-        {/* Calendly embed */}
+        {/* Cal.com embed */}
         <div
-          className="cal-inline-widget"
-          data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=171923&text_color=f0ece4&primary_color=c1914b`}
+          id="cal-booking"
           style={{
             minWidth: "280px",
             height: "700px",
