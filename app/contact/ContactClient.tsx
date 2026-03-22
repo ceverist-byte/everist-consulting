@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 // ─── EDIT THIS ──────────────────────────────────────────────────────
 // Replace with your actual Calendly scheduling link
-const CALENDLY_URL = "https://calendly.com/chris-everist/vdc-structural-diagnostic";
+const CALENDLY_URL = "https://cal.com/chriseverist/vdc-structural-diagnostic";
 // ────────────────────────────────────────────────────────────────────
 
 export default function ContactClient() {
@@ -20,7 +20,7 @@ export default function ContactClient() {
   // Load Calendly widget script
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.src = "https://app.cal.com/embed/embed.js";
     script.async = true;
     document.head.appendChild(script);
     return () => {
@@ -71,7 +71,7 @@ export default function ContactClient() {
       <div>
         {/* Calendly embed */}
         <div
-          className="calendly-inline-widget"
+          className="cal-inline-widget"
           data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=171923&text_color=f0ece4&primary_color=c1914b`}
           style={{
             minWidth: "280px",
