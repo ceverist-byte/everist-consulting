@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Chris Everist — VDC Consulting",
   description:
-    "20+ years in construction technology. Built the VDC practice at BNBuilders from the ground up. Licensed Architect, LEED AP, Associate DBIA. Based in San Diego.",
+    "20+ years in construction technology. built the VDC practice at a leading GC from the ground up. Architectural background · LEED AP · Assoc. DBIA. Based in San Diego.",
 };
 
 const credentials = [
@@ -26,7 +26,7 @@ const timeline = [
   {
     period: "9 years",
     role: "VDC Practice Leader",
-    company: "BNBuilders",
+    company: "Leading GC",
     detail:
       "Built the VDC practice from the ground up — recruited the team, established governance frameworks, and made it profitable. Zero team turnover over nine years.",
   },
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   marginBottom: "16px",
                 }}
               >
-                I built the VDC practice at BNBuilders from the ground up —
+                I built the VDC practice at a leading GC from the ground up —
                 recruited the team, established governance, and made it
                 profitable. Nine years. Zero turnover.
               </p>
@@ -165,11 +165,11 @@ export default function AboutPage() {
                 {
                   value: "20+",
                   label: "Years in construction technology",
-                  sub: "Turner · BNBuilders · Everist Consulting",
+                  sub: "Turner · Leading GC · Everist Consulting",
                 },
                 {
                   value: "9",
-                  label: "Years building the BNBuilders VDC practice",
+                  label: "Years building the GC VDC practice",
                   sub: "From zero to profitable, purpose-built operating model",
                 },
                 {

@@ -141,7 +141,7 @@ export default function Footer() {
             reserved.
           </span>
           <span style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
-            Licensed Architect · LEED AP · Associate DBIA
+            Architectural background · LEED AP · Assoc. DBIA
           </span>
         </div>
       </div>
