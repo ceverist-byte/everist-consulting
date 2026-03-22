@@ -19,26 +19,47 @@ export default function ContactClient() {
 
   // Load Cal.com embed
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://app.cal.com/embed/embed.js";
-    script.async = true;
-    script.onload = () => {
-      // @ts-ignore
-      window.Cal("init", {origin: "https://app.cal.com"});
-      // @ts-ignore
-      window.Cal("inline", {
-        elementOrSelector: "#cal-booking",
-        calLink: "chriseverist/vdc-structural-diagnostic",
-        config: {
-          layout: "month_view",
-          theme: "dark",
+    (function (C: any, A: string, L: string) {
+      let p = function (a: any, ar: any) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
         }
-      });
-    };
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
+        if (ar[0] === L) {
+          const api: any = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["-queue", api]);
+          } else {
+            p(cal, ar);
+          }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    // @ts-ignore
+    window.Cal("init", "vdc", {origin: "https://app.cal.com"});
+    // @ts-ignore
+    window.Cal.ns.vdc("inline", {
+      elementOrSelector: "#cal-booking",
+      calLink: "chriseverist/vdc-structural-diagnostic",
+      config: { layout: "month_view" }
+    });
+    // @ts-ignore
+    window.Cal.ns.vdc("ui", {
+      styles: { branding: { brandColor: "#c1914b" } },
+      hideEventTypeDetails: false,
+    });
   }, []);
 
   async function handleFormSubmit(e: React.FormEvent) {
