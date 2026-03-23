@@ -12,7 +12,7 @@ const phases = [
     number: "01",
     phase: "Phase 1",
     name: "Stakeholder Diagnosis",
-    range: "$15,000–$25,000",
+    
     duration: "2–4 weeks",
     description:
       "You can't fix a structural problem you haven't mapped. Phase 1 produces a clear, documented picture of where decisions actually get made — not where the org chart says they get made.",
@@ -37,7 +37,7 @@ const phases = [
     number: "02",
     phase: "Phase 2",
     name: "Operating Model Design",
-    range: "$25,000–$50,000",
+    
     duration: "4–8 weeks",
     description:
       "The structural answer. Where should VDC sit? What authority does it need? How do you build governance that survives personnel changes? Phase 2 produces the operating model design — the decisions that make transformation possible.",
@@ -64,7 +64,7 @@ const phases = [
     number: "03",
     phase: "Phase 3",
     name: "Implementation Support",
-    range: "$5,000–$10,000/month",
+    
     duration: "Optional retainer",
     description:
       "Governance degrades under pressure. Phase 3 keeps the operating model on track through the first year of implementation — when old habits are strongest and new structures are most fragile.",
@@ -296,15 +296,7 @@ export default function ServicesPage() {
                   >
                     {p.name}
                   </h2>
-                  <div
-                    style={{
-                      fontSize: "0.9375rem",
-                      color: "#c1914b",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    {p.range}
-                  </div>
+                  
                   <p
                     style={{
                       fontSize: "0.9375rem",
@@ -655,9 +647,7 @@ export default function ServicesPage() {
               marginBottom: "36px",
             }}
           >
-            The fees listed are ranges based on organizational complexity and
-            scope. Most engagements begin with a 30-minute diagnostic
-            conversation before a proposal is drafted.
+            Every engagement is scoped individually based on organizational complexity. Most begin with a 30-minute diagnostic conversation before a proposal is drafted.
           </p>
           <Link
             href="/contact"
