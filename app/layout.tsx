@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "construction technology strategy",
     "BIM operating model",
     "VDC organizational design",
-    "Last Planner System",
+    "Last Planner System®",
     "AI adoption construction",
     "construction digital transformation",
     "San Diego VDC",

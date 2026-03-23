@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services — VDC Operating Model Design",
   description:
-    "The Everist 3-Phase Method: Stakeholder Diagnosis, Operating Model Design, and Implementation Support. Plus Last Planner System and AI/Automation Advisory.",
+    "The Everist 3-Phase Method: Stakeholder Diagnosis, Operating Model Design, and Implementation Support. Plus Last Planner System® and AI/Automation Advisory.",
 };
 
 const phases = [
@@ -88,10 +88,10 @@ const phases = [
 
 const additionalServices = [
   {
-    name: "Last Planner System",
+    name: "Last Planner System®",
     icon: "LPS",
     description:
-      "Implementation and governance design for Last Planner System — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model redesign.",
+      "Implementation and governance design for Last Planner System® — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model redesign.",
     useCases: [
       "Healthcare facilities with complex phasing requirements",
       "GCs integrating prefabrication with pull planning",

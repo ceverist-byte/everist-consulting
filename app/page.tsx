@@ -226,7 +226,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-2">
             {[
               "VDC Operating Model Design",
-              "Last Planner System",
+              "Last Planner System®",
               "AI/Automation Advisory",
               "San Diego · Remote",
             ].map((tag) => (
