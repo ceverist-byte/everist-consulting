@@ -66,11 +66,17 @@ export default function ContactClient() {
     e.preventDefault();
     setFormState("sending");
 
-    // Simple mailto fallback — replace with Formspree / Resend in production
-    // For production: POST to /api/contact with formData
     try {
-      await new Promise((r) => setTimeout(r, 800)); // Simulate send
-      setFormState("sent");
+      const response = await fetch("https://formspree.io/f/xwvrgjje", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setFormState("sent");
+      } else {
+        setFormState("error");
+      }
     } catch {
       setFormState("error");
     }
