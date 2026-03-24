@@ -114,9 +114,9 @@ export default function ContactClient() {
           id="cal-booking"
           style={{
             minWidth: "280px",
-            height: "800px",
+            height: "1100px",
             borderRadius: "12px",
-            overflow: "scroll",
+            overflow: "visible",
             marginBottom: "48px",
           }}
         />
