@@ -59,7 +59,7 @@ const services = [
   {
     phase: "Phase 1",
     name: "Stakeholder Diagnosis",
-    range: "$15–25K · 2–4 weeks",
+    
     description:
       "Map where decisions actually get made. Interview regional leadership, operations, preconstruction, and VDC. Identify your current archetype and quantify the gap between authority and expectations.",
     deliverables: [
@@ -72,7 +72,7 @@ const services = [
   {
     phase: "Phase 2",
     name: "Operating Model Design",
-    range: "$25–50K · 4–8 weeks",
+    
     description:
       "Design where VDC should sit structurally and what authority it needs to deliver the outcomes leadership expects. Build the governance framework that makes transformation stick — not just while you're watching.",
     deliverables: [
@@ -85,7 +85,7 @@ const services = [
   {
     phase: "Phase 3",
     name: "Implementation Support",
-    range: "$5–10K/month · Optional",
+    
     description:
       "Monthly check-ins to monitor adoption signals, adjust governance as the organization evolves, and ensure the operating model survives personnel changes. The work designed to transfer — you shouldn't need me forever.",
     deliverables: [

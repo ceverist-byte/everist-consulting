@@ -116,7 +116,7 @@ export default function ContactClient() {
             minWidth: "280px",
             height: "700px",
             borderRadius: "12px",
-            overflow: "hidden",
+            overflow: "auto",
             marginBottom: "48px",
           }}
         />
