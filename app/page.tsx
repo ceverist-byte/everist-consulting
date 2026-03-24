@@ -668,16 +668,6 @@ export default function Home() {
                 >
                   {s.name}
                 </h3>
-                <div
-                  style={{
-                    fontSize: "0.8125rem",
-                    color: "#c1914b",
-                    marginBottom: "16px",
-                    fontFamily: "var(--font-dm-sans)",
-                  }}
-                >
-                  {s.range}
-                </div>
                 <p
                   style={{
                     fontSize: "0.875rem",
