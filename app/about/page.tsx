@@ -109,8 +109,6 @@ export default function AboutPage() {
                 }}
               >
                 I've been inside the structural problem I now help organizations solve — across two decades, multiple organizations, and both sides of the owner/contractor relationship.
-                recruited the team, established governance, and made it
-                profitable. Nine years. Zero turnover.
               </p>
               <p
                 style={{

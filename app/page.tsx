@@ -754,8 +754,6 @@ export default function Home() {
                 }}
               >
                 I've spent 20+ years inside the structural problem I now help organizations solve — across general contracting, owner-side capital programs, and international construction education. I've built VDC capability from scratch, navigated every organizational archetype from the inside, and watched the same authority misalignment produce the same stall in organizations that otherwise had nothing in common. That pattern is the methodology.
-                recruited the team, established governance, and made it
-                profitable. Nine years, zero turnover.
               </p>
               <p
                 style={{
