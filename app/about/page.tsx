@@ -20,7 +20,7 @@ const timeline = [
     role: "Founder",
     company: "Everist Consulting",
     detail:
-      "VDC strategy and operating model design for GCs and owner-side capital programs. Launched March 2026.",
+      "VDC strategy and operating model design for GCs and owner-side capital programs. Launched 2026.",
     highlight: true,
   },
   {
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   marginBottom: "20px",
                 }}
               >
-                Before founding Everist Consulting, I spent five years at Turner Construction — including a year leading international VDC and lean instruction across Southeast Asia — followed by eleven years leading VDC practice at a West Coast GC.
+                Before founding Everist Consulting, I spent five years at Turner Construction — including a year leading international VDC and lean instruction across Southeast Asia — followed by more than a decade leading VDC practice at a West Coast general contractor.
               </p>
               <p
                 style={{
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   marginBottom: "36px",
                 }}
               >
-                I launched Everist Consulting in March 2026 to work directly
+                I launched Everist Consulting in 2026 to work directly
                 with GC executives and owner-side capital programs — hospital
                 campuses, universities, data centers — on the organizational
                 design decisions that determine whether VDC creates competitive
