@@ -24,18 +24,18 @@ const timeline = [
     highlight: true,
   },
   {
-    period: "9 years",
+    period: "11 years",
     role: "VDC Practice Leader",
-    company: "Leading GC",
+    company: "West Coast GC",
     detail:
-      "Built the VDC practice from the ground up — recruited the team, established governance frameworks, and made it profitable. Zero team turnover over nine years.",
+      "Built VDC capability from zero — organizational design, team development, governance frameworks, and financial sustainability. Zero voluntary turnover across the full tenure.",
   },
   {
-    period: "Prior",
+    period: "5 years",
     role: "Construction Technology Leadership",
-    company: "Turner Construction & Others",
+    company: "Turner Construction",
     detail:
-      "20+ years spanning field technology, design integration, and organizational implementation across major GCs.",
+      "Field technology, design integration, and digital delivery — including one year leading international VDC and lean instruction across Southeast Asia.",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   marginBottom: "16px",
                 }}
               >
-                I built the VDC practice at a leading GC from the ground up —
+                I've been inside the structural problem I now help organizations solve — across two decades, multiple organizations, and both sides of the owner/contractor relationship.
                 recruited the team, established governance, and made it
                 profitable. Nine years. Zero turnover.
               </p>
@@ -120,10 +120,17 @@ export default function AboutPage() {
                   marginBottom: "16px",
                 }}
               >
-                Before that, more than a decade at Turner Construction and
-                others, spanning field technology, design integration, and
-                digital delivery. I&apos;ve been inside the structural problem I
-                now help organizations solve.
+                I&apos;ve built VDC capability from the ground up: recruited teams, established governance frameworks, and made it financially durable. I&apos;ve also watched that work stall at other organizations — not because of the technology, but because of where VDC sat structurally relative to the decisions it was expected to influence. That observation, repeated across enough contexts, became the methodology.
+              </p>
+              <p
+                style={{
+                  fontSize: "1.0625rem",
+                  color: "#9a9590",
+                  lineHeight: 1.75,
+                  marginBottom: "20px",
+                }}
+              >
+                Before founding Everist Consulting, I spent five years at Turner Construction — including a year leading international VDC and lean instruction across Southeast Asia — followed by eleven years leading VDC practice at a West Coast GC.
               </p>
               <p
                 style={{

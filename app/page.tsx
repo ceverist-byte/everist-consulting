@@ -753,7 +753,7 @@ export default function Home() {
                   marginBottom: "16px",
                 }}
               >
-                I built the VDC practice at a leading GC from the ground up —
+                I've spent 20+ years inside the structural problem I now help organizations solve — across general contracting, owner-side capital programs, and international construction education. I've built VDC capability from scratch, navigated every organizational archetype from the inside, and watched the same authority misalignment produce the same stall in organizations that otherwise had nothing in common. That pattern is the methodology.
                 recruited the team, established governance, and made it
                 profitable. Nine years, zero turnover.
               </p>
@@ -790,7 +790,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { value: "20+", label: "Years in construction technology" },
-                { value: "9", label: "Years building GC VDC practice" },
+                { value: "11", label: "Years building a GC VDC practice from zero" },
                 { value: "0", label: "Team turnover during that period" },
                 {
                   value: "3",
