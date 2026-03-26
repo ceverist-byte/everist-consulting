@@ -24,7 +24,7 @@ const timeline = [
     highlight: true,
   },
   {
-    period: "11 years",
+    period: "10+ years",
     role: "VDC Practice Leader",
     company: "West Coast GC",
     detail:
@@ -173,7 +173,7 @@ export default function AboutPage() {
                   sub: "Turner · Leading GC · Everist Consulting",
                 },
                 {
-                  value: "9",
+                  value: "10+",
                   label: "Years building the GC VDC practice",
                   sub: "From zero to profitable, purpose-built operating model",
                 },
