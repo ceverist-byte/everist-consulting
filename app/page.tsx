@@ -788,7 +788,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { value: "20+", label: "Years in construction technology" },
-                { value: "11", label: "Years building a GC VDC practice from zero" },
+                { value: "10+", label: "Years building a GC VDC practice from zero" },
                 { value: "0", label: "Team turnover during that period" },
                 {
                   value: "3",
