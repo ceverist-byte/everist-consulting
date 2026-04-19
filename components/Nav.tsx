@@ -1,5 +1,6 @@
 "use client";
 
+import PageShell from "@/components/layout/PageShell";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -7,6 +8,7 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/ai-automation", label: "AI & Automation" },
   { href: "/assessment", label: "Assessment" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -25,7 +27,7 @@ export default function Nav() {
         borderBottom: "1px solid rgba(240,236,228,0.06)",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <PageShell className="flex h-16 items-center justify-between">
         {/* Wordmark */}
         <Link href="/" className="flex items-center gap-3 group">
           <div
@@ -143,7 +145,7 @@ export default function Nav() {
             }}
           />
         </button>
-      </div>
+      </PageShell>
 
       {/* Mobile menu */}
       {open && (

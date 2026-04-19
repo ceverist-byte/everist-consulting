@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageShell from "@/components/layout/PageShell";
 import AssessmentClient from "./AssessmentClient";
 
 export const metadata: Metadata = {
@@ -11,17 +12,7 @@ export default function AssessmentPage() {
   return (
     <>
       {/* Header */}
-      <section
-        style={{
-          background: "#0f1117",
-          paddingTop: "120px",
-          paddingBottom: "64px",
-          paddingLeft: "24px",
-          paddingRight: "24px",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
+      <section className="relative overflow-hidden bg-slate-950 pb-16 pt-32">
         <div
           className="absolute inset-0"
           style={{
@@ -29,7 +20,8 @@ export default function AssessmentPage() {
               "radial-gradient(ellipse at center top, rgba(193,145,75,0.1) 0%, transparent 55%)",
           }}
         />
-        <div className="relative max-w-3xl mx-auto text-center">
+        <PageShell className="relative">
+          <div className="mx-auto max-w-3xl text-center">
           <div className="eyebrow" style={{ display: "block", marginBottom: "20px" }}>
             Diagnostic Assessments
           </div>
@@ -59,18 +51,14 @@ export default function AssessmentPage() {
             framework used in live discovery calls with GCs and capital program
             owners.
           </p>
-        </div>
+          </div>
+        </PageShell>
       </section>
 
-      {/* Assessment client — track selector + quiz */}
-      <section
-        style={{
-          background: "#0f1117",
-          padding: "0 24px 96px",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-        }}
-      >
-        <AssessmentClient />
+      <section className="border-t border-[rgba(240,236,228,0.06)] bg-slate-950 pb-24">
+        <PageShell>
+          <AssessmentClient />
+        </PageShell>
       </section>
     </>
   );

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageShell from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
   title: "Everist Consulting — VDC Strategy & Operating Model Design",
@@ -126,10 +127,7 @@ export default function Home() {
           }}
         />
 
-        <div
-          className="relative max-w-6xl mx-auto px-6 w-full"
-          style={{ paddingTop: "60px", paddingBottom: "80px" }}
-        >
+        <PageShell className="relative w-full pb-20 pt-16">
           {/* Eyebrow */}
           <div
             className="eyebrow flex items-center gap-3 mb-8"
@@ -181,6 +179,34 @@ export default function Home() {
             creates competitive advantage. The gap is structural — not
             technological.
           </p>
+
+          <div style={{ maxWidth: "500px", marginBottom: "32px" }}>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                fontWeight: 300,
+                color: "#6b6762",
+                lineHeight: 1.75,
+                marginBottom: "12px",
+              }}
+            >
+              The same pattern shows up in AI and automation work. When
+              adoption stalls, the root cause is usually not the tool. It&apos;s
+              the same system problem VDC has always exposed.
+            </p>
+            <Link
+              href="/ai-automation"
+              style={{
+                fontSize: "0.9rem",
+                color: "#9a9590",
+                textDecoration: "none",
+                borderBottom: "1px solid rgba(240,236,228,0.16)",
+                paddingBottom: "2px",
+              }}
+            >
+              Explore AI &amp; Automation Advisory →
+            </Link>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-wrap items-center gap-4 mb-16">
@@ -245,7 +271,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* ─── THESIS ───────────────────────────────────────────────── */}
@@ -256,7 +282,7 @@ export default function Home() {
           padding: "96px 24px",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="eyebrow mb-6">The Core Problem</div>
@@ -411,7 +437,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* ─── ARCHETYPE MATRIX ─────────────────────────────────────── */}
@@ -423,7 +449,7 @@ export default function Home() {
           padding: "96px 24px",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="text-center mb-16">
             <div className="eyebrow mb-4 block">The VDC Archetype Matrix</div>
             <h2
@@ -597,12 +623,12 @@ export default function Home() {
               Find Your Archetype — Take the Assessment →
             </Link>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* ─── SERVICES ─────────────────────────────────────────────── */}
       <section style={{ background: "#0f1117", padding: "96px 24px" }}>
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="mb-16">
             <div className="eyebrow mb-4 block">The 3-Phase Method</div>
             <h2
@@ -716,7 +742,7 @@ export default function Home() {
               Full service details and engagement structure →
             </Link>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* ─── CREDENTIALS ──────────────────────────────────────────── */}
@@ -727,7 +753,7 @@ export default function Home() {
           padding: "80px 24px",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="eyebrow mb-6 block">Who this is for</div>
@@ -829,7 +855,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* ─── BOTTOM CTA ───────────────────────────────────────────── */}

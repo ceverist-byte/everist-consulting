@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageShell from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
   title: "Services — VDC Operating Model Design",
@@ -176,7 +177,7 @@ export default function ServicesPage() {
               "radial-gradient(ellipse at 30% 60%, rgba(193,145,75,0.09) 0%, transparent 50%)",
           }}
         />
-        <div className="relative max-w-6xl mx-auto">
+        <PageShell className="relative">
           <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
             The Everist Operating Model Design Method
           </div>
@@ -223,12 +224,27 @@ export default function ServicesPage() {
               Authority → Decision structure → Operating model → Technology
             </span>
           </div>
-        </div>
+          <div style={{ marginTop: "18px" }}>
+            <Link
+              href="/ai-automation"
+              style={{
+                fontSize: "0.9rem",
+                color: "#9a9590",
+                textDecoration: "none",
+                borderBottom: "1px solid rgba(240,236,228,0.16)",
+                paddingBottom: "2px",
+              }}
+            >
+              Also working on AI &amp; automation? See AI &amp; Automation
+              Advisory.
+            </Link>
+          </div>
+        </PageShell>
       </section>
 
       {/* 3-Phase Method */}
       <section style={{ background: "#0f1117", padding: "80px 24px" }}>
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
             The 3-Phase Method
           </div>
@@ -415,7 +431,7 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* Archetype-to-service mapping */}
@@ -427,7 +443,7 @@ export default function ServicesPage() {
           padding: "80px 24px",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
             Engagement Fit by Archetype
           </div>
@@ -517,12 +533,12 @@ export default function ServicesPage() {
               Not sure which archetype you are? Take the 5-minute assessment →
             </Link>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* Additional service lines */}
       <section style={{ background: "#0f1117", padding: "80px 24px" }}>
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
             Additional Service Lines
           </div>
@@ -613,7 +629,7 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* CTA */}

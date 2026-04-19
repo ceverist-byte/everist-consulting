@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageShell from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
   title: "About Chris Everist — VDC Consulting",
@@ -80,7 +81,7 @@ export default function AboutPage() {
               "radial-gradient(ellipse at 80% 50%, rgba(193,145,75,0.09) 0%, transparent 50%)",
           }}
         />
-        <div className="relative max-w-6xl mx-auto">
+        <PageShell className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             {/* Bio */}
             <div>
@@ -227,7 +228,7 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* Career timeline */}
@@ -238,7 +239,7 @@ export default function AboutPage() {
           borderBottom: "1px solid rgba(240,236,228,0.06)",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
             Career
           </div>
@@ -313,7 +314,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* Philosophy */}
@@ -324,7 +325,7 @@ export default function AboutPage() {
           borderBottom: "1px solid rgba(240,236,228,0.06)",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
             Consulting Philosophy
           </div>
@@ -399,7 +400,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* Who I work with */}
@@ -410,7 +411,7 @@ export default function AboutPage() {
           borderBottom: "1px solid rgba(240,236,228,0.06)",
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <PageShell>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <div className="eyebrow" style={{ display: "block", marginBottom: "20px" }}>
@@ -492,7 +493,7 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
+        </PageShell>
       </section>
 
       {/* CTA */}
@@ -503,7 +504,7 @@ export default function AboutPage() {
           textAlign: "center",
         }}
       >
-        <div className="max-w-xl mx-auto">
+        <PageShell className="max-w-xl text-center">
           <h2
             style={{
               fontFamily: "var(--font-syne)",
@@ -567,7 +568,7 @@ export default function AboutPage() {
               Take the Assessment First
             </Link>
           </div>
-        </div>
+        </PageShell>
       </section>
     </>
   );

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageShell from "@/components/layout/PageShell";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
@@ -10,18 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section
-        style={{
-          background: "#0f1117",
-          paddingTop: "120px",
-          paddingBottom: "64px",
-          paddingLeft: "24px",
-          paddingRight: "24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
+      <section className="relative overflow-hidden border-b border-[rgba(240,236,228,0.06)] bg-slate-950 pb-16 pt-32">
         <div
           className="absolute inset-0"
           style={{
@@ -29,8 +19,8 @@ export default function ContactPage() {
               "radial-gradient(ellipse at 20% 60%, rgba(193,145,75,0.09) 0%, transparent 50%)",
           }}
         />
-        <div className="relative max-w-6xl mx-auto">
-          <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
+        <PageShell className="relative">
+          <div className="eyebrow mb-6 block">
             Discovery Call
           </div>
           <h1
@@ -72,13 +62,13 @@ export default function ContactPage() {
             a formal engagement makes sense afterward, I&apos;ll scope it
             specifically for your situation.
           </p>
-        </div>
+        </PageShell>
       </section>
 
-      <section style={{ background: "#0f1117", padding: "64px 24px 96px" }}>
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-slate-950 pb-24 pt-16">
+        <PageShell>
           <ContactClient />
-        </div>
+        </PageShell>
       </section>
     </>
   );

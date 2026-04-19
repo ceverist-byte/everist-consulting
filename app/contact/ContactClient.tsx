@@ -1,11 +1,8 @@
 "use client";
 
+import ContentCard from "@/components/layout/ContentCard";
+import SplitLayout from "@/components/layout/SplitLayout";
 import { useEffect, useState } from "react";
-
-// ─── EDIT THIS ──────────────────────────────────────────────────────
-// Replace with your actual Calendly scheduling link
-const CALENDLY_URL = "https://cal.com/chriseverist/vdc-structural-diagnostic";
-// ────────────────────────────────────────────────────────────────────
 
 export default function ContactClient() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -17,49 +14,83 @@ export default function ContactClient() {
     message: "",
   });
 
-  // Load Cal.com embed
   useEffect(() => {
-    (function (C: any, A: string, L: string) {
-      let p = function (a: any, ar: any) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.ns = {};
-          cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api: any = function () { p(api, arguments); };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          if (typeof namespace === "string") {
-            cal.ns[namespace] = cal.ns[namespace] || api;
-            p(cal.ns[namespace], ar);
-            p(cal, ["-queue", api]);
-          } else {
+    let cancelled = false;
+
+    const mountCalendar = () => {
+      if (cancelled) return;
+
+      const container = document.getElementById("cal-booking");
+      if (!container || container.dataset.calMounted === "true") return;
+
+      container.dataset.calMounted = "true";
+      container.innerHTML = "";
+
+      (function (C: any, A: string, L: string) {
+        const p = function (a: any, ar: any) {
+          a.q.push(ar);
+        };
+        const d = C.document;
+
+        C.Cal =
+          C.Cal ||
+          function () {
+            const cal = C.Cal;
+            const ar = arguments;
+
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+
+            if (ar[0] === L) {
+              const api: any = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else {
+                p(cal, ar);
+              }
+              return;
+            }
+
             p(cal, ar);
-          }
-          return;
-        }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-    // @ts-ignore
-    window.Cal("init", "vdc", {origin: "https://app.cal.com"});
-    // @ts-ignore
-    window.Cal.ns.vdc("inline", {
-      elementOrSelector: "#cal-booking",
-      calLink: "chriseverist/vdc-structural-diagnostic",
-      config: { layout: "month_view" }
-    });
-    // @ts-ignore
-    window.Cal.ns.vdc("ui", {
-      styles: { branding: { brandColor: "#c1914b" } },
-      hideEventTypeDetails: false,
-    });
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      (window as any).Cal("init", "vdc-structural-diagnostic", {
+        origin: "https://app.cal.com",
+      });
+
+      (window as any).Cal.ns["vdc-structural-diagnostic"]("inline", {
+        elementOrSelector: "#cal-booking",
+        config: {
+          layout: "month_view",
+          useSlotsViewOnSmallScreen: true,
+        },
+        calLink: "chriseverist/vdc-structural-diagnostic",
+      });
+
+      (window as any).Cal.ns["vdc-structural-diagnostic"]("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        styles: { branding: { brandColor: "#c1914b" } },
+      });
+    };
+
+    mountCalendar();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   async function handleFormSubmit(e: React.FormEvent) {
@@ -104,180 +135,162 @@ export default function ContactClient() {
   ];
 
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-2 gap-16"
-    >
-      {/* Left: Calendly + what to expect */}
-      <div>
-        {/* Cal.com embed */}
-        <div
-          id="cal-booking"
-          style={{
-            minWidth: "280px",
-            height: "1100px",
-            borderRadius: "12px",
-            overflow: "visible",
-            marginBottom: "48px",
-          }}
-        />
-
-        {/* What to expect */}
-        <div>
+    <SplitLayout
+      left={
+        <div className="flex flex-col gap-12 lg:items-end">
           <div
-            className="eyebrow"
-            style={{ display: "block", marginBottom: "24px" }}
-          >
-            What to expect
+            id="cal-booking"
+            className="h-[980px] w-full overflow-auto rounded-[12px] md:max-w-[480px]"
+          />
+
+          <div className="w-full md:max-w-[480px]">
+            <div className="eyebrow mb-6 block">What to expect</div>
+            <div className="flex flex-col gap-5">
+              {whatToExpect.map((w) => (
+                <div key={w.step} className="flex gap-4">
+                  <div
+                    className="min-w-6 pt-[3px] font-display text-[0.625rem] font-bold tracking-[0.12em] text-amber-everist"
+                  >
+                    {w.step}
+                  </div>
+                  <div>
+                    <div
+                      className="mb-1 font-display text-sm font-bold text-cream"
+                    >
+                      {w.label}
+                    </div>
+                    <p
+                      className="text-sm leading-[1.65] text-faint"
+                    >
+                      {w.detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            {whatToExpect.map((w) => (
-              <div key={w.step} style={{ display: "flex", gap: "16px" }}>
+        </div>
+      }
+      right={
+        <div className="flex flex-col gap-8">
+          <ContentCard className="p-8 md:p-12">
+            <div className="eyebrow mb-4 block">Prefer email?</div>
+            <h2
+              style={{
+                fontFamily: "var(--font-syne)",
+                fontSize: "1.25rem",
+                fontWeight: 700,
+                color: "#f0ece4",
+                letterSpacing: "-0.01em",
+                marginBottom: "8px",
+              }}
+            >
+              Send a note directly.
+            </h2>
+            <p
+              style={{
+                fontSize: "0.875rem",
+                color: "#9a9590",
+                lineHeight: 1.65,
+                marginBottom: "28px",
+              }}
+            >
+              I respond to all inquiries within one business day. If you&apos;d
+              rather not schedule in advance, just describe your situation and
+              I&apos;ll follow up.
+            </p>
+
+            {formState === "sent" ? (
+              <div
+                style={{
+                  background: "rgba(75,193,145,0.08)",
+                  border: "1px solid rgba(75,193,145,0.2)",
+                  borderRadius: "8px",
+                  padding: "20px",
+                  textAlign: "center",
+                }}
+              >
                 <div
                   style={{
                     fontFamily: "var(--font-syne)",
-                    fontSize: "0.625rem",
+                    fontSize: "0.875rem",
                     fontWeight: 700,
-                    color: "#c1914b",
-                    letterSpacing: "0.12em",
-                    paddingTop: "3px",
-                    minWidth: "24px",
+                    color: "#4bc191",
+                    marginBottom: "6px",
                   }}
                 >
-                  {w.step}
+                  Message received.
                 </div>
-                <div>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-syne)",
-                      fontSize: "0.875rem",
-                      fontWeight: 700,
-                      color: "#f0ece4",
-                      marginBottom: "4px",
-                    }}
-                  >
-                    {w.label}
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "#6b6762",
-                      lineHeight: 1.65,
-                    }}
-                  >
-                    {w.detail}
-                  </p>
-                </div>
+                <p style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+                  I&apos;ll follow up within one business day.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
+            ) : (
+              <form onSubmit={handleFormSubmit}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "12px",
+                  }}
+                >
+                  {[
+                    { id: "name", label: "Name *", type: "text", required: true },
+                    {
+                      id: "email",
+                      label: "Work email *",
+                      type: "email",
+                      required: true,
+                    },
+                    {
+                      id: "company",
+                      label: "Company",
+                      type: "text",
+                      required: false,
+                    },
+                    {
+                      id: "role",
+                      label: "Your role",
+                      type: "text",
+                      required: false,
+                    },
+                  ].map((f) => (
+                    <input
+                      key={f.id}
+                      type={f.type}
+                      placeholder={f.label}
+                      required={f.required}
+                      value={formData[f.id as keyof typeof formData]}
+                      onChange={(e) =>
+                        setFormData((d) => ({ ...d, [f.id]: e.target.value }))
+                      }
+                      style={{
+                        background: "rgba(240,236,228,0.04)",
+                        border: "1px solid rgba(240,236,228,0.1)",
+                        borderRadius: "6px",
+                        padding: "13px 14px",
+                        fontSize: "0.9rem",
+                        color: "#f0ece4",
+                        outline: "none",
+                        width: "100%",
+                        fontFamily: "var(--font-dm-sans)",
+                        transition: "border-color 0.15s",
+                      }}
+                      onFocus={(e) =>
+                        (e.target.style.borderColor = "rgba(193,145,75,0.45)")
+                      }
+                      onBlur={(e) =>
+                        (e.target.style.borderColor = "rgba(240,236,228,0.1)")
+                      }
+                    />
+                  ))}
 
-      {/* Right: fallback form + info */}
-      <div>
-        <div
-          style={{
-            background: "rgba(240,236,228,0.025)",
-            border: "1px solid rgba(240,236,228,0.08)",
-            borderRadius: "12px",
-            padding: "36px",
-            marginBottom: "32px",
-          }}
-        >
-          <div
-            className="eyebrow"
-            style={{ display: "block", marginBottom: "16px" }}
-          >
-            Prefer email?
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-syne)",
-              fontSize: "1.25rem",
-              fontWeight: 700,
-              color: "#f0ece4",
-              letterSpacing: "-0.01em",
-              marginBottom: "8px",
-            }}
-          >
-            Send a note directly.
-          </h2>
-          <p
-            style={{
-              fontSize: "0.875rem",
-              color: "#9a9590",
-              lineHeight: 1.65,
-              marginBottom: "28px",
-            }}
-          >
-            I respond to all inquiries within one business day. If you&apos;d
-            rather not schedule in advance, just describe your situation and
-            I&apos;ll follow up.
-          </p>
-
-          {formState === "sent" ? (
-            <div
-              style={{
-                background: "rgba(75,193,145,0.08)",
-                border: "1px solid rgba(75,193,145,0.2)",
-                borderRadius: "8px",
-                padding: "20px",
-                textAlign: "center",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "var(--font-syne)",
-                  fontSize: "0.875rem",
-                  fontWeight: 700,
-                  color: "#4bc191",
-                  marginBottom: "6px",
-                }}
-              >
-                Message received.
-              </div>
-              <p style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
-                I&apos;ll follow up within one business day.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleFormSubmit}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
-                }}
-              >
-                {[
-                  { id: "name", label: "Name *", type: "text", required: true },
-                  {
-                    id: "email",
-                    label: "Work email *",
-                    type: "email",
-                    required: true,
-                  },
-                  {
-                    id: "company",
-                    label: "Company",
-                    type: "text",
-                    required: false,
-                  },
-                  {
-                    id: "role",
-                    label: "Your role",
-                    type: "text",
-                    required: false,
-                  },
-                ].map((f) => (
-                  <input
-                    key={f.id}
-                    type={f.type}
-                    placeholder={f.label}
-                    required={f.required}
-                    value={formData[f.id as keyof typeof formData]}
+                  <textarea
+                    placeholder="Briefly describe your situation or question"
+                    rows={4}
+                    value={formData.message}
                     onChange={(e) =>
-                      setFormData((d) => ({ ...d, [f.id]: e.target.value }))
+                      setFormData((d) => ({ ...d, message: e.target.value }))
                     }
                     style={{
                       background: "rgba(240,236,228,0.04)",
@@ -289,6 +302,7 @@ export default function ContactClient() {
                       outline: "none",
                       width: "100%",
                       fontFamily: "var(--font-dm-sans)",
+                      resize: "vertical",
                       transition: "border-color 0.15s",
                     }}
                     onFocus={(e) =>
@@ -298,149 +312,86 @@ export default function ContactClient() {
                       (e.target.style.borderColor = "rgba(240,236,228,0.1)")
                     }
                   />
-                ))}
 
-                <textarea
-                  placeholder="Briefly describe your situation or question"
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData((d) => ({ ...d, message: e.target.value }))
-                  }
-                  style={{
-                    background: "rgba(240,236,228,0.04)",
-                    border: "1px solid rgba(240,236,228,0.1)",
-                    borderRadius: "6px",
-                    padding: "13px 14px",
-                    fontSize: "0.9rem",
-                    color: "#f0ece4",
-                    outline: "none",
-                    width: "100%",
-                    fontFamily: "var(--font-dm-sans)",
-                    resize: "vertical",
-                    transition: "border-color 0.15s",
-                  }}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "rgba(193,145,75,0.45)")
-                  }
-                  onBlur={(e) =>
-                    (e.target.style.borderColor = "rgba(240,236,228,0.1)")
-                  }
-                />
+                  {formState === "error" && (
+                    <p style={{ fontSize: "0.8125rem", color: "#e06060" }}>
+                      Something went wrong. Email me directly at
+                      chris@everistconsulting.com
+                    </p>
+                  )}
 
-                {formState === "error" && (
-                  <p style={{ fontSize: "0.8125rem", color: "#e06060" }}>
-                    Something went wrong. Email me directly at
-                    chris@everistconsulting.com
-                  </p>
-                )}
+                  <button
+                    type="submit"
+                    disabled={formState === "sending"}
+                    style={{
+                      fontFamily: "var(--font-syne)",
+                      fontSize: "0.8125rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.07em",
+                      textTransform: "uppercase",
+                      padding: "14px 24px",
+                      background:
+                        formState === "sending"
+                          ? "rgba(193,145,75,0.6)"
+                          : "#c1914b",
+                      color: "#0f1117",
+                      borderRadius: "6px",
+                      border: "none",
+                      cursor:
+                        formState === "sending" ? "not-allowed" : "pointer",
+                      width: "100%",
+                      transition: "background 0.15s",
+                    }}
+                  >
+                    {formState === "sending" ? "Sending…" : "Send Message →"}
+                  </button>
+                </div>
+              </form>
+            )}
+          </ContentCard>
 
-                <button
-                  type="submit"
-                  disabled={formState === "sending"}
-                  style={{
-                    fontFamily: "var(--font-syne)",
-                    fontSize: "0.8125rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.07em",
-                    textTransform: "uppercase",
-                    padding: "14px 24px",
-                    background: formState === "sending" ? "rgba(193,145,75,0.6)" : "#c1914b",
-                    color: "#0f1117",
-                    borderRadius: "6px",
-                    border: "none",
-                    cursor: formState === "sending" ? "not-allowed" : "pointer",
-                    width: "100%",
-                    transition: "background 0.15s",
-                  }}
-                >
-                  {formState === "sending" ? "Sending…" : "Send Message →"}
-                </button>
+          <div className="flex flex-col gap-3">
+            <div
+              className="flex items-center gap-4 rounded-[8px] border border-[rgba(240,236,228,0.06)] bg-[rgba(240,236,228,0.02)] px-5 py-4"
+            >
+              <div
+                className="min-w-12 font-display text-[0.625rem] font-bold uppercase tracking-[0.14em] text-faint"
+              >
+                Email
               </div>
-            </form>
-          )}
-        </div>
-
-        {/* Direct contact */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "12px",
-          }}
-        >
-          <div
-            style={{
-              padding: "16px 20px",
-              background: "rgba(240,236,228,0.02)",
-              border: "1px solid rgba(240,236,228,0.06)",
-              borderRadius: "8px",
-              display: "flex",
-              gap: "14px",
-              alignItems: "center",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.625rem",
-                fontWeight: 700,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#6b6762",
-                minWidth: "56px",
-              }}
-            >
-              Email
+              <a
+                href="mailto:chris@everistconsulting.com"
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#9a9590",
+                  textDecoration: "none",
+                  transition: "color 0.15s",
+                }}
+                onMouseEnter={(e) =>
+                  ((e.target as HTMLElement).style.color = "#f0ece4")
+                }
+                onMouseLeave={(e) =>
+                  ((e.target as HTMLElement).style.color = "#9a9590")
+                }
+              >
+                chris@everistconsulting.com
+              </a>
             </div>
-            <a
-              href="mailto:chris@everistconsulting.com"
-              style={{
-                fontSize: "0.9rem",
-                color: "#9a9590",
-                textDecoration: "none",
-                transition: "color 0.15s",
-              }}
-              onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = "#f0ece4")
-              }
-              onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.color = "#9a9590")
-              }
-            >
-              chris@everistconsulting.com
-            </a>
-          </div>
-          <div
-            style={{
-              padding: "16px 20px",
-              background: "rgba(240,236,228,0.02)",
-              border: "1px solid rgba(240,236,228,0.06)",
-              borderRadius: "8px",
-              display: "flex",
-              gap: "14px",
-              alignItems: "center",
-            }}
-          >
             <div
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.625rem",
-                fontWeight: 700,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#6b6762",
-                minWidth: "56px",
-              }}
+              className="flex items-center gap-4 rounded-[8px] border border-[rgba(240,236,228,0.06)] bg-[rgba(240,236,228,0.02)] px-5 py-4"
             >
-              Based
+              <div
+                className="min-w-12 font-display text-[0.625rem] font-bold uppercase tracking-[0.14em] text-faint"
+              >
+                Based
+              </div>
+              <span style={{ fontSize: "0.9rem", color: "#9a9590" }}>
+                San Diego, CA · Remote-first
+              </span>
             </div>
-            <span style={{ fontSize: "0.9rem", color: "#9a9590" }}>
-              San Diego, CA · Remote-first
-            </span>
           </div>
         </div>
-      </div>
-    </div>
+      }
+    />
   );
 }
