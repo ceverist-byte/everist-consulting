@@ -11,7 +11,7 @@ export default function ContentCard({
 }: ContentCardProps) {
   return (
     <div
-      className={`rounded-[12px] border border-[rgba(240,236,228,0.08)] bg-[rgba(240,236,228,0.025)] p-6 md:p-8 ${className}`.trim()}
+      className={`rounded-[2px] border border-[var(--rule)] bg-[var(--bg)] p-5 md:p-6 ${className}`.trim()}
     >
       {children}
     </div>

@@ -160,35 +160,28 @@ export default function ServicesPage() {
       {/* Hero */}
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           paddingTop: "120px",
           paddingBottom: "64px",
           paddingLeft: "24px",
           paddingRight: "24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 30% 60%, rgba(193,145,75,0.09) 0%, transparent 50%)",
-          }}
-        />
         <PageShell className="relative">
           <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
             The Everist Operating Model Design Method
           </div>
           <h1
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 800,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "20px",
               maxWidth: "640px",
             }}
@@ -198,7 +191,7 @@ export default function ServicesPage() {
           <p
             style={{
               fontSize: "1rem",
-              color: "#9a9590",
+              color: "var(--text-primary)",
               lineHeight: 1.75,
               maxWidth: "540px",
               marginBottom: "20px",
@@ -215,12 +208,12 @@ export default function ServicesPage() {
               gap: "8px",
               alignItems: "center",
               padding: "10px 16px",
-              background: "rgba(193,145,75,0.07)",
-              border: "1px solid rgba(193,145,75,0.18)",
-              borderRadius: "6px",
+              background: "transparent",
+              border: "1px solid var(--rule)",
+              borderRadius: "2px",
             }}
           >
-            <span style={{ fontSize: "0.8125rem", color: "#c1914b" }}>
+            <span style={{ fontSize: "0.8125rem", color: "var(--accent)" }}>
               Authority → Decision structure → Operating model → Technology
             </span>
           </div>
@@ -229,9 +222,9 @@ export default function ServicesPage() {
               href="/ai-automation"
               style={{
                 fontSize: "0.9rem",
-                color: "#9a9590",
+                color: "var(--text-primary)",
                 textDecoration: "none",
-                borderBottom: "1px solid rgba(240,236,228,0.16)",
+                borderBottom: "1px solid var(--rule)",
                 paddingBottom: "2px",
               }}
             >
@@ -243,7 +236,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 3-Phase Method */}
-      <section style={{ background: "#0f1117", padding: "80px 24px" }}>
+      <section style={{ background: "var(--bg)", padding: "80px 24px" }}>
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
             The 3-Phase Method
@@ -259,7 +252,7 @@ export default function ServicesPage() {
                   paddingBottom: i < phases.length - 1 ? "48px" : "0",
                   borderBottom:
                     i < phases.length - 1
-                      ? "1px solid rgba(240,236,228,0.06)"
+                      ? "1px solid var(--rule-strong)"
                       : "none",
                 }}
                 className="[grid-template-columns:1fr] md:[grid-template-columns:1fr_1fr]"
@@ -276,12 +269,12 @@ export default function ServicesPage() {
                   >
                     <span
                       style={{
-                        fontFamily: "var(--font-syne)",
+                        fontFamily: "var(--font-sans)",
                         fontSize: "0.625rem",
                         fontWeight: 700,
                         letterSpacing: "0.16em",
                         textTransform: "uppercase",
-                        color: "#c1914b",
+                        color: "var(--accent)",
                       }}
                     >
                       {p.phase}
@@ -290,22 +283,22 @@ export default function ServicesPage() {
                       style={{
                         width: "1px",
                         height: "14px",
-                        background: "rgba(240,236,228,0.12)",
+                        background: "var(--rule)",
                         display: "inline-block",
                       }}
                     />
                     <span
-                      style={{ fontSize: "0.8125rem", color: "#6b6762" }}
+                      style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}
                     >
                       {p.duration}
                     </span>
                   </div>
                   <h2
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "1.5rem",
                       fontWeight: 800,
-                      color: "#f0ece4",
+                      color: "var(--text-primary)",
                       letterSpacing: "-0.015em",
                       marginBottom: "8px",
                     }}
@@ -316,7 +309,7 @@ export default function ServicesPage() {
                   <p
                     style={{
                       fontSize: "0.9375rem",
-                      color: "#9a9590",
+                      color: "var(--text-primary)",
                       lineHeight: 1.75,
                       marginBottom: "20px",
                     }}
@@ -325,16 +318,16 @@ export default function ServicesPage() {
                   </p>
                   <div
                     style={{
-                      background: "rgba(193,145,75,0.06)",
-                      border: "1px solid rgba(193,145,75,0.14)",
-                      borderRadius: "8px",
+                      background: "transparent",
+                      border: "1px solid var(--rule)",
+                      borderRadius: "2px",
                       padding: "14px 16px",
                     }}
                   >
                     <span
                       style={{
                         fontSize: "0.8125rem",
-                        color: "#9a9590",
+                        color: "var(--text-primary)",
                         fontStyle: "italic",
                         lineHeight: 1.6,
                       }}
@@ -348,20 +341,20 @@ export default function ServicesPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                   <div
                     style={{
-                      background: "rgba(240,236,228,0.03)",
-                      border: "1px solid rgba(240,236,228,0.07)",
-                      borderRadius: "10px",
+                      background: "transparent",
+                      border: "1px solid var(--rule)",
+                      borderRadius: "2px",
                       padding: "22px",
                     }}
                   >
                     <div
                       style={{
-                        fontFamily: "var(--font-syne)",
+                        fontFamily: "var(--font-sans)",
                         fontSize: "0.625rem",
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: "#6b6762",
+                        color: "var(--text-secondary)",
                         marginBottom: "12px",
                       }}
                     >
@@ -373,14 +366,14 @@ export default function ServicesPage() {
                           key={a}
                           style={{
                             fontSize: "0.875rem",
-                            color: "#9a9590",
+                            color: "var(--text-primary)",
                             lineHeight: 1.55,
                             display: "flex",
                             gap: "10px",
                             alignItems: "flex-start",
                           }}
                         >
-                          <span style={{ color: "#c1914b", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
+                          <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
                           {a}
                         </li>
                       ))}
@@ -389,20 +382,20 @@ export default function ServicesPage() {
 
                   <div
                     style={{
-                      background: "rgba(240,236,228,0.03)",
-                      border: "1px solid rgba(240,236,228,0.07)",
-                      borderRadius: "10px",
+                      background: "transparent",
+                      border: "1px solid var(--rule)",
+                      borderRadius: "2px",
                       padding: "22px",
                     }}
                   >
                     <div
                       style={{
-                        fontFamily: "var(--font-syne)",
+                        fontFamily: "var(--font-sans)",
                         fontSize: "0.625rem",
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: "#6b6762",
+                        color: "var(--text-secondary)",
                         marginBottom: "12px",
                       }}
                     >
@@ -414,14 +407,14 @@ export default function ServicesPage() {
                           key={d}
                           style={{
                             fontSize: "0.875rem",
-                            color: "#9a9590",
+                            color: "var(--text-primary)",
                             lineHeight: 1.55,
                             display: "flex",
                             gap: "10px",
                             alignItems: "flex-start",
                           }}
                         >
-                          <span style={{ color: "#c1914b", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
+                          <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
                           {d}
                         </li>
                       ))}
@@ -437,9 +430,9 @@ export default function ServicesPage() {
       {/* Archetype-to-service mapping */}
       <section
         style={{
-          background: "#171923",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          background: "var(--bg)",
+          borderTop: "1px solid var(--rule-strong)",
+          borderBottom: "1px solid var(--rule-strong)",
           padding: "80px 24px",
         }}
       >
@@ -449,11 +442,11 @@ export default function ServicesPage() {
           </div>
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(1.5rem, 3vw, 2rem)",
               fontWeight: 800,
               letterSpacing: "-0.02em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "40px",
               lineHeight: 1.2,
             }}
@@ -470,21 +463,21 @@ export default function ServicesPage() {
                   gap: "24px",
                   alignItems: "start",
                   padding: "20px 24px",
-                  background: "rgba(240,236,228,0.025)",
-                  border: "1px solid rgba(240,236,228,0.06)",
-                  borderRadius: "8px",
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
                 }}
                 className="[grid-template-columns:1fr] md:[grid-template-columns:200px_160px_1fr]"
               >
                 <div>
                   <div
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "0.5625rem",
                       fontWeight: 700,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: "#6b6762",
+                      color: "var(--text-secondary)",
                       marginBottom: "4px",
                     }}
                   >
@@ -492,10 +485,10 @@ export default function ServicesPage() {
                   </div>
                   <div
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "0.9375rem",
                       fontWeight: 700,
-                      color: "#f0ece4",
+                      color: "var(--text-primary)",
                       letterSpacing: "-0.01em",
                     }}
                   >
@@ -506,15 +499,15 @@ export default function ServicesPage() {
                   <div
                     style={{
                       fontSize: "0.75rem",
-                      color: "#c1914b",
-                      fontFamily: "var(--font-syne)",
+                      color: "var(--accent)",
+                      fontFamily: "var(--font-sans)",
                       fontWeight: 600,
                     }}
                   >
                     {a.primaryFit}
                   </div>
                 </div>
-                <p style={{ fontSize: "0.875rem", color: "#6b6762", lineHeight: 1.65 }}>
+                <p style={{ fontSize: "0.875rem", color: "var(--text-primary)", lineHeight: 1.65 }}>
                   {a.detail}
                 </p>
               </div>
@@ -525,9 +518,9 @@ export default function ServicesPage() {
               href="/assessment"
               style={{
                 fontSize: "0.875rem",
-                color: "#9a9590",
+                color: "var(--text-secondary)",
                 textDecoration: "none",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-sans)",
               }}
             >
               Not sure which archetype you are? Take the 5-minute assessment →
@@ -537,18 +530,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional service lines */}
-      <section style={{ background: "#0f1117", padding: "80px 24px" }}>
+      <section style={{ background: "var(--bg)", padding: "80px 24px" }}>
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
             Additional Service Lines
           </div>
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(1.5rem, 3vw, 2rem)",
               fontWeight: 800,
               letterSpacing: "-0.02em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "40px",
               lineHeight: 1.2,
             }}
@@ -560,9 +553,9 @@ export default function ServicesPage() {
               <div
                 key={s.name}
                 style={{
-                  background: "rgba(240,236,228,0.025)",
-                  border: "1px solid rgba(240,236,228,0.07)",
-                  borderRadius: "12px",
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
                   padding: "28px",
                 }}
               >
@@ -570,16 +563,16 @@ export default function ServicesPage() {
                   style={{
                     width: "36px",
                     height: "36px",
-                    background: "rgba(193,145,75,0.12)",
-                    border: "1px solid rgba(193,145,75,0.24)",
-                    borderRadius: "8px",
+                    background: "transparent",
+                    border: "1px solid var(--rule)",
+                    borderRadius: "2px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "0.625rem",
                     fontWeight: 700,
-                    color: "#c1914b",
+                    color: "var(--accent)",
                     letterSpacing: "0.06em",
                     marginBottom: "16px",
                   }}
@@ -588,10 +581,10 @@ export default function ServicesPage() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "1.0625rem",
                     fontWeight: 700,
-                    color: "#f0ece4",
+                    color: "var(--text-primary)",
                     marginBottom: "10px",
                     letterSpacing: "-0.01em",
                   }}
@@ -601,7 +594,7 @@ export default function ServicesPage() {
                 <p
                   style={{
                     fontSize: "0.875rem",
-                    color: "#9a9590",
+                    color: "var(--text-primary)",
                     lineHeight: 1.7,
                     marginBottom: "16px",
                   }}
@@ -614,14 +607,14 @@ export default function ServicesPage() {
                       key={u}
                       style={{
                         fontSize: "0.8125rem",
-                        color: "#6b6762",
+                        color: "var(--text-primary)",
                         lineHeight: 1.6,
                         display: "flex",
                         gap: "8px",
                         alignItems: "flex-start",
                       }}
                     >
-                      <span style={{ color: "#c1914b", fontSize: "0.5rem", paddingTop: "5px", flexShrink: 0 }}>▸</span>
+                      <span style={{ color: "var(--accent)", fontSize: "0.5rem", paddingTop: "5px", flexShrink: 0 }}>▸</span>
                       {u}
                     </li>
                   ))}
@@ -635,8 +628,8 @@ export default function ServicesPage() {
       {/* CTA */}
       <section
         style={{
-          background: "#171923",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
+          background: "var(--bg)",
+          borderTop: "1px solid var(--rule-strong)",
           padding: "80px 24px",
           textAlign: "center",
         }}
@@ -644,11 +637,11 @@ export default function ServicesPage() {
         <div className="max-w-xl mx-auto">
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(1.5rem, 3vw, 2.125rem)",
               fontWeight: 800,
               letterSpacing: "-0.02em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "16px",
               lineHeight: 1.2,
             }}
@@ -658,7 +651,7 @@ export default function ServicesPage() {
           <p
             style={{
               fontSize: "0.9375rem",
-              color: "#9a9590",
+              color: "var(--text-primary)",
               lineHeight: 1.7,
               marginBottom: "36px",
             }}
@@ -668,15 +661,16 @@ export default function ServicesPage() {
           <Link
             href="/contact"
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "0.8125rem",
               fontWeight: 700,
               letterSpacing: "0.07em",
               textTransform: "uppercase",
               padding: "15px 32px",
-              background: "#c1914b",
-              color: "#0f1117",
-              borderRadius: "6px",
+              background: "var(--fg)",
+              color: "var(--bg)",
+              borderRadius: "2px",
+              border: "1px solid var(--fg)",
               textDecoration: "none",
               display: "inline-block",
             }}

@@ -17,8 +17,8 @@ const archetypes = [
     authority: "Low",
     timing: "Late",
     complaint: '"We invested in BIM but nothing really changed."',
-    accent: "rgba(193,75,75,0.15)",
-    border: "rgba(193,75,75,0.2)",
+    accent: "transparent",
+    border: "var(--rule)",
   },
   {
     number: "02",
@@ -28,8 +28,8 @@ const archetypes = [
     authority: "Low–Mid",
     timing: "Early",
     complaint: '"We use VDC to win work, but the field doesn\'t carry it through."',
-    accent: "rgba(193,145,75,0.12)",
-    border: "rgba(193,145,75,0.2)",
+    accent: "transparent",
+    border: "var(--rule)",
   },
   {
     number: "03",
@@ -39,8 +39,8 @@ const archetypes = [
     authority: "High",
     timing: "Late",
     complaint: '"VDC is running well. I\'m not sure what the next level looks like."',
-    accent: "rgba(75,145,193,0.12)",
-    border: "rgba(75,145,193,0.2)",
+    accent: "transparent",
+    border: "var(--rule)",
   },
   {
     number: "04",
@@ -50,8 +50,8 @@ const archetypes = [
     authority: "High",
     timing: "Early",
     complaint: '"How do we scale this without losing what makes it work?"',
-    accent: "rgba(75,193,145,0.12)",
-    border: "rgba(75,193,145,0.2)",
+    accent: "transparent",
+    border: "var(--rule)",
     highlight: true,
   },
 ];
@@ -98,48 +98,118 @@ const services = [
   },
 ];
 
+const pageBg = "var(--bg)";
+const pageFg = "var(--fg)";
+const pageText = "var(--text-primary)";
+const pageMuted = "var(--text-secondary)";
+const pageRule = "var(--rule)";
+const pageRuleStrong = "var(--rule-strong)";
+const pageAccent = "var(--accent)";
+
+const sectionStyle = {
+  background: pageBg,
+  borderTop: `1px solid ${pageRuleStrong}`,
+  padding: "72px 0",
+};
+
+const contentWrapStyle = {
+  maxWidth: "1120px",
+  margin: "0 auto",
+};
+
+const eyebrowStyle = {
+  color: pageAccent,
+  fontSize: "0.75rem",
+  fontWeight: 700,
+  letterSpacing: "0.08em",
+  lineHeight: 1,
+  marginBottom: "18px",
+  textTransform: "uppercase" as const,
+};
+
+const h2Style = {
+  color: pageText,
+  fontFamily: "var(--font-sans)",
+  fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+  fontWeight: 700,
+  letterSpacing: "-0.025em",
+  lineHeight: 1.12,
+};
+
+const bodyTextStyle = {
+  color: pageText,
+  fontSize: "1rem",
+  fontWeight: 400,
+  lineHeight: 1.65,
+};
+
+const primaryCtaStyle = {
+  background: pageFg,
+  border: `1px solid ${pageFg}`,
+  borderRadius: "3px",
+  color: pageBg,
+  display: "inline-block",
+  fontSize: "0.875rem",
+  fontWeight: 700,
+  letterSpacing: "0.02em",
+  lineHeight: 1,
+  padding: "14px 22px",
+  textDecoration: "none",
+  textTransform: "uppercase" as const,
+};
+
+const secondaryCtaStyle = {
+  background: "transparent",
+  border: `1px solid ${pageFg}`,
+  borderRadius: "3px",
+  color: pageText,
+  display: "inline-block",
+  fontSize: "0.875rem",
+  fontWeight: 700,
+  letterSpacing: "0.02em",
+  lineHeight: 1,
+  padding: "14px 22px",
+  textDecoration: "none",
+  textTransform: "uppercase" as const,
+};
+
+const textLinkStyle = {
+  color: pageText,
+  fontSize: "0.9375rem",
+  fontWeight: 600,
+  textDecoration: "underline",
+  textDecorationColor: pageRule,
+  textUnderlineOffset: "4px",
+};
+
 export default function Home() {
   return (
     <>
       {/* ─── HERO ─────────────────────────────────────────────────── */}
       <section
         style={{
-          background: "#0f1117",
-          minHeight: "100vh",
+          background: pageBg,
+          borderBottom: `1px solid ${pageRuleStrong}`,
           display: "flex",
           alignItems: "center",
           position: "relative",
-          overflow: "hidden",
-          paddingTop: "80px",
+          minHeight: "78vh",
+          padding: "120px 0 64px",
         }}
       >
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 bg-grid"
-          style={{ backgroundSize: "48px 48px", opacity: 1 }}
-        />
-        {/* Radial amber glow */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 70% 40%, rgba(193,145,75,0.13) 0%, transparent 55%)",
-          }}
-        />
-
-        <PageShell className="relative w-full pb-20 pt-16">
+        <PageShell className="relative w-full">
+          <div style={contentWrapStyle}>
           {/* Eyebrow */}
           <div
-            className="eyebrow flex items-center gap-3 mb-8"
-            style={{ color: "#c1914b" }}
+            className="flex items-center gap-3"
+            style={eyebrowStyle}
           >
             VDC Strategy & Operating Model Design
             <span
               style={{
                 width: "40px",
                 height: "1px",
-                background: "#c1914b",
-                opacity: 0.5,
+                background: pageRuleStrong,
                 display: "inline-block",
               }}
             />
@@ -148,18 +218,18 @@ export default function Home() {
           {/* Headline */}
           <h1
             style={{
-              fontFamily: "var(--font-syne)",
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
-              fontWeight: 800,
-              lineHeight: 1.08,
+              fontFamily: "var(--font-sans)",
+              fontSize: "clamp(2.5rem, 6vw, 5rem)",
+              fontWeight: 700,
+              lineHeight: 0.98,
               letterSpacing: "-0.03em",
-              color: "#f0ece4",
-              maxWidth: "700px",
-              marginBottom: "28px",
+              color: pageText,
+              maxWidth: "760px",
+              marginBottom: "24px",
             }}
           >
             Turn VDC capability into{" "}
-            <em style={{ fontStyle: "normal", color: "#c1914b" }}>
+            <em style={{ fontStyle: "normal", color: pageText }}>
               competitive advantage.
             </em>
           </h1>
@@ -167,12 +237,10 @@ export default function Home() {
           {/* Subhead */}
           <p
             style={{
-              fontSize: "1.0625rem",
-              fontWeight: 300,
-              color: "#9a9590",
-              lineHeight: 1.7,
-              maxWidth: "480px",
-              marginBottom: "44px",
+              ...bodyTextStyle,
+              fontSize: "1.125rem",
+              maxWidth: "560px",
+              marginBottom: "28px",
             }}
           >
             Most GCs have a VDC function. Very few have a VDC capability that
@@ -180,13 +248,11 @@ export default function Home() {
             technological.
           </p>
 
-          <div style={{ maxWidth: "500px", marginBottom: "32px" }}>
+          <div style={{ maxWidth: "560px", marginBottom: "28px" }}>
             <p
               style={{
-                fontSize: "0.95rem",
-                fontWeight: 300,
-                color: "#6b6762",
-                lineHeight: 1.75,
+                ...bodyTextStyle,
+                fontSize: "0.96875rem",
                 marginBottom: "12px",
               }}
             >
@@ -196,60 +262,37 @@ export default function Home() {
             </p>
             <Link
               href="/ai-automation"
-              style={{
-                fontSize: "0.9rem",
-                color: "#9a9590",
-                textDecoration: "none",
-                borderBottom: "1px solid rgba(240,236,228,0.16)",
-                paddingBottom: "2px",
-              }}
+              style={textLinkStyle}
             >
               Explore AI &amp; Automation Advisory →
             </Link>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-4 mb-16">
+          <div className="flex flex-wrap items-center gap-3 mb-12">
             <Link
               href="/assessment"
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.07em",
-                textTransform: "uppercase",
-                padding: "15px 32px",
-                background: "#c1914b",
-                color: "#0f1117",
-                borderRadius: "6px",
-                textDecoration: "none",
-                display: "inline-block",
-                transition: "background 0.15s",
-              }}
+              style={primaryCtaStyle}
             >
               Find Your VDC Archetype →
             </Link>
             <Link
               href="/contact"
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontSize: "0.9375rem",
-                fontWeight: 400,
-                padding: "15px 24px",
-                border: "1px solid rgba(240,236,228,0.16)",
-                color: "#f0ece4",
-                borderRadius: "6px",
-                textDecoration: "none",
-                display: "inline-block",
-                transition: "border-color 0.15s",
-              }}
+              style={secondaryCtaStyle}
             >
               Book a Discovery Call
             </Link>
           </div>
 
           {/* Credential tags */}
-          <div className="flex flex-wrap gap-2">
+          <div
+            className="flex flex-wrap gap-x-4 gap-y-2"
+            style={{
+              borderTop: `1px solid ${pageRuleStrong}`,
+              maxWidth: "720px",
+              paddingTop: "18px",
+            }}
+          >
             {[
               "VDC Operating Model Design",
               "Last Planner System®",
@@ -260,10 +303,7 @@ export default function Home() {
                 key={tag}
                 style={{
                   fontSize: "0.75rem",
-                  color: "#6b6762",
-                  border: "1px solid rgba(240,236,228,0.08)",
-                  borderRadius: "4px",
-                  padding: "5px 12px",
+                  color: pageText,
                   letterSpacing: "0.03em",
                 }}
               >
@@ -271,40 +311,28 @@ export default function Home() {
               </span>
             ))}
           </div>
+          </div>
         </PageShell>
       </section>
 
       {/* ─── THESIS ───────────────────────────────────────────────── */}
-      <section
-        style={{
-          background: "#0f1117",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          padding: "96px 24px",
-        }}
-      >
+      <section style={sectionStyle}>
         <PageShell>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,440px)] gap-12 items-start" style={contentWrapStyle}>
             <div>
-              <div className="eyebrow mb-6">The Core Problem</div>
+              <div style={eyebrowStyle}>The Core Problem</div>
               <h2
                 style={{
-                  fontFamily: "var(--font-syne)",
-                  fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                  fontWeight: 800,
-                  lineHeight: 1.15,
-                  letterSpacing: "-0.025em",
-                  color: "#f0ece4",
-                  marginBottom: "24px",
+                  ...h2Style,
+                  marginBottom: "20px",
                 }}
               >
                 Technology doesn&apos;t fail because of tooling.
               </h2>
               <p
                 style={{
-                  fontSize: "1rem",
-                  color: "#9a9590",
-                  lineHeight: 1.75,
-                  marginBottom: "20px",
+                  ...bodyTextStyle,
+                  marginBottom: "16px",
                 }}
               >
                 It fails because mandate, authority, and incentives are
@@ -313,10 +341,8 @@ export default function Home() {
               </p>
               <p
                 style={{
-                  fontSize: "1rem",
-                  color: "#9a9590",
-                  lineHeight: 1.75,
-                  marginBottom: "32px",
+                  ...bodyTextStyle,
+                  marginBottom: "24px",
                 }}
               >
                 When VDC sits under Operations, it participates after delivery
@@ -327,46 +353,31 @@ export default function Home() {
               </p>
               <Link
                 href="/services"
-                style={{
-                  fontFamily: "var(--font-syne)",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#c1914b",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                }}
+                style={textLinkStyle}
               >
                 How I approach this →
               </Link>
             </div>
 
-            {/* Contrast box */}
             <div
               style={{
-                background: "rgba(240,236,228,0.03)",
-                border: "1px solid rgba(240,236,228,0.08)",
-                borderRadius: "12px",
-                padding: "36px",
+                borderTop: `1px solid ${pageRuleStrong}`,
+                paddingTop: "20px",
               }}
             >
               <div
                 style={{
-                  fontFamily: "var(--font-syne)",
                   fontSize: "0.6875rem",
                   fontWeight: 700,
-                  letterSpacing: "0.14em",
+                  letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#6b6762",
-                  marginBottom: "24px",
+                  color: pageText,
+                  marginBottom: "20px",
                 }}
               >
                 Why transformations stall
               </div>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {[
                   {
                     label: "Most consultants start here",
@@ -386,35 +397,39 @@ export default function Home() {
                     muted: false,
                   },
                 ].map((block) => (
-                  <div key={block.label}>
+                  <div
+                    key={block.label}
+                    style={{
+                      borderTop: `1px solid ${pageRule}`,
+                      paddingTop: "16px",
+                    }}
+                  >
                     <div
                       style={{
                         fontSize: "0.75rem",
-                        color: block.muted ? "#6b6762" : "#c1914b",
+                        color: block.muted ? pageText : pageAccent,
                         marginBottom: "10px",
-                        fontFamily: "var(--font-syne)",
                         fontWeight: 600,
-                        letterSpacing: "0.06em",
+                        letterSpacing: "0.04em",
                         textTransform: "uppercase",
                       }}
                     >
                       {block.label}
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-8px">
+                    <div className="flex flex-wrap gap-2">
                       {block.stack.map((item, i) => (
                         <span key={item}>
                           <span
                             style={{
                               fontSize: "0.9375rem",
-                              color: block.muted ? "#6b6762" : "#f0ece4",
-                              fontFamily: "var(--font-syne)",
-                              fontWeight: block.muted ? 400 : 600,
+                              color: pageText,
+                              fontWeight: block.muted ? 500 : 600,
                             }}
                           >
                             {item}
                           </span>
                           {i < block.stack.length - 1 && (
-                            <span style={{ color: "#6b6762", margin: "0 8px" }}>
+                            <span style={{ color: pageText, margin: "0 8px" }}>
                               →
                             </span>
                           )}
@@ -424,10 +439,9 @@ export default function Home() {
                     <p
                       style={{
                         fontSize: "0.8125rem",
-                        color: "#6b6762",
+                        color: pageMuted,
                         lineHeight: 1.6,
                         marginTop: "10px",
-                        fontStyle: "italic",
                       }}
                     >
                       {block.note}
@@ -443,23 +457,16 @@ export default function Home() {
       {/* ─── ARCHETYPE MATRIX ─────────────────────────────────────── */}
       <section
         style={{
-          background: "#171923",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
-          padding: "96px 24px",
+          ...sectionStyle,
+          background: pageBg,
         }}
       >
         <PageShell>
-          <div className="text-center mb-16">
-            <div className="eyebrow mb-4 block">The VDC Archetype Matrix</div>
+          <div style={{ ...contentWrapStyle, marginBottom: "40px" }}>
+            <div style={eyebrowStyle}>The VDC Archetype Matrix</div>
             <h2
               style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                fontWeight: 800,
-                lineHeight: 1.15,
-                letterSpacing: "-0.025em",
-                color: "#f0ece4",
+                ...h2Style,
                 marginBottom: "16px",
               }}
             >
@@ -467,11 +474,8 @@ export default function Home() {
             </h2>
             <p
               style={{
-                fontSize: "0.9375rem",
-                color: "#9a9590",
-                maxWidth: "480px",
-                margin: "0 auto",
-                lineHeight: 1.7,
+                ...bodyTextStyle,
+                maxWidth: "560px",
               }}
             >
               Two axes determine how VDC behaves inside a contractor: when it
@@ -482,49 +486,38 @@ export default function Home() {
           {/* Matrix axes labels */}
           <div
             className="hidden md:flex justify-between mb-3 px-1"
-            style={{ maxWidth: "900px", margin: "0 auto 12px" }}
+            style={{ ...contentWrapStyle, maxWidth: "900px", marginBottom: "12px" }}
           >
-            <span style={{ fontSize: "0.75rem", color: "#6b6762" }}>
+            <span style={{ fontSize: "0.75rem", color: pageMuted }}>
               ← Late engagement
             </span>
-            <span style={{ fontSize: "0.75rem", color: "#6b6762" }}>
+            <span style={{ fontSize: "0.75rem", color: pageMuted }}>
               Early engagement →
             </span>
           </div>
 
           <div
             className="grid grid-cols-1 md:grid-cols-2 gap-4"
-            style={{ maxWidth: "900px", margin: "0 auto" }}
+            style={{ ...contentWrapStyle, maxWidth: "900px" }}
           >
             {archetypes.map((a) => (
               <div
                 key={a.number}
                 style={{
-                  background: a.accent,
-                  border: `1px solid ${a.border}`,
-                  borderRadius: "12px",
-                  padding: "28px 28px 24px",
+                  borderTop: `1px solid ${pageRuleStrong}`,
+                  padding: "24px 0 0",
                   position: "relative",
-                  ...(a.highlight
-                    ? { boxShadow: "0 0 0 1px rgba(75,193,145,0.15)" }
-                    : {}),
                 }}
               >
                 {a.highlight && (
                   <div
                     style={{
-                      position: "absolute",
-                      top: "-1px",
-                      right: "20px",
-                      background: "rgba(75,193,145,0.9)",
-                      color: "#0f1117",
+                      color: pageAccent,
                       fontSize: "0.625rem",
                       fontWeight: 700,
-                      letterSpacing: "0.12em",
+                      letterSpacing: "0.08em",
                       textTransform: "uppercase",
-                      padding: "4px 10px",
-                      borderRadius: "0 0 6px 6px",
-                      fontFamily: "var(--font-syne)",
+                      marginBottom: "12px",
                     }}
                   >
                     Target State
@@ -532,12 +525,11 @@ export default function Home() {
                 )}
                 <div
                   style={{
-                    fontFamily: "var(--font-syne)",
                     fontSize: "0.625rem",
                     fontWeight: 700,
-                    letterSpacing: "0.14em",
+                    letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color: "#6b6762",
+                    color: pageText,
                     marginBottom: "10px",
                   }}
                 >
@@ -545,10 +537,9 @@ export default function Home() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "var(--font-syne)",
                     fontSize: "1.1875rem",
                     fontWeight: 700,
-                    color: "#f0ece4",
+                    color: pageText,
                     marginBottom: "12px",
                     letterSpacing: "-0.01em",
                   }}
@@ -558,7 +549,7 @@ export default function Home() {
                 <p
                   style={{
                     fontSize: "0.875rem",
-                    color: "#9a9590",
+                    color: pageText,
                     lineHeight: 1.65,
                     marginBottom: "16px",
                   }}
@@ -568,9 +559,8 @@ export default function Home() {
                 <blockquote
                   style={{
                     fontSize: "0.8125rem",
-                    color: "#6b6762",
-                    fontStyle: "italic",
-                    borderLeft: `2px solid ${a.border}`,
+                    color: pageMuted,
+                    borderLeft: `2px solid ${pageRuleStrong}`,
                     paddingLeft: "12px",
                     marginBottom: "16px",
                     lineHeight: 1.6,
@@ -587,10 +577,8 @@ export default function Home() {
                       key={chip.label}
                       style={{
                         fontSize: "0.6875rem",
-                        color: "#6b6762",
-                        border: "1px solid rgba(240,236,228,0.08)",
-                        borderRadius: "4px",
-                        padding: "3px 9px",
+                        color: pageMuted,
+                        letterSpacing: "0.02em",
                       }}
                     >
                       {chip.label}: {chip.value}
@@ -601,24 +589,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div style={{ ...contentWrapStyle, maxWidth: "900px", marginTop: "36px" }}>
             <Link
               href="/assessment"
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.07em",
-                textTransform: "uppercase",
-                padding: "14px 28px",
-                background: "rgba(193,145,75,0.12)",
-                border: "1px solid rgba(193,145,75,0.3)",
-                color: "#c1914b",
-                borderRadius: "6px",
-                textDecoration: "none",
-                display: "inline-block",
-                transition: "background 0.15s",
-              }}
+              style={secondaryCtaStyle}
             >
               Find Your Archetype — Take the Assessment →
             </Link>
@@ -627,18 +601,13 @@ export default function Home() {
       </section>
 
       {/* ─── SERVICES ─────────────────────────────────────────────── */}
-      <section style={{ background: "#0f1117", padding: "96px 24px" }}>
+      <section style={sectionStyle}>
         <PageShell>
-          <div className="mb-16">
-            <div className="eyebrow mb-4 block">The 3-Phase Method</div>
+          <div style={{ ...contentWrapStyle, marginBottom: "40px" }}>
+            <div style={eyebrowStyle}>The 3-Phase Method</div>
             <h2
               style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                fontWeight: 800,
-                lineHeight: 1.15,
-                letterSpacing: "-0.025em",
-                color: "#f0ece4",
+                ...h2Style,
                 maxWidth: "540px",
               }}
             >
@@ -646,37 +615,23 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={contentWrapStyle}>
             {services.map((s, i) => (
               <div
                 key={s.phase}
                 style={{
-                  background: "rgba(240,236,228,0.025)",
-                  border: "1px solid rgba(240,236,228,0.07)",
-                  borderRadius: "12px",
-                  padding: "32px",
+                  borderTop: `1px solid ${pageRuleStrong}`,
+                  paddingTop: "22px",
                   position: "relative",
                 }}
               >
                 <div
                   style={{
-                    position: "absolute",
-                    top: "0",
-                    left: "32px",
-                    width: "1px",
-                    height: "32px",
-                    background: "#c1914b",
-                    opacity: 0.5,
-                  }}
-                />
-                <div
-                  style={{
-                    fontFamily: "var(--font-syne)",
                     fontSize: "0.625rem",
                     fontWeight: 700,
-                    letterSpacing: "0.16em",
+                    letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color: "#c1914b",
+                    color: pageAccent,
                     marginBottom: "8px",
                   }}
                 >
@@ -684,10 +639,9 @@ export default function Home() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "var(--font-syne)",
                     fontSize: "1.125rem",
                     fontWeight: 700,
-                    color: "#f0ece4",
+                    color: pageText,
                     marginBottom: "6px",
                     letterSpacing: "-0.01em",
                   }}
@@ -697,8 +651,8 @@ export default function Home() {
                 <p
                   style={{
                     fontSize: "0.875rem",
-                    color: "#9a9590",
-                    lineHeight: 1.7,
+                    color: pageText,
+                    lineHeight: 1.65,
                     marginBottom: "20px",
                   }}
                 >
@@ -710,15 +664,15 @@ export default function Home() {
                       key={d}
                       style={{
                         fontSize: "0.8125rem",
-                        color: "#6b6762",
-                        padding: "5px 0",
-                        borderTop: "1px solid rgba(240,236,228,0.05)",
+                        color: pageMuted,
+                        padding: "7px 0",
+                        borderTop: `1px solid ${pageRule}`,
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
                       }}
                     >
-                      <span style={{ color: "#c1914b", fontSize: "0.625rem" }}>
+                      <span style={{ color: pageAccent, fontSize: "0.625rem" }}>
                         ▸
                       </span>
                       {d}
@@ -729,15 +683,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div style={{ ...contentWrapStyle, marginTop: "32px" }}>
             <Link
               href="/services"
-              style={{
-                fontSize: "0.875rem",
-                color: "#9a9590",
-                textDecoration: "none",
-                fontFamily: "var(--font-dm-sans)",
-              }}
+              style={textLinkStyle}
             >
               Full service details and engagement structure →
             </Link>
@@ -748,23 +697,18 @@ export default function Home() {
       {/* ─── CREDENTIALS ──────────────────────────────────────────── */}
       <section
         style={{
-          background: "#171923",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          padding: "80px 24px",
+          ...sectionStyle,
+          background: pageBg,
         }}
       >
         <PageShell>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] gap-12 items-start" style={contentWrapStyle}>
             <div>
-              <div className="eyebrow mb-6 block">Who this is for</div>
+              <div style={eyebrowStyle}>Who this is for</div>
               <h2
                 style={{
-                  fontFamily: "var(--font-syne)",
+                  ...h2Style,
                   fontSize: "clamp(1.5rem, 2.5vw, 2.125rem)",
-                  fontWeight: 800,
-                  lineHeight: 1.2,
-                  letterSpacing: "-0.02em",
-                  color: "#f0ece4",
                   marginBottom: "20px",
                 }}
               >
@@ -773,9 +717,8 @@ export default function Home() {
               </h2>
               <p
                 style={{
+                  ...bodyTextStyle,
                   fontSize: "0.9375rem",
-                  color: "#9a9590",
-                  lineHeight: 1.75,
                   marginBottom: "16px",
                 }}
               >
@@ -783,10 +726,9 @@ export default function Home() {
               </p>
               <p
                 style={{
+                  ...bodyTextStyle,
                   fontSize: "0.9375rem",
-                  color: "#9a9590",
-                  lineHeight: 1.75,
-                  marginBottom: "32px",
+                  marginBottom: "24px",
                 }}
               >
                 I work with general contractors redesigning VDC practices after
@@ -797,15 +739,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about"
-                style={{
-                  fontFamily: "var(--font-syne)",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#c1914b",
-                  textDecoration: "none",
-                }}
+                style={textLinkStyle}
               >
                 Full background →
               </Link>
@@ -824,18 +758,15 @@ export default function Home() {
                 <div
                   key={stat.label}
                   style={{
-                    background: "rgba(240,236,228,0.03)",
-                    border: "1px solid rgba(240,236,228,0.07)",
-                    borderRadius: "10px",
-                    padding: "24px 20px",
+                    borderTop: `1px solid ${pageRule}`,
+                    paddingTop: "18px",
                   }}
                 >
                   <div
                     style={{
-                      fontFamily: "var(--font-syne)",
                       fontSize: "2rem",
-                      fontWeight: 800,
-                      color: "#c1914b",
+                      fontWeight: 700,
+                      color: pageText,
                       lineHeight: 1,
                       marginBottom: "8px",
                     }}
@@ -845,7 +776,7 @@ export default function Home() {
                   <div
                     style={{
                       fontSize: "0.8125rem",
-                      color: "#6b6762",
+                      color: pageMuted,
                       lineHeight: 1.5,
                     }}
                   >
@@ -861,22 +792,16 @@ export default function Home() {
       {/* ─── BOTTOM CTA ───────────────────────────────────────────── */}
       <section
         style={{
-          background: "#0f1117",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          padding: "96px 24px",
-          textAlign: "center",
+          ...sectionStyle,
+          paddingBottom: "80px",
         }}
       >
-        <div className="max-w-2xl mx-auto">
-          <div className="eyebrow mb-6 block">Ready to start?</div>
+        <PageShell>
+        <div style={{ ...contentWrapStyle, maxWidth: "720px", margin: "0 auto 0 0" }}>
+          <div style={eyebrowStyle}>Ready to start?</div>
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
-              fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-              fontWeight: 800,
-              lineHeight: 1.15,
-              letterSpacing: "-0.025em",
-              color: "#f0ece4",
+              ...h2Style,
               marginBottom: "20px",
             }}
           >
@@ -884,10 +809,10 @@ export default function Home() {
           </h2>
           <p
             style={{
+              ...bodyTextStyle,
               fontSize: "0.9375rem",
-              color: "#9a9590",
-              lineHeight: 1.75,
-              marginBottom: "48px",
+              marginBottom: "28px",
+              maxWidth: "620px",
             }}
           >
             Take the assessment to identify your archetype and receive a
@@ -896,49 +821,23 @@ export default function Home() {
           </p>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            style={{ maxWidth: "420px", margin: "0 auto" }}
+            className="flex flex-col sm:flex-row gap-3"
           >
             <Link
               href="/assessment"
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.07em",
-                textTransform: "uppercase",
-                padding: "16px 28px",
-                background: "#c1914b",
-                color: "#0f1117",
-                borderRadius: "6px",
-                textDecoration: "none",
-                display: "block",
-                textAlign: "center",
-              }}
+              style={primaryCtaStyle}
             >
               Take the Assessment
             </Link>
             <Link
               href="/contact"
-              style={{
-                fontFamily: "var(--font-syne)",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.07em",
-                textTransform: "uppercase",
-                padding: "16px 28px",
-                border: "1px solid rgba(240,236,228,0.16)",
-                color: "#f0ece4",
-                borderRadius: "6px",
-                textDecoration: "none",
-                display: "block",
-                textAlign: "center",
-              }}
+              style={secondaryCtaStyle}
             >
               Book a Call
             </Link>
           </div>
         </div>
+        </PageShell>
       </section>
     </>
   );

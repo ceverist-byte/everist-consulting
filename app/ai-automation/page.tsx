@@ -57,39 +57,28 @@ export default function AiAutomationPage() {
     <>
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           paddingTop: "120px",
           paddingBottom: "88px",
           paddingLeft: "24px",
           paddingRight: "24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        <div
-          className="absolute inset-0 bg-grid"
-          style={{ backgroundSize: "48px 48px", opacity: 1 }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 72% 32%, rgba(193,145,75,0.12) 0%, transparent 55%)",
-          }}
-        />
         <PageShell className="relative">
           <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
             AI &amp; Automation Advisory
           </div>
           <h1
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(2.2rem, 5vw, 4rem)",
               fontWeight: 800,
               lineHeight: 1.08,
               letterSpacing: "-0.03em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               maxWidth: "860px",
               marginBottom: "24px",
             }}
@@ -108,8 +97,8 @@ export default function AiAutomationPage() {
             <p
               style={{
                 fontSize: "1.0625rem",
-                fontWeight: 300,
-                color: "#9a9590",
+                fontWeight: 400,
+                color: "var(--text-primary)",
                 lineHeight: 1.75,
               }}
             >
@@ -120,8 +109,8 @@ export default function AiAutomationPage() {
             <p
               style={{
                 fontSize: "1.0625rem",
-                fontWeight: 300,
-                color: "#9a9590",
+                fontWeight: 400,
+                color: "var(--text-primary)",
                 lineHeight: 1.75,
               }}
             >
@@ -134,8 +123,8 @@ export default function AiAutomationPage() {
             <p
               style={{
                 fontSize: "1.0625rem",
-                fontWeight: 300,
-                color: "#9a9590",
+                fontWeight: 400,
+                color: "var(--text-primary)",
                 lineHeight: 1.75,
               }}
             >
@@ -150,15 +139,16 @@ export default function AiAutomationPage() {
             <Link
               href="/contact"
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.8125rem",
                 fontWeight: 700,
                 letterSpacing: "0.07em",
                 textTransform: "uppercase",
                 padding: "15px 28px",
-                background: "#c1914b",
-                color: "#0f1117",
-                borderRadius: "6px",
+                background: "var(--fg)",
+                color: "var(--bg)",
+                borderRadius: "2px",
+                border: "1px solid var(--fg)",
                 textDecoration: "none",
                 display: "inline-block",
               }}
@@ -168,13 +158,13 @@ export default function AiAutomationPage() {
             <a
               href="mailto:chris@everistconsulting.com"
               style={{
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.9375rem",
                 fontWeight: 400,
                 padding: "15px 24px",
-                border: "1px solid rgba(240,236,228,0.16)",
-                color: "#f0ece4",
-                borderRadius: "6px",
+                border: "1px solid var(--fg)",
+                color: "var(--text-primary)",
+                borderRadius: "2px",
                 textDecoration: "none",
                 display: "inline-block",
               }}
@@ -185,7 +175,7 @@ export default function AiAutomationPage() {
         </PageShell>
       </section>
 
-      <section style={{ background: "#0f1117", padding: "88px 24px" }}>
+      <section style={{ background: "var(--bg)", padding: "88px 24px" }}>
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "18px" }}>
             What I Help With
@@ -202,23 +192,20 @@ export default function AiAutomationPage() {
               <article
                 key={item.label}
                 style={{
-                  background:
-                    index === 1
-                      ? "linear-gradient(180deg, rgba(193,145,75,0.09) 0%, rgba(23,25,35,0.78) 100%)"
-                      : "rgba(23,25,35,0.68)",
-                  border: "1px solid rgba(240,236,228,0.08)",
-                  borderRadius: "10px",
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
                   padding: "28px",
                 }}
               >
                 <div
                   style={{
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "0.75rem",
                     fontWeight: 700,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#c1914b",
+                    color: "var(--accent)",
                     marginBottom: "20px",
                   }}
                 >
@@ -226,11 +213,11 @@ export default function AiAutomationPage() {
                 </div>
                 <h2
                   style={{
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "1.35rem",
                     lineHeight: 1.3,
                     letterSpacing: "-0.02em",
-                    color: "#f0ece4",
+                    color: "var(--text-primary)",
                     marginBottom: "16px",
                   }}
                 >
@@ -239,7 +226,7 @@ export default function AiAutomationPage() {
                 <p
                   style={{
                     fontSize: "0.98rem",
-                    color: "#9a9590",
+                    color: "var(--text-primary)",
                     lineHeight: 1.75,
                   }}
                 >
@@ -253,14 +240,14 @@ export default function AiAutomationPage() {
 
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           padding: "0 24px 88px",
         }}
       >
         <PageShell>
           <div
             style={{
-              borderTop: "1px solid rgba(240,236,228,0.06)",
+              borderTop: "1px solid var(--rule-strong)",
               paddingTop: "88px",
             }}
           >
@@ -282,14 +269,14 @@ export default function AiAutomationPage() {
                     padding: "24px 0 0",
                     borderTop:
                       index === 0
-                        ? "2px solid rgba(193,145,75,0.55)"
-                        : "2px solid rgba(240,236,228,0.1)",
+                        ? "2px solid var(--fg)"
+                        : "2px solid var(--rule)",
                   }}
                 >
                   <p
                     style={{
                       fontSize: "1rem",
-                      color: "#cfc9bf",
+                      color: "var(--text-primary)",
                       lineHeight: 1.75,
                       maxWidth: "360px",
                     }}
@@ -305,10 +292,10 @@ export default function AiAutomationPage() {
 
       <section
         style={{
-          background: "#171923",
+          background: "var(--bg)",
           padding: "88px 24px",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderTop: "1px solid var(--rule-strong)",
+          borderBottom: "1px solid var(--rule-strong)",
         }}
       >
         <PageShell>
@@ -330,16 +317,16 @@ export default function AiAutomationPage() {
                   gridTemplateColumns: "1fr",
                   gap: "12px",
                   padding: "24px 0",
-                  borderBottom: "1px solid rgba(240,236,228,0.08)",
+                  borderBottom: "1px solid var(--rule)",
                 }}
                 className="md:[grid-template-columns:260px_1fr]"
               >
                 <h2
                   style={{
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "1.2rem",
                     lineHeight: 1.25,
-                    color: "#f0ece4",
+                    color: "var(--text-primary)",
                     letterSpacing: "-0.02em",
                   }}
                 >
@@ -348,7 +335,7 @@ export default function AiAutomationPage() {
                 <p
                   style={{
                     fontSize: "1rem",
-                    color: "#9a9590",
+                    color: "var(--text-primary)",
                     lineHeight: 1.75,
                     maxWidth: "760px",
                   }}
@@ -361,16 +348,15 @@ export default function AiAutomationPage() {
         </PageShell>
       </section>
 
-      <section style={{ background: "#0f1117", padding: "88px 24px 104px" }}>
+      <section style={{ background: "var(--bg)", padding: "88px 24px 104px" }}>
         <PageShell>
           <div
             style={{
               maxWidth: "760px",
               padding: "32px",
-              borderRadius: "12px",
-              border: "1px solid rgba(193,145,75,0.16)",
-              background:
-                "linear-gradient(180deg, rgba(193,145,75,0.07) 0%, rgba(23,25,35,0.72) 100%)",
+              borderRadius: "2px",
+              border: "1px solid var(--rule)",
+              background: "transparent",
             }}
           >
             <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
@@ -379,7 +365,7 @@ export default function AiAutomationPage() {
             <p
               style={{
                 fontSize: "1rem",
-                color: "#cfc9bf",
+                color: "var(--text-primary)",
                 lineHeight: 1.75,
                 marginBottom: "24px",
                 maxWidth: "560px",
@@ -394,15 +380,16 @@ export default function AiAutomationPage() {
               <Link
                 href="/contact"
                 style={{
-                  fontFamily: "var(--font-syne)",
+                  fontFamily: "var(--font-sans)",
                   fontSize: "0.8125rem",
                   fontWeight: 700,
                   letterSpacing: "0.07em",
                   textTransform: "uppercase",
                   padding: "15px 28px",
-                  background: "#c1914b",
-                  color: "#0f1117",
-                  borderRadius: "6px",
+                  background: "var(--fg)",
+                  color: "var(--bg)",
+                  borderRadius: "2px",
+                  border: "1px solid var(--fg)",
                   textDecoration: "none",
                   display: "inline-block",
                 }}
@@ -413,9 +400,9 @@ export default function AiAutomationPage() {
                 href="mailto:chris@everistconsulting.com"
                 style={{
                   fontSize: "0.95rem",
-                  color: "#f0ece4",
+                  color: "var(--text-primary)",
                   textDecoration: "none",
-                  borderBottom: "1px solid rgba(240,236,228,0.24)",
+                  borderBottom: "1px solid var(--rule)",
                   paddingBottom: "2px",
                 }}
               >

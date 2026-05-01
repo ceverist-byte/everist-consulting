@@ -64,23 +64,16 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           paddingTop: "120px",
           paddingBottom: "80px",
           paddingLeft: "24px",
           paddingRight: "24px",
           position: "relative",
           overflow: "hidden",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 80% 50%, rgba(193,145,75,0.09) 0%, transparent 50%)",
-          }}
-        />
         <PageShell className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             {/* Bio */}
@@ -90,12 +83,12 @@ export default function AboutPage() {
               </div>
               <h1
                 style={{
-                  fontFamily: "var(--font-syne)",
+                  fontFamily: "var(--font-sans)",
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                   fontWeight: 800,
                   lineHeight: 1.1,
                   letterSpacing: "-0.03em",
-                  color: "#f0ece4",
+                  color: "var(--text-primary)",
                   marginBottom: "24px",
                 }}
               >
@@ -104,7 +97,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "1rem",
-                  color: "#9a9590",
+                  color: "var(--text-primary)",
                   lineHeight: 1.75,
                   marginBottom: "16px",
                 }}
@@ -114,7 +107,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "1rem",
-                  color: "#9a9590",
+                  color: "var(--text-primary)",
                   lineHeight: 1.75,
                   marginBottom: "16px",
                 }}
@@ -124,7 +117,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "1.0625rem",
-                  color: "#9a9590",
+                  color: "var(--text-primary)",
                   lineHeight: 1.75,
                   marginBottom: "20px",
                 }}
@@ -134,7 +127,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "1rem",
-                  color: "#9a9590",
+                  color: "var(--text-primary)",
                   lineHeight: 1.75,
                   marginBottom: "36px",
                 }}
@@ -153,8 +146,8 @@ export default function AboutPage() {
                     key={c}
                     style={{
                       fontSize: "0.8125rem",
-                      color: "#9a9590",
-                      border: "1px solid rgba(240,236,228,0.1)",
+                      color: "var(--text-secondary)",
+                      border: "1px solid var(--rule)",
                       borderRadius: "4px",
                       padding: "6px 12px",
                     }}
@@ -187,9 +180,9 @@ export default function AboutPage() {
                 <div
                   key={s.label}
                   style={{
-                    background: "rgba(240,236,228,0.03)",
-                    border: "1px solid rgba(240,236,228,0.07)",
-                    borderRadius: "10px",
+                    background: "transparent",
+                    border: "1px solid var(--rule)",
+                    borderRadius: "2px",
                     padding: "22px 24px",
                     display: "flex",
                     gap: "20px",
@@ -198,10 +191,10 @@ export default function AboutPage() {
                 >
                   <div
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "2.25rem",
                       fontWeight: 800,
-                      color: "#c1914b",
+                      color: "var(--accent)",
                       lineHeight: 1,
                       minWidth: "60px",
                     }}
@@ -212,7 +205,7 @@ export default function AboutPage() {
                     <div
                       style={{
                         fontSize: "0.9375rem",
-                        color: "#f0ece4",
+                        color: "var(--text-primary)",
                         fontWeight: 500,
                         marginBottom: "4px",
                         lineHeight: 1.4,
@@ -220,7 +213,7 @@ export default function AboutPage() {
                     >
                       {s.label}
                     </div>
-                    <div style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+                    <div style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
                       {s.sub}
                     </div>
                   </div>
@@ -234,9 +227,9 @@ export default function AboutPage() {
       {/* Career timeline */}
       <section
         style={{
-          background: "#171923",
+          background: "var(--bg)",
           padding: "80px 24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
         }}
       >
         <PageShell>
@@ -255,14 +248,14 @@ export default function AboutPage() {
                   marginBottom: i < timeline.length - 1 ? "36px" : "0",
                   borderBottom:
                     i < timeline.length - 1
-                      ? "1px solid rgba(240,236,228,0.06)"
+                      ? "1px solid var(--rule-strong)"
                       : "none",
                 }}
               >
                 <div
                   style={{
                     fontSize: "0.8125rem",
-                    color: "#6b6762",
+                    color: "var(--text-secondary)",
                     paddingTop: "4px",
                   }}
                 >
@@ -280,22 +273,22 @@ export default function AboutPage() {
                   >
                     <span
                       style={{
-                        fontFamily: "var(--font-syne)",
+                        fontFamily: "var(--font-sans)",
                         fontSize: "1.0625rem",
                         fontWeight: 700,
-                        color: "#f0ece4",
+                        color: "var(--text-primary)",
                         letterSpacing: "-0.01em",
                       }}
                     >
                       {t.role}
                     </span>
-                    <span style={{ color: "#6b6762", fontSize: "0.875rem" }}>
+                    <span style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>
                       ·
                     </span>
                     <span
                       style={{
                         fontSize: "0.9375rem",
-                        color: t.highlight ? "#c1914b" : "#9a9590",
+                        color: t.highlight ? "var(--accent)" : "var(--text-secondary)",
                       }}
                     >
                       {t.company}
@@ -304,7 +297,7 @@ export default function AboutPage() {
                   <p
                     style={{
                       fontSize: "0.875rem",
-                      color: "#6b6762",
+                      color: "var(--text-primary)",
                       lineHeight: 1.7,
                     }}
                   >
@@ -320,9 +313,9 @@ export default function AboutPage() {
       {/* Philosophy */}
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           padding: "80px 24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
         }}
       >
         <PageShell>
@@ -331,11 +324,11 @@ export default function AboutPage() {
           </div>
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
               fontWeight: 800,
               letterSpacing: "-0.025em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "48px",
               lineHeight: 1.15,
               maxWidth: "540px",
@@ -355,7 +348,7 @@ export default function AboutPage() {
                   paddingBottom: i < philosophy.length - 1 ? "32px" : "0",
                   borderBottom:
                     i < philosophy.length - 1
-                      ? "1px solid rgba(240,236,228,0.06)"
+                      ? "1px solid var(--rule-strong)"
                       : "none",
                   alignItems: "start",
                 }}
@@ -364,10 +357,10 @@ export default function AboutPage() {
                 <div>
                   <span
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "0.625rem",
                       fontWeight: 700,
-                      color: "#c1914b",
+                      color: "var(--accent)",
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
                       marginRight: "10px",
@@ -377,10 +370,10 @@ export default function AboutPage() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "1.125rem",
                       fontWeight: 700,
-                      color: "#f0ece4",
+                      color: "var(--text-primary)",
                       lineHeight: 1.35,
                       letterSpacing: "-0.01em",
                     }}
@@ -391,7 +384,7 @@ export default function AboutPage() {
                 <p
                   style={{
                     fontSize: "0.9375rem",
-                    color: "#9a9590",
+                    color: "var(--text-primary)",
                     lineHeight: 1.75,
                   }}
                 >
@@ -406,9 +399,9 @@ export default function AboutPage() {
       {/* Who I work with */}
       <section
         style={{
-          background: "#171923",
+          background: "var(--bg)",
           padding: "80px 24px",
-          borderBottom: "1px solid rgba(240,236,228,0.06)",
+          borderBottom: "1px solid var(--rule-strong)",
         }}
       >
         <PageShell>
@@ -419,11 +412,11 @@ export default function AboutPage() {
               </div>
               <h2
                 style={{
-                  fontFamily: "var(--font-syne)",
+                  fontFamily: "var(--font-sans)",
                   fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
                   fontWeight: 800,
                   letterSpacing: "-0.02em",
-                  color: "#f0ece4",
+                  color: "var(--text-primary)",
                   marginBottom: "20px",
                   lineHeight: 1.2,
                 }}
@@ -433,7 +426,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "0.9375rem",
-                  color: "#9a9590",
+                  color: "var(--text-primary)",
                   lineHeight: 1.75,
                 }}
               >
@@ -463,18 +456,18 @@ export default function AboutPage() {
                 <div
                   key={c.type}
                   style={{
-                    background: "rgba(240,236,228,0.025)",
-                    border: "1px solid rgba(240,236,228,0.07)",
-                    borderRadius: "10px",
+                    background: "transparent",
+                    border: "1px solid var(--rule)",
+                    borderRadius: "2px",
                     padding: "20px 22px",
                   }}
                 >
                   <div
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "0.875rem",
                       fontWeight: 700,
-                      color: "#f0ece4",
+                      color: "var(--text-primary)",
                       marginBottom: "6px",
                     }}
                   >
@@ -483,7 +476,7 @@ export default function AboutPage() {
                   <p
                     style={{
                       fontSize: "0.8125rem",
-                      color: "#6b6762",
+                      color: "var(--text-primary)",
                       lineHeight: 1.65,
                     }}
                   >
@@ -499,7 +492,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section
         style={{
-          background: "#0f1117",
+          background: "var(--bg)",
           padding: "80px 24px",
           textAlign: "center",
         }}
@@ -507,11 +500,11 @@ export default function AboutPage() {
         <PageShell className="max-w-xl text-center">
           <h2
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(1.5rem, 3vw, 2.125rem)",
               fontWeight: 800,
               letterSpacing: "-0.02em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "16px",
               lineHeight: 1.2,
             }}
@@ -521,7 +514,7 @@ export default function AboutPage() {
           <p
             style={{
               fontSize: "0.9375rem",
-              color: "#9a9590",
+              color: "var(--text-primary)",
               lineHeight: 1.7,
               marginBottom: "36px",
             }}
@@ -534,15 +527,16 @@ export default function AboutPage() {
             <Link
               href="/contact"
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.8125rem",
                 fontWeight: 700,
                 letterSpacing: "0.07em",
                 textTransform: "uppercase",
                 padding: "15px 28px",
-                background: "#c1914b",
-                color: "#0f1117",
-                borderRadius: "6px",
+                background: "var(--fg)",
+                color: "var(--bg)",
+                borderRadius: "2px",
+                border: "1px solid var(--fg)",
                 textDecoration: "none",
                 display: "inline-block",
               }}
@@ -552,15 +546,15 @@ export default function AboutPage() {
             <Link
               href="/assessment"
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.8125rem",
                 fontWeight: 700,
                 letterSpacing: "0.07em",
                 textTransform: "uppercase",
                 padding: "15px 28px",
-                border: "1px solid rgba(240,236,228,0.14)",
-                color: "#f0ece4",
-                borderRadius: "6px",
+                border: "1px solid var(--fg)",
+                color: "var(--text-primary)",
+                borderRadius: "2px",
                 textDecoration: "none",
                 display: "inline-block",
               }}

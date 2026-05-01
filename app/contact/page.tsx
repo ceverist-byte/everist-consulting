@@ -11,26 +11,19 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-[rgba(240,236,228,0.06)] bg-slate-950 pb-16 pt-32">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 20% 60%, rgba(193,145,75,0.09) 0%, transparent 50%)",
-          }}
-        />
+      <section className="relative border-b border-[var(--rule-strong)] bg-[var(--bg)] pb-16 pt-32">
         <PageShell className="relative">
           <div className="eyebrow mb-6 block">
             Discovery Call
           </div>
           <h1
             style={{
-              fontFamily: "var(--font-syne)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 800,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ece4",
+              color: "var(--text-primary)",
               marginBottom: "20px",
               maxWidth: "560px",
             }}
@@ -40,7 +33,7 @@ export default function ContactPage() {
           <p
             style={{
               fontSize: "1rem",
-              color: "#9a9590",
+              color: "var(--text-primary)",
               lineHeight: 1.75,
               maxWidth: "480px",
               marginBottom: "12px",
@@ -53,7 +46,7 @@ export default function ContactPage() {
           <p
             style={{
               fontSize: "0.9375rem",
-              color: "#9a9590",
+              color: "var(--text-primary)",
               lineHeight: 1.75,
               maxWidth: "480px",
             }}
@@ -65,7 +58,7 @@ export default function ContactPage() {
         </PageShell>
       </section>
 
-      <section className="bg-slate-950 pb-24 pt-16">
+      <section className="bg-[var(--bg)] pb-24 pt-16">
         <PageShell>
           <ContactClient />
         </PageShell>

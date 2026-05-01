@@ -82,7 +82,7 @@ export default function ContactClient() {
       (window as any).Cal.ns["vdc-structural-diagnostic"]("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
-        styles: { branding: { brandColor: "#c1914b" } },
+        styles: { branding: { brandColor: "#111111" } },
       });
     };
 
@@ -140,7 +140,7 @@ export default function ContactClient() {
         <div className="flex flex-col gap-12 lg:items-end">
           <div
             id="cal-booking"
-            className="h-[980px] w-full overflow-auto rounded-[12px] md:max-w-[480px]"
+            className="h-[980px] w-full overflow-auto rounded-[2px] border border-[var(--rule)] md:max-w-[480px]"
           />
 
           <div className="w-full md:max-w-[480px]">
@@ -149,18 +149,18 @@ export default function ContactClient() {
               {whatToExpect.map((w) => (
                 <div key={w.step} className="flex gap-4">
                   <div
-                    className="min-w-6 pt-[3px] font-display text-[0.625rem] font-bold tracking-[0.12em] text-amber-everist"
+                    className="min-w-6 pt-[3px] font-sans text-[0.625rem] font-bold tracking-[0.12em] text-[var(--accent)]"
                   >
                     {w.step}
                   </div>
                   <div>
                     <div
-                      className="mb-1 font-display text-sm font-bold text-cream"
+                      className="mb-1 font-sans text-sm font-bold text-[var(--text-primary)]"
                     >
                       {w.label}
                     </div>
                     <p
-                      className="text-sm leading-[1.65] text-faint"
+                      className="text-sm leading-[1.65] text-[var(--text-secondary)]"
                     >
                       {w.detail}
                     </p>
@@ -173,14 +173,14 @@ export default function ContactClient() {
       }
       right={
         <div className="flex flex-col gap-8">
-          <ContentCard className="p-8 md:p-12">
+          <ContentCard className="p-6 md:p-8">
             <div className="eyebrow mb-4 block">Prefer email?</div>
             <h2
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "1.25rem",
                 fontWeight: 700,
-                color: "#f0ece4",
+                color: "var(--text-primary)",
                 letterSpacing: "-0.01em",
                 marginBottom: "8px",
               }}
@@ -190,7 +190,7 @@ export default function ContactClient() {
             <p
               style={{
                 fontSize: "0.875rem",
-                color: "#9a9590",
+                color: "var(--text-secondary)",
                 lineHeight: 1.65,
                 marginBottom: "28px",
               }}
@@ -203,25 +203,25 @@ export default function ContactClient() {
             {formState === "sent" ? (
               <div
                 style={{
-                  background: "rgba(75,193,145,0.08)",
-                  border: "1px solid rgba(75,193,145,0.2)",
-                  borderRadius: "8px",
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
                   padding: "20px",
                   textAlign: "center",
                 }}
               >
                 <div
                   style={{
-                    fontFamily: "var(--font-syne)",
+                    fontFamily: "var(--font-sans)",
                     fontSize: "0.875rem",
                     fontWeight: 700,
-                    color: "#4bc191",
+                    color: "var(--text-primary)",
                     marginBottom: "6px",
                   }}
                 >
                   Message received.
                 </div>
-                <p style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+                <p style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
                   I&apos;ll follow up within one business day.
                 </p>
               </div>
@@ -265,22 +265,21 @@ export default function ContactClient() {
                         setFormData((d) => ({ ...d, [f.id]: e.target.value }))
                       }
                       style={{
-                        background: "rgba(240,236,228,0.04)",
-                        border: "1px solid rgba(240,236,228,0.1)",
-                        borderRadius: "6px",
+                        background: "var(--bg)",
+                        border: "1px solid var(--rule)",
+                        borderRadius: "2px",
                         padding: "13px 14px",
                         fontSize: "0.9rem",
-                        color: "#f0ece4",
+                        color: "var(--text-primary)",
                         outline: "none",
                         width: "100%",
-                        fontFamily: "var(--font-dm-sans)",
-                        transition: "border-color 0.15s",
+                        fontFamily: "var(--font-sans)",
                       }}
                       onFocus={(e) =>
-                        (e.target.style.borderColor = "rgba(193,145,75,0.45)")
+                        (e.target.style.borderColor = "var(--fg)")
                       }
                       onBlur={(e) =>
-                        (e.target.style.borderColor = "rgba(240,236,228,0.1)")
+                        (e.target.style.borderColor = "var(--rule)")
                       }
                     />
                   ))}
@@ -293,28 +292,27 @@ export default function ContactClient() {
                       setFormData((d) => ({ ...d, message: e.target.value }))
                     }
                     style={{
-                      background: "rgba(240,236,228,0.04)",
-                      border: "1px solid rgba(240,236,228,0.1)",
-                      borderRadius: "6px",
+                      background: "var(--bg)",
+                      border: "1px solid var(--rule)",
+                      borderRadius: "2px",
                       padding: "13px 14px",
                       fontSize: "0.9rem",
-                      color: "#f0ece4",
+                      color: "var(--text-primary)",
                       outline: "none",
                       width: "100%",
-                      fontFamily: "var(--font-dm-sans)",
+                      fontFamily: "var(--font-sans)",
                       resize: "vertical",
-                      transition: "border-color 0.15s",
                     }}
                     onFocus={(e) =>
-                      (e.target.style.borderColor = "rgba(193,145,75,0.45)")
+                      (e.target.style.borderColor = "var(--fg)")
                     }
                     onBlur={(e) =>
-                      (e.target.style.borderColor = "rgba(240,236,228,0.1)")
+                      (e.target.style.borderColor = "var(--rule)")
                     }
                   />
 
                   {formState === "error" && (
-                    <p style={{ fontSize: "0.8125rem", color: "#e06060" }}>
+                    <p style={{ fontSize: "0.8125rem", color: "var(--text-primary)" }}>
                       Something went wrong. Email me directly at
                       chris@everistconsulting.com
                     </p>
@@ -324,7 +322,7 @@ export default function ContactClient() {
                     type="submit"
                     disabled={formState === "sending"}
                     style={{
-                      fontFamily: "var(--font-syne)",
+                      fontFamily: "var(--font-sans)",
                       fontSize: "0.8125rem",
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -332,15 +330,14 @@ export default function ContactClient() {
                       padding: "14px 24px",
                       background:
                         formState === "sending"
-                          ? "rgba(193,145,75,0.6)"
-                          : "#c1914b",
-                      color: "#0f1117",
-                      borderRadius: "6px",
-                      border: "none",
+                          ? "var(--text-secondary)"
+                          : "var(--fg)",
+                      color: "var(--bg)",
+                      borderRadius: "2px",
+                      border: "1px solid var(--fg)",
                       cursor:
                         formState === "sending" ? "not-allowed" : "pointer",
                       width: "100%",
-                      transition: "background 0.15s",
                     }}
                   >
                     {formState === "sending" ? "Sending…" : "Send Message →"}
@@ -352,10 +349,10 @@ export default function ContactClient() {
 
           <div className="flex flex-col gap-3">
             <div
-              className="flex items-center gap-4 rounded-[8px] border border-[rgba(240,236,228,0.06)] bg-[rgba(240,236,228,0.02)] px-5 py-4"
+              className="flex items-center gap-4 rounded-[2px] border border-[var(--rule)] bg-[var(--bg)] px-5 py-4"
             >
               <div
-                className="min-w-12 font-display text-[0.625rem] font-bold uppercase tracking-[0.14em] text-faint"
+                className="min-w-12 font-sans text-[0.625rem] font-bold uppercase tracking-[0.14em] text-[var(--text-secondary)]"
               >
                 Email
               </div>
@@ -363,29 +360,22 @@ export default function ContactClient() {
                 href="mailto:chris@everistconsulting.com"
                 style={{
                   fontSize: "0.9rem",
-                  color: "#9a9590",
+                  color: "var(--text-secondary)",
                   textDecoration: "none",
-                  transition: "color 0.15s",
                 }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#f0ece4")
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = "#9a9590")
-                }
               >
                 chris@everistconsulting.com
               </a>
             </div>
             <div
-              className="flex items-center gap-4 rounded-[8px] border border-[rgba(240,236,228,0.06)] bg-[rgba(240,236,228,0.02)] px-5 py-4"
+              className="flex items-center gap-4 rounded-[2px] border border-[var(--rule)] bg-[var(--bg)] px-5 py-4"
             >
               <div
-                className="min-w-12 font-display text-[0.625rem] font-bold uppercase tracking-[0.14em] text-faint"
+                className="min-w-12 font-sans text-[0.625rem] font-bold uppercase tracking-[0.14em] text-[var(--text-secondary)]"
               >
                 Based
               </div>
-              <span style={{ fontSize: "0.9rem", color: "#9a9590" }}>
+              <span style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
                 San Diego, CA · Remote-first
               </span>
             </div>

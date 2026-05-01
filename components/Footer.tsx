@@ -7,20 +7,20 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid rgba(240,236,228,0.06)",
-        background: "#0f1117",
+        borderTop: "1px solid var(--rule-strong)",
+        background: "var(--bg)",
       }}
     >
-      <PageShell className="py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <PageShell className="py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
             <div
               style={{
-                fontFamily: "var(--font-syne)",
-                fontWeight: 800,
+                fontFamily: "var(--font-sans)",
+                fontWeight: 700,
                 fontSize: "1.125rem",
-                color: "#f0ece4",
+                color: "var(--text-primary)",
                 letterSpacing: "-0.02em",
                 marginBottom: "12px",
               }}
@@ -30,7 +30,7 @@ export default function Footer() {
             <p
               style={{
                 fontSize: "0.875rem",
-                color: "#6b6762",
+                color: "var(--text-secondary)",
                 lineHeight: 1.65,
                 maxWidth: "240px",
               }}
@@ -42,7 +42,7 @@ export default function Footer() {
               style={{
                 marginTop: "20px",
                 fontSize: "0.8125rem",
-                color: "#6b6762",
+                color: "var(--text-secondary)",
               }}
             >
               San Diego, CA · Remote
@@ -69,16 +69,9 @@ export default function Footer() {
                   href={l.href}
                   style={{
                     fontSize: "0.875rem",
-                    color: "#9a9590",
+                    color: "var(--text-secondary)",
                     textDecoration: "none",
-                    transition: "color 0.15s",
                   }}
-                  onMouseEnter={(e) =>
-                    ((e.target as HTMLElement).style.color = "#f0ece4")
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.color = "#9a9590")
-                  }
                 >
                   {l.label}
                 </Link>
@@ -98,27 +91,26 @@ export default function Footer() {
               href="/contact"
               style={{
                 display: "inline-block",
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.75rem",
                 fontWeight: 700,
-                letterSpacing: "0.08em",
+                letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 padding: "11px 22px",
-                background: "rgba(193,145,75,0.12)",
-                border: "1px solid rgba(193,145,75,0.3)",
-                color: "#c1914b",
-                borderRadius: "6px",
+                background: "var(--fg)",
+                border: "1px solid var(--fg)",
+                color: "var(--bg)",
+                borderRadius: "2px",
                 textDecoration: "none",
-                transition: "background 0.15s, border-color 0.15s",
                 marginBottom: "16px",
               }}
             >
               Schedule a Discovery Call
             </Link>
-            <div style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+            <div style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
               <a
                 href="mailto:chris@everistconsulting.com"
-                style={{ color: "#9a9590", textDecoration: "none" }}
+                style={{ color: "var(--text-secondary)", textDecoration: "none" }}
               >
                 chris@everistconsulting.com
               </a>
@@ -130,7 +122,7 @@ export default function Footer() {
         <div
           style={{
             paddingTop: "24px",
-            borderTop: "1px solid rgba(240,236,228,0.06)",
+            borderTop: "1px solid var(--rule-strong)",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -138,11 +130,11 @@ export default function Footer() {
             gap: "8px",
           }}
         >
-          <span style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+          <span style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
             © {new Date().getFullYear()} Everist Consulting LLC. All rights
             reserved.
           </span>
-          <span style={{ fontSize: "0.8125rem", color: "#6b6762" }}>
+          <span style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
             Architectural background · LEED AP · Assoc. DBIA
           </span>
         </div>

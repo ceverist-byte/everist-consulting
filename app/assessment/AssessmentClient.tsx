@@ -54,13 +54,13 @@ export default function AssessmentClient() {
             style={{
               background:
                 activeTrack === t.id
-                  ? "rgba(193,145,75,0.08)"
-                  : "rgba(240,236,228,0.02)",
+                  ? "transparent"
+                  : "transparent",
               border:
                 activeTrack === t.id
-                  ? "1px solid rgba(193,145,75,0.35)"
-                  : "1px solid rgba(240,236,228,0.07)",
-              borderRadius: "10px",
+                  ? "1px solid var(--fg)"
+                  : "1px solid var(--rule)",
+              borderRadius: "2px",
               padding: "24px 24px 20px",
               cursor: "pointer",
               textAlign: "left",
@@ -70,12 +70,12 @@ export default function AssessmentClient() {
             {t.primary && (
               <div
                 style={{
-                  fontFamily: "var(--font-syne)",
+                  fontFamily: "var(--font-sans)",
                   fontSize: "0.5625rem",
                   fontWeight: 700,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: "#c1914b",
+                  color: "var(--accent)",
                   marginBottom: "8px",
                 }}
               >
@@ -84,10 +84,10 @@ export default function AssessmentClient() {
             )}
             <div
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "1rem",
                 fontWeight: 700,
-                color: activeTrack === t.id ? "#f0ece4" : "#9a9590",
+                color: activeTrack === t.id ? "var(--text-primary)" : "var(--text-secondary)",
                 marginBottom: "8px",
                 letterSpacing: "-0.01em",
                 transition: "color 0.15s",
@@ -98,7 +98,7 @@ export default function AssessmentClient() {
             <p
               style={{
                 fontSize: "0.8125rem",
-                color: activeTrack === t.id ? "#9a9590" : "#6b6762",
+                color: activeTrack === t.id ? "var(--text-secondary)" : "var(--text-secondary)",
                 lineHeight: 1.6,
                 marginBottom: "12px",
                 transition: "color 0.15s",
@@ -109,8 +109,8 @@ export default function AssessmentClient() {
             <span
               style={{
                 fontSize: "0.75rem",
-                color: activeTrack === t.id ? "#c1914b" : "#6b6762",
-                fontFamily: "var(--font-syne)",
+                color: activeTrack === t.id ? "var(--accent)" : "var(--text-secondary)",
+                fontFamily: "var(--font-sans)",
                 fontWeight: 600,
                 letterSpacing: "0.06em",
                 transition: "color 0.15s",
@@ -133,7 +133,7 @@ export default function AssessmentClient() {
         style={{
           marginTop: "64px",
           paddingTop: "48px",
-          borderTop: "1px solid rgba(240,236,228,0.06)",
+          borderTop: "1px solid var(--rule)",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: "32px",
@@ -156,12 +156,12 @@ export default function AssessmentClient() {
           <div key={c.label}>
             <div
               style={{
-                fontFamily: "var(--font-syne)",
+                fontFamily: "var(--font-sans)",
                 fontSize: "0.625rem",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                color: "#c1914b",
+                color: "var(--accent)",
                 marginBottom: "8px",
               }}
             >
@@ -170,7 +170,7 @@ export default function AssessmentClient() {
             <p
               style={{
                 fontSize: "0.875rem",
-                color: "#6b6762",
+                color: "var(--text-secondary)",
                 lineHeight: 1.7,
               }}
             >

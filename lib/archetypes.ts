@@ -38,8 +38,8 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
     shiftPath:
       "Moving from Coordination Shop to meaningful strategic impact requires a structural repositioning — not more software. The first step is a clear diagnosis of where decisions actually get made and whether VDC has proximity to those gates.",
     engagementFit: "Phase1+2",
-    color: "rgba(193,75,75,0.08)",
-    borderColor: "rgba(193,75,75,0.25)",
+    color: "var(--bg)",
+    borderColor: "var(--rule)",
     badgeLabel: "Archetype 1",
   },
   "2": {
@@ -63,8 +63,8 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
     shiftPath:
       "The path forward is clarifying where enterprise standards authority lives and whether VDC has cross-functional mandate or is only effective when precon controls the project.",
     engagementFit: "Phase1+2",
-    color: "rgba(193,145,75,0.08)",
-    borderColor: "rgba(193,145,75,0.25)",
+    color: "var(--bg)",
+    borderColor: "var(--rule)",
     badgeLabel: "Archetype 2",
   },
   "3": {
@@ -88,8 +88,8 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
     shiftPath:
       "The shift to Strategic Delivery Office requires repositioning VDC reporting and connecting it to regional strategy — not more operational improvement. The question is whether executive sponsorship exists to make that jump.",
     engagementFit: "Phase2+3",
-    color: "rgba(75,145,193,0.08)",
-    borderColor: "rgba(75,145,193,0.25)",
+    color: "var(--bg)",
+    borderColor: "var(--rule)",
     badgeLabel: "Archetype 3",
   },
   "4": {
@@ -113,8 +113,8 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
     shiftPath:
       "The focus at Archetype 4 is sustainability and scale — documenting the governance that makes the operating model survive personnel changes, and extending the model to new geographies or project types.",
     engagementFit: "Phase2+3",
-    color: "rgba(75,193,145,0.08)",
-    borderColor: "rgba(75,193,145,0.25)",
+    color: "var(--bg)",
+    borderColor: "var(--rule)",
     badgeLabel: "Archetype 4",
   },
 };
