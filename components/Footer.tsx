@@ -131,7 +131,7 @@ export default function Footer() {
           }}
         >
           <span style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
-            © {new Date().getFullYear()} Everist Consulting LLC. All rights reserved.
+            © {new Date().getFullYear()} Everist Consulting. All rights reserved.
           </span>
         </div>
       </PageShell>
