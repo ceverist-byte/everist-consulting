@@ -17,13 +17,14 @@ export const metadata: Metadata = {
     template: "%s | Everist Consulting",
   },
   description:
-    "VDC organizational design and implementation consulting for general contractors and owner-side capital programs. Based in San Diego. Founded by Chris Everist.",
+    "VDC operating model design and AI advisory for general contractors and owner-side capital programs. Based in San Diego.",
   keywords: [
     "VDC consulting",
+    "VDC operating model design",
     "construction technology strategy",
     "BIM operating model",
     "VDC organizational design",
-    "Last Planner System®",
+    "Last Planner System",
     "AI adoption construction",
     "construction digital transformation",
     "San Diego VDC",
@@ -33,15 +34,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://everistconsulting.com",
     siteName: "Everist Consulting",
-    title: "Everist Consulting — VDC Strategy & Operating Model Design",
+    title: "Everist Consulting — VDC Operating Model Design",
     description:
-      "Transform VDC from coordination function to competitive advantage. Organizational design consulting for GCs and owner-side capital programs.",
+      "VDC operating model design and AI advisory for general contractors and owner-side capital programs.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Everist Consulting — VDC Strategy & Operating Model Design",
+    title: "Everist Consulting — VDC Operating Model Design",
     description:
-      "Transform VDC from coordination function to competitive advantage.",
+      "VDC operating model design and AI advisory for general contractors and owner-side capital programs.",
   },
   metadataBase: new URL("https://everistconsulting.com"),
 };

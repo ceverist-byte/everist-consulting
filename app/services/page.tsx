@@ -5,117 +5,47 @@ import PageShell from "@/components/layout/PageShell";
 export const metadata: Metadata = {
   title: "Services — VDC Operating Model Design",
   description:
-    "The Everist 3-Phase Method: Stakeholder Diagnosis, Operating Model Design, and Implementation Support. Plus Last Planner System® and AI/Automation Advisory.",
+    "VDC operating model design, AI and automation advisory, Last Planner System® implementation, and strategic decision support for general contractors and owner-side capital programs.",
 };
 
-const phases = [
+const serviceLines = [
   {
-    number: "01",
-    phase: "Phase 1",
-    name: "Stakeholder Diagnosis",
-    
-    duration: "2–4 weeks",
+    name: "VDC Operating Model Design",
     description:
-      "You can't fix a structural problem you haven't mapped. Phase 1 produces a clear, documented picture of where decisions actually get made — not where the org chart says they get made.",
-    activities: [
-      "Interviews with regional leadership, operations, preconstruction, and VDC",
-      "Decision gate mapping across a representative project lifecycle",
-      "Authority proximity assessment — who actually controls what",
-      "Expectation vs. capability audit across key outcome areas",
-      "Archetype identification and gap quantification",
+      "The core engagement. Diagnose the gap between the outcomes leadership expects from VDC and the structure the organization has built around it. Design the operating model — placement, authority, governance, and accountability — that closes the gap and survives personnel changes.",
+    outcomes: [
+      "A clear, leadership-legible picture of where the gap is and what's causing it",
+      "An operating model design that survives personnel changes",
+      "A sequenced implementation roadmap and change management approach",
+      "Optional implementation support — designed to transfer, not extend",
     ],
-    deliverables: [
-      "Current-state authority map",
-      "Decision timing diagnosis",
-      "Identified archetype (1–4) with supporting evidence",
-      "Gap analysis: authority vs. stated expectations",
-      "Executive summary for leadership presentation",
-    ],
-    output:
-      "A clear diagnosis of why transformation is stalling — and a documented foundation for the operating model design.",
   },
   {
-    number: "02",
-    phase: "Phase 2",
-    name: "Operating Model Design",
-    
-    duration: "4–8 weeks",
+    name: "AI & Automation Advisory",
     description:
-      "The structural answer. Where should VDC sit? What authority does it need? How do you build governance that survives personnel changes? Phase 2 produces the operating model design — the decisions that make transformation possible.",
-    activities: [
-      "Organizational placement recommendation with rationale",
-      "Decision authority framework — who decides what, when",
-      "Incentive structure redesign to make adoption rational",
-      "Stakeholder alignment strategy for internal buy-in",
-      "Governance framework design — mandate, accountability, escalation paths",
-      "Enterprise standards architecture",
+      "Strategic advisory on AI adoption in construction — evaluating tools against actual workflows, diagnosing why a pilot stalled, structuring the operational decisions that determine whether AI investments produce results. Not tool deployment.",
+    outcomes: [
+      "Use case identification grounded in your actual workflows",
+      "Vendor and platform evaluation against decision points that matter",
+      "Workflow redesign before tool deployment",
+      "Governance design for AI in production environments",
     ],
-    deliverables: [
-      "Organizational placement recommendation",
-      "Authority & Governance Framework document",
-      "Stakeholder alignment strategy",
-      "Implementation roadmap with sequenced milestones",
-      "Change management playbook",
-      "Executive presentation package",
-    ],
-    output:
-      "An operating model that makes transformation structurally possible — not dependent on heroic individual effort.",
   },
-  {
-    number: "03",
-    phase: "Phase 3",
-    name: "Implementation Support",
-    
-    duration: "Optional retainer",
-    description:
-      "Governance degrades under pressure. Phase 3 keeps the operating model on track through the first year of implementation — when old habits are strongest and new structures are most fragile.",
-    activities: [
-      "Monthly governance check-ins with VDC and regional leadership",
-      "Adoption signal tracking against the implementation roadmap",
-      "Course correction as organizational dynamics evolve",
-      "Leadership coaching on structural design and change management",
-      "Quarterly operating model reviews",
-    ],
-    deliverables: [
-      "Monthly adoption tracking report",
-      "Quarterly operating model review",
-      "On-call advisory for structural decisions",
-      "Transition plan when retainer concludes",
-    ],
-    output:
-      "Transformation that sticks — with a defined exit from the retainer when the team owns the model independently.",
-  },
-];
-
-const additionalServices = [
   {
     name: "Last Planner System®",
-    icon: "LPS",
     description:
-      "Implementation and governance design for Last Planner System® — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model redesign.",
-    useCases: [
-      "Healthcare facilities with complex phasing requirements",
-      "GCs integrating prefabrication with pull planning",
-      "Owner programs requiring construction sequencing visibility",
-    ],
-  },
-  {
-    name: "AI/Automation Advisory",
-    icon: "AI",
-    description:
-      "Strategic advisory on AI adoption in construction — use case identification, vendor evaluation, data readiness assessment, and governance design. Not tool deployment. The organizational decisions that determine whether AI investments produce results.",
-    useCases: [
-      "Capital programs evaluating AI for schedule compression",
-      "GCs assessing AI readiness before platform investment",
-      "Owner-side organizations building AI governance frameworks",
+      "Implementation and governance design for Last Planner System® — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model design.",
+    outcomes: [
+      "Pull planning structure designed for your project type",
+      "Integration with prefabrication and field operations",
+      "Governance that holds across project handoffs",
     ],
   },
   {
     name: "Strategic Decision Support",
-    icon: "SD",
     description:
       "Ad-hoc advisory for specific organizational decisions — evaluating a platform investment, structuring a new VDC role, responding to an owner's digital delivery requirements. Delivered as a defined scope, not an open-ended retainer.",
-    useCases: [
+    outcomes: [
       "Pre-investment technology evaluation",
       "VDC leader role design and hiring support",
       "Owner digital deliverable requirement response",
@@ -123,34 +53,21 @@ const additionalServices = [
   },
 ];
 
-const archetypeMatrix = [
+const audiences = [
   {
-    archetype: "Coordination Shop",
-    num: "1",
-    primaryFit: "Phase 1 + Phase 2",
-    detail:
-      "The structural misalignment is clearest here. Phase 1 maps the gap between what VDC is expected to deliver and what its current positioning allows. Phase 2 designs the operating model needed to shift.",
+    type: "General Contractors",
+    description:
+      "Mid-size to large GCs rebuilding VDC capability into something operationally durable — typically after growth, leadership transitions, or a recognition that the current structure can't produce the outcomes leadership expects.",
   },
   {
-    archetype: "Preconstruction Tool Group",
-    num: "2",
-    primaryFit: "Phase 1 + Phase 2",
-    detail:
-      "The precon/operations handoff is the structural weak point. Phase 1 identifies where adoption breaks down. Phase 2 redesigns the authority structure that makes enterprise standards stick.",
+    type: "Hospital & University Capital Programs",
+    description:
+      "Owner-side capital programs running healthcare, research, and institutional projects where coordination governance affects accreditation, opening dates, and patient care.",
   },
   {
-    archetype: "Execution Engine",
-    num: "3",
-    primaryFit: "Phase 2 + Phase 3",
-    detail:
-      "You've solved the tactical problem. The gap is connecting VDC to regional strategy. Phase 2 designs the repositioning. Phase 3 supports the governance transition as the new structure takes hold.",
-  },
-  {
-    archetype: "Strategic Delivery Office",
-    num: "4",
-    primaryFit: "Phase 3 · Strategic Decision Support",
-    detail:
-      "The operating model exists. The challenge is sustainability and scale — ensuring governance survives growth and personnel changes. Phase 3 retainer and decision support fit best here.",
+    type: "CM and Owner's Rep Principals",
+    description:
+      "Advising owners on project readiness before GC selection — particularly when project complexity or duration warrants structural diagnosis upstream.",
   },
 ];
 
@@ -172,7 +89,7 @@ export default function ServicesPage() {
       >
         <PageShell className="relative">
           <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
-            The Everist Operating Model Design Method
+            Services
           </div>
           <h1
             style={{
@@ -183,116 +100,42 @@ export default function ServicesPage() {
               letterSpacing: "-0.03em",
               color: "var(--text-primary)",
               marginBottom: "20px",
-              maxWidth: "640px",
+              maxWidth: "780px",
             }}
           >
-            Organizational governance design. Not another BIM execution plan.
+            The governance layer above coordination.
           </h1>
-          <p
-            style={{
-              fontSize: "1rem",
-              color: "var(--text-primary)",
-              lineHeight: 1.75,
-              maxWidth: "540px",
-              marginBottom: "20px",
-            }}
-          >
-            Most VDC consultants assume the organizational structure is already
-            correct and work on tools, workflows, and training from there. I
-            work at the layer upstream — where the structural decisions that
-            determine whether any of that sticks actually live.
-          </p>
-          <div
-            style={{
-              display: "inline-flex",
-              gap: "8px",
-              alignItems: "center",
-              padding: "10px 16px",
-              background: "transparent",
-              border: "1px solid var(--rule)",
-              borderRadius: "2px",
-            }}
-          >
-            <span style={{ fontSize: "0.8125rem", color: "var(--accent)" }}>
-              Authority → Decision structure → Operating model → Technology
-            </span>
-          </div>
-          <div style={{ marginTop: "18px" }}>
-            <Link
-              href="/ai-automation"
-              style={{
-                fontSize: "0.9rem",
-                color: "var(--text-primary)",
-                textDecoration: "none",
-                borderBottom: "1px solid var(--rule)",
-                paddingBottom: "2px",
-              }}
-            >
-              Also working on AI &amp; automation? See AI &amp; Automation
-              Advisory.
-            </Link>
+          <div style={{ maxWidth: "680px" }}>
+            <p style={{ fontSize: "1.0625rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "16px" }}>
+              Most VDC consultants assume the organizational structure is already correct and work on tools, workflows, and training from there. I work at the layer upstream — where the structural decisions that determine whether any of that sticks actually live.
+            </p>
+            <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+              The deliverable is structural clarity — the kind that survives personnel changes and produces outcomes leadership can predict.
+            </p>
           </div>
         </PageShell>
       </section>
 
-      {/* 3-Phase Method */}
+      {/* Service lines */}
       <section style={{ background: "var(--bg)", padding: "80px 24px" }}>
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
-            The 3-Phase Method
+            What I Offer
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
-            {phases.map((p, i) => (
+            {serviceLines.map((s, i) => (
               <div
-                key={p.phase}
+                key={s.name}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "48px",
-                  paddingBottom: i < phases.length - 1 ? "48px" : "0",
-                  borderBottom:
-                    i < phases.length - 1
-                      ? "1px solid var(--rule-strong)"
-                      : "none",
+                  gridTemplateColumns: "1fr",
+                  gap: "32px",
+                  paddingBottom: i < serviceLines.length - 1 ? "48px" : "0",
+                  borderBottom: i < serviceLines.length - 1 ? "1px solid var(--rule-strong)" : "none",
                 }}
-                className="[grid-template-columns:1fr] md:[grid-template-columns:1fr_1fr]"
+                className="md:[grid-template-columns:1fr_1fr]"
               >
-                {/* Left: overview */}
                 <div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "var(--font-sans)",
-                        fontSize: "0.625rem",
-                        fontWeight: 700,
-                        letterSpacing: "0.16em",
-                        textTransform: "uppercase",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      {p.phase}
-                    </span>
-                    <span
-                      style={{
-                        width: "1px",
-                        height: "14px",
-                        background: "var(--rule)",
-                        display: "inline-block",
-                      }}
-                    />
-                    <span
-                      style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}
-                    >
-                      {p.duration}
-                    </span>
-                  </div>
                   <h2
                     style={{
                       fontFamily: "var(--font-sans)",
@@ -300,126 +143,65 @@ export default function ServicesPage() {
                       fontWeight: 800,
                       color: "var(--text-primary)",
                       letterSpacing: "-0.015em",
-                      marginBottom: "8px",
+                      marginBottom: "16px",
                     }}
                   >
-                    {p.name}
+                    {s.name}
                   </h2>
-                  
-                  <p
-                    style={{
-                      fontSize: "0.9375rem",
-                      color: "var(--text-primary)",
-                      lineHeight: 1.75,
-                      marginBottom: "20px",
-                    }}
-                  >
-                    {p.description}
+                  <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+                    {s.description}
                   </p>
-                  <div
-                    style={{
-                      background: "transparent",
-                      border: "1px solid var(--rule)",
-                      borderRadius: "2px",
-                      padding: "14px 16px",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "0.8125rem",
-                        color: "var(--text-primary)",
-                        fontStyle: "italic",
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      Output: {p.output}
-                    </span>
-                  </div>
                 </div>
-
-                {/* Right: activities + deliverables */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                <div
+                  style={{
+                    background: "transparent",
+                    border: "1px solid var(--rule)",
+                    borderRadius: "2px",
+                    padding: "22px",
+                  }}
+                >
                   <div
                     style={{
-                      background: "transparent",
-                      border: "1px solid var(--rule)",
-                      borderRadius: "2px",
-                      padding: "22px",
+                      fontFamily: "var(--font-sans)",
+                      fontSize: "0.625rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      color: "var(--text-secondary)",
+                      marginBottom: "12px",
                     }}
                   >
-                    <div
-                      style={{
-                        fontFamily: "var(--font-sans)",
-                        fontSize: "0.625rem",
-                        fontWeight: 700,
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        color: "var(--text-secondary)",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      Key Activities
-                    </div>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
-                      {p.activities.map((a) => (
-                        <li
-                          key={a}
-                          style={{
-                            fontSize: "0.875rem",
-                            color: "var(--text-primary)",
-                            lineHeight: 1.55,
-                            display: "flex",
-                            gap: "10px",
-                            alignItems: "flex-start",
-                          }}
-                        >
-                          <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
-                          {a}
-                        </li>
-                      ))}
-                    </ul>
+                    What you get
                   </div>
-
-                  <div
+                  <ul
                     style={{
-                      background: "transparent",
-                      border: "1px solid var(--rule)",
-                      borderRadius: "2px",
-                      padding: "22px",
+                      listStyle: "none",
+                      padding: 0,
+                      margin: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
                     }}
                   >
-                    <div
-                      style={{
-                        fontFamily: "var(--font-sans)",
-                        fontSize: "0.625rem",
-                        fontWeight: 700,
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        color: "var(--text-secondary)",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      Deliverables
-                    </div>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
-                      {p.deliverables.map((d) => (
-                        <li
-                          key={d}
-                          style={{
-                            fontSize: "0.875rem",
-                            color: "var(--text-primary)",
-                            lineHeight: 1.55,
-                            display: "flex",
-                            gap: "10px",
-                            alignItems: "flex-start",
-                          }}
-                        >
-                          <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>▸</span>
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {s.outcomes.map((o) => (
+                      <li
+                        key={o}
+                        style={{
+                          fontSize: "0.875rem",
+                          color: "var(--text-primary)",
+                          lineHeight: 1.6,
+                          display: "flex",
+                          gap: "10px",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
+                          ▸
+                        </span>
+                        {o}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -427,7 +209,7 @@ export default function ServicesPage() {
         </PageShell>
       </section>
 
-      {/* Archetype-to-service mapping */}
+      {/* Who this is for */}
       <section
         style={{
           background: "var(--bg)",
@@ -438,7 +220,7 @@ export default function ServicesPage() {
       >
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
-            Engagement Fit by Archetype
+            Who This Is For
           </div>
           <h2
             style={{
@@ -449,176 +231,37 @@ export default function ServicesPage() {
               color: "var(--text-primary)",
               marginBottom: "40px",
               lineHeight: 1.2,
+              maxWidth: "560px",
             }}
           >
-            Where you are determines where we start.
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            {archetypeMatrix.map((a) => (
-              <div
-                key={a.archetype}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "200px 160px 1fr",
-                  gap: "24px",
-                  alignItems: "start",
-                  padding: "20px 24px",
-                  background: "transparent",
-                  border: "1px solid var(--rule)",
-                  borderRadius: "2px",
-                }}
-                className="[grid-template-columns:1fr] md:[grid-template-columns:200px_160px_1fr]"
-              >
-                <div>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.5625rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      color: "var(--text-secondary)",
-                      marginBottom: "4px",
-                    }}
-                  >
-                    Archetype {a.num}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.9375rem",
-                      fontWeight: 700,
-                      color: "var(--text-primary)",
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {a.archetype}
-                  </div>
-                </div>
-                <div>
-                  <div
-                    style={{
-                      fontSize: "0.75rem",
-                      color: "var(--accent)",
-                      fontFamily: "var(--font-sans)",
-                      fontWeight: 600,
-                    }}
-                  >
-                    {a.primaryFit}
-                  </div>
-                </div>
-                <p style={{ fontSize: "0.875rem", color: "var(--text-primary)", lineHeight: 1.65 }}>
-                  {a.detail}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginTop: "28px" }}>
-            <Link
-              href="/assessment"
-              style={{
-                fontSize: "0.875rem",
-                color: "var(--text-secondary)",
-                textDecoration: "none",
-                fontFamily: "var(--font-sans)",
-              }}
-            >
-              Not sure which archetype you are? Take the 5-minute assessment →
-            </Link>
-          </div>
-        </PageShell>
-      </section>
-
-      {/* Additional service lines */}
-      <section style={{ background: "var(--bg)", padding: "80px 24px" }}>
-        <PageShell>
-          <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
-            Additional Service Lines
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "clamp(1.5rem, 3vw, 2rem)",
-              fontWeight: 800,
-              letterSpacing: "-0.02em",
-              color: "var(--text-primary)",
-              marginBottom: "40px",
-              lineHeight: 1.2,
-            }}
-          >
-            Complementary capabilities.
+            Three groups consistently benefit from this work.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additionalServices.map((s) => (
+            {audiences.map((a) => (
               <div
-                key={s.name}
+                key={a.type}
                 style={{
                   background: "transparent",
                   border: "1px solid var(--rule)",
                   borderRadius: "2px",
-                  padding: "28px",
+                  padding: "24px",
                 }}
               >
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    background: "transparent",
-                    border: "1px solid var(--rule)",
-                    borderRadius: "2px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-sans)",
-                    fontSize: "0.625rem",
-                    fontWeight: 700,
-                    color: "var(--accent)",
-                    letterSpacing: "0.06em",
-                    marginBottom: "16px",
-                  }}
-                >
-                  {s.icon}
-                </div>
                 <h3
                   style={{
                     fontFamily: "var(--font-sans)",
                     fontSize: "1.0625rem",
                     fontWeight: 700,
                     color: "var(--text-primary)",
-                    marginBottom: "10px",
+                    marginBottom: "12px",
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  {s.name}
+                  {a.type}
                 </h3>
-                <p
-                  style={{
-                    fontSize: "0.875rem",
-                    color: "var(--text-primary)",
-                    lineHeight: 1.7,
-                    marginBottom: "16px",
-                  }}
-                >
-                  {s.description}
+                <p style={{ fontSize: "0.875rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+                  {a.description}
                 </p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "5px" }}>
-                  {s.useCases.map((u) => (
-                    <li
-                      key={u}
-                      style={{
-                        fontSize: "0.8125rem",
-                        color: "var(--text-primary)",
-                        lineHeight: 1.6,
-                        display: "flex",
-                        gap: "8px",
-                        alignItems: "flex-start",
-                      }}
-                    >
-                      <span style={{ color: "var(--accent)", fontSize: "0.5rem", paddingTop: "5px", flexShrink: 0 }}>▸</span>
-                      {u}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
@@ -629,7 +272,6 @@ export default function ServicesPage() {
       <section
         style={{
           background: "var(--bg)",
-          borderTop: "1px solid var(--rule-strong)",
           padding: "80px 24px",
           textAlign: "center",
         }}

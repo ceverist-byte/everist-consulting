@@ -124,18 +124,14 @@ export default function Footer() {
             paddingTop: "24px",
             borderTop: "1px solid var(--rule-strong)",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             alignItems: "center",
             flexWrap: "wrap",
             gap: "8px",
           }}
         >
           <span style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
-            © {new Date().getFullYear()} Everist Consulting LLC. All rights
-            reserved.
-          </span>
-          <span style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
-            Architectural background · LEED AP · Assoc. DBIA
+            © {new Date().getFullYear()} Everist Consulting LLC. All rights reserved.
           </span>
         </div>
       </PageShell>

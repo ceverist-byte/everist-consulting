@@ -3,100 +3,10 @@ import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Everist Consulting — VDC Strategy & Operating Model Design",
+  title: "Everist Consulting — VDC Operating Model Design",
   description:
-    "Transform VDC from coordination function to competitive advantage. Organizational design consulting for GCs and owner-side capital programs. Based in San Diego.",
+    "VDC operating model design and AI advisory for general contractors and owner-side capital programs. Based in San Diego.",
 };
-
-const archetypes = [
-  {
-    number: "01",
-    name: "Coordination Shop",
-    description:
-      "VDC supports execution. Clash detection, model coordination, field support. Enters after design is locked. The most common structure in the industry.",
-    authority: "Low",
-    timing: "Late",
-    complaint: '"We invested in BIM but nothing really changed."',
-    accent: "transparent",
-    border: "var(--rule)",
-  },
-  {
-    number: "02",
-    name: "Preconstruction Tool Group",
-    description:
-      "VDC powers pursuits and estimates. Strong precon contribution — but the field frequently ignores it once the project is won.",
-    authority: "Low–Mid",
-    timing: "Early",
-    complaint: '"We use VDC to win work, but the field doesn\'t carry it through."',
-    accent: "transparent",
-    border: "var(--rule)",
-  },
-  {
-    number: "03",
-    name: "Execution Engine",
-    description:
-      "VDC is deeply integrated into operations — logistics, prefab, scheduling. Projects are delivered more efficiently. But VDC still doesn't influence delivery strategy.",
-    authority: "High",
-    timing: "Late",
-    complaint: '"VDC is running well. I\'m not sure what the next level looks like."',
-    accent: "transparent",
-    border: "var(--rule)",
-  },
-  {
-    number: "04",
-    name: "Strategic Delivery Office",
-    description:
-      "VDC sits alongside preconstruction and operations in regional leadership. It shapes delivery architecture, owner relationships, and competitive positioning.",
-    authority: "High",
-    timing: "Early",
-    complaint: '"How do we scale this without losing what makes it work?"',
-    accent: "transparent",
-    border: "var(--rule)",
-    highlight: true,
-  },
-];
-
-const services = [
-  {
-    phase: "Phase 1",
-    name: "Stakeholder Diagnosis",
-    
-    description:
-      "Map where decisions actually get made. Interview regional leadership, operations, preconstruction, and VDC. Identify your current archetype and quantify the gap between authority and expectations.",
-    deliverables: [
-      "Current-state authority map",
-      "Decision timing diagnosis",
-      "Archetype identification",
-      "Gap analysis (authority vs. expectations)",
-    ],
-  },
-  {
-    phase: "Phase 2",
-    name: "Operating Model Design",
-    
-    description:
-      "Design where VDC should sit structurally and what authority it needs to deliver the outcomes leadership expects. Build the governance framework that makes transformation stick — not just while you're watching.",
-    deliverables: [
-      "Authority & governance framework",
-      "Organizational placement recommendation",
-      "Stakeholder alignment strategy",
-      "Implementation roadmap",
-    ],
-  },
-  {
-    phase: "Phase 3",
-    name: "Implementation Support",
-    
-    description:
-      "Monthly check-ins to monitor adoption signals, adjust governance as the organization evolves, and ensure the operating model survives personnel changes. The work designed to transfer — you shouldn't need me forever.",
-    deliverables: [
-      "Monthly governance check-ins",
-      "Adoption signal tracking",
-      "Course correction as needed",
-      "Leadership coaching",
-    ],
-  },
-];
 
 const pageBg = "var(--bg)";
 const pageFg = "var(--fg)";
@@ -173,19 +83,10 @@ const secondaryCtaStyle = {
   textTransform: "uppercase" as const,
 };
 
-const textLinkStyle = {
-  color: pageText,
-  fontSize: "0.9375rem",
-  fontWeight: 600,
-  textDecoration: "underline",
-  textDecorationColor: pageRule,
-  textUnderlineOffset: "4px",
-};
-
 export default function Home() {
   return (
     <>
-      {/* ─── HERO ─────────────────────────────────────────────────── */}
+      {/* HERO — Section 1: Opening frame */}
       <section
         style={{
           background: pageBg,
@@ -199,644 +100,183 @@ export default function Home() {
       >
         <PageShell className="relative w-full">
           <div style={contentWrapStyle}>
-          {/* Eyebrow */}
-          <div
-            className="flex items-center gap-3"
-            style={eyebrowStyle}
-          >
-            VDC Strategy & Operating Model Design
-            <span
-              style={{
-                width: "40px",
-                height: "1px",
-                background: pageRuleStrong,
-                display: "inline-block",
-              }}
-            />
-          </div>
-
-          {/* Headline */}
-          <h1
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "clamp(2.5rem, 6vw, 5rem)",
-              fontWeight: 700,
-              lineHeight: 0.98,
-              letterSpacing: "-0.03em",
-              color: pageText,
-              maxWidth: "760px",
-              marginBottom: "24px",
-            }}
-          >
-            Turn VDC capability into{" "}
-            <em style={{ fontStyle: "normal", color: pageText }}>
-              competitive advantage.
-            </em>
-          </h1>
-
-          {/* Subhead */}
-          <p
-            style={{
-              ...bodyTextStyle,
-              fontSize: "1.125rem",
-              maxWidth: "560px",
-              marginBottom: "28px",
-            }}
-          >
-            Most GCs have a VDC function. Very few have a VDC capability that
-            creates competitive advantage. The gap is structural — not
-            technological.
-          </p>
-
-          <div style={{ maxWidth: "560px", marginBottom: "28px" }}>
-            <p
-              style={{
-                ...bodyTextStyle,
-                fontSize: "0.96875rem",
-                marginBottom: "12px",
-              }}
-            >
-              The same pattern shows up in AI and automation work. When
-              adoption stalls, the root cause is usually not the tool. It&apos;s
-              the same system problem VDC has always exposed.
-            </p>
-            <Link
-              href="/ai-automation"
-              style={textLinkStyle}
-            >
-              Explore AI &amp; Automation Advisory →
-            </Link>
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-3 mb-12">
-            <Link
-              href="/assessment"
-              style={primaryCtaStyle}
-            >
-              Find Your VDC Archetype →
-            </Link>
-            <Link
-              href="/contact"
-              style={secondaryCtaStyle}
-            >
-              Book a Discovery Call
-            </Link>
-          </div>
-
-          {/* Credential tags */}
-          <div
-            className="flex flex-wrap gap-x-4 gap-y-2"
-            style={{
-              borderTop: `1px solid ${pageRuleStrong}`,
-              maxWidth: "720px",
-              paddingTop: "18px",
-            }}
-          >
-            {[
-              "VDC Operating Model Design",
-              "Last Planner System®",
-              "AI/Automation Advisory",
-              "San Diego · Remote",
-            ].map((tag) => (
+            <div className="flex items-center gap-3" style={eyebrowStyle}>
+              VDC Operating Model Design · AI Advisory
               <span
-                key={tag}
                 style={{
-                  fontSize: "0.75rem",
-                  color: pageText,
-                  letterSpacing: "0.03em",
+                  width: "40px",
+                  height: "1px",
+                  background: pageRuleStrong,
+                  display: "inline-block",
                 }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+              />
+            </div>
+
+            <h1
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontWeight: 700,
+                lineHeight: 0.98,
+                letterSpacing: "-0.03em",
+                color: pageText,
+                maxWidth: "880px",
+                marginBottom: "32px",
+              }}
+            >
+              Most capital projects are advised by people who each protect one thing.
+            </h1>
+
+            <div style={{ maxWidth: "640px" }}>
+              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
+                The architect protects design intent. The contract protects budget. The CM protects schedule.
+              </p>
+              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
+                None of them protect the coordination window — the period before installation when changes are still cheap to make. It opens before construction. It closes well before most owners notice it was there.
+              </p>
+            </div>
           </div>
         </PageShell>
       </section>
 
-      {/* ─── THESIS ───────────────────────────────────────────────── */}
+      {/* Section 2: The reframe */}
       <section style={sectionStyle}>
         <PageShell>
-          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,440px)] gap-12 items-start" style={contentWrapStyle}>
-            <div>
-              <div style={eyebrowStyle}>The Core Problem</div>
-              <h2
-                style={{
-                  ...h2Style,
-                  marginBottom: "20px",
-                }}
-              >
-                Technology doesn&apos;t fail because of tooling.
-              </h2>
-              <p
-                style={{
-                  ...bodyTextStyle,
-                  marginBottom: "16px",
-                }}
-              >
-                It fails because mandate, authority, and incentives are
-                misaligned. Most construction firms expect Strategic Delivery
-                Office results while operating a Coordination Shop structure.
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>The reframe</div>
+            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
+              The right to change design before it&apos;s built has a price.
+            </h2>
+            <div style={{ maxWidth: "720px" }}>
+              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
+                Made before installation, those changes cost roughly a dollar. Made during installation, the same changes cost ten to a hundred times that — through rework, trade conflicts, schedule impact, and the change orders that follow.
               </p>
-              <p
-                style={{
-                  ...bodyTextStyle,
-                  marginBottom: "24px",
-                }}
-              >
-                When VDC sits under Operations, it participates after delivery
-                strategy is locked. It can improve coordination — but it cannot
-                influence prefabrication, design strategy, or competitive
-                positioning. That&apos;s not a technology problem. It&apos;s a
-                governance problem.
+              <p style={{ ...bodyTextStyle }}>
+                You aren&apos;t buying coordination software or modeling services. You&apos;re buying the right to change design before it&apos;s built. That right has a duration, and there is no notice when it ends.
               </p>
-              <Link
-                href="/services"
-                style={textLinkStyle}
-              >
-                How I approach this →
-              </Link>
             </div>
+          </div>
+        </PageShell>
+      </section>
 
-            <div
-              style={{
-                borderTop: `1px solid ${pageRuleStrong}`,
-                paddingTop: "20px",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "0.6875rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: pageText,
-                  marginBottom: "20px",
-                }}
-              >
-                Why transformations stall
-              </div>
-              <div className="space-y-5">
-                {[
-                  {
-                    label: "Most consultants start here",
-                    stack: ["Technology", "Workflow", "Training"],
-                    note: "These approaches assume the organizational structure is already correct.",
-                    muted: true,
-                  },
-                  {
-                    label: "I start here",
-                    stack: [
-                      "Authority",
-                      "Decision structure",
-                      "Operating model",
-                      "Technology",
-                    ],
-                    note: "That order is what makes transformation stick.",
-                    muted: false,
-                  },
-                ].map((block) => (
-                  <div
-                    key={block.label}
-                    style={{
-                      borderTop: `1px solid ${pageRule}`,
-                      paddingTop: "16px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "0.75rem",
-                        color: block.muted ? pageText : pageAccent,
-                        marginBottom: "10px",
-                        fontWeight: 600,
-                        letterSpacing: "0.04em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {block.label}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {block.stack.map((item, i) => (
-                        <span key={item}>
-                          <span
-                            style={{
-                              fontSize: "0.9375rem",
-                              color: pageText,
-                              fontWeight: block.muted ? 500 : 600,
-                            }}
-                          >
-                            {item}
-                          </span>
-                          {i < block.stack.length - 1 && (
-                            <span style={{ color: pageText, margin: "0 8px" }}>
-                              →
-                            </span>
-                          )}
-                        </span>
-                      ))}
-                    </div>
-                    <p
-                      style={{
-                        fontSize: "0.8125rem",
-                        color: pageMuted,
-                        lineHeight: 1.6,
-                        marginTop: "10px",
-                      }}
-                    >
-                      {block.note}
-                    </p>
-                  </div>
-                ))}
+      {/* Section 3: Who this is for */}
+      <section style={sectionStyle}>
+        <PageShell>
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>Who this is for</div>
+            <div style={{ maxWidth: "820px" }}>
+              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
+                Three groups consistently benefit from this work: general contractors rebuilding VDC capability into something operationally durable; hospital systems and university capital programs running healthcare, research, and institutional projects where coordination governance affects accreditation, opening dates, and patient care; and CM and Owner&apos;s Rep principals advising owners on project readiness before GC selection.
+              </p>
+            </div>
+          </div>
+        </PageShell>
+      </section>
+
+      {/* Section 4: What Everist Consulting does */}
+      <section style={sectionStyle}>
+        <PageShell>
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>What Everist Consulting does</div>
+            <h2 style={{ ...h2Style, marginBottom: "24px", maxWidth: "820px" }}>
+              The governance layer above coordination.
+            </h2>
+            <div style={{ maxWidth: "720px" }}>
+              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
+                Everist Consulting designs the structure that determines whether VDC investment produces the outcomes the owner contracted for. The work spans operating model design for organizations rebuilding internal capability and AI and automation advisory for leaders deciding what to absorb and what to defer.
+              </p>
+              <p style={{ ...bodyTextStyle, marginBottom: "28px" }}>
+                Everist Consulting is not a vendor of software, modeling, or staffing. The deliverable is structural clarity.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/services" style={secondaryCtaStyle}>
+                  Services
+                </Link>
+                <Link href="/ai-automation" style={secondaryCtaStyle}>
+                  AI &amp; Automation Advisory
+                </Link>
               </div>
             </div>
           </div>
         </PageShell>
       </section>
 
-      {/* ─── ARCHETYPE MATRIX ─────────────────────────────────────── */}
-      <section
-        style={{
-          ...sectionStyle,
-          background: pageBg,
-        }}
-      >
-        <PageShell>
-          <div style={{ ...contentWrapStyle, marginBottom: "40px" }}>
-            <div style={eyebrowStyle}>The VDC Archetype Matrix</div>
-            <h2
-              style={{
-                ...h2Style,
-                marginBottom: "16px",
-              }}
-            >
-              Where does your VDC capability sit?
-            </h2>
-            <p
-              style={{
-                ...bodyTextStyle,
-                maxWidth: "560px",
-              }}
-            >
-              Two axes determine how VDC behaves inside a contractor: when it
-              engages, and what authority it has.
-            </p>
-          </div>
-
-          {/* Matrix axes labels */}
-          <div
-            className="hidden md:flex justify-between mb-3 px-1"
-            style={{ ...contentWrapStyle, maxWidth: "900px", marginBottom: "12px" }}
-          >
-            <span style={{ fontSize: "0.75rem", color: pageMuted }}>
-              ← Late engagement
-            </span>
-            <span style={{ fontSize: "0.75rem", color: pageMuted }}>
-              Early engagement →
-            </span>
-          </div>
-
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4"
-            style={{ ...contentWrapStyle, maxWidth: "900px" }}
-          >
-            {archetypes.map((a) => (
-              <div
-                key={a.number}
-                style={{
-                  borderTop: `1px solid ${pageRuleStrong}`,
-                  padding: "24px 0 0",
-                  position: "relative",
-                }}
-              >
-                {a.highlight && (
-                  <div
-                    style={{
-                      color: pageAccent,
-                      fontSize: "0.625rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      marginBottom: "12px",
-                    }}
-                  >
-                    Target State
-                  </div>
-                )}
-                <div
-                  style={{
-                    fontSize: "0.625rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: pageText,
-                    marginBottom: "10px",
-                  }}
-                >
-                  Archetype {a.number}
-                </div>
-                <h3
-                  style={{
-                    fontSize: "1.1875rem",
-                    fontWeight: 700,
-                    color: pageText,
-                    marginBottom: "12px",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {a.name}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "0.875rem",
-                    color: pageText,
-                    lineHeight: 1.65,
-                    marginBottom: "16px",
-                  }}
-                >
-                  {a.description}
-                </p>
-                <blockquote
-                  style={{
-                    fontSize: "0.8125rem",
-                    color: pageMuted,
-                    borderLeft: `2px solid ${pageRuleStrong}`,
-                    paddingLeft: "12px",
-                    marginBottom: "16px",
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {a.complaint}
-                </blockquote>
-                <div className="flex gap-3">
-                  {[
-                    { label: "Authority", value: a.authority },
-                    { label: "Timing", value: a.timing },
-                  ].map((chip) => (
-                    <span
-                      key={chip.label}
-                      style={{
-                        fontSize: "0.6875rem",
-                        color: pageMuted,
-                        letterSpacing: "0.02em",
-                      }}
-                    >
-                      {chip.label}: {chip.value}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ ...contentWrapStyle, maxWidth: "900px", marginTop: "36px" }}>
-            <Link
-              href="/assessment"
-              style={secondaryCtaStyle}
-            >
-              Find Your Archetype — Take the Assessment →
-            </Link>
-          </div>
-        </PageShell>
-      </section>
-
-      {/* ─── SERVICES ─────────────────────────────────────────────── */}
+      {/* Section 5: Background */}
       <section style={sectionStyle}>
         <PageShell>
-          <div style={{ ...contentWrapStyle, marginBottom: "40px" }}>
-            <div style={eyebrowStyle}>The 3-Phase Method</div>
-            <h2
-              style={{
-                ...h2Style,
-                maxWidth: "540px",
-              }}
-            >
-              Organizational governance design. Not another BIM plan.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={contentWrapStyle}>
-            {services.map((s, i) => (
-              <div
-                key={s.phase}
-                style={{
-                  borderTop: `1px solid ${pageRuleStrong}`,
-                  paddingTop: "22px",
-                  position: "relative",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "0.625rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: pageAccent,
-                    marginBottom: "8px",
-                  }}
-                >
-                  {s.phase}
-                </div>
-                <h3
-                  style={{
-                    fontSize: "1.125rem",
-                    fontWeight: 700,
-                    color: pageText,
-                    marginBottom: "6px",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {s.name}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "0.875rem",
-                    color: pageText,
-                    lineHeight: 1.65,
-                    marginBottom: "20px",
-                  }}
-                >
-                  {s.description}
-                </p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {s.deliverables.map((d) => (
-                    <li
-                      key={d}
-                      style={{
-                        fontSize: "0.8125rem",
-                        color: pageMuted,
-                        padding: "7px 0",
-                        borderTop: `1px solid ${pageRule}`,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      <span style={{ color: pageAccent, fontSize: "0.625rem" }}>
-                        ▸
-                      </span>
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ ...contentWrapStyle, marginTop: "32px" }}>
-            <Link
-              href="/services"
-              style={textLinkStyle}
-            >
-              Full service details and engagement structure →
-            </Link>
-          </div>
-        </PageShell>
-      </section>
-
-      {/* ─── CREDENTIALS ──────────────────────────────────────────── */}
-      <section
-        style={{
-          ...sectionStyle,
-          background: pageBg,
-        }}
-      >
-        <PageShell>
-          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] gap-12 items-start" style={contentWrapStyle}>
-            <div>
-              <div style={eyebrowStyle}>Who this is for</div>
-              <h2
-                style={{
-                  ...h2Style,
-                  fontSize: "clamp(1.5rem, 2.5vw, 2.125rem)",
-                  marginBottom: "20px",
-                }}
-              >
-                Built from 20+ years inside the problem you&apos;re trying to
-                solve.
-              </h2>
-              <p
-                style={{
-                  ...bodyTextStyle,
-                  fontSize: "0.9375rem",
-                  marginBottom: "16px",
-                }}
-              >
-                I've spent 20+ years inside the structural problem I now help organizations solve — across general contracting, owner-side capital programs, and international construction education. I've built VDC capability from scratch, navigated every organizational archetype from the inside, and watched the same authority misalignment produce the same stall in organizations that otherwise had nothing in common. That pattern is the methodology.
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>Background</div>
+            <div style={{ maxWidth: "820px" }}>
+              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
+                Chris Everist has spent over twenty years inside the construction technology layer of buildings — including five years at Turner Construction with international VDC and lean instruction work, followed by an extended tenure leading VDC practice at a West Coast general contractor.
               </p>
-              <p
-                style={{
-                  ...bodyTextStyle,
-                  fontSize: "0.9375rem",
-                  marginBottom: "24px",
-                }}
-              >
-                I work with general contractors redesigning VDC practices after
-                growth or leadership transitions, and with owner-side capital
-                programs — hospital campuses, universities, data centers — that
-                need delivery oversight capability they don&apos;t currently
-                have.
+              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "28px" }}>
+                He co-authored <em>BIM with the End in Mind</em> (USIBD, 2021) and co-presented the inaugural Agentic AI in Construction webinar with Datagrid in March 2025.
               </p>
               <Link
                 href="/about"
-                style={textLinkStyle}
+                style={{
+                  color: pageText,
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  textDecoration: "underline",
+                  textDecorationColor: pageRule,
+                  textUnderlineOffset: "4px",
+                }}
               >
                 Full background →
               </Link>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "20+", label: "Years in construction technology" },
-                { value: "10+", label: "Years building a GC VDC practice from zero" },
-                { value: "0", label: "Team turnover during that period" },
-                {
-                  value: "3",
-                  label: "Credentials: Architect · LEED AP · Assoc. DBIA",
-                },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  style={{
-                    borderTop: `1px solid ${pageRule}`,
-                    paddingTop: "18px",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "2rem",
-                      fontWeight: 700,
-                      color: pageText,
-                      lineHeight: 1,
-                      marginBottom: "8px",
-                    }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "0.8125rem",
-                      color: pageMuted,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </PageShell>
       </section>
 
-      {/* ─── BOTTOM CTA ───────────────────────────────────────────── */}
-      <section
-        style={{
-          ...sectionStyle,
-          paddingBottom: "80px",
-        }}
-      >
+      {/* Section 6: CTA — The diagnostic question */}
+      <section style={{ ...sectionStyle, paddingBottom: "96px" }}>
         <PageShell>
-        <div style={{ ...contentWrapStyle, maxWidth: "720px", margin: "0 auto 0 0" }}>
-          <div style={eyebrowStyle}>Ready to start?</div>
-          <h2
-            style={{
-              ...h2Style,
-              marginBottom: "20px",
-            }}
-          >
-            Two ways in.
-          </h2>
-          <p
-            style={{
-              ...bodyTextStyle,
-              fontSize: "0.9375rem",
-              marginBottom: "28px",
-              maxWidth: "620px",
-            }}
-          >
-            Take the assessment to identify your archetype and receive a
-            tailored diagnostic. Or book a 30-minute call directly — we&apos;ll
-            map your structure and identify the gap in the conversation.
-          </p>
-
-          <div
-            className="flex flex-col sm:flex-row gap-3"
-          >
-            <Link
-              href="/assessment"
-              style={primaryCtaStyle}
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>The Diagnostic Question</div>
+            <p style={{ ...bodyTextStyle, marginBottom: "16px", maxWidth: "640px" }}>
+              Before your next preconstruction meeting, ask your GC or CM:
+            </p>
+            <blockquote
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "clamp(1.375rem, 2.5vw, 1.75rem)",
+                fontWeight: 600,
+                lineHeight: 1.3,
+                letterSpacing: "-0.02em",
+                color: pageAccent,
+                borderLeft: `2px solid ${pageAccent}`,
+                paddingLeft: "20px",
+                margin: "0 0 24px",
+                maxWidth: "780px",
+              }}
             >
-              Take the Assessment
-            </Link>
-            <Link
-              href="/contact"
-              style={secondaryCtaStyle}
-            >
-              Book a Call
-            </Link>
+              &ldquo;Who owns the coordination schedule, and what happens to the project if they miss it?&rdquo;
+            </blockquote>
+            <p style={{ ...bodyTextStyle, marginBottom: "32px", maxWidth: "640px" }}>
+              If your GC or CM cannot answer that in one sentence, your window is already closing. A confident answer means coordination is governed. The absence of one is the signal.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/contact" style={primaryCtaStyle}>
+                Book a Discovery Call
+              </Link>
+              <a
+                href="mailto:chris@everistconsulting.com"
+                style={{
+                  fontSize: "1rem",
+                  color: pageAccent,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  borderBottom: `1px solid ${pageAccent}`,
+                  paddingBottom: "2px",
+                }}
+              >
+                chris@everistconsulting.com
+              </a>
+            </div>
           </div>
-        </div>
         </PageShell>
       </section>
     </>
