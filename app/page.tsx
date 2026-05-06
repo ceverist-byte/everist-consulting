@@ -129,7 +129,7 @@ export default function Home() {
 
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
-                The architect protects design intent. The contract protects budget. The CM protects schedule.
+                The architect protects design intent. The GC protects budget. The CM protects schedule.
               </p>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
                 None of them protect the coordination window — the period before installation when changes are still cheap to make. It opens before construction. It closes well before most owners notice it was there.
