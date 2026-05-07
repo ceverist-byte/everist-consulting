@@ -151,7 +151,7 @@ export default function AboutPage() {
                   Background
                 </div>
                 <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
-                  Architectural and sustainability training (background only, not active credentials).
+                  Time in architecture and sustainability before moving into construction (background only, not active credentials). That trajectory shapes how the practice reads the seam between authored intent and built outcome — the territory where coordination decisions either preserve or unwind what was drawn.
                 </p>
               </div>
               <div
