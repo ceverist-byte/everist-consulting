@@ -201,6 +201,37 @@ export default function Home() {
         </PageShell>
       </section>
 
+      {/* Selected Work — proof slot */}
+      <section style={sectionStyle}>
+        <PageShell>
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>Selected Work</div>
+            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
+              Engagements in practice.
+            </h2>
+            <div style={{ maxWidth: "640px" }}>
+              <p style={{ ...bodyTextStyle, marginBottom: "24px" }}>
+                The first engagement is in its final phase. A case study — what the diagnosis surfaced, the intervention introduced, and the change the client retained — will be published following project close.
+              </p>
+              <Link
+                href="/work"
+                style={{
+                  color: pageText,
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  borderBottom: `1px solid ${pageRule}`,
+                  paddingBottom: "2px",
+                  display: "inline-block",
+                }}
+              >
+                <span style={{ color: pageAccent }}>See what gets shown</span> →
+              </Link>
+            </div>
+          </div>
+        </PageShell>
+      </section>
+
       {/* Section 5: Background */}
       <section style={sectionStyle}>
         <PageShell>
