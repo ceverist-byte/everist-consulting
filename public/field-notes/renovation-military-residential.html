@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Everist-Labs — Field Note: Renovation &amp; Military Residential</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #EEEEEC;
+      --fg: #111111;
+      --secondary: #484B50;
+      --accent: #3D7553;
+      --accent-light: #EAF3DE;
+      --rule: #D5D4D0;
+      --rule-strong: #B4B3AF;
+      --muted: #6A6861;
+      --subtle: #E5E4E1;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-feature-settings: "ss01", "cv11";
+      -webkit-font-smoothing: antialiased;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .no-print { display: none; }
+      .page { max-width: 100%; padding: 0.5in 0.75in; }
+      .section-block { break-inside: avoid; }
+    }
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+    }
+    @media (max-width: 640px) {
+      .page { padding: 32px 24px 56px; }
+    }
+
+    /* ── Header ── */
+    .doc-header {
+      border-bottom: 1.5px solid var(--fg);
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+    }
+    .doc-eyebrow {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .doc-title {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .doc-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .doc-meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 0.5px solid var(--rule);
+    }
+    .doc-meta-item {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+    .doc-meta-item span {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .doc-meta-item strong {
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    /* ── Personal opening ── */
+    .opening {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--secondary);
+      font-style: italic;
+      padding: 20px 0 28px;
+      border-bottom: 0.5px solid var(--rule);
+      margin-bottom: 32px;
+    }
+
+    /* ── Sections ── */
+    .section-block {
+      margin-bottom: 36px;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 0.5px;
+      background: var(--rule);
+    }
+    .section-heading {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--fg);
+    }
+
+    /* ── Finding items ── */
+    .finding {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 0 12px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .finding:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .finding-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      padding-top: 2px;
+      font-weight: 600;
+    }
+    .finding-body {}
+    .finding-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--fg);
+    }
+    .finding-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--secondary);
+    }
+
+    /* ── AVMU close section ── */
+    .avmu-section {
+      background: var(--fg);
+      color: var(--bg);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+    }
+    .avmu-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rule-strong);
+      margin-bottom: 12px;
+    }
+    .avmu-heading {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: #EEEEEC;
+    }
+    .avmu-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #B4B3AF;
+      margin-bottom: 16px;
+    }
+    .avmu-body strong {
+      color: #EEEEEC;
+      font-weight: 500;
+    }
+
+    /* ── Hard close ── */
+    .hard-close {
+      border-top: 0.5px solid #484B50;
+      padding-top: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #EEEEEC;
+      line-height: 1.5;
+    }
+
+    /* ── Footer ── */
+    .doc-footer {
+      border-top: 0.5px solid var(--rule);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .doc-footer-brand {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .doc-footer-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .doc-footer-brand a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--rule-strong);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .doc-footer-brand a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="doc-header">
+      <div class="doc-eyebrow">Everist Consulting &middot; Everist-Labs &middot; Field Note</div>
+      <h1 class="doc-title">Renovation &amp; Military Residential<br>Coordination — Field Guide</h1>
+      <p class="doc-subtitle">Applied methodology for VDC teams on renovation and BEQ / military residential projects</p>
+      <div class="doc-meta">
+        <div class="doc-meta-item"><span>Type</span><strong>Field Note</strong></div>
+        <div class="doc-meta-item"><span>Scope</span><strong>Renovation · BEQ · Military Residential</strong></div>
+        <div class="doc-meta-item"><span>Method</span><strong>AVMU · Content Plan · Assumptions Log</strong></div>
+        <div class="doc-meta-item"><span>Issued</span><strong>2026</strong></div>
+      </div>
+    </header>
+
+    <!-- Personal opening -->
+    <p class="opening">
+      A field note for two former colleagues I want to see win on this project type. 
+      You've both been running this methodology for years &mdash; the Content Plan, the production cycle, the priority structure. 
+      This is what I'd tell you if we were still in the same building, applied to where you are right now.
+    </p>
+
+    <!-- Section 01: Renovation Coordination -->
+    <div class="section-block">
+      <div class="section-label">Section 01 &middot; Renovation Coordination</div>
+      <h2 class="section-heading">What kills these projects in the ceiling</h2>
+
+      <div class="finding">
+        <div class="finding-num">01</div>
+        <div class="finding-body">
+          <div class="finding-title">Plans are clean in plan view. They break down in section.</div>
+          <div class="finding-text">Every conflict worth finding on a renovation project requires a vertical cut to see it. The floor plan passes a coordination review. The vertical stack does not. Commit to section cuts as the primary coordination artifact &mdash; not plan overlays. If you haven't run a section cut at every beam-crossing condition, you haven't coordinated.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">02</div>
+        <div class="finding-body">
+          <div class="finding-title">Duct sizing is load-driven, not geometry-driven.</div>
+          <div class="finding-text">Hydraulically correct duct sizes are often physically uninstallable at plan ceiling heights once structural beam crossings are accounted for. Verify available plenum depth at every beam-crossing condition before fabrication submittals. The discrepancy between designed duct size and available depth can be substantial &mdash; sometimes requiring section-by-section renegotiation or beam penetrations to resolve. The M-series plan is internally consistent. It may not have been checked against the structure.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">03</div>
+        <div class="finding-body">
+          <div class="finding-title">Ceiling assembly thickness and available plenum depth are two separate conversations.</div>
+          <div class="finding-text">The specified ceiling assembly and the space between structure and finish ceiling are rarely connected in the permit set. Verify the specified assembly against confirmed plenum depth independently &mdash; do not derive available space from the RCP alone. If the RCP and the structural drawings haven't been overlaid in section, assume they haven't been cross-checked.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">04</div>
+        <div class="finding-body">
+          <div class="finding-title">Existing overhead conditions are under-documented.</div>
+          <div class="finding-text">On any renovation with significant existing overhead infrastructure, build your model with existing conditions as unknowns &mdash; not as shown. The drawings often treat the building as empty before the renovation. It isn't. Budget time for field verification before locking your model. Existing sanitary, waste, and storm drain routing frequently falls outside the documented envelope.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">05</div>
+        <div class="finding-body">
+          <div class="finding-title">New structural elements sometimes reach the field without confirmed BOB elevations.</div>
+          <div class="finding-text">If the framing plan specifies new steel, get a field-verified or SEOR-confirmed bottom-of-beam elevation before modeling dependent systems. Scaling from the drawings or assuming typical depth from the section schedule is risky &mdash; the drawings themselves sometimes carry the instruction to verify. Don't pass that uncertainty downstream to MEP.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 02: BEQ / Military Residential -->
+    <div class="section-block">
+      <div class="section-label">Section 02 &middot; BEQ &amp; Military Residential</div>
+      <h2 class="section-heading">What this project type adds</h2>
+
+      <div class="finding">
+        <div class="finding-num">01</div>
+        <div class="finding-body">
+          <div class="finding-title">Find the person with the overalls and a flashlight before you close the ceiling.</div>
+          <div class="finding-text">Facility maintenance personnel will live with what you build long after the construction team leaves. On military residential &mdash; BEQs especially &mdash; the overhead cavity must be navigable, marked, and documented for the people who will service it for the next 20 years. Get a facilities representative in the coordination conversation early. Their constraints are not in the spec.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">02</div>
+        <div class="finding-body">
+          <div class="finding-title">Repeating floor plans multiply every unresolved conflict.</div>
+          <div class="finding-text">BEQs have recurring bays. A coordination problem in Bay 1 is the same problem in Bay 6 and Bay 12. Getting the prototype bay right before it repeats is not optional &mdash; it is the schedule. A sectional study on one typical bay, verified before fabrication, returns its cost many times over in avoided RFIs across the building.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">03</div>
+        <div class="finding-body">
+          <div class="finding-title">Access panel locations, above-ceiling lighting, and grid markers belong in the model.</div>
+          <div class="finding-text">Not as afterthoughts. The maintenance experience of the building is a coordination deliverable. Above-ceiling lighting, column-grid markers, and adequate crawl clearances should be modeled and verified in section before the ceiling is closed. If the maintenance crew can't locate where they are in a dark ceiling plenum, the coordination failed &mdash; regardless of what the clash report shows.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-num">04</div>
+        <div class="finding-body">
+          <div class="finding-title">Confined ceiling access requires a protocol, not just a ladder.</div>
+          <div class="finding-text">On projects with occupied overhead &mdash; mechanical chases, equipment access zones, labyrinthine plenum routing &mdash; document the access sequence. Who enters. How they locate where they are. What clearance they need to bring tools. A dimensioned section cut at the tightest access condition is the minimum deliverable. A 6'4" maintenance tech trying to drag tools through a 36" plenum is a constructability failure that shows up on day one of occupancy, not during punch list.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 03: AVMU Close -->
+    <div class="avmu-section">
+      <div class="avmu-label">Section 03 &middot; The Methodology &middot; AVMU</div>
+      <h2 class="avmu-heading">This is the methodology I've been building into a productized service.</h2>
+      <p class="avmu-body">
+        The scaffold is what you know: <strong>Content Plan in</strong>, production cycle, 
+        <strong>Assumptions Log</strong>, priority structure, <strong>Constructability Review out</strong>. 
+        I've trained an AI to run production inside it. I run it on my end. 
+        You get the deliverable. Your network, your tools, your stack &mdash; none of it changes.
+      </p>
+      <p class="avmu-body">
+        The findings in Sections 01 and 02 are exactly what the methodology is designed to surface: 
+        vertical stack conflicts invisible on plan, duct sizing assumptions that don't survive a section cut, 
+        maintenance access conditions that aren't in the permit set. 
+        This is what the production cycle finds, documents, and hands back to your team with proposed resolutions.
+      </p>
+      <div class="hard-close">
+        Let me run one scope on your current project. You pick the zone. I deliver an organized model snapshot, an Assumptions Log, and proposed resolutions in foreman-ready cuts &mdash; two weeks, fixed fee, fixed deliverable list. That's the engagement.
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div class="doc-footer-brand"><a href="https://www.everistconsulting.com">Everist Consulting</a> &middot; Everist-Labs</div>
+      <div class="doc-footer-tagline">The breakdown happens at the hand-off.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
