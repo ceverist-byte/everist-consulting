@@ -7,24 +7,6 @@ export const metadata: Metadata = {
   description: "Engagement case studies in VDC operating model design.",
 };
 
-const frame = [
-  {
-    label: "Situation",
-    detail:
-      "The engagement context — client type, project scale, and the coordination problem that prompted the work.",
-  },
-  {
-    label: "Intervention",
-    detail:
-      "The structural diagnosis and the operating model change introduced.",
-  },
-  {
-    label: "Change",
-    detail:
-      "What the client now owns differently — and how that shows up in their next project.",
-  },
-];
-
 export default function WorkPage() {
   return (
     <>
@@ -74,7 +56,7 @@ export default function WorkPage() {
         <div style={{ height: "1px", background: "var(--rule)" }} />
       </PageShell>
 
-      {/* Holding state */}
+      {/* Case study listing */}
       <section
         style={{
           background: "var(--bg)",
@@ -102,90 +84,52 @@ export default function WorkPage() {
                 paddingTop: "6px",
               }}
             >
-              Status
+              Engagement 01
             </div>
             <div>
               <h2
                 style={{
                   fontFamily: "var(--font-sans)",
-                  fontSize: "clamp(1.5rem, 2.2vw, 1.75rem)",
-                  fontWeight: 400,
-                  letterSpacing: "-0.015em",
+                  fontSize: "clamp(1.5rem, 2.4vw, 1.875rem)",
+                  fontWeight: 800,
+                  letterSpacing: "-0.02em",
                   lineHeight: 1.25,
                   color: "var(--text-primary)",
                   marginBottom: "20px",
                   maxWidth: "640px",
                 }}
               >
-                First engagement closing — case study in preparation.
+                Forcing engineering decisions before installation foreclosed them.
               </h2>
               <p
                 style={{
-                  fontSize: "0.9375rem",
+                  fontSize: "1rem",
                   color: "var(--text-primary)",
                   lineHeight: 1.75,
                   maxWidth: "640px",
+                  marginBottom: "24px",
                 }}
               >
-                Everist Consulting&apos;s first engagement is in its final phase. A case study describing the structural gap identified, the operating model intervention, and the change the client retained will be published here following project close. Available shortly.
+                Six weeks of overhead systems coordination on a hotel renovation already under construction — three floors of mechanical, electrical, and plumbing rough-in moving toward a fixed installation deadline. The engagement built the dimensioned record that turned field observations into documented engineering decisions in time to matter.
               </p>
-            </div>
-          </div>
-        </PageShell>
-      </section>
-
-      {/* Divider */}
-      <PageShell>
-        <div style={{ height: "1px", background: "var(--rule)" }} />
-      </PageShell>
-
-      {/* Frame preview */}
-      <section
-        style={{
-          background: "var(--bg)",
-          padding: "80px 24px",
-        }}
-      >
-        <PageShell>
-          <h2
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "clamp(1.5rem, 2.4vw, 1.875rem)",
-              fontWeight: 800,
-              letterSpacing: "-0.02em",
-              lineHeight: 1.2,
-              color: "var(--text-primary)",
-              marginBottom: "48px",
-              maxWidth: "560px",
-            }}
-          >
-            What you&apos;ll read here.
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
-            {frame.map((row) => (
-              <div
-                key={row.label}
+              <Link
+                href="/work/overhead-mep-sectional-study"
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: "12px",
-                  alignItems: "start",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  letterSpacing: "-0.005em",
+                  color: "var(--text-primary)",
+                  textDecoration: "none",
+                  borderBottom: "1px solid var(--rule)",
+                  paddingBottom: "2px",
+                  display: "inline-block",
                 }}
-                className="md:[grid-template-columns:200px_1fr] md:gap-16"
               >
-                <div className="eyebrow">{row.label}</div>
-                <p
-                  style={{
-                    fontSize: "1rem",
-                    color: "var(--text-primary)",
-                    lineHeight: 1.75,
-                    maxWidth: "640px",
-                  }}
-                >
-                  {row.detail}
-                </p>
-              </div>
-            ))}
+                <span style={{ color: "var(--accent)" }}>Read the engagement</span>{" "}
+                →
+              </Link>
+            </div>
           </div>
         </PageShell>
       </section>
