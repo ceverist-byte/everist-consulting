@@ -110,7 +110,7 @@ export default function WorkPage() {
                   marginBottom: "24px",
                 }}
               >
-                Six weeks. Three floors of overhead MEP rough-in. Mechanical fabrication already cutting at engagement start; steel install eleven days from rough-in. Five conditions that would have failed at installation, converted into engineering decisions documented in time to matter — at a precision the available 2D drawing tools could not generate.
+                Six weeks. Three floors of overhead MEP rough-in. Mechanical fabrication already cutting at engagement start; steel install six days from rough-in. Five conditions that would have failed at installation, converted into engineering decisions documented in time to matter — at a precision the available 2D drawing tools could not generate.
               </p>
               <Link
                 href="/work/overhead-mep-sectional-study"
