@@ -110,7 +110,7 @@ export default function WorkPage() {
                   marginBottom: "24px",
                 }}
               >
-                Six weeks of overhead systems coordination on a hotel renovation already under construction — three floors of mechanical, electrical, and plumbing rough-in moving toward a fixed installation deadline. The engagement built the dimensioned record that turned field observations into documented engineering decisions in time to matter.
+                Six weeks. Three floors of overhead MEP rough-in. Mechanical fabrication already cutting at engagement start; steel install eleven days from rough-in. Five conditions that would have failed at installation, converted into engineering decisions documented in time to matter — at a precision the available 2D drawing tools could not generate.
               </p>
               <Link
                 href="/work/overhead-mep-sectional-study"
