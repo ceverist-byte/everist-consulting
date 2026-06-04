@@ -54,6 +54,74 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={interTight.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.everistconsulting.com/#organization",
+                  name: "Everist Consulting",
+                  url: "https://www.everistconsulting.com",
+                  description:
+                    "Independent VDC operating model consultancy and AI advisory practice serving general contractors and owner-side capital programs in San Diego, California.",
+                  foundingDate: "2026",
+                  founder: { "@id": "https://www.everistconsulting.com/#person" },
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "San Diego",
+                    addressRegion: "CA",
+                    addressCountry: "US",
+                  },
+                  areaServed: "US",
+                  knowsAbout: [
+                    "Virtual Design and Construction",
+                    "VDC Operating Model Design",
+                    "Construction Technology Strategy",
+                    "AI Advisory",
+                    "Construction Coordination Governance",
+                  ],
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    email: "chris@everistconsulting.com",
+                    contactType: "business",
+                  },
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://www.everistconsulting.com/#person",
+                  name: "Christopher Everist",
+                  alternateName: "Chris Everist",
+                  url: "https://www.everistconsulting.com/about",
+                  jobTitle: "Founder",
+                  worksFor: { "@id": "https://www.everistconsulting.com/#organization" },
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "San Diego",
+                    addressRegion: "CA",
+                    addressCountry: "US",
+                  },
+                  knowsAbout: [
+                    "Virtual Design and Construction",
+                    "VDC Operating Model Design",
+                    "Construction Technology Strategy",
+                    "AI Advisory",
+                    "BIM",
+                    "Lean Construction",
+                    "Construction Coordination Governance",
+                  ],
+                  sameAs: [
+                    "https://www.linkedin.com/in/christopher-everist-b52a9528/",
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>
         <Nav />
         <main>{children}</main>

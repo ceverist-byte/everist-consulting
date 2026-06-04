@@ -183,6 +183,9 @@ export default function Home() {
             </h2>
             <div style={{ maxWidth: "720px" }}>
               <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
+                Everist Consulting is an independent VDC operating model consultancy and AI advisory practice founded by Christopher Everist in San Diego, California.
+              </p>
+              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
                 Everist Consulting designs the structure that determines whether VDC investment produces the outcomes the owner contracted for. The work spans operating model design for organizations rebuilding internal capability and AI and automation advisory for leaders deciding what to absorb and what to defer.
               </p>
               <p style={{ ...bodyTextStyle, marginBottom: "28px" }}>
@@ -211,7 +214,7 @@ export default function Home() {
             </h2>
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, marginBottom: "24px" }}>
-                The first engagement is in its final phase. A case study — what the diagnosis surfaced, the intervention introduced, and the change the client retained — will be published following project close.
+                The first engagement is documented. Six weeks of overhead MEP coordination on an active hotel renovation — five conditions that would have failed at installation, converted into engineering decisions before the window closed.
               </p>
               <Link
                 href="/work"
@@ -225,7 +228,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                <span style={{ color: pageAccent }}>See what gets shown</span> →
+                <span style={{ color: pageAccent }}>Read the first engagement</span> →
               </Link>
             </div>
           </div>

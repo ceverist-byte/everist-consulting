@@ -118,7 +118,7 @@ export default function ContactClient() {
       step: "01",
       label: "Before the call",
       detail:
-        "No prep required. If you've taken the VDC Archetype assessment, share your result — it gives me useful context. Otherwise, just show up.",
+        "No prep required. Come with a recent project in mind — that gives us something concrete to work from. Otherwise, just show up.",
     },
     {
       step: "02",
@@ -130,7 +130,7 @@ export default function ContactClient() {
       step: "03",
       label: "After the call",
       detail:
-        "You'll have a clear picture of your current archetype and the structural gap. If a formal engagement makes sense, I'll scope it specifically for your situation within 48 hours.",
+        "You'll have a clear picture of where your VDC capability sits today and the structural gap. If a formal engagement makes sense, I'll scope it specifically for your situation within 48 hours.",
     },
   ];
 

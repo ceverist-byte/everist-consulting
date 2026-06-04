@@ -35,8 +35,8 @@ export default function Footer() {
                 maxWidth: "240px",
               }}
             >
-              VDC strategy and operating model design for general contractors
-              and owner-side capital programs.
+              VDC operating model design and AI advisory for general
+              contractors and owner-side capital programs.
             </p>
             <div
               style={{
@@ -60,7 +60,6 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               {[
                 { href: "/services", label: "Services" },
-                { href: "/assessment", label: "VDC Assessment" },
                 { href: "/about", label: "About Chris" },
                 { href: "/contact", label: "Book a Call" },
               ].map((l) => (
