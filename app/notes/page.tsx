@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 03",
+    title: "We Said Modernize. Nothing Moved.",
+    description:
+      "A friend with thirty years in the field asked what governance was, and the clean answer wouldn't come. The honest one — whether the decision survives the room it was made in, and why the hero on the hard job is the symptom, not the save.",
+    href: "/notes/we-said-modernize-nothing-moved",
+  },
+  {
     number: "Note 02",
     title: "Governance Is Not a Document",
     description:
