@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Pursuit Advisory | Everist Consulting",
+  title: "Pursuit Advisory",
   description:
     "Strategy and governance for complex public pursuits — defining what the win turns on, building a team's differentiated story, and governing the submission before the window closes. For mid-market general contractors in Southern California.",
 };
