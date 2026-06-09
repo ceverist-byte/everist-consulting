@@ -8,18 +8,19 @@ export const metadata: Metadata = {
     "VDC operating model design, AI and automation advisory, Last Planner System® implementation, and strategic decision support for general contractors and owner-side capital programs.",
 };
 
-const serviceLines = [
-  {
-    name: "VDC Operating Model Design",
-    description:
-      "The core engagement. Diagnose the gap between the outcomes leadership expects from VDC and the structure the organization has built around it. Design the operating model — placement, authority, governance, and accountability — that closes the gap and survives personnel changes.",
-    outcomes: [
-      "A clear, leadership-legible picture of where the gap is and what's causing it",
-      "An operating model design that survives personnel changes",
-      "A sequenced implementation roadmap and change management approach",
-      "Optional implementation support — designed to transfer, not extend",
-    ],
-  },
+const coreEngagement = {
+  name: "VDC Operating Model Design",
+  description:
+    "The core engagement. Diagnose the gap between the outcomes leadership expects from VDC and the structure the organization has built around it. Design the operating model — placement, authority, governance, and accountability — that closes the gap and survives personnel changes.",
+  outcomes: [
+    "A clear, leadership-legible picture of where the gap is and what's causing it",
+    "An operating model design that survives personnel changes",
+    "A sequenced implementation roadmap and change management approach",
+    "Optional implementation support — designed to transfer, not extend",
+  ],
+};
+
+const complementaryLines = [
   {
     name: "AI & Automation Advisory",
     description:
@@ -49,6 +50,17 @@ const serviceLines = [
       "Pre-investment technology evaluation",
       "VDC leader role design and hiring support",
       "Owner digital deliverable requirement response",
+    ],
+  },
+  {
+    name: "Pursuit Advisory",
+    description:
+      "Strategy and governance for complex public pursuits — defining what the win turns on, building the team's differentiated story, and governing the submission so the artifact set is whole before the window closes. Not proposal production. The upstream decisions that determine whether a capable team's submission reflects how well it has already thought the project through.",
+    outcomes: [
+      "A clear win thesis and the specific points the submission has to prove",
+      "A differentiated story carried by the team's own exhibits, not a template",
+      "A governed artifact set, assembled and coherent before the window closes",
+      "Interview and shortlist preparation focused on what moves the panel",
     ],
   },
 ];
@@ -123,88 +135,176 @@ export default function ServicesPage() {
             What I Offer
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
-            {serviceLines.map((s, i) => (
-              <div
-                key={s.name}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: "32px",
-                  paddingBottom: i < serviceLines.length - 1 ? "48px" : "0",
-                  borderBottom: i < serviceLines.length - 1 ? "1px solid var(--rule-strong)" : "none",
-                }}
-                className="md:[grid-template-columns:1fr_1fr]"
-              >
-                <div>
-                  <h2
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "1.5rem",
-                      fontWeight: 800,
-                      color: "var(--text-primary)",
-                      letterSpacing: "-0.015em",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    {s.name}
-                  </h2>
-                  <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
-                    {s.description}
-                  </p>
-                </div>
-                <div
+            {/* Core engagement */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr",
+                gap: "32px",
+              }}
+              className="md:[grid-template-columns:1fr_1fr]"
+            >
+              <div>
+                <h2
                   style={{
-                    background: "transparent",
-                    border: "1px solid var(--rule)",
-                    borderRadius: "2px",
-                    padding: "22px",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "1.5rem",
+                    fontWeight: 800,
+                    color: "var(--text-primary)",
+                    letterSpacing: "-0.015em",
+                    marginBottom: "16px",
                   }}
                 >
+                  {coreEngagement.name}
+                </h2>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+                  {coreEngagement.description}
+                </p>
+              </div>
+              <div
+                style={{
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
+                  padding: "22px",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.625rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    color: "var(--text-secondary)",
+                    marginBottom: "12px",
+                  }}
+                >
+                  What you get
+                </div>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                  }}
+                >
+                  {coreEngagement.outcomes.map((o) => (
+                    <li
+                      key={o}
+                      style={{
+                        fontSize: "0.875rem",
+                        color: "var(--text-primary)",
+                        lineHeight: 1.6,
+                        display: "flex",
+                        gap: "10px",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
+                        ▸
+                      </span>
+                      {o}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Complementary capabilities */}
+            <div>
+              <div style={{ height: "1px", background: "var(--rule-strong)", marginBottom: "48px" }} />
+              <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
+                Complementary capabilities
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
+                {complementaryLines.map((s, i) => (
                   <div
+                    key={s.name}
                     style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.625rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      color: "var(--text-secondary)",
-                      marginBottom: "12px",
+                      display: "grid",
+                      gridTemplateColumns: "1fr",
+                      gap: "32px",
+                      paddingBottom: i < complementaryLines.length - 1 ? "48px" : "0",
+                      borderBottom: i < complementaryLines.length - 1 ? "1px solid var(--rule-strong)" : "none",
                     }}
+                    className="md:[grid-template-columns:1fr_1fr]"
                   >
-                    What you get
-                  </div>
-                  <ul
-                    style={{
-                      listStyle: "none",
-                      padding: 0,
-                      margin: 0,
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "8px",
-                    }}
-                  >
-                    {s.outcomes.map((o) => (
-                      <li
-                        key={o}
+                    <div>
+                      <h2
                         style={{
-                          fontSize: "0.875rem",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "1.5rem",
+                          fontWeight: 800,
                           color: "var(--text-primary)",
-                          lineHeight: 1.6,
-                          display: "flex",
-                          gap: "10px",
-                          alignItems: "flex-start",
+                          letterSpacing: "-0.015em",
+                          marginBottom: "16px",
                         }}
                       >
-                        <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
-                          ▸
-                        </span>
-                        {o}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                        {s.name}
+                      </h2>
+                      <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+                        {s.description}
+                      </p>
+                    </div>
+                    <div
+                      style={{
+                        background: "transparent",
+                        border: "1px solid var(--rule)",
+                        borderRadius: "2px",
+                        padding: "22px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "0.625rem",
+                          fontWeight: 700,
+                          letterSpacing: "0.14em",
+                          textTransform: "uppercase",
+                          color: "var(--text-secondary)",
+                          marginBottom: "12px",
+                        }}
+                      >
+                        What you get
+                      </div>
+                      <ul
+                        style={{
+                          listStyle: "none",
+                          padding: 0,
+                          margin: 0,
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "8px",
+                        }}
+                      >
+                        {s.outcomes.map((o) => (
+                          <li
+                            key={o}
+                            style={{
+                              fontSize: "0.875rem",
+                              color: "var(--text-primary)",
+                              lineHeight: 1.6,
+                              display: "flex",
+                              gap: "10px",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
+                              ▸
+                            </span>
+                            {o}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </PageShell>
       </section>
