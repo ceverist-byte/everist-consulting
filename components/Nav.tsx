@@ -5,15 +5,35 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const links = [
+type NavChild = { href: string; label: string };
+type NavLink = { href: string; label: string; children?: NavChild[] };
+
+const links: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/services", label: "Overview" },
+      { href: "/ai-automation", label: "AI & Automation" },
+      { href: "/pursuit", label: "Pursuit Advisory" },
+    ],
+  },
   { href: "/work", label: "Selected Work" },
   { href: "/notes", label: "Notes" },
-  { href: "/ai-automation", label: "AI & Automation" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+function isActive(pathname: string, link: NavLink): boolean {
+  if (link.children) {
+    return (
+      pathname === link.href ||
+      link.children.some((child) => child.href === pathname)
+    );
+  }
+  return pathname === link.href;
+}
 
 const logoSvg = `<svg viewBox="0 0 1800 700" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate(70 70) scale(0.56)" fill="#111111">
@@ -59,7 +79,69 @@ export default function Nav() {
 
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = isActive(pathname, link);
+
+            if (link.children) {
+              return (
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      color: active ? "var(--text-primary)" : "var(--text-secondary)",
+                      fontSize: "0.875rem",
+                      fontWeight: active ? 600 : 500,
+                      letterSpacing: "-0.01em",
+                      lineHeight: 1,
+                      textDecoration: "none",
+                    }}
+                  >
+                    {link.label}
+                    <span
+                      aria-hidden="true"
+                      style={{ color: "var(--text-secondary)", fontSize: "0.625rem" }}
+                    >
+                      ▾
+                    </span>
+                  </Link>
+                  <div
+                    className="absolute left-0 top-full hidden group-hover:block group-focus-within:block"
+                    style={{
+                      background: "var(--bg)",
+                      border: "1px solid var(--rule)",
+                      borderRadius: "2px",
+                      padding: "10px",
+                      minWidth: "200px",
+                    }}
+                  >
+                    {link.children.map((child) => {
+                      const childActive = pathname === child.href;
+
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          style={{
+                            display: "block",
+                            padding: "8px 10px",
+                            color: childActive ? "var(--text-primary)" : "var(--text-secondary)",
+                            fontSize: "0.875rem",
+                            fontWeight: childActive ? 600 : 500,
+                            letterSpacing: "-0.01em",
+                            lineHeight: 1.2,
+                            textDecoration: "none",
+                          }}
+                        >
+                          {child.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            }
 
             return (
               <Link
@@ -134,7 +216,52 @@ export default function Nav() {
         >
           <PageShell className="flex flex-col gap-5 py-6">
             {links.map((link) => {
-              const active = pathname === link.href;
+              const active = isActive(pathname, link);
+
+              if (link.children) {
+                return (
+                  <div key={link.href} className="flex flex-col gap-5">
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      style={{
+                        color: active ? "var(--text-primary)" : "var(--text-secondary)",
+                        fontSize: "1rem",
+                        fontWeight: active ? 600 : 500,
+                        letterSpacing: "-0.01em",
+                        lineHeight: 1,
+                        textDecoration: "none",
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                    {link.children
+                      .filter((child) => child.href !== link.href)
+                      .map((child) => {
+                        const childActive = pathname === child.href;
+
+                        return (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => setOpen(false)}
+                            style={{
+                              paddingLeft: "16px",
+                              color: childActive ? "var(--text-primary)" : "var(--text-secondary)",
+                              fontSize: "1rem",
+                              fontWeight: childActive ? 600 : 500,
+                              letterSpacing: "-0.01em",
+                              lineHeight: 1,
+                              textDecoration: "none",
+                            }}
+                          >
+                            {child.label}
+                          </Link>
+                        );
+                      })}
+                  </div>
+                );
+              }
 
               return (
                 <Link
