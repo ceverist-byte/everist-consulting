@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import matter from 'gray-matter';
+import Link from 'next/link';
 import styles from './bep.module.css';
 
 export const dynamic = 'force-static';
@@ -24,14 +25,6 @@ interface ExhibitMeta {
   desc: string;
 }
 
-/**
- * Parse exhibit metadata from the Exhibits section of the markdown.
- * Reads title and description from the document rather than hardcoding them,
- * so future revisions update automatically on file swap.
- *
- * Expected format per line:
- * - **Exhibit N · Title.** Description text. In production.
- */
 function parseExhibits(text: string): ExhibitMeta[] {
   const lines = text.split('\n').filter(l => /\*\*Exhibit \d+/.test(l));
   return lines.flatMap(line => {
@@ -48,6 +41,9 @@ function parseExhibits(text: string): ExhibitMeta[] {
 
 const EXHIBITS_MARKER = '\n## Exhibits\n';
 
+const MONO =
+  "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+
 export default async function BEPPage() {
   const filePath = join(process.cwd(), 'content/portal/dempsey/bep.md');
   const raw = readFileSync(filePath, 'utf-8');
@@ -63,16 +59,41 @@ export default async function BEPPage() {
     splitIdx >= 0 ? body.slice(splitIdx + EXHIBITS_MARKER.length) : '';
 
   const html = await renderMarkdown(mainMarkdown);
-
   const exhibits = parseExhibits(exhibitsSection);
 
   return (
     <div>
+      {/* Back navigation */}
+      <div
+        style={{
+          marginBottom: '32px',
+          paddingBottom: '20px',
+          borderBottom: '1px solid #D8D4CB',
+          maxWidth: '680px',
+        }}
+      >
+        <Link
+          href="/portal/dempsey"
+          style={{
+            fontFamily: MONO,
+            fontSize: '10px',
+            letterSpacing: '0.14em',
+            textTransform: 'uppercase',
+            color: '#6A6861',
+            textDecoration: 'none',
+          }}
+        >
+          ← Dempsey Portal
+        </Link>
+      </div>
+
+      {/* Main document body */}
       <article
         className={styles.document}
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
+      {/* Exhibits section */}
       <section aria-labelledby="exhibits-heading">
         <h2
           id="exhibits-heading"
@@ -108,6 +129,7 @@ export default async function BEPPage() {
         </div>
       </section>
 
+      {/* Document footer */}
       <p className={styles.docFooter} style={{ maxWidth: '680px' }}>
         Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · {revision} · {revDate}
       </p>
