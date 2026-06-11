@@ -4,6 +4,7 @@ import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
+import matter from 'gray-matter';
 import styles from './bep.module.css';
 
 export const dynamic = 'force-static';
@@ -21,11 +22,15 @@ const EXHIBITS_MARKER = '\n## Exhibits\n';
 
 export default async function BEPPage() {
   const filePath = join(process.cwd(), 'content/portal/dempsey/bep.md');
-  const markdown = readFileSync(filePath, 'utf-8');
+  const raw = readFileSync(filePath, 'utf-8');
 
-  const splitIdx = markdown.indexOf(EXHIBITS_MARKER);
+  const { data: meta, content: body } = matter(raw);
+  const revision = (meta.revision as string) ?? '';
+  const revDate = (meta.date as string) ?? '';
+
+  const splitIdx = body.indexOf(EXHIBITS_MARKER);
   const mainMarkdown =
-    splitIdx >= 0 ? markdown.slice(0, splitIdx) : markdown;
+    splitIdx >= 0 ? body.slice(0, splitIdx) : body;
 
   const html = await renderMarkdown(mainMarkdown);
 
@@ -77,7 +82,7 @@ export default async function BEPPage() {
       </section>
 
       <p className={styles.docFooter} style={{ maxWidth: '680px' }}>
-        Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 0 · 2026-06-10
+        Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · {revision} · {revDate}
       </p>
     </div>
   );

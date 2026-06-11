@@ -1,3 +1,8 @@
+---
+revision: "REV 0"
+date: "2026-06-10"
+status: "Draft for coordination review"
+---
 # EVC-1.5 Lite BIM Execution Plan
 ## La Jolla Cove Hotel · Job 25029 · Dempsey Construction
 
