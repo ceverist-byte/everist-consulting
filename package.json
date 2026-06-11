@@ -13,6 +13,7 @@
     "gray-matter": "^4.0.3",
     "jose": "^6.2.3",
     "next": "^16.2.1",
+    "nodemailer": "^8.0.11",
     "react": "^18",
     "react-dom": "^18",
     "rehype-stringify": "^10.0.1",
