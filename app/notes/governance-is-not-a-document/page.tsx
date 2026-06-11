@@ -40,7 +40,7 @@ const closingProseParagraphs = [
 ];
 
 const ctaLeadParagraph =
-  "I run a 30-minute structural diagnostic that maps where authority breaks on a capital program. No deck and no pitch — we map the gap, and you keep the map.";
+  "Before the diagnostic, there's a shorter way in: five questions about how delivery actually changes on your program — who can require it, who answers for it, who owns what teams build from. Open answers. I read every one.";
 
 const bodyParaStyle = {
   fontSize: "1rem",
@@ -209,14 +209,9 @@ export default function GovernanceNotADocumentPage() {
           >
             {ctaLeadParagraph}
           </p>
-          <a
-            href="https://cal.com/chriseverist/vdc-structural-diagnostic"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={primaryCtaStyle}
-          >
-            Book the diagnostic
-          </a>
+          <Link href="/field" style={primaryCtaStyle}>
+            Take the assessment
+          </Link>
           <div style={{ marginTop: "24px" }}>
             <Link
               href="/notes"
