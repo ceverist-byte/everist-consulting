@@ -16,6 +16,13 @@ const inputBase: React.CSSProperties = {
   fontFamily: "var(--font-sans)",
 };
 
+const labelStyle: React.CSSProperties = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "0.875rem",
+  color: "var(--text-secondary)",
+  letterSpacing: "0.01em",
+};
+
 function autoGrow(el: HTMLTextAreaElement) {
   el.style.height = "auto";
   el.style.height = `${el.scrollHeight}px`;
@@ -175,23 +182,38 @@ export default function FieldClient() {
               })}
 
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  style={inputBase}
-                  onFocus={(e) => (e.target.style.borderColor = "var(--fg)")}
-                  onBlur={(e) => (e.target.style.borderColor = "var(--rule)")}
-                />
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  style={inputBase}
-                  onFocus={(e) => (e.target.style.borderColor = "var(--fg)")}
-                  onBlur={(e) => (e.target.style.borderColor = "var(--rule)")}
-                />
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <label htmlFor="field-email" style={labelStyle}>
+                    Email
+                  </label>
+                  <input
+                    id="field-email"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={inputBase}
+                    onFocus={(e) => (e.target.style.borderColor = "var(--fg)")}
+                    onBlur={(e) => (e.target.style.borderColor = "var(--rule)")}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <label htmlFor="field-name" style={labelStyle}>
+                    Name (optional)
+                  </label>
+                  <input
+                    id="field-name"
+                    type="text"
+                    autoComplete="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    style={inputBase}
+                    onFocus={(e) => (e.target.style.borderColor = "var(--fg)")}
+                    onBlur={(e) => (e.target.style.borderColor = "var(--rule)")}
+                  />
+                </div>
                 <p
                   style={{
                     fontSize: "0.9375rem",
