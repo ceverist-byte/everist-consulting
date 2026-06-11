@@ -18,6 +18,34 @@ async function renderMarkdown(markdown: string): Promise<string> {
   return result.toString();
 }
 
+interface ExhibitMeta {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+/**
+ * Parse exhibit metadata from the Exhibits section of the markdown.
+ * Reads title and description from the document rather than hardcoding them,
+ * so future revisions update automatically on file swap.
+ *
+ * Expected format per line:
+ * - **Exhibit N · Title.** Description text. In production.
+ */
+function parseExhibits(text: string): ExhibitMeta[] {
+  const lines = text.split('\n').filter(l => /\*\*Exhibit \d+/.test(l));
+  return lines.flatMap(line => {
+    const headerMatch = line.match(/\*\*Exhibit (\d+) · ([^*]+?)\.\*\*/);
+    const descMatch = line.match(/\.\*\* (.+?) In production\./);
+    if (!headerMatch) return [];
+    return [{
+      num: `Exhibit ${headerMatch[1]}`,
+      title: headerMatch[2].trim(),
+      desc: descMatch ? descMatch[1].trim() : '',
+    }];
+  });
+}
+
 const EXHIBITS_MARKER = '\n## Exhibits\n';
 
 export default async function BEPPage() {
@@ -31,8 +59,12 @@ export default async function BEPPage() {
   const splitIdx = body.indexOf(EXHIBITS_MARKER);
   const mainMarkdown =
     splitIdx >= 0 ? body.slice(0, splitIdx) : body;
+  const exhibitsSection =
+    splitIdx >= 0 ? body.slice(splitIdx + EXHIBITS_MARKER.length) : '';
 
   const html = await renderMarkdown(mainMarkdown);
+
+  const exhibits = parseExhibits(exhibitsSection);
 
   return (
     <div>
@@ -59,25 +91,20 @@ export default async function BEPPage() {
         </h2>
 
         <div className={styles.exhibitGroup} style={{ maxWidth: '680px' }}>
-          <figure id="exhibit-1" className={styles.exhibit}>
-            <div className={styles.exhibitNum}>Exhibit 1</div>
-            <div className={styles.exhibitTitle}>Coordination Swim-Lane</div>
-            <div className={styles.exhibitDesc}>
-              Roles, decision ownership, shop-drawing ownership, and the instruction
-              vector as one sequence of work. Sections E, F, and G reference it.
-            </div>
-            <div className={styles.exhibitPending}>In production</div>
-          </figure>
-
-          <figure id="exhibit-2" className={styles.exhibit}>
-            <div className={styles.exhibitNum}>Exhibit 2</div>
-            <div className={styles.exhibitTitle}>Governed-Elevation Vertical Stack</div>
-            <div className={styles.exhibitDesc}>
-              The system priority structure of Section C rendered as a representative
-              section at governed elevations, for field confirmation.
-            </div>
-            <div className={styles.exhibitPending}>In production</div>
-          </figure>
+          {exhibits.map(ex => (
+            <figure
+              key={ex.num}
+              id={`exhibit-${ex.num.replace('Exhibit ', '')}`}
+              className={styles.exhibit}
+            >
+              <div className={styles.exhibitNum}>{ex.num}</div>
+              <div className={styles.exhibitTitle}>{ex.title}</div>
+              {ex.desc && (
+                <div className={styles.exhibitDesc}>{ex.desc}</div>
+              )}
+              <div className={styles.exhibitPending}>In production</div>
+            </figure>
+          ))}
         </div>
       </section>
 

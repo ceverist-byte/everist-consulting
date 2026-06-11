@@ -1,143 +1,149 @@
 ---
-revision: "REV 0"
-date: "2026-06-10"
-status: "Draft for coordination review"
+revision: "REV 1"
+date: "June 10, 2026"
+status: "Draft for review, transmittal target June 17, 2026"
 ---
-# EVC-1.5 Lite BIM Execution Plan
-## La Jolla Cove Hotel · Job 25029 · Dempsey Construction
 
-**Document control**
-REV 0 · 2026-06-10 · Status: Draft for coordination review
-Prepared by Everist Consulting under Letter of Engagement EVC-1.5 (effective 2026-06-01, executed 2026-06-09), Item 4. This document governs the routing coordination under LOE Item 6.
+# Lite BIM Execution Plan
+
+**La Jolla Cove Hotel · Job 25029 · EVC-1.5 Scan Bridge**
+
+A coordination governance work product. It makes existing field authority legible so that every party reading it can see who decides, when, on what evidence, and how the decision is traced afterward.
+
+| | |
+|---|---|
+| Project | La Jolla Cove Hotel, 1155 Coast Blvd, La Jolla, CA 92037 |
+| Job number | 25029 |
+| Engagement | EVC-1.5 Scan Bridge |
+| Prepared by | Everist Consulting |
+| Revision | REV 1 |
+| Date | June 10, 2026 |
+| Status | Draft for review, transmittal target June 17, 2026 |
+| Supersedes | REV 0 skeleton. Incorporates capture-ingest 01, logged June 10, 2026 |
+| Governing milestone | Overhead rough-in start at Level 2, July 29, 2026 |
 
 ---
 
 ## A. Purpose and Boundary
 
-This plan makes existing field authority legible. It is not a contractual mechanism and does not pretend to be. It carries no authority of its own. It borrows Dempsey's field authority by making it legible.
+This plan makes the project's existing field authority legible. It is not a contractual mechanism and does not present itself as one. It carries no authority of its own. It borrows the field authority Dempsey Construction already holds and makes that authority legible to every party that reads it.
 
 The plan does three things:
 
-1. It codifies the coordination priority rules established in the first session: structure, then ceilings, then ducts, then fire protection.
-2. It cues each coordination decision to its owner by trade.
-3. It defines a single instruction vector for the named systems.
+1. It codifies the coordination priority rules established in the first coordination session: structural, then ceilings, then ducts, then fire protection.
+2. It cues each coordination decision to the party that owns it, by trade.
+3. It defines a single instruction vector for carrying a coordination finding to a held install, and it adopts RFI-number tagging as the method that traces a changed element from decision to install.
 
-The plan does not require the installing subcontractor to model, does not impose retroactive procurement standards, and does not declare expectations the contracts do not back.
+The plan does not require True Air to model, does not impose retroactive procurement standards, and does not declare expectations the contracts do not back.
 
-The plan runs slightly behind the coordination sessions with the installing subcontractor and captures what each session reveals.
+The countersigned Letter of Engagement, effective June 1, 2026, and its six scope items define what Everist Consulting owns on this engagement. This plan documents coordination governance within that scope. It does not extend Everist Consulting into markup or shop-drawing production, fabrication or installation modeling, or design responsibility, each of which the Letter of Engagement excludes. The plan runs alongside the coordination sessions and captures what each session reveals.
 
 ---
 
 ## B. Project Information and Roles
 
-| Field | Information |
-|---|---|
-| Project | La Jolla Cove Hotel renovation |
-| Address | 1155 Coast Blvd, La Jolla, CA 92037 |
-| Job | 25029 |
-| Client | Dempsey Construction |
-| Consultant | Everist Consulting (Chris Everist, Principal) |
-| Engagement | EVC-1.5 Scan Bridge, LOE effective 2026-06-01 |
-| Governing milestone | Overhead rough-ins begin 2026-07-29, Level 2 first |
+The engagement extends the EVC-1 relationship, closed May 2026, into a defined bridge scope ahead of the overhead rough-in. The overhead rough-in starts at Level 2 on July 29, 2026, with Level 3 following on August 14, Level 4 on September 4, and Level 1 on September 23.
 
-**Coordination roles**
-
-| Lane | Party | Role |
+| Role | Party | Scope on this engagement |
 |---|---|---|
-| Dempsey field | Jackson Tews, Superintendent | Field authority, coordination direction, back-check |
-| Dempsey field | Joe Ciaccio, Senior Superintendent | Field authority |
-| Consultant | Everist Consulting | Coordination, conflict identification, integration |
-| Installing subcontractor | True Air | Mechanical installation for the named systems, shop drawings |
-| Design | Design team and engineers of record | Design intent, RFI responses |
-| Scan vendor | ARC (Architectural Resource Consultants) | Registered scan and existing-conditions model |
+| General contractor and field authority | Dempsey Construction. Jackson Tews, Superintendent. Joe Ciaccio, Senior Superintendent. | Owns field direction, RFIs, the field back-check at install, and install holds |
+| General contractor, submittal review | Dempsey Construction. Jason, role developing, confirmation pending. | Owns the admin back-check of markups against RFI direction. Joins the Tuesday model review. |
+| Coordination | Everist Consulting | Scan scope definition, scan vendor coordination, existing-conditions integration, this plan, the coordination session, routing analysis for the named systems, and the back-check checklist with first-cycle coaching |
+| Mechanical, installing subcontractor | True Air | Produces marked-up mechanical plans, the project's shop-drawing equivalent, and owns their submission. Owns fabrication and installation. |
+| Design team and structural engineer of record | Design team and SEOR | Owns design intent and engineering authority decisions |
+| Scan vendor | ARC, Architectural Resource Consultants | Produces the registered scan and the existing-conditions model under direct contract to Dempsey Construction |
 
-**Scan vendor relationship.** The registered scan and existing-conditions model are contracted directly between Dempsey and the scan vendor. Everist coordinates the scan scope and reviews the deliverable for fitness against the coordination need. Everist does not contract, price, warrant, or direct the scan vendor.
+**Scan scope of record.** A registered scan and existing-conditions model of the whole building, Levels 1 through 4, under Dempsey notice to proceed dated June 10, 2026. The scan executes June 11, 2026. The point cloud is delivered in Autodesk ReCap, with a LOD 200 model for use as a SketchUp background. Survey control is excluded from this scope. The scan uses a stairwell and internal control loop only, because the studs are underway, the floors are stable, and the scope is overhead coordination rather than floor flatness. The exclusion is recorded so that any future floor-flatness mapping is recognized as new scope.
 
-**Scan scope of record.** A registered scan and existing-conditions model of the Level 1 and Level 4 areas bounded by the marked-up plans dated 2026-06-01. Scan accuracy at LOA 30 (plus or minus 15 mm, USIBD Level of Accuracy). Modeled content at LOD 200. The point cloud is web-hosted, with measurement available through the Autodesk Recap viewer. Because the bounded areas are unframed, captured content is predominantly existing structure, slab, and overhead piping from the floors above.
+**Scan accuracy, measured and represented.** Measured accuracy, the accuracy of the captured points, is near LOA 30 at plus or minus 15 mm on the USIBD scale. Represented accuracy, the accuracy a reader should attribute to the modeled geometry, may be LOA 20, a coarser level, because the LOD 200 model abstracts the point cloud. Any measurement that requires LOA 30 is taken from the point cloud, not from the model. The validation method and the path for geometry that falls outside the stated accuracy are defined in section D.
+
+**Broker note.** The scan vendor contracts directly with Dempsey Construction. Everist Consulting coordinates the scan and does not contract, price, warrant, or direct the scan vendor's work.
 
 ---
 
 ## C. System Priority Structure
 
-When two systems occupy the same space, the system with the higher priority (the lower number) takes precedence. The hierarchy below is typical. Exceptions are named where this project departs from it, and the named exceptions are the substance the field team confirms.
+Priority resolves which system governs when two occupy the same space. The lower the priority number, the higher the precedence.
 
-**Priority 1 is Existing-to-Remain.** This is a scan-anchored engagement. The registered point cloud is the evidence layer for existing conditions, and dimensions are pulled from it. Existing-to-remain outranks every proposed system.
+**Baseline.** The typical coordination hierarchy is the starting point, and it is the reference every project exception is measured against. In order of precedence: existing to remain, structural, ceilings, architectural including light fixtures, miscellaneous metals, equipment and devices including clearances, duct mains and branches, then the remaining distribution systems, with fire mains, fire stand pipe, and fire branches near the flexible end of the order. This hierarchy is typical. Exceptions exist on this project and are named below.
 
-**Adopted priority hierarchy (typical baseline)**
+The session-one rules map onto the baseline as the project default: structural, then ceilings, then ducts, then fire protection.
 
-1. Existing-to-Remain
-2. Structural
-3. Ceilings
-4. Architectural, including light fixtures
-5. Miscellaneous metals
-6. Equipment and devices, including required clearances
-7. Duct mains and branches
-8. Process piping
-9. Gravity plumbing (sloping lines take priority)
-10. Large electrical racks
-11. Cable tray
-12. Piping racks
-13. Fire mains
-14. Fire standpipe
-15. Small electrical racks
-16. Mechanical pipe branches
-17. Fire branches
+**Priority 1, existing to remain, is scan-anchored on this engagement.** The registered scan and the existing-conditions model are the evidence layer for existing structure, slab, and overhead conditions across the whole building. Dimensions are pulled from that record.
 
-The first-session rules (structure, then ceilings, then ducts, then fire protection) map onto this hierarchy and govern where the named systems conflict.
+**Project exceptions, named, with rationale and owner.**
 
-**Project exceptions**
+Exception 1. The ceiling resolves into two elements with different precedence.
 
-1. **Ceiling, read as two elements.** The finished ceiling height is a protected target and ranks high among the constraints. The ceiling assembly is the adjustable solver, presently the GridLock assembly under RFI 102, and ranks low because it adapts to the confirmed positions above it. *Decision owned by: design team for the assembly selection (RFI 102 record); Dempsey for installed height confirmation.*
+- The finished ceiling height is a protected datum and holds high precedence. It is the height the coordination protects. The targets of record are 7 ft 2 in at restrooms and 8 ft 2 in at bedrooms. Because the finish flooring type and thickness are not yet selected, the targets are set against the thickest candidate finish, so a thinner selection yields a taller ceiling and never a shorter one. The assumed thickness and the reasoning are documented in section D.
+- The ceiling assembly is the flexible solver and holds low precedence. The assembly adapts to the confirmed positions above it. The assembly under coordination is the locking drywall grid system at approximately 1.5 inches, carried under RFI 102.
 
-2. **Committed equipment elevated.** The committed and installed fan coil units are coordinated as near-fixed rather than at the typical equipment rank, because they are committed in the field. *Decision owned by: Dempsey field for installed position; True Air for unit data.*
+Decision owned by: owner and design team for finish selection and tolerance. Dempsey for tolerance adoption and installed-height confirmation. Design team for the assembly selection under RFI 102.
 
-**Priority is not urgency.** Fire protection ranks low in precedence because it yields and routes last. At the same time it carries the tightest clearance in the named-system scope. Low precedence does not mean low urgency.
+Exception 2. Committed equipment is elevated.
 
-The priority structure is rendered as a governed-elevation vertical-stack section (Exhibit 2) so the field team can confirm on paper that it is complete and accurate before it anchors coordination.
+- The per-bathroom fan coil units are committed and installed, turned to clear the plumber and set within the stud framing. Committed equipment of this kind is coordinated as near-fixed, an exception to the typical equipment rank.
+
+Decision owned by: Dempsey field, as the condition that committed them.
+
+**Priority is not urgency.** A system low in the priority order yields when it shares space with a system above it. That is a separate matter from how binding its clearance is on the schedule. The fire-protection and sprinkler main is low in the priority order and routes around the systems above it, and its clearance is at the same time among the tightest conditions on the floor. The plan keeps the two axes separate so that low priority is never read as low urgency.
+
+An illustrated governed-elevation version of this priority structure is maintained as Exhibit 2 for field confirmation, so that the team can confirm the structure is complete and accurate before it anchors coordination.
 
 ---
 
 ## D. Modeling Scope by System
 
-This section establishes the level to which each system is modeled, the conditions consciously deprioritized for field coordination, and the prefabrication boundary. It is a scaffold at REV 0 and is issued as a draft for the team to confirm. It will fill as the existing-conditions model and the coordination sessions reveal scope.
+This section establishes the level to which each system is modeled, the accuracy a reader should attribute to it, the conditions consciously deprioritized for field coordination, and the prefabrication boundary. It carries the modeling assumptions and the validation protocol. Systems are organized by Uniformat classification, with a Model Element Author and a modeled level assigned to each. The section advances as the scan and the coordination sessions reveal scope.
 
-Systems are organized by Uniformat II classification. The table below scaffolds the Work Breakdown Structure and carries, for each element, the model element author (MEA) and the level of development (LOD).
-
-| Uniformat | System or deliverable | Author (MEA) | LOD | Coordination state |
+| Code | System | Model Element Author | Modeled level | Coordination state |
 |---|---|---|---|---|
-| B1010 | Existing structure and slab (deck above, beam) | Scan vendor, existing-conditions model | 200 / LOA 30 | Existing-to-remain reference |
-| D2020 | Existing overhead piping from floors above | Scan vendor, existing-conditions model | 200 | Existing-to-remain reference |
-| D3050 | Fan coil units (committed equipment) | True Air for unit data; existing-conditions model where installed | 200 reference | Near-fixed reference |
-| C3030 | Ceiling height target | Design and RCP record | Datum | Protected target |
-| C3030 | Ceiling assembly (GridLock, RFI 102) | Installing framing subcontractor for shops; Everist coordination reference | 200 to 300 | Coordinated, RFI 102 |
-| D3040 | Exhaust duct main (proposed routing) | Everist coordination model for conflict identification; True Air for shops | 300 or below | Coordinated for conflict ID |
-| D4010 | Fire protection main (proposed routing) | Everist coordination model for conflict identification; installing subcontractor for shops | 300 or below | Coordinated for conflict ID |
+| Existing reference | Existing structure, slab, and overhead conditions, whole building Levels 1 through 4 | ARC, scan vendor | LOD 200, captured near LOA 30, represented at LOA 20 | Existing-to-remain reference, priority 1 |
+| D30 | Exhaust ductwork, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
+| D40 | Fire-protection main, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
 
-**Prefabrication boundary.** Anything not modeled to a coordinated state is not available for prefabrication.
+**Whole-building modeling, by level.** Level 2 and Level 3 are included to capture steel placement variation. Level 4 is included, and updated guest-suite drawings are expected and reconciled when received. Level 1 is included and flagged for low ceilings and existing beams, where mechanical and plumbing fit is verified.
 
-**Conditions consciously deprioritized at this stage.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. These are deprioritized for field coordination at REV 0 and are documented here so the boundary is explicit.
+**Validation protocol.** Measurements are checked against the point cloud as the evidence layer. When a modeled element falls outside the stated level of accuracy, it is flagged and routed to the relevant stakeholder for a decision. It is never silently absorbed. The flag path is to identify the out-of-accuracy element, flag it with the affected system and location, and route it to the owner named for that decision.
+
+**Assumption register.** Modeling conventions adopted on this engagement are recorded so that any reader can reproduce the basis of a modeled element.
+
+- Sagging pipe is modeled at true diameter, fit to the point cloud, with the lowest captured point governing.
+- Finish flooring thickness is set at the thickest candidate finish until a selection is made, consistent with the ceiling-height tolerance in section C.
+
+**Prefabrication boundary.** Anything not modeled to a coordinated state cannot be prefabricated.
+
+**Conditions consciously deprioritized.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. Survey control and floor-flatness mapping are excluded, as recorded in section B. These are deprioritized for field coordination at this revision and are documented so the boundary is explicit. As scope firms, conditions that move into or out of the coordinated set are recorded in the capture register, cited to the RFI or session that moved them.
 
 ---
 
 ## E. Decision Ownership
 
-Each coordination decision is cued to its trade owner using the formula "Decision owned by: [party]." This section does not commit solutions on an owner's behalf. The detailed sequence is carried in the integrated swim-lane (Exhibit 1).
+Coordination decisions are cued to the party that owns them, in the form Decision owned by: [party]. The plan cues decisions to their owners and does not commit a solution on an owner's behalf. The decision-by-decision sequence is carried in the integrated swim-lane, Exhibit 1.
 
 Governing decisions from the current record, cued and not committed:
 
-- Base versus four-floor scan extent (the Levels 2 and 3 framing line-of-sight add). *Decision owned by: Dempsey.*
-- Shop-drawing back-check owner. *Decision owned by: Dempsey (named owner to be assigned).*
-- Exhaust branch diameter through the beam zone. *Decision owned by: mechanical engineer of record (per the RFI 146 record). Raised by Dempsey field.*
-- Ceiling assembly selection. *Decision owned by: design team (RFI 102 record).*
+- Scan extent. Resolved to the whole building, Levels 1 through 4. *Decision owned by: Dempsey, by notice to proceed dated June 10, 2026.*
+- Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction. Carried as Jason, probable, confirmation pending. *Decision owned by: Dempsey.*
+- Exhaust routing where the 3-inch maximum zones are not fabricable. True Air's fabrication range is 4 to 8 inches, so the 3-inch maximum zones cannot be fabricated as drawn. The options are lower ceilings, structural penetrations, or an in-unit fan alternative at 6-inch round on north-south routing. Open, and cued for the June 18 coordination meeting. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- Ceiling assembly selection, the grid system under RFI 102. *Decision owned by: design team, with Dempsey for installed-height confirmation.*
 - Fan coil installed position. *Decision owned by: Dempsey field.*
+- Finish selection and tolerance adoption. *Decision owned by: owner and design team for the finish, Dempsey for tolerance adoption.*
 
 ---
 
-## F. Shop-Drawing Ownership and Submission Structure
+## F. Shop-Drawing and Markup Ownership
 
-The installing subcontractor owns and submits the shop drawings for its scope. For the named mechanical systems, True Air owns and submits. The back-check of the shop drawings against the governing RFI is owned by Dempsey. Consistent with the LOE, Everist does not produce mechanical or fire-protection shop drawings.
+On this project the installing subcontractor produces marked-up mechanical plans rather than new shop drawings. The markups are the project's shop-drawing equivalent. True Air owns and submits its marked-up mechanical plans, and True Air owns its fabrication and installation. Consistent with the Letter of Engagement, Everist Consulting does not produce mechanical or fire-protection markups or shop drawings.
 
-The ownership and submission lanes are carried in the integrated swim-lane (Exhibit 1).
+The back-check of the markups is owned by Dempsey and runs as a split:
+
+- Admin accountability. The markups are checked against the confirmed RFI direction by the Dempsey submittal-review owner, carried as Jason, pending.
+- Field accountability. The hold at install is owned by Jackson Tews and Joe Ciaccio.
+
+Everist Consulting builds the back-check checklist and coaches the first cycle only. The back-check is not a recurring Everist duty. It is capability transferred to the Dempsey owner.
+
+The ownership and submission lanes are carried in the integrated swim-lane, Exhibit 1.
 
 ---
 
@@ -145,27 +151,39 @@ The ownership and submission lanes are carried in the integrated swim-lane (Exhi
 
 The named systems follow a single instruction vector:
 
-**coordination finding → RFI → confirmed direction → True Air shop drawings → back-check against the RFI (Dempsey-owned) → hold at install**
+**coordination finding → RFI → confirmed direction → True Air plan markups → back-check against the RFI → hold at install**
 
-The back-check step requires a named Dempsey owner. If it is unowned, it defaults to nobody. The vector is carried in the integrated swim-lane (Exhibit 1).
+On this project, plan markups stand in for shop drawings, and the back-check checks the markups against the confirmed RFI direction. The back-check is owned by Dempsey and is split between an admin owner, who checks markups against RFI direction, and the field, which holds at install. The admin step requires a named Dempsey owner, carried as Jason, pending. An unowned back-check defaults to no owner.
+
+RFI-number tagging is the tracing method. Every model element changed by an RFI carries that RFI number from the decision, through the markup, to the install back-check. The RFI number is the thread that lets any party confirm at install that what is being built traces to a confirmed decision.
+
+The vector is carried in the integrated swim-lane, Exhibit 1.
 
 ---
 
 ## H. Coordination Cadence
 
-Coordination runs twice weekly: one virtual session and one on-site session on Thursdays. Each meeting type carries an expected output.
+Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Chris Everist, Joe Ciaccio, and Jason. Thursdays are coordination with True Air and the other contractors. The first Tuesday session is the week of June 15. The True Air coordination meeting is Thursday, June 18.
 
-- **Virtual session.** Status, open-item triage, and RFI tracking.
-- **On-site session, Thursdays.** Working coordination with the installing subcontractor. The meeting type depends on shop-drawing status. With shops in hand, the session is a back-check kickoff against the RFIs. Without shops, the session sets the rules of the road, and shops become the dated deliverable out of the meeting.
+Each session carries an expected output. The Tuesday session produces a reviewed model and a prepared agenda for the contractor coordination. The Thursday coordination is a back-check kickoff when True Air markups are in hand, and a rules-of-the-road session when they are not, in which case the markups become the dated deliverable out of the meeting.
 
-The cadence runs slightly behind the True Air sessions and captures what each reveals into the capture register.
-
-**Schedule anchor.** Overhead rough-ins begin 2026-07-29, Level 2 first, then Level 3 on 8-14, Level 4 on 9-04, and Level 1 on 9-23, per the 2026-06-15 construction schedule. Framing line of sight on Levels 2 and 3 is the near-term driver.
+**Schedule anchor.** Overhead rough-ins begin July 29, 2026, Level 2 first, then Level 3 on August 14, Level 4 on September 4, and Level 1 on September 23, per the June 15, 2026 construction schedule. Framing line of sight on Levels 2 and 3 is the near-term driver. The cadence runs ahead of the rough-in and captures what each session reveals into the capture register.
 
 ---
 
 ## I. Capture Register
 
-The plan advances from a standing capture register, not from memory. After each coordination session the capture is recorded in a fixed format: decisions made, owner named per decision, RFIs triggered or referenced, open busts, and items assigned with dates. Section updates follow from the register.
+The plan advances from a standing capture register, not from memory. After each coordination session the capture is recorded in a fixed format: decisions made, owner named per decision, RFIs triggered or referenced, open busts, and items assigned with dates. Each revision of this plan traces its changes to entries in the register.
 
-The register is maintained by Everist Consulting and is empty at REV 0. The first captures land after the coordination session on 2026-06-11.
+The register is maintained by Everist Consulting. Capture-ingest 01 was logged June 10, 2026 from two on-site sessions, the Letter of Engagement review and the ARC scan walk, and this revision incorporates it. The next capture follows the first Tuesday session.
+
+---
+
+## Exhibits
+
+- **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it. In production.
+- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
+
+---
+
+*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 1 · June 10, 2026*
