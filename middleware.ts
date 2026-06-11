@@ -7,15 +7,6 @@ const PORTAL_COOKIE = 'ec-portal-session'
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Hide assessment until Stage 2 funnel is built (email gate + conditioning sequence)
-  if (pathname === '/assessment') {
-    return NextResponse.redirect(new URL('/contact', request.url), 302)
-  }
-  // Legacy redirect — /coming-soon was the previous landing; send users to home
-  if (pathname === '/coming-soon') {
-    return NextResponse.redirect(new URL('/', request.url), 302)
-  }
-
   // Client portal auth gate
   if (pathname.startsWith('/portal')) {
     return portalGuard(request)
