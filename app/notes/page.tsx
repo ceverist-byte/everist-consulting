@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 04",
+    title: "The Red Pencil",
+    description:
+      "Blueprints, redlines, and a stamp that never carried my name. The platforms changed for twenty years; the cycles survived every one. What were we buying when we bought the tool?",
+    href: "/notes/the-red-pencil",
+  },
+  {
     number: "Note 03",
     title: "We Said Modernize. Nothing Moved.",
     description:
