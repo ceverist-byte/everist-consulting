@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 
@@ -176,6 +177,16 @@ export default function TheRedPencilPage() {
         }}
       >
         <PageShell>
+          <div style={{ marginBottom: "48px" }}>
+            <Image
+              src="/images/notes/the-red-pencil-comic.png"
+              alt="Eleven-panel editorial comic strip tracing the arc of redline cycles from a first job in architecture through two decades of platform changes. A red pencil, a rubber stamp, and a sequence nobody wrote down."
+              width={1200}
+              height={900}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "20px", maxWidth: "680px" }}>
             {paragraphs.map((para, idx) => (
               <p key={idx} style={bodyParaStyle}>
