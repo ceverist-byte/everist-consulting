@@ -1,7 +1,7 @@
 ---
-revision: "REV 1"
-date: "June 10, 2026"
-status: "Draft for review, transmittal target June 17, 2026"
+revision: "REV 0"
+date: "June 15, 2026"
+status: "Draft for review, Tuesday June 16 gate"
 ---
 
 # Lite BIM Execution Plan
@@ -16,10 +16,10 @@ A coordination governance work product. It makes existing field authority legibl
 | Job number | 25029 |
 | Engagement | EVC-1.5 Scan Bridge |
 | Prepared by | Everist Consulting |
-| Revision | REV 1 |
-| Date | June 10, 2026 |
-| Status | Draft for review, transmittal target June 17, 2026 |
-| Supersedes | REV 0 skeleton. Incorporates capture-ingest 01, logged June 10, 2026 |
+| Revision | REV 0 |
+| Date | June 15, 2026 |
+| Status | Draft for review, Tuesday June 16 gate |
+| Supersedes | The June 10 skeleton. Incorporates capture-ingest 01 and 02 |
 | Governing milestone | Overhead rough-in start at Level 2, July 29, 2026 |
 
 ---
@@ -47,7 +47,7 @@ The engagement extends the EVC-1 relationship, closed May 2026, into a defined b
 | Role | Party | Scope on this engagement |
 |---|---|---|
 | General contractor and field authority | Dempsey Construction. Jackson Tews, Superintendent. Joe Ciaccio, Senior Superintendent. | Owns field direction, RFIs, the field back-check at install, and install holds |
-| General contractor, submittal review | Dempsey Construction. Jason, role developing, confirmation pending. | Owns the admin back-check of markups against RFI direction. Joins the Tuesday model review. |
+| General contractor, submittal review | Dempsey Construction. Jason Garrett, Dempsey PE, developing submittal-review capability. | Owns the admin back-check of markups against RFI direction. Joins the Tuesday model review. |
 | Coordination | Everist Consulting | Scan scope definition, scan vendor coordination, existing-conditions integration, this plan, the coordination session, routing analysis for the named systems, and the back-check checklist with first-cycle coaching |
 | Mechanical, installing subcontractor | True Air | Produces marked-up mechanical plans, the project's shop-drawing equivalent, and owns their submission. Owns fabrication and installation. |
 | Design team and structural engineer of record | Design team and SEOR | Owns design intent and engineering authority decisions |
@@ -115,6 +115,17 @@ This section establishes the level to which each system is modeled, the accuracy
 
 **Conditions consciously deprioritized.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. Survey control and floor-flatness mapping are excluded, as recorded in section B. These are deprioritized for field coordination at this revision and are documented so the boundary is explicit. As scope firms, conditions that move into or out of the coordinated set are recorded in the capture register, cited to the RFI or session that moved them.
 
+### As-Built Integration Scope (LOE Item 3)
+
+The conditions deferred at the Phase 1 close return on this engagement as As-Built Integration scope, anchored to the point cloud rather than the design drawings. The scan is the new evidence layer, and this is the scope the scan now makes real. None of the geometry below exists in the model. Each item is a known gap the integration inherits, cited by RFI, with the decision cued to its owner and not committed here. All overhead elements are fit to the point cloud at the lowest-point convention.
+
+- **Exhaust ductwork.** Modeled to the deferred mechanical submittal and the RFI 146 direction, prioritizing the approved sizing of a 4-inch floor, with the 3-inch zones not fabricable by True Air. *Open decision: the routing where the 3-inch zones cannot be built, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- **Fire protection.** Modeled to the deferred fire-protection submittal, branch lines and mains in representative north-south bays. *Decision owned by: design team, with the fire-protection subcontractor.*
+- **Fan coil and in-unit alternative.** Representative placements at four north-south locations. The in-unit fan alternative, 6-inch round on north-south routing, is live and is modeled as a representative section to test feasibility against the point cloud. *Open decision: lower ceilings, structural penetrations, or the in-unit alternative, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- **Elevator landing areas, south-side conflict zone.** The conflict zone is integrated with the scan data. The SEOR-approved penetration stubs per RFI 146, at 5 by 18, 5 by 16, 5 by 14, and 5 by 12 inches, are the decision record and are modeled against the point cloud. *Decision owned by: design team and SEOR. References RFI 146.*
+- **Level 4 guest suites.** Held as a placeholder pending updated drawings from the design team, integrated when issued. *Decision owned by: design team, on the drawing issue.*
+- **Level 1 conditions.** Mechanical and plumbing fit to the point cloud where ceilings are low and existing beams are present. The integration identifies where the 7-foot beam condition forecloses the current design as drawn, flagged and not absorbed. *Decision owned by: design team and SEOR.*
+
 ---
 
 ## E. Decision Ownership
@@ -124,7 +135,7 @@ Coordination decisions are cued to the party that owns them, in the form Decisio
 Governing decisions from the current record, cued and not committed:
 
 - Scan extent. Resolved to the whole building, Levels 1 through 4. *Decision owned by: Dempsey, by notice to proceed dated June 10, 2026.*
-- Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction. Carried as Jason, probable, confirmation pending. *Decision owned by: Dempsey.*
+- Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction. Carried as Jason Garrett, Dempsey PE, probable, to be formalized Tuesday June 16. *Decision owned by: Dempsey.*
 - Exhaust routing where the 3-inch maximum zones are not fabricable. True Air's fabrication range is 4 to 8 inches, so the 3-inch maximum zones cannot be fabricated as drawn. The options are lower ceilings, structural penetrations, or an in-unit fan alternative at 6-inch round on north-south routing. Open, and cued for the June 18 coordination meeting. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
 - Ceiling assembly selection, the grid system under RFI 102. *Decision owned by: design team, with Dempsey for installed-height confirmation.*
 - Fan coil installed position. *Decision owned by: Dempsey field.*
@@ -138,7 +149,7 @@ On this project the installing subcontractor produces marked-up mechanical plans
 
 The back-check of the markups is owned by Dempsey and runs as a split:
 
-- Admin accountability. The markups are checked against the confirmed RFI direction by the Dempsey submittal-review owner, carried as Jason, pending.
+- Admin accountability. The markups are checked against the confirmed RFI direction by the Dempsey submittal-review owner, Jason Garrett, Dempsey PE, probable, to be formalized Tuesday June 16.
 - Field accountability. The hold at install is owned by Jackson Tews and Joe Ciaccio.
 
 Everist Consulting builds the back-check checklist and coaches the first cycle only. The back-check is not a recurring Everist duty. It is capability transferred to the Dempsey owner.
@@ -153,7 +164,7 @@ The named systems follow a single instruction vector:
 
 **coordination finding → RFI → confirmed direction → True Air plan markups → back-check against the RFI → hold at install**
 
-On this project, plan markups stand in for shop drawings, and the back-check checks the markups against the confirmed RFI direction. The back-check is owned by Dempsey and is split between an admin owner, who checks markups against RFI direction, and the field, which holds at install. The admin step requires a named Dempsey owner, carried as Jason, pending. An unowned back-check defaults to no owner.
+On this project, plan markups stand in for shop drawings, and the back-check checks the markups against the confirmed RFI direction. The back-check is owned by Dempsey and is split between an admin owner, who checks markups against RFI direction, and the field, which holds at install. The admin step requires a named Dempsey owner, Jason Garrett, Dempsey PE, probable, to be formalized June 16. An unowned back-check defaults to no owner.
 
 RFI-number tagging is the tracing method. Every model element changed by an RFI carries that RFI number from the decision, through the markup, to the install back-check. The RFI number is the thread that lets any party confirm at install that what is being built traces to a confirmed decision.
 
@@ -163,7 +174,7 @@ The vector is carried in the integrated swim-lane, Exhibit 1.
 
 ## H. Coordination Cadence
 
-Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Chris Everist, Joe Ciaccio, and Jason. Thursdays are coordination with True Air and the other contractors. The first Tuesday session is the week of June 15. The True Air coordination meeting is Thursday, June 18.
+Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Joe Ciaccio, Jason Garrett, and Chris Everist. Thursdays are coordination with True Air and the other contractors. The first Tuesday session is the week of June 15. The True Air coordination meeting is Thursday, June 18.
 
 Each session carries an expected output. The Tuesday session produces a reviewed model and a prepared agenda for the contractor coordination. The Thursday coordination is a back-check kickoff when True Air markups are in hand, and a rules-of-the-road session when they are not, in which case the markups become the dated deliverable out of the meeting.
 
@@ -186,4 +197,4 @@ The register is maintained by Everist Consulting. Capture-ingest 01 was logged J
 
 ---
 
-*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 1 · June 10, 2026*
+*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 0 · June 15, 2026*
