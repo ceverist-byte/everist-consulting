@@ -17,7 +17,7 @@ function ECMark({ size = 24 }: { size?: number }) {
       aria-hidden="true"
       focusable="false"
     >
-      <g fill="#8A642C">
+      <g fill="#111111">
         <rect x="0" y="0" width="170" height="1000" />
         <rect x="0" y="830" width="1000" height="170" />
         <rect x="830" y="300" width="170" height="700" />
