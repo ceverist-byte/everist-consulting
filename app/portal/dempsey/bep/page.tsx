@@ -59,6 +59,35 @@ export default async function BEPPage() {
     splitIdx >= 0 ? body.slice(splitIdx + EXHIBITS_MARKER.length) : '';
 
   const html = await renderMarkdown(mainMarkdown);
+
+  // ─── GOLD HIGHLIGHTS: incomplete elements ────────────────────────────────────
+  // Each block is independently removable when the item is complete.
+  let processedHtml = html;
+
+  // Exhibit 1 — inline references in sections E, F, and G.
+  // replaceAll catches all three occurrences.
+  // REMOVE THIS BLOCK when Exhibit 1 (Coordination Swim-Lane) is delivered.
+  processedHtml = processedHtml.replaceAll(
+    'swim-lane, Exhibit 1.',
+    'swim-lane, <span style="background:rgba(138,100,44,0.14);padding:1px 3px;border-radius:1px">Exhibit 1</span>.'
+  );
+
+  // Exhibit 2 — one inline reference in section C.
+  // REMOVE THIS BLOCK when Exhibit 2 (Governed-Elevation Vertical Stack) is delivered.
+  processedHtml = processedHtml.replace(
+    'Exhibit 2 for field confirmation',
+    '<span style="background:rgba(138,100,44,0.14);padding:1px 3px;border-radius:1px">Exhibit 2 for field confirmation</span>'
+  );
+
+  // Level 4 guest suites — the single bullet in section D As-Built Integration.
+  // Regex handles optional whitespace between <li> and <strong>.
+  // REMOVE THIS BLOCK when Level 4 drawings are delivered and integrated.
+  processedHtml = processedHtml.replace(
+    /(<li>)\s*(<strong>Level 4 guest suites\.)/,
+    '<li style="background:rgba(138,100,44,0.1);border-left:2px solid rgba(138,100,44,0.35);padding-left:6px;margin-left:-8px;list-style-position:outside">$2'
+  );
+  // ─────────────────────────────────────────────────────────────────────────────
+
   const exhibits = parseExhibits(exhibitsSection);
 
   return (
@@ -90,7 +119,7 @@ export default async function BEPPage() {
       {/* Main document body */}
       <article
         className={styles.document}
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: processedHtml }}
       />
 
       {/* Exhibits section */}
@@ -117,6 +146,11 @@ export default async function BEPPage() {
               key={ex.num}
               id={`exhibit-${ex.num.replace('Exhibit ', '')}`}
               className={styles.exhibit}
+              // GOLD HIGHLIGHT: in-production exhibit — remove style prop when this exhibit is delivered
+              style={{
+                background: 'rgba(138, 100, 44, 0.08)',
+                borderColor: 'rgba(138, 100, 44, 0.35)',
+              }}
             >
               <div className={styles.exhibitNum}>{ex.num}</div>
               <div className={styles.exhibitTitle}>{ex.title}</div>
