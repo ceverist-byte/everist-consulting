@@ -7,13 +7,12 @@ export const metadata: Metadata = {
   },
 };
 
-function ECMark({ size = 24 }: { size?: number }) {
+function ECMark({ size = 40 }: { size?: number }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 1000 1000"
-      shapeRendering="crispEdges"
       aria-hidden="true"
       focusable="false"
     >
@@ -67,7 +66,7 @@ export default function PortalLayout({
           gap: '14px',
         }}
       >
-        <ECMark size={24} />
+        <ECMark size={40} />
         <span
           style={{
             fontFamily: MONO,
