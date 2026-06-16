@@ -7,6 +7,7 @@ import rehypeStringify from 'rehype-stringify';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import styles from './bep.module.css';
+import ExhibitOneSwimLane from './ExhibitOneSwimLane';
 
 export const dynamic = 'force-static';
 
@@ -39,9 +40,7 @@ function parseExhibits(text: string): ExhibitMeta[] {
   });
 }
 
-const MIRO_EXHIBIT_1 =
-  'https://miro.com/app/board/uXjVHFfdl8o=/?moveToWidget=3458764675676323343';
-
+// Exhibit 1 is embedded on this page (the swim-lane). References anchor to it.
 const LINK_STYLE =
   'color:#8A642C;text-decoration:underline;text-underline-offset:2px';
 
@@ -70,11 +69,10 @@ export default async function BEPPage() {
   // Each block is independently removable when the item is complete.
   let processedHtml = html;
 
-  // Exhibit 1 — inline references in sections E, F, and G become Miro hyperlinks.
-  // Exhibit 1 is delivered (live on Miro): no gold marker.
+  // Exhibit 1 — inline references in E, F, G anchor to the embedded swim-lane (#exhibit-1).
   processedHtml = processedHtml.replaceAll(
     'swim-lane, Exhibit 1.',
-    `swim-lane, <a href="${MIRO_EXHIBIT_1}" target="_blank" rel="noopener noreferrer" style="${LINK_STYLE}">Exhibit 1</a>.`
+    `swim-lane, <a href="#exhibit-1" style="${LINK_STYLE}">Exhibit 1</a>.`
   );
 
   // Exhibit 2 — one inline reference in section C.
@@ -149,20 +147,16 @@ export default async function BEPPage() {
           {exhibits.map(ex => {
             const exNumber = ex.num.replace('Exhibit ', '');
 
-            // Exhibit 1 — delivered. Hyperlinked entry to the live Miro board. No gold.
+            // Exhibit 1 — delivered. Embedded swim-lane; title anchors to the diagram. No gold.
             if (exNumber === '1') {
               return (
-                <figure
-                  key={ex.num}
-                  id="exhibit-1"
-                  className={styles.exhibit}
-                >
-                  <div className={styles.exhibitNum}>{ex.num}</div>
-                  <div className={styles.exhibitTitle}>
+                <div key={ex.num}>
+                  <div className={styles.exhibitNum} style={{ marginBottom: '4px' }}>
+                    {ex.num}
+                  </div>
+                  <div className={styles.exhibitTitle} style={{ marginBottom: '10px' }}>
                     <a
-                      href={MIRO_EXHIBIT_1}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="#exhibit-1"
                       style={{
                         color: '#8A642C',
                         textDecoration: 'underline',
@@ -172,10 +166,8 @@ export default async function BEPPage() {
                       {ex.title}
                     </a>
                   </div>
-                  {ex.desc && (
-                    <div className={styles.exhibitDesc}>{ex.desc}</div>
-                  )}
-                </figure>
+                  <ExhibitOneSwimLane />
+                </div>
               );
             }
 
