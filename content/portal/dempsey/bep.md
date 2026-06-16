@@ -1,7 +1,7 @@
 ---
-revision: "REV 0"
-date: "June 15, 2026"
-status: "Draft for review, Tuesday June 16 gate"
+revision: "REV 1"
+date: "June 17, 2026"
+status: "For transmittal, June 17, 2026"
 ---
 
 # Lite BIM Execution Plan
@@ -16,10 +16,10 @@ A coordination governance work product. It makes existing field authority legibl
 | Job number | 25029 |
 | Engagement | EVC-1.5 Scan Bridge |
 | Prepared by | Everist Consulting |
-| Revision | REV 0 |
-| Date | June 15, 2026 |
-| Status | Draft for review, Tuesday June 16 gate |
-| Supersedes | The June 10 skeleton. Incorporates capture-ingest 01 and 02 |
+| Revision | REV 1 |
+| Date | June 17, 2026 |
+| Status | For transmittal, June 17, 2026 |
+| Supersedes | REV 0, June 15, 2026. Incorporates capture-ingest 01 and 02 |
 | Governing milestone | Overhead rough-in start at Level 2, July 29, 2026 |
 
 ---
@@ -47,15 +47,16 @@ The engagement extends the EVC-1 relationship, closed May 2026, into a defined b
 | Role | Party | Scope on this engagement |
 |---|---|---|
 | General contractor and field authority | Dempsey Construction. Jackson Tews, Superintendent. Joe Ciaccio, Senior Superintendent. | Owns field direction, RFIs, the field back-check at install, and install holds |
-| General contractor, submittal review | Dempsey Construction. Jason Garrett, Dempsey PE, developing submittal-review capability. | Owns the admin back-check of markups against RFI direction. Joins the Tuesday model review. |
+| General contractor, submittal review | Dempsey Construction. Jason Garrett, Dempsey PE. | Owns quality control, the admin back-check of True Air markups against RFI direction, and RFI administration. Coached by Chris Everist and Jackson Tews for cycle one. Joins the Tuesday model review. |
 | Coordination | Everist Consulting | Scan scope definition, scan vendor coordination, existing-conditions integration, this plan, the coordination session, routing analysis for the named systems, and the back-check checklist with first-cycle coaching |
 | Mechanical, installing subcontractor | True Air | Produces marked-up mechanical plans, the project's shop-drawing equivalent, and owns their submission. Owns fabrication and installation. |
 | Design team and structural engineer of record | Design team and SEOR | Owns design intent and engineering authority decisions |
+| Plumbing engineer of record | H+W Engineering. Travis Wagner, P.E., Mechanical and Plumbing Director. | Authored the Level 4 ceiling plumbing rework. A design-intent reference for Level 4 integration, not a decision owned by Dempsey or Everist Consulting. |
 | Scan vendor | ARC, Architectural Resource Consultants | Produces the registered scan and the existing-conditions model under direct contract to Dempsey Construction |
 
-**Scan scope of record.** A registered scan and existing-conditions model of the whole building, Levels 1 through 4, under Dempsey notice to proceed dated June 10, 2026. The scan executes June 11, 2026. The point cloud is delivered in Autodesk ReCap, with a LOD 200 model for use as a SketchUp background. Survey control is excluded from this scope. The scan uses a stairwell and internal control loop only, because the studs are underway, the floors are stable, and the scope is overhead coordination rather than floor flatness. The exclusion is recorded so that any future floor-flatness mapping is recognized as new scope.
+**Scan scope of record.** A registered scan and existing-conditions model of the whole building, Levels 1 through 4, under Dempsey notice to proceed dated June 10, 2026. The scan executed June 11, 2026. The point cloud is delivered in Autodesk ReCap. The existing-conditions model is delivered by ARC as a Revit as-built, expected about June 20, 2026. Survey control is excluded from this scope. The scan uses a stairwell and internal control loop only, because the studs are underway, the floors are stable, and the scope is overhead coordination rather than floor flatness. The exclusion is recorded so that any future floor-flatness mapping is recognized as new scope.
 
-**Scan accuracy, measured and represented.** Measured accuracy, the accuracy of the captured points, is near LOA 30 at plus or minus 15 mm on the USIBD scale. Represented accuracy, the accuracy a reader should attribute to the modeled geometry, may be LOA 20, a coarser level, because the LOD 200 model abstracts the point cloud. Any measurement that requires LOA 30 is taken from the point cloud, not from the model. The validation method and the path for geometry that falls outside the stated accuracy are defined in section D.
+**Scan accuracy, measured and represented.** Measured accuracy, the accuracy of the captured points, is near LOA 30 at plus or minus 15 mm on the USIBD scale. Represented accuracy, the accuracy a reader should attribute to the modeled geometry, may be LOA 20, a coarser level, because the as-built model abstracts the point cloud. Any measurement that requires LOA 30 is taken from the point cloud, not from the model. The validation method and the path for geometry that falls outside the stated accuracy are defined in section D.
 
 **Broker note.** The scan vendor contracts directly with Dempsey Construction. Everist Consulting coordinates the scan and does not contract, price, warrant, or direct the scan vendor's work.
 
@@ -98,9 +99,14 @@ This section establishes the level to which each system is modeled, the accuracy
 
 | Code | System | Model Element Author | Modeled level | Coordination state |
 |---|---|---|---|---|
-| Existing reference | Existing structure, slab, and overhead conditions, whole building Levels 1 through 4 | ARC, scan vendor | LOD 200, captured near LOA 30, represented at LOA 20 | Existing-to-remain reference, priority 1 |
+| Existing reference | Existing structure, slab, and overhead conditions, whole building Levels 1 through 4 | ARC, scan vendor | Revit as-built, captured near LOA 30, represented at LOA 20 | Existing-to-remain reference, priority 1 |
 | D30 | Exhaust ductwork, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
+| D30 | Refrigerant piping, VRF distribution, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
 | D40 | Fire-protection main, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
+
+**Source model and revision sequence.** The ARC as-built model is expected about June 20, 2026, after this transmittal. This revision is the governance skeleton. It establishes the modeling scope, the validation method, the decision owners, and the scope boundary. The modeled integration output, the named systems resolved against the as-built to surface clashes, is confirmed in a later revision once the model is in hand.
+
+**Existing framing and the ceiling assembly.** Existing structural and miscellaneous metal framing arrives inside the ARC as-built reference rather than as a separately modeled system. The ceiling assembly under RFI 102 is the flexible solver named in section C and is the surface the named systems coordinate against. The modeling treatment of the framing and the ceiling assembly is confirmed in the later revision, with the as-built in hand. Equipment beyond the committed fan coils, such as rooftop units and panels, is outside the modeled scope at this revision, and the fan coil entry carries the equipment boundary.
 
 **Whole-building modeling, by level.** Level 2 and Level 3 are included to capture steel placement variation. Level 4 is included, and updated guest-suite drawings are expected and reconciled when received. Level 1 is included and flagged for low ceilings and existing beams, where mechanical and plumbing fit is verified.
 
@@ -119,12 +125,15 @@ This section establishes the level to which each system is modeled, the accuracy
 
 The conditions deferred at the Phase 1 close return on this engagement as As-Built Integration scope, anchored to the point cloud rather than the design drawings. The scan is the new evidence layer, and this is the scope the scan now makes real. None of the geometry below exists in the model. Each item is a known gap the integration inherits, cited by RFI, with the decision cued to its owner and not committed here. All overhead elements are fit to the point cloud at the lowest-point convention.
 
-- **Exhaust ductwork.** Modeled to the deferred mechanical submittal and the RFI 146 direction, prioritizing the approved sizing of a 4-inch floor, with the 3-inch zones not fabricable by True Air. *Open decision: the routing where the 3-inch zones cannot be built, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- **Exhaust ductwork.** Modeled to the deferred mechanical submittal and the RFI 146 direction, prioritizing the approved sizing of a 4-inch floor, with the 3-inch zones not fabricable by True Air. *Open decision: where the 3-inch zones cannot be built, lower ceilings, structural penetrations, or the in-unit fan alternative at 6-inch round on north-south routing, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- **Refrigerant distribution.** The branch refrigerant boxes, the VRF distribution that serves the fan coils, are under a relocation from the hallways into the suites to free hallway plenum for the central duct run. Because the boxes serve the fan coils, the refrigerant distribution and the fan coil locations coordinate together. *Open decision: the branch refrigerant box relocation. Decision owned by: design team, with True Air input.*
 - **Fire protection.** Modeled to the deferred fire-protection submittal, branch lines and mains in representative north-south bays. *Decision owned by: design team, with the fire-protection subcontractor.*
-- **Fan coil and in-unit alternative.** Representative placements at four north-south locations. The in-unit fan alternative, 6-inch round on north-south routing, is live and is modeled as a representative section to test feasibility against the point cloud. *Open decision: lower ceilings, structural penetrations, or the in-unit alternative, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
-- **Elevator landing areas, south-side conflict zone.** The conflict zone is integrated with the scan data. The SEOR-approved penetration stubs per RFI 146, at 5 by 18, 5 by 16, 5 by 14, and 5 by 12 inches, are the decision record and are modeled against the point cloud. *Decision owned by: design team and SEOR. References RFI 146.*
-- **Level 4 guest suites.** Held as a placeholder pending updated drawings from the design team, integrated when issued. *Decision owned by: design team, on the drawing issue.*
+- **Fan coils.** Representative placements at four north-south locations, coordinated together with the refrigerant distribution that serves them. *Decision owned by: Dempsey field, as the condition that committed them.*
+- **Elevator landing areas, south-side conflict zone.** The conflict zone is integrated with the scan data. The SEOR-approved penetration stubs per RFI 146, at 5 by 18, 5 by 16, 5 by 14, and 5 by 12 inches, are the decision record and are modeled against the point cloud. Larger beam penetration requests route to Alex, structural and SEOR, pending confirmation. *Decision owned by: design team and SEOR. References RFI 146.*
+- **Level 4 guest suites.** Held as a placeholder pending updated drawings from the design team, integrated when issued. The Level 4 ceiling plumbing rework, authored by Travis Wagner at H+W Engineering and targeting 7 ft 2 in, is a design-team coordination item to verify against the overhead stack. The plumbing engineer of record's plumbing model is a reference for that verification and is not modeled by this engagement. *Decision owned by: design team, on the drawing issue.*
 - **Level 1 conditions.** Mechanical and plumbing fit to the point cloud where ceilings are low and existing beams are present. The integration identifies where the 7-foot beam condition forecloses the current design as drawn, flagged and not absorbed. *Decision owned by: design team and SEOR.*
+
+**Scope boundary, plumbing engineer of record model.** The plumbing engineer of record at H+W Engineering issued a Revit plumbing model, received by way of Dempsey on June 15, 2026, showing the Level 4 and roof grease and waste re-route that achieves the 7 ft 2 in target. It is received as a reference for the Level 4 ceiling-height verification. It is not absorbed into the As-Built Integration scope as a modeled input. Any formal ingestion of that plumbing geometry is new scope beyond the current Letter of Engagement.
 
 ---
 
@@ -135,10 +144,13 @@ Coordination decisions are cued to the party that owns them, in the form Decisio
 Governing decisions from the current record, cued and not committed:
 
 - Scan extent. Resolved to the whole building, Levels 1 through 4. *Decision owned by: Dempsey, by notice to proceed dated June 10, 2026.*
-- Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction. Carried as Jason Garrett, Dempsey PE, probable, to be formalized Tuesday June 16. *Decision owned by: Dempsey.*
+- Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction, confirmed as Jason Garrett, Dempsey PE, June 16, 2026. *Decision owned by: Dempsey.*
+- Refrigerant distribution strategy. The branch refrigerant boxes that serve the fan coils relocate from the hallways into the suites to free hallway plenum for the central duct run, coordinated together with the fan coil locations they serve. *Decision owned by: design team, with True Air input.*
 - Exhaust routing where the 3-inch maximum zones are not fabricable. True Air's fabrication range is 4 to 8 inches, so the 3-inch maximum zones cannot be fabricated as drawn. The options are lower ceilings, structural penetrations, or an in-unit fan alternative at 6-inch round on north-south routing. Open, and cued for the June 18 coordination meeting. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- Structural penetration path for larger beam penetration requests. *Decision owned by: Alex, structural and SEOR, pending confirmation.*
 - Ceiling assembly selection, the grid system under RFI 102. *Decision owned by: design team, with Dempsey for installed-height confirmation.*
 - Fan coil installed position. *Decision owned by: Dempsey field.*
+- Level 4 ceiling-height verification against the overhead stack, referencing the plumbing engineer of record rework by Travis Wagner at H+W Engineering. *Decision owned by: design team.*
 - Finish selection and tolerance adoption. *Decision owned by: owner and design team for the finish, Dempsey for tolerance adoption.*
 
 ---
@@ -149,7 +161,7 @@ On this project the installing subcontractor produces marked-up mechanical plans
 
 The back-check of the markups is owned by Dempsey and runs as a split:
 
-- Admin accountability. The markups are checked against the confirmed RFI direction by the Dempsey submittal-review owner, Jason Garrett, Dempsey PE, probable, to be formalized Tuesday June 16.
+- Admin accountability. The markups are checked against the confirmed RFI direction by the Dempsey submittal-review owner, Jason Garrett, Dempsey PE, confirmed June 16, 2026 and coached by Chris Everist and Jackson Tews for cycle one.
 - Field accountability. The hold at install is owned by Jackson Tews and Joe Ciaccio.
 
 Everist Consulting builds the back-check checklist and coaches the first cycle only. The back-check is not a recurring Everist duty. It is capability transferred to the Dempsey owner.
@@ -164,7 +176,7 @@ The named systems follow a single instruction vector:
 
 **coordination finding → RFI → confirmed direction → True Air plan markups → back-check against the RFI → hold at install**
 
-On this project, plan markups stand in for shop drawings, and the back-check checks the markups against the confirmed RFI direction. The back-check is owned by Dempsey and is split between an admin owner, who checks markups against RFI direction, and the field, which holds at install. The admin step requires a named Dempsey owner, Jason Garrett, Dempsey PE, probable, to be formalized June 16. An unowned back-check defaults to no owner.
+On this project, plan markups stand in for shop drawings, and the back-check checks the markups against the confirmed RFI direction. The back-check is owned by Dempsey and is split between an admin owner, who checks markups against RFI direction, and the field, which holds at install. The admin owner is Jason Garrett, Dempsey PE, confirmed June 16, 2026.
 
 RFI-number tagging is the tracing method. Every model element changed by an RFI carries that RFI number from the decision, through the markup, to the install back-check. The RFI number is the thread that lets any party confirm at install that what is being built traces to a confirmed decision.
 
@@ -174,7 +186,7 @@ The vector is carried in the integrated swim-lane, Exhibit 1.
 
 ## H. Coordination Cadence
 
-Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Joe Ciaccio, Jason Garrett, and Chris Everist. Thursdays are coordination with True Air and the other contractors. The first Tuesday session is the week of June 15. The True Air coordination meeting is Thursday, June 18.
+Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Joe Ciaccio, Jason Garrett, and Chris Everist. Thursdays are coordination with True Air and the other contractors. The first Tuesday session was held June 16, 2026. The True Air coordination meeting is Thursday, June 18.
 
 Each session carries an expected output. The Tuesday session produces a reviewed model and a prepared agenda for the contractor coordination. The Thursday coordination is a back-check kickoff when True Air markups are in hand, and a rules-of-the-road session when they are not, in which case the markups become the dated deliverable out of the meeting.
 
@@ -186,15 +198,15 @@ Each session carries an expected output. The Tuesday session produces a reviewed
 
 The plan advances from a standing capture register, not from memory. After each coordination session the capture is recorded in a fixed format: decisions made, owner named per decision, RFIs triggered or referenced, open busts, and items assigned with dates. Each revision of this plan traces its changes to entries in the register.
 
-The register is maintained by Everist Consulting. Capture-ingest 01 was logged June 10, 2026 from two on-site sessions, the Letter of Engagement review and the ARC scan walk, and this revision incorporates it. The next capture follows the first Tuesday session.
+The register is maintained by Everist Consulting. Capture-ingest 01 was logged June 10, 2026 from two on-site sessions, the Letter of Engagement review and the ARC scan walk. Capture-ingest 02 was logged June 16, 2026 from the first Tuesday model-review session. This revision incorporates both. The next capture follows the June 18 True Air coordination session.
 
 ---
 
 ## Exhibits
 
-- **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it. In production.
+- **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it.
 - **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
 
 ---
 
-*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 0 · June 15, 2026*
+*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 1 · June 17, 2026*
