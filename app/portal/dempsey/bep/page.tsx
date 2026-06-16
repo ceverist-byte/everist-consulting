@@ -40,10 +40,6 @@ function parseExhibits(text: string): ExhibitMeta[] {
   });
 }
 
-// Exhibit 1 is embedded on this page (the swim-lane). References anchor to it.
-const LINK_STYLE =
-  'color:#8A642C;text-decoration:underline;text-underline-offset:2px';
-
 const EXHIBITS_MARKER = '\n## Exhibits\n';
 
 const MONO =
@@ -69,10 +65,10 @@ export default async function BEPPage() {
   // Each block is independently removable when the item is complete.
   let processedHtml = html;
 
-  // Exhibit 1 — inline references in E, F, G anchor to the embedded swim-lane (#exhibit-1).
+  // Exhibit 1 — inline references in E, F, G link to the dedicated exhibit page.
   processedHtml = processedHtml.replaceAll(
     'swim-lane, Exhibit 1.',
-    `swim-lane, <a href="#exhibit-1" style="${LINK_STYLE}">Exhibit 1</a>.`
+    'swim-lane, <a href="/portal/dempsey/bep/exhibit-1" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">Exhibit 1</a>.'
   );
 
   // Exhibit 2 — one inline reference in section C.
@@ -156,7 +152,7 @@ export default async function BEPPage() {
                   </div>
                   <div className={styles.exhibitTitle} style={{ marginBottom: '10px' }}>
                     <a
-                      href="#exhibit-1"
+                      href="/portal/dempsey/bep/exhibit-1"
                       style={{
                         color: '#8A642C',
                         textDecoration: 'underline',

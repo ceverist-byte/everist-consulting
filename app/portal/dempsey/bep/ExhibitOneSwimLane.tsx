@@ -2,7 +2,7 @@
 // Branded SVG re-render of the coordination swim-lane. Replaces the placeholder.
 // To update the diagram, regenerate the SVG and replace the SVG_MARKUP string below.
 
-const SVG_MARKUP = `<svg viewBox="0 0 1240 720" xmlns="http://www.w3.org/2000/svg" font-family="'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="EVC-1.5 Coordination Swim-Lane">
+const SVG_MARKUP = `<svg viewBox="0 0 1240 720" width="100%" style="display:block;height:auto" xmlns="http://www.w3.org/2000/svg" font-family="'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="EVC-1.5 Coordination Swim-Lane">
 <defs>
   <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
     <path d="M0,0 L7,3 L0,6 Z" fill="#8A642C"/>
