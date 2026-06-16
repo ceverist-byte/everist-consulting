@@ -7,6 +7,7 @@ import rehypeStringify from 'rehype-stringify';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import styles from './bep.module.css';
+import ExhibitOneSwimLane from './ExhibitOneSwimLane';
 
 export const dynamic = 'force-static';
 
@@ -63,14 +64,6 @@ export default async function BEPPage() {
   // ─── GOLD HIGHLIGHTS: incomplete elements ────────────────────────────────────
   // Each block is independently removable when the item is complete.
   let processedHtml = html;
-
-  // Exhibit 1 — inline references in sections E, F, and G.
-  // replaceAll catches all three occurrences.
-  // REMOVE THIS BLOCK when Exhibit 1 (Coordination Swim-Lane) is delivered.
-  processedHtml = processedHtml.replaceAll(
-    'swim-lane, Exhibit 1.',
-    'swim-lane, <span style="background:rgba(138,100,44,0.14);padding:1px 3px;border-radius:1px">Exhibit 1</span>.'
-  );
 
   // Exhibit 2 — one inline reference in section C.
   // REMOVE THIS BLOCK when Exhibit 2 (Governed-Elevation Vertical Stack) is delivered.
@@ -141,25 +134,44 @@ export default async function BEPPage() {
         </h2>
 
         <div className={styles.exhibitGroup} style={{ maxWidth: '680px' }}>
-          {exhibits.map(ex => (
-            <figure
-              key={ex.num}
-              id={`exhibit-${ex.num.replace('Exhibit ', '')}`}
-              className={styles.exhibit}
-              // GOLD HIGHLIGHT: in-production exhibit — remove style prop when this exhibit is delivered
-              style={{
-                background: 'rgba(138, 100, 44, 0.08)',
-                borderColor: 'rgba(138, 100, 44, 0.35)',
-              }}
-            >
-              <div className={styles.exhibitNum}>{ex.num}</div>
-              <div className={styles.exhibitTitle}>{ex.title}</div>
-              {ex.desc && (
-                <div className={styles.exhibitDesc}>{ex.desc}</div>
-              )}
-              <div className={styles.exhibitPending}>In production</div>
-            </figure>
-          ))}
+          {exhibits.map(ex => {
+            const exNumber = ex.num.replace('Exhibit ', '');
+
+            // Exhibit 1 — delivered. Render the branded swim-lane. No gold marker.
+            if (exNumber === '1') {
+              return (
+                <div key={ex.num}>
+                  <div className={styles.exhibitNum} style={{ marginBottom: '4px' }}>
+                    {ex.num}
+                  </div>
+                  <div className={styles.exhibitTitle} style={{ marginBottom: '10px' }}>
+                    {ex.title}
+                  </div>
+                  <ExhibitOneSwimLane />
+                </div>
+              );
+            }
+
+            // Exhibit 2 — in production. Gold placeholder.
+            return (
+              <figure
+                key={ex.num}
+                id={`exhibit-${exNumber}`}
+                className={styles.exhibit}
+                style={{
+                  background: 'rgba(138, 100, 44, 0.08)',
+                  borderColor: 'rgba(138, 100, 44, 0.35)',
+                }}
+              >
+                <div className={styles.exhibitNum}>{ex.num}</div>
+                <div className={styles.exhibitTitle}>{ex.title}</div>
+                {ex.desc && (
+                  <div className={styles.exhibitDesc}>{ex.desc}</div>
+                )}
+                <div className={styles.exhibitPending}>In production</div>
+              </figure>
+            );
+          })}
         </div>
       </section>
 
