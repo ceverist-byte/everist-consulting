@@ -73,6 +73,9 @@ export default function Exhibit1Page() {
           left: '50%',
           transform: 'translateX(-50%)',
           paddingBottom: '32px',
+          paddingLeft: '32px',
+          paddingRight: '32px',
+          boxSizing: 'border-box',
         }}
       >
         <ExhibitOneSwimLane />
