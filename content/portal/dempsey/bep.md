@@ -95,18 +95,23 @@ An illustrated governed-elevation version of this priority structure is maintain
 
 ## D. Modeling Scope by System
 
-This section establishes the level to which each system is modeled, the accuracy a reader should attribute to it, the conditions consciously deprioritized for field coordination, and the prefabrication boundary. It carries the modeling assumptions and the validation protocol. Systems are organized by Uniformat classification, with a Model Element Author and a modeled level assigned to each. The section advances as the scan and the coordination sessions reveal scope.
+This section is the single source of truth for where each modeled system stands. The ledger below tracks each system by what has been released to model against, the source of record, where it lives in the model, its current status, and the deliverable once it posts. The section also carries the modeling assumptions, the validation protocol, the conditions consciously deprioritized, and the prefabrication boundary. The As-Built Integration prose that follows the ledger is the reasoning behind each system: the ledger is the where and whether, the prose is the why. Most rows read Not Started at this revision by design.
 
-| Code | System | Model Element Author | Modeled level | Coordination state |
-|---|---|---|---|---|
-| Existing reference | Existing structure, slab, and overhead conditions, whole building Levels 1 through 4 | ARC, scan vendor | Revit as-built, captured near LOA 30, represented at LOA 20 | Existing-to-remain reference, priority 1 |
-| D30 | Exhaust ductwork, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
-| D30 | Refrigerant piping, VRF distribution, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
-| D40 | Fire-protection main, proposed routing | Everist Consulting for coordination. True Air for markups. | LOD 300 or below, for conflict identification and solution testing | Named system, routing analysis and conflict identification |
+| System | Released | Source of Record | Model Location | Status | Deliverable |
+|---|---|---|---|---|---|
+| Exhaust ductwork | Partial (in-unit fan direction landed; markup to MEOR pending 6/18) | RFI 146 plus 6/18 markup | As-Built Integration model | Not Started (awaiting as-built ~6/20) | |
+| Refrigerant distribution | Partial (shops in hand; routing, size, and profile confirmation is a 6/18 goal) | Refrigerant piping shops 6/15 | As-Built Integration model | Not Started | |
+| Fire protection | Partial (shops in hand) | Fire sprinkler shops 6/15 plus deferred FP submittal | As-Built Integration model | Not Started | |
+| Fan coils | Yes for L2/L3 north (releasing to hang 6/18); representative elsewhere | Refrigerant shops 6/15 plus field commitment | As-Built Integration model | Not Started (L2/L3 north moves to Confirmed after 6/18) | |
+| Elevator-lobby penetrations | Yes (SEOR-approved stubs are the decision record; larger requests route to Alex at structural/SEOR, pending) | RFI 146 | As-Built Integration model | Not Started | |
+| L4 guest suites | No (awaiting updated drawings from design team) | Pending drawings. Travis Wagner / H+W plumbing model is reference only, not modeled by this engagement | Held | Not Started (held) | |
+| L1 conditions | Partial (fit to point cloud; 7 ft beam condition is a flag, not a model commitment) | ARC as-built | As-Built Integration model | Not Started | |
+| Ceilings (RFI 102 GridLock) | Yes (the flexible solver named in section C; the surface all named systems coordinate against) | RFI 102 | Exhibit 2 vertical stack (locked-C split: protected datum plus thin assembly band) plus As-Built Integration model | In Progress (Exhibit 2 build) | |
+| Critical metal framing | Partial (installed framing arrives in the ARC as-built; un-installed framing is a modeled-representation question to resolve when the as-built lands) | ARC as-built (installed) plus design drawings (un-installed, treatment pending) | As-Built Integration model | Not Started (awaiting as-built plus modeling-treatment decision) | |
+
+The Deliverable column is blank until an item posts, at which point each cell becomes a link to its Dempsey Portal posting. Exhibit 2, the governed-elevation vertical stack named as a model location for the ceiling row, is in production and attaches in the next revision.
 
 **Source model and revision sequence.** The ARC as-built model is expected about June 20, 2026, after this transmittal. This revision is the governance skeleton. It establishes the modeling scope, the validation method, the decision owners, and the scope boundary. The modeled integration output, the named systems resolved against the as-built to surface clashes, is confirmed in a later revision once the model is in hand.
-
-**Existing framing and the ceiling assembly.** Existing structural and miscellaneous metal framing arrives inside the ARC as-built reference rather than as a separately modeled system. The ceiling assembly under RFI 102 is the flexible solver named in section C and is the surface the named systems coordinate against. The modeling treatment of the framing and the ceiling assembly is confirmed in the later revision, with the as-built in hand. Equipment beyond the committed fan coils, such as rooftop units and panels, is outside the modeled scope at this revision, and the fan coil entry carries the equipment boundary.
 
 **Whole-building modeling, by level.** Level 2 and Level 3 are included to capture steel placement variation. Level 4 is included, and updated guest-suite drawings are expected and reconciled when received. Level 1 is included and flagged for low ceilings and existing beams, where mechanical and plumbing fit is verified.
 
@@ -119,13 +124,13 @@ This section establishes the level to which each system is modeled, the accuracy
 
 **Prefabrication boundary.** Anything not modeled to a coordinated state cannot be prefabricated.
 
-**Conditions consciously deprioritized.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. Survey control and floor-flatness mapping are excluded, as recorded in section B. These are deprioritized for field coordination at this revision and are documented so the boundary is explicit. As scope firms, conditions that move into or out of the coordinated set are recorded in the capture register, cited to the RFI or session that moved them.
+**Conditions consciously deprioritized.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. Survey control and floor-flatness mapping are excluded, as recorded in section B. Equipment beyond the committed fan coils, such as rooftop units and panels, is outside the modeled scope at this revision. These are deprioritized for field coordination at this revision and are documented so the boundary is explicit. As scope firms, conditions that move into or out of the coordinated set are recorded in the capture register, cited to the RFI or session that moved them.
 
 ### As-Built Integration Scope (LOE Item 3)
 
 The conditions deferred at the Phase 1 close return on this engagement as As-Built Integration scope, anchored to the point cloud rather than the design drawings. The scan is the new evidence layer, and this is the scope the scan now makes real. None of the geometry below exists in the model. Each item is a known gap the integration inherits, cited by RFI, with the decision cued to its owner and not committed here. All overhead elements are fit to the point cloud at the lowest-point convention.
 
-- **Exhaust ductwork.** Modeled to the deferred mechanical submittal and the RFI 146 direction, prioritizing the approved sizing of a 4-inch floor, with the 3-inch zones not fabricable by True Air. *Open decision: where the 3-inch zones cannot be built, lower ceilings, structural penetrations, or the in-unit fan alternative at 6-inch round on north-south routing, cued for June 18. Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- **Exhaust ductwork.** Modeled to the deferred mechanical submittal and the RFI 146 direction, prioritizing the approved sizing of a 4-inch floor, with the 3-inch zones not fabricable by True Air. The direction for the zones that cannot be built has landed on the in-unit fan alternative at 6-inch round on north-south routing, with the markup to the mechanical engineer of record pending the June 18 session. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
 - **Refrigerant distribution.** The branch refrigerant boxes, the VRF distribution that serves the fan coils, are under a relocation from the hallways into the suites to free hallway plenum for the central duct run. Because the boxes serve the fan coils, the refrigerant distribution and the fan coil locations coordinate together. *Open decision: the branch refrigerant box relocation. Decision owned by: design team, with True Air input.*
 - **Fire protection.** Modeled to the deferred fire-protection submittal, branch lines and mains in representative north-south bays. *Decision owned by: design team, with the fire-protection subcontractor.*
 - **Fan coils.** Representative placements at four north-south locations, coordinated together with the refrigerant distribution that serves them. *Decision owned by: Dempsey field, as the condition that committed them.*
@@ -205,7 +210,7 @@ The register is maintained by Everist Consulting. Capture-ingest 01 was logged J
 ## Exhibits
 
 - **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it.
-- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation.
+- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
 
 ---
 
