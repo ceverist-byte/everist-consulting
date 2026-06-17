@@ -205,7 +205,7 @@ The register is maintained by Everist Consulting. Capture-ingest 01 was logged J
 ## Exhibits
 
 - **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it.
-- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
+- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation.
 
 ---
 

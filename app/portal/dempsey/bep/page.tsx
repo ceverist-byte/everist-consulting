@@ -167,23 +167,31 @@ export default async function BEPPage() {
               );
             }
 
-            // Exhibit 2 — in production. Gold placeholder.
+            // Exhibit 2 — delivered. Links to the governed-elevation exhibit page.
             return (
               <figure
                 key={ex.num}
                 id={`exhibit-${exNumber}`}
                 className={styles.exhibit}
-                style={{
-                  background: 'rgba(138, 100, 44, 0.08)',
-                  borderColor: 'rgba(138, 100, 44, 0.35)',
-                }}
               >
                 <div className={styles.exhibitNum}>{ex.num}</div>
-                <div className={styles.exhibitTitle}>{ex.title}</div>
+                <div className={styles.exhibitTitle}>
+                  <a
+                    href="/exhibit/evc1-5-governed-elevation-vertical-stack"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: '#8A642C',
+                      textDecoration: 'underline',
+                      textUnderlineOffset: '2px',
+                    }}
+                  >
+                    {ex.title}
+                  </a>
+                </div>
                 {ex.desc && (
                   <div className={styles.exhibitDesc}>{ex.desc}</div>
                 )}
-                <div className={styles.exhibitPending}>In production</div>
               </figure>
             );
           })}
