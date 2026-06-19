@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 05",
+    title: "No Model in the Room",
+    description:
+      "Most coordination runs on a shared model. This one didn't — and what got solved anyway showed what the model was actually for.",
+    href: "/notes/no-model-in-the-room",
+  },
+  {
     number: "Note 04",
     title: "The Red Pencil",
     description:
