@@ -95,7 +95,7 @@ An illustrated governed-elevation version of this priority structure is maintain
 
 ## D. Modeling Scope by System
 
-This section is the single source of truth for the modeling scope. The Model Element Table below classifies every modeled system by Uniformat II, with its Model Element Author, its level of development, and its current status in one consolidated grid. The As-Built Integration Scope that follows is the work program: it carries each deferred study, its qualifying statement, and its decision owner, plus the studies held in the backlog. The table is the scope and where each element stands; the study inventory is why each study exists and what it is waiting on.
+This section is the single source of truth for the modeling scope. The Model Element Table below classifies every modeled system by Uniformat II, with its Model Element Author, its level of development, and its current status in one consolidated grid. The As-Built Integration Scope that follows is the work program: it carries each deferred study, its qualifying statement, and its decision owner, plus the studies held in the backlog. The table is the scope and where each element stands; the study inventory is why each study exists and what it is waiting on. The located study map at Exhibit 3 places each system on the building's floor plans, level by level, so the table and the map together carry the full spatial picture.
 
 ### Model Element Table
 
@@ -115,6 +115,8 @@ Status reads in two parts: the release state of what each study models against, 
 **Source model and revision sequence.** The ARC as-built model is expected about June 20, 2026, after this transmittal. This revision is the governance skeleton. It establishes the modeling scope, the validation method, the decision owners, and the scope boundary. The modeled integration output, the named systems resolved against the as-built to surface clashes, is confirmed in a later revision once the model is in hand.
 
 **Modeling scope by level.** The scan captured all four levels. Levels 2 and 3 carry the active studies, where steel placement variation drives the coordination. Levels 1 and 4 are in scope but held in the backlog below.
+
+**Location basis.** The located study map at Exhibit 3 registers each modeled system to the building's floor plans by level, color by system, with the two core shafts threaded through and the infilled lightwell structural constraint marked. Level 1 and Roof are reference levels carrying origin markers and shaft heads. Levels 2 through 4 carry the active system zones.
 
 **Validation protocol.** Measurements are checked against the point cloud as the evidence layer. When a modeled element falls outside the stated level of accuracy, it is flagged and routed to the relevant stakeholder for a decision. It is never silently absorbed. The flag path is to identify the out-of-accuracy element, flag it with the affected system and location, and route it to the owner named for that decision.
 
@@ -217,6 +219,7 @@ The register is maintained by Everist Consulting. Capture-ingest 01 was logged J
 
 - **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it.
 - **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
+- **Exhibit 3 · Location Breakdown Structure.** The modeled systems placed on the building's floor plans by level, color by system, with core shafts and the infilled lightwell structural constraint marked.
 
 ---
 

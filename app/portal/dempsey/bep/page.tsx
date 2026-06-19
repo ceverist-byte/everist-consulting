@@ -71,6 +71,13 @@ export default async function BEPPage() {
     'swim-lane, <a href="/portal/dempsey/bep/exhibit-1" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">Exhibit 1</a>.'
   );
 
+  // Exhibit 3 — two inline references in Section D link to the dedicated
+  // exhibit page. Remove when Exhibit 3 is superseded.
+  processedHtml = processedHtml.replaceAll(
+    'located study map at Exhibit 3',
+    '<a href="/portal/dempsey/bep/exhibit-3" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">located study map at Exhibit 3</a>'
+  );
+
   // Exhibit 2 — one inline reference in section C.
   // REMOVE THIS BLOCK when Exhibit 2 (Governed-Elevation Vertical Stack) is delivered.
   processedHtml = processedHtml.replace(
@@ -164,6 +171,34 @@ export default async function BEPPage() {
                   </div>
                   <ExhibitOneSwimLane />
                 </div>
+              );
+            }
+
+            // Exhibit 3 — delivered. Live link, no gold, no In Production marker.
+            if (exNumber === '3') {
+              return (
+                <figure
+                  key={ex.num}
+                  id="exhibit-3"
+                  className={styles.exhibit}
+                >
+                  <div className={styles.exhibitNum}>{ex.num}</div>
+                  <div className={styles.exhibitTitle}>
+                    <a
+                      href="/portal/dempsey/bep/exhibit-3"
+                      style={{
+                        color: '#8A642C',
+                        textDecoration: 'underline',
+                        textUnderlineOffset: '2px',
+                      }}
+                    >
+                      {ex.title}
+                    </a>
+                  </div>
+                  {ex.desc && (
+                    <div className={styles.exhibitDesc}>{ex.desc}</div>
+                  )}
+                </figure>
               );
             }
 
