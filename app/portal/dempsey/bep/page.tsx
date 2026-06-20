@@ -78,13 +78,6 @@ export default async function BEPPage() {
     '<a href="/portal/dempsey/bep/exhibit-3" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">located study map at Exhibit 3</a>'
   );
 
-  // Exhibit 2 — one inline reference in section C.
-  // REMOVE THIS BLOCK when Exhibit 2 (Governed-Elevation Vertical Stack) is delivered.
-  processedHtml = processedHtml.replace(
-    'Exhibit 2 for field confirmation',
-    '<span style="background:rgba(138,100,44,0.14);padding:1px 3px;border-radius:1px">Exhibit 2 for field confirmation</span>'
-  );
-
   // Level 4 guest suites — the single bullet in section D As-Built Integration.
   // Regex handles optional whitespace between <li> and <strong>.
   // REMOVE THIS BLOCK when Level 4 drawings are delivered and integrated.
