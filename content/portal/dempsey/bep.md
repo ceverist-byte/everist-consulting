@@ -1,12 +1,12 @@
 ---
-revision: "REV 1"
-date: "June 17, 2026"
-status: "For transmittal, June 17, 2026"
+revision: "REV 2"
+date: "June 19, 2026"
+status: "For transmittal, June 19, 2026"
 ---
 
 # Lite BIM Execution Plan
 
-**La Jolla Cove Hotel · Job 25029 · EVC-1.5 Scan Bridge**
+**La Jolla Cove Hotel · Job 25029 · Scan Bridge**
 
 A coordination governance work product. It makes existing field authority legible so that every party reading it can see who decides, when, on what evidence, and how the decision is traced afterward.
 
@@ -14,12 +14,11 @@ A coordination governance work product. It makes existing field authority legibl
 |---|---|
 | Project | La Jolla Cove Hotel, 1155 Coast Blvd, La Jolla, CA 92037 |
 | Job number | 25029 |
-| Engagement | EVC-1.5 Scan Bridge |
 | Prepared by | Everist Consulting |
-| Revision | REV 1 |
-| Date | June 17, 2026 |
-| Status | For transmittal, June 17, 2026 |
-| Supersedes | REV 0, June 15, 2026. Incorporates capture-ingest 01 and 02 |
+| Revision | REV 2 |
+| Date | June 19, 2026 |
+| Status | For transmittal, June 19, 2026 |
+| Supersedes | REV 1, June 17, 2026. Incorporates capture-ingest 02 and 03 |
 | Governing milestone | Overhead rough-in start at Level 2, July 29, 2026 |
 
 ---
@@ -46,7 +45,7 @@ The engagement extends the EVC-1 relationship, closed May 2026, into a defined b
 
 | Role | Party | Scope on this engagement |
 |---|---|---|
-| General contractor and field authority | Dempsey Construction. Jackson Tews, Superintendent. Joe Ciaccio, Senior Superintendent. | Owns field direction, RFIs, the field back-check at install, and install holds |
+| General contractor and field authority | Dempsey Construction. Jackson Tews, Assistant Superintendent. Joe Ciaccio, Senior Superintendent. | Owns field direction, RFIs, the field back-check at install, and install holds |
 | General contractor, submittal review | Dempsey Construction. Jason Garrett, Dempsey PE. | Owns quality control, the admin back-check of True Air markups against RFI direction, and RFI administration. Coached by Chris Everist and Jackson Tews for cycle one. Joins the Tuesday model review. |
 | Coordination | Everist Consulting | Scan scope definition, scan vendor coordination, existing-conditions integration, this plan, the coordination session, routing analysis for the named systems, and the back-check checklist with first-cycle coaching |
 | Mechanical, installing subcontractor | True Air | Produces marked-up mechanical plans, the project's shop-drawing equivalent, and owns their submission. Owns fabrication and installation. |
@@ -95,7 +94,7 @@ An illustrated governed-elevation version of this priority structure is maintain
 
 ## D. Modeling Scope by System
 
-This section is the single source of truth for the modeling scope. The Model Element Table below classifies every modeled system by Uniformat II, with its Model Element Author, its level of development, and its current status in one consolidated grid. The As-Built Integration Scope that follows is the work program: it carries each deferred study, its qualifying statement, and its decision owner, plus the studies held in the backlog. The table is the scope and where each element stands; the study inventory is why each study exists and what it is waiting on. The located study map at Exhibit 3 places each system on the building's floor plans, level by level, so the table and the map together carry the full spatial picture.
+This section is the single source of truth for the modeling scope. The Model Element Table below classifies every modeled system by Uniformat II, with its Model Element Author, its level of development, and its current status in one consolidated grid. The As-Built Integration Scope that follows is the work program: the numbered studies that resolve the building, the located study map at Exhibit 3, and the backlog held separately. The table is the scope and where each element stands; the study inventory is why each study exists and what it is waiting on.
 
 ### Model Element Table
 
@@ -105,18 +104,16 @@ This section is the single source of truth for the modeling scope. The Model Ele
 | B1010 | Superstructure, structural penetration coordination, elevator lobby south conflict zone | Elevator-lobby penetration study | Everist Consulting, coordination | LOD 300 or below | Partial, Not Started |
 | C1010 | Interior construction, critical metal framing constraining the overhead plenum | Installed framing arrives in the as-built; un-installed treatment pending the as-built | ARC for installed, Everist Consulting for un-installed, pending | As-built LOA for installed, pending for un-installed | Partial, Not Started |
 | C3030 | Interior finishes, ceiling assembly under RFI 102 GridLock | The tolerance solver named in section C; the surface named systems coordinate against | Everist Consulting, coordination | LOD 300 | Released, In Progress |
-| D3040 | HVAC distribution, exhaust ductwork | Exhaust routing study | Everist Consulting, coordination; True Air, markups | LOD 300 or below | Partial, Not Started |
+| D3040 | HVAC distribution, exhaust ductwork | Exhaust routing study | Everist Consulting, coordination; True Air, markups | LOD 300 or below | Released, Not Started |
 | D3040 | HVAC distribution, refrigerant piping, VRF | Refrigerant and branch-box relocation study | Everist Consulting, coordination; True Air, markups | LOD 300 or below | Partial, Not Started |
 | D3050 | HVAC terminal units, fan coils | Fan coil placement study | Everist Consulting, coordination; True Air, markups | LOD 300 or below | Partial, Not Started |
 | D4010 | Fire protection, sprinkler main and branches | Fire protection routing study | Everist Consulting, coordination; fire-protection subcontractor, shops | LOD 300 or below | Partial, Not Started |
 
-Status reads in two parts: the release state of what each study models against, and the modeling progress. Partial means the basis is in hand but incomplete; Released means it is firm. Most rows read Not Started by design, because the existing-conditions model is not yet in hand. The ceiling row reads In Progress because Exhibit 2, its governed-elevation stack, is in production; Exhibit 2 attaches in the next revision. Where a study's output posts to the Dempsey Portal, the link appears with that study in the inventory below.
+Status reads in two parts: the release state of what each study models against, and the modeling progress. Partial means the basis is in hand but incomplete; Released means it is firm. Most rows read Not Started because the existing-conditions model is not yet in hand. The ceiling row reads In Progress because Exhibit 2, its governed-elevation stack, is in production.
 
-**Source model and revision sequence.** The ARC as-built model is expected about June 20, 2026, after this transmittal. This revision is the governance skeleton. It establishes the modeling scope, the validation method, the decision owners, and the scope boundary. The modeled integration output, the named systems resolved against the as-built to surface clashes, is confirmed in a later revision once the model is in hand.
+**Source model and revision sequence.** The ARC as-built model is expected about June 20, 2026. This revision establishes the modeling scope, the validation method, the decision owners, and the scope boundary. The modeled integration output, the named systems resolved against the as-built to surface clashes, is confirmed once the model is in hand.
 
 **Modeling scope by level.** The scan captured all four levels. Levels 2 and 3 carry the active studies, where steel placement variation drives the coordination. Levels 1 and 4 are in scope but held in the backlog below.
-
-**Location basis.** The located study map at Exhibit 3 registers each modeled system to the building's floor plans by level, color by system, with the two core shafts threaded through and the infilled lightwell structural constraint marked. Level 1 and Roof are reference levels carrying origin markers and shaft heads. Levels 2 through 4 carry the active system zones.
 
 **Validation protocol.** Measurements are checked against the point cloud as the evidence layer. When a modeled element falls outside the stated level of accuracy, it is flagged and routed to the relevant stakeholder for a decision. It is never silently absorbed. The flag path is to identify the out-of-accuracy element, flag it with the affected system and location, and route it to the owner named for that decision.
 
@@ -124,29 +121,41 @@ Status reads in two parts: the release state of what each study models against, 
 
 - Sagging pipe is modeled at true diameter, fit to the point cloud, with the lowest captured point governing.
 - Finish flooring thickness is set at the thickest candidate finish until a selection is made, consistent with the ceiling-height tolerance in section C.
+- Congestion weighting is a relative priority, stated as an order rather than a count. It is a closed approximation, not a pending validation.
 
 **Prefabrication boundary.** Anything not modeled to a coordinated state cannot be prefabricated.
 
 **Conditions consciously deprioritized.** Perimeter walls are excluded from the existing-conditions model scope. Glazing and storefront framing are not within the scan areas. Survey control and floor-flatness mapping are excluded, as recorded in section B. Equipment beyond the committed fan coils, such as rooftop units and panels, is outside the modeled scope at this revision. These are deprioritized for field coordination at this revision and are documented so the boundary is explicit. As scope firms, conditions that move into or out of the coordinated set are recorded in the capture register, cited to the RFI or session that moved them.
 
-### As-Built Integration Scope (LOE Item 3)
+**Location basis.** The verified model carries two core shafts. RF-SHFT is the exhaust riser, carried from Level 1 to roof. GRS-SHFT is the grease shaft, carried from Level 1 to roof. The former lightwell is not a routing zone; it is carried as the INFILLED LIGHTWELL structural constraint, the reinforced infill bays across Levels 2 to 4. The West Corridor, W-COR, is refrigerant-dominant, carrying the west line-set routing, with exhaust, fan coils, and fire protection also present. The located study map at Exhibit 3 places the repeating conditions on the floor plans, color by system under a six-system key, with the two core shafts threaded through every level. It is a five-panel stack: a Level 1 reference panel carrying the origin markers and the two shaft bases, the color-by-system zones across Levels 2 to 4, and a roof panel carrying the two shaft heads, because the shafts run Level 1 to roof. The infilled-lightwell bays are shown as the structural constraint, held distinct from the system-color zones, and a relative-priority weight panel sits in the legend. Exhibit 3 is live at the portal.
 
-The conditions deferred at the Phase 1 close return on this engagement as coordination studies, each anchored to the ARC as-built point cloud rather than the design drawings, and cited by RFI. The scan is the new evidence layer, and this is the scope it makes real. None of the geometry below exists in the model yet. Each study is a known gap the integration inherits, tested against the point cloud at the lowest-point convention, with its decision cued to its owner and not committed here. Governed-elevation representative sections, the method carried forward from Phase 1, are the test instrument. The inventory grows as studies surface through the cadence.
+### As-Built Integration Scope
+
+The conditions deferred at the Phase 1 close return on this engagement as coordination studies, each anchored to the ARC as-built point cloud rather than the design drawings, and cited by RFI. The scan is the new evidence layer, and this is the scope it makes real. None of the geometry below exists in the model yet. Each study is a known gap the integration inherits, tested against the point cloud at the lowest-point convention, with its decision cued to its owner. Governed-elevation representative sections, the method carried forward from Phase 1, are the test instrument.
 
 **Active studies.**
 
-- **Exhaust routing.** Tests the RFI 146 exhaust against the as-built where the approved 4-inch floor holds and the 3-inch zones cannot be fabricated by True Air. The direction for the zones that cannot be built has landed on the in-unit fan alternative at 6-inch round on north-south routing, with the markup to the mechanical engineer of record pending the June 18 session. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
-- **Refrigerant distribution.** The branch refrigerant boxes that serve the fan coils relocate from the hallways into the suites to free hallway plenum for the central duct run. Because the boxes serve the fan coils, the refrigerant distribution and the fan coil placements coordinate together. *Decision owned by: design team, with True Air input.*
-- **Fire protection.** The sprinkler main and branch lines in representative north-south bays, modeled to the deferred fire-protection submittal. *Decision owned by: design team, with the fire-protection subcontractor.*
-- **Fan coils.** Representative placements at four north-south locations, coordinated with the refrigerant distribution that serves them. Level 2 and Level 3 north release to hang at the June 18 session. *Decision owned by: Dempsey field, as the condition that committed them.*
-- **Elevator-lobby penetrations.** The south-side conflict zone integrated against the scan data. The SEOR-approved penetration stubs per RFI 146, at 5 by 18, 5 by 16, 5 by 14, and 5 by 12 inches, are the decision record and are modeled against the point cloud. Larger beam penetration requests route to Alex, structural and SEOR, pending confirmation. *Decision owned by: design team and SEOR. References RFI 146.*
+**01 Refrigerant distribution.** The branch refrigerant boxes that serve the fan coils relocate from the hallways into the suites to free hallway plenum for the central duct run. Because the boxes serve the fan coils, the refrigerant distribution and the fan coil placements coordinate together. *Decision owned by: design team, with True Air input.*
+
+**02 Exhaust routing.** Routes the endorsed in-unit fan solution and proves termination compliance. The in-unit fan, 6-inch round on north-south routing, is endorsed by the mechanical engineer of record. Duct sizing is an 8-inch trunk in the soffit serving the fan coils and the bathrooms, dropping to 6 inch after the take-off to each unit. Exhaust-air terminations meet IMC 502.2.1: at least 3 feet from the property line, at least 10 feet from any forced-air inlet, at least 10 feet above a public walkway, at least 3 feet from building openings, and no discharge across a walkway. That is the roof termination condition tied to the shaft heads, binding on this coastal site. *Endorsed by the mechanical engineer of record. References RFI 146.*
+
+**03 Fan coils.** Representative placements at four north-south locations, coordinated with the refrigerant distribution that serves them. The elevator-lobby fan coil is studied at FC-3-329 on Level 3 and repeats at FC-429 on Level 4. The same condition occurs at FC-1B-2 on Level 1, carried with the Level 1 backlog, and Level 2 carries none, so the repeat is not a clean upward sequence. Levels 2 and 3 north released to hang at the June 18 session. *Decision owned by: Dempsey field, as the condition that committed them.*
+
+**04 Elevator-lobby penetrations.** The south-side conflict zone integrated against the scan data. The SEOR-approved penetration stubs per RFI 146, at 5 by 18, 5 by 16, 5 by 14, and 5 by 12 inches, are the decision record and are modeled against the point cloud. Larger beam penetration requests route to Alex, structural and SEOR, pending confirmation. *Decision owned by: design team and SEOR. References RFI 146.*
+
+**05 Fire protection.** The sprinkler main and branch lines in representative north-south bays, modeled to the deferred fire-protection submittal. *Decision owned by: design team, with the fire-protection subcontractor.*
 
 **Backlogged studies, not started and not prioritized.**
 
-- **Level 4 guest suites.** Held pending updated drawings from the design team, integrated when issued. The Level 4 ceiling plumbing rework, authored by Travis Wagner at H+W Engineering and targeting 7 ft 2 in, is a design-team coordination item to verify against the overhead stack when the study opens. *Decision owned by: design team, on the drawing issue.*
-- **Level 1 conditions.** Held pending prioritization. Mechanical and plumbing fit to the point cloud where ceilings are low and existing beams are present; the study identifies where the 7-foot beam condition forecloses the current design as drawn, flagged and not absorbed. *Decision owned by: design team and SEOR.*
+**Level 4 guest suites.** Held pending updated drawings from the design team, integrated when issued. The Level 4 ceiling plumbing rework, authored by Travis Wagner at H+W Engineering and targeting 7 ft 2 in, is a design-team coordination item to verify against the overhead stack when the study opens. *Decision owned by: design team, on the drawing issue.*
 
-**Scope boundary, plumbing engineer of record model.** The plumbing engineer of record at H+W Engineering issued a Revit plumbing model, received by way of Dempsey on June 15, 2026, showing the Level 4 and roof grease and waste re-route that achieves the 7 ft 2 in target. It is received as a reference for the Level 4 ceiling-height verification. It is not absorbed into the As-Built Integration scope as a modeled input. Any formal ingestion of that plumbing geometry is new scope beyond the current Letter of Engagement.
+**Level 1 conditions.** Held pending prioritization. Mechanical and plumbing fit to the point cloud where ceilings are low and existing beams are present; the study identifies where the 7-foot beam condition forecloses the current design as drawn, flagged and not absorbed. *Decision owned by: design team and SEOR.*
+
+**Scope boundary, plumbing engineer of record model.** The plumbing engineer of record at H+W Engineering issued a Revit plumbing model, received by way of Dempsey on June 15, 2026, showing the Level 4 and roof grease and waste re-route that achieves the 7 ft 2 in target. It is received as a reference for the Level 4 ceiling-height verification. It is not absorbed into the As-Built Integration scope as a modeled input. Any formal ingestion of that plumbing geometry is new scope.
+
+**Scope basis and residual risk.** This assessment resolves the building by study, not by room. Each system's typical condition is coordinated once and carried across every instance where it repeats, which is most of the building. The spaces that are genuinely different, the Level 4 suites and the low-ceiling areas on Level 1, are carried as named exceptions and coordinated on their own terms. The basis is deliberate: it puts the coordination effort where it returns the most and keeps the non-standard work to a short, explicit list.
+
+The boundary is stated plainly. The assessment coordinates the typical and names the exceptions; it does not individually model every room. The residual risk is that a space assumed to match the typical carries a condition the typical study did not. That risk is bounded by the validation in this plan: every replicated instance is subject to the LOA and LOD validation protocol and the out-of-LOA flag path, and the field back-check at install is where a condition outside the typical is caught and routed. An instance that fails validation, or a field condition the typical did not anticipate, converts from a replicated instance to an exception and is coordinated as one.
 
 ---
 
@@ -159,7 +168,7 @@ Governing decisions from the current record, cued and not committed:
 - Scan extent. Resolved to the whole building, Levels 1 through 4. *Decision owned by: Dempsey, by notice to proceed dated June 10, 2026.*
 - Markup back-check, admin owner. The Dempsey submittal-review owner who checks markups against RFI direction, confirmed as Jason Garrett, Dempsey PE, June 16, 2026. *Decision owned by: Dempsey.*
 - Refrigerant distribution strategy. The branch refrigerant boxes that serve the fan coils relocate from the hallways into the suites to free hallway plenum for the central duct run, coordinated together with the fan coil locations they serve. *Decision owned by: design team, with True Air input.*
-- Exhaust routing where the 3-inch maximum zones are not fabricable. True Air's fabrication range is 4 to 8 inches, so the 3-inch maximum zones cannot be fabricated as drawn. The options are lower ceilings, structural penetrations, or an in-unit fan alternative at 6-inch round on north-south routing. Open, and cued for the June 18 coordination meeting. *Decision owned by: design team and SEOR, with True Air input. References RFI 146.*
+- Exhaust routing. The in-unit fan at 6-inch round on north-south routing is endorsed by the mechanical engineer of record. Duct sizing is an 8-inch trunk in the soffit dropping to 6 inch at each unit take-off, with roof terminations meeting IMC 502.2.1, binding on this coastal site. Resolved at the June 18 session. *Decision owned by: design team and mechanical engineer of record, with True Air input. References RFI 146.*
 - Structural penetration path for larger beam penetration requests. *Decision owned by: Alex, structural and SEOR, pending confirmation.*
 - Ceiling assembly selection, the grid system under RFI 102. *Decision owned by: design team, with Dempsey for installed-height confirmation.*
 - Fan coil installed position. *Decision owned by: Dempsey field.*
@@ -199,7 +208,7 @@ The vector is carried in the integrated swim-lane, Exhibit 1.
 
 ## H. Coordination Cadence
 
-Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Joe Ciaccio, Jason Garrett, and Chris Everist. Thursdays are coordination with True Air and the other contractors. The first Tuesday session was held June 16, 2026. The True Air coordination meeting is Thursday, June 18.
+Coordination runs twice weekly. Tuesdays are a virtual session by Teams for model review and coordination-meeting preparation, with Jackson Tews, Joe Ciaccio, Jason Garrett, and Chris Everist. Thursdays are coordination with True Air and the other contractors. The first Tuesday session was held June 16, 2026. The first True Air coordination session was held June 18, 2026.
 
 Each session carries an expected output. The Tuesday session produces a reviewed model and a prepared agenda for the contractor coordination. The Thursday coordination is a back-check kickoff when True Air markups are in hand, and a rules-of-the-road session when they are not, in which case the markups become the dated deliverable out of the meeting.
 
@@ -211,16 +220,16 @@ Each session carries an expected output. The Tuesday session produces a reviewed
 
 The plan advances from a standing capture register, not from memory. After each coordination session the capture is recorded in a fixed format: decisions made, owner named per decision, RFIs triggered or referenced, open busts, and items assigned with dates. Each revision of this plan traces its changes to entries in the register.
 
-The register is maintained by Everist Consulting. Capture-ingest 01 was logged June 10, 2026 from two on-site sessions, the Letter of Engagement review and the ARC scan walk. Capture-ingest 02 was logged June 16, 2026 from the first Tuesday model-review session. This revision incorporates both. The next capture follows the June 18 True Air coordination session.
+The register is maintained by Everist Consulting. Capture-ingest 01 was logged June 10, 2026 from two on-site sessions, the Letter of Engagement review and the ARC scan walk. Capture-ingest 02 was logged June 16, 2026 from the first Tuesday model-review session. Capture-ingest 03 was logged June 18, 2026 from the first True Air coordination session: exhaust direction endorsed by the mechanical engineer of record, Levels 2 and 3 north fan coils released to hang, the two-shaft location basis verified, and the fan coil occurrence pattern verified. This revision incorporates capture-ingest 02 and 03.
 
 ---
 
 ## Exhibits
 
-- **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it.
-- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. In production.
-- **Exhibit 3 · Location Breakdown Structure.** The modeled systems placed on the building's floor plans by level, color by system, with core shafts and the infilled lightwell structural constraint marked.
+- **Exhibit 1 · Coordination Swim-Lane.** Roles, decision ownership, markup and shop-drawing ownership, and the instruction vector as one sequence of work. Sections E, F, and G reference it. Live at the portal.
+- **Exhibit 2 · Governed-Elevation Vertical Stack.** The system priority structure of section C rendered as a representative section at governed elevations, for field confirmation. Live at the portal.
+- **Exhibit 3 · Located Study Map.** The building's repeating conditions placed on the floor plans, color by system under a six-system key, across Levels 2 to 4. A five-panel stack: a Level 1 reference panel with the origin markers and both shaft bases, the color-by-system zones across Levels 2 to 4, and a roof panel with the two shaft heads, because the shafts run Level 1 to roof. The infilled-lightwell bays shown as the structural constraint, held distinct from the system-color zones, and a relative-priority weight panel in the legend. Live at the portal.
 
 ---
 
-*Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · REV 1 · June 17, 2026*
+*Everist Consulting · La Jolla Cove Hotel · Job 25029 · REV 2 · June 19, 2026*
