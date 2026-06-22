@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 06",
+    title: "You Became the Wire",
+    description:
+      "Run more than two or three LLM chats at once and you become the integration layer — the wire shuttling context between sessions that can't see each other. The fix isn't a bigger tool.",
+    href: "/notes/you-became-the-wire",
+  },
+  {
     number: "Note 05",
     title: "No Model in the Room",
     description:
