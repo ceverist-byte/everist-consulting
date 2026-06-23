@@ -58,6 +58,33 @@ export default function GoverningElevationPage() {
           The project&apos;s system priority structure rendered as a representative
           section at governed elevations, for field confirmation.
         </p>
+        <ol
+          style={{
+            fontFamily: SANS,
+            fontSize: '12px',
+            lineHeight: 1.5,
+            color: '#4F4A43',
+            margin: '10px 0 0',
+            padding: '0 0 0 18px',
+          }}
+        >
+          <li>
+            Main duct conflicts with the bath ceiling at 7&apos;-2&quot;. The duct
+            cannot run at this elevation without cutting into the approved ceiling
+            plane.
+          </li>
+          <li>
+            Bath fan coil must sit above the 7&apos;-2&quot; bath ceiling and below
+            the deck above. Duct connection to be field-verified.
+          </li>
+          <li>
+            Fire protection main runs parallel alongside the main duct through the
+            same overhead zone.
+          </li>
+          <li>
+            No overhead systems run above the 8&apos;-2&quot; living area ceiling.
+          </li>
+        </ol>
       </div>
 
       <div style={{ flex: 1, overflow: 'hidden' }}>
