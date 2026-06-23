@@ -59,13 +59,13 @@ export default function GoverningElevationPage() {
           section at governed elevations, for field confirmation.
         </p>
         <ol
+          className="list-decimal pl-5"
           style={{
             fontFamily: SANS,
             fontSize: '12px',
             lineHeight: 1.5,
             color: '#4F4A43',
             margin: '10px 0 0',
-            padding: '0 0 0 18px',
           }}
         >
           <li>
