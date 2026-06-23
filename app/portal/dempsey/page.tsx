@@ -70,7 +70,7 @@ export default function DempseyPortalPage() {
             margin: '0 0 14px',
           }}
         >
-          Documents
+          Deliverables
         </p>
 
         {/* BEP row */}
@@ -146,6 +146,80 @@ export default function DempseyPortalPage() {
             </span>
           </div>
         </Link>
+
+        {/* Coordination Finding stub */}
+        <div
+          style={{
+            border: '1px solid #D8D4CB',
+            padding: '18px 20px',
+            marginTop: '12px',
+          }}
+        >
+          <p
+            style={{
+              fontFamily:
+                "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+              fontSize: '10px',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#6A6861',
+              margin: '0 0 6px',
+            }}
+          >
+            Coordination Finding
+          </p>
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: 0,
+            }}
+          >
+            Routing analysis and conflict identification for the overhead MEP systems
+            within the scope established by the BIM Execution Plan. Coordination
+            findings document the current state at a specific typical condition and
+            are updated as each study is located and confirmed by field markup.
+          </p>
+        </div>
+
+        {/* Back-check Checklist stub */}
+        <div
+          style={{
+            border: '1px solid #D8D4CB',
+            padding: '18px 20px',
+            marginTop: '12px',
+          }}
+        >
+          <p
+            style={{
+              fontFamily:
+                "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+              fontSize: '10px',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#6A6861',
+              margin: '0 0 6px',
+            }}
+          >
+            Back-check Checklist
+          </p>
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: 0,
+            }}
+          >
+            A back-check checklist for field verification at install, built from the
+            confirmed coordination findings and coached through cycle one by Everist
+            Consulting. No instances ready. Fills in when a coordination finding is
+            confirmed and direction is aligned.
+          </p>
+        </div>
       </div>
     </div>
   );

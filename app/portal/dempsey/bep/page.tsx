@@ -232,48 +232,6 @@ export default async function BEPPage() {
         </div>
       </section>
 
-      {/* Deliverables section */}
-      <section aria-labelledby="deliverables-heading" style={{ marginTop: '48px' }}>
-        <h2
-          id="deliverables-heading"
-          style={{
-            fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
-            fontSize: '15px',
-            fontWeight: 700,
-            letterSpacing: 0,
-            margin: '0 0 14px',
-            paddingBottom: '10px',
-            borderBottom: '1px solid #D8D4CB',
-            maxWidth: '680px',
-          }}
-        >
-          Deliverables
-        </h2>
-        <div style={{ maxWidth: '680px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          <figure className={styles.exhibit} style={{ margin: 0 }}>
-            <div className={styles.exhibitNum}>Coordination Finding</div>
-            <p className={styles.exhibitDesc} style={{ marginTop: '6px' }}>
-              Routing analysis and conflict identification for the overhead MEP systems
-              within the scope established by the BIM Execution Plan. Coordination
-              findings document the current state at a specific typical condition and
-              are updated as each study is located and confirmed by field markup.
-            </p>
-          </figure>
-          <figure className={styles.exhibit} style={{ margin: 0 }}>
-            <div className={styles.exhibitNum}>Back-check Checklist</div>
-            <p className={styles.exhibitDesc} style={{ marginTop: '6px', marginBottom: '12px' }}>
-              A back-check checklist for field verification at install, built from the
-              confirmed coordination findings and coached through cycle one by
-              Everist Consulting.
-            </p>
-            <div className={styles.exhibitPending}>
-              No instances ready. Fills in when a coordination finding is confirmed and
-              direction is aligned.
-            </div>
-          </figure>
-        </div>
-      </section>
-
       {/* Document footer */}
       <p className={styles.docFooter} style={{ maxWidth: '680px' }}>
         Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · {revision} · {revDate}
