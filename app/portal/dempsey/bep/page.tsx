@@ -85,12 +85,11 @@ export default async function BEPPage() {
     '<a href="/portal/dempsey/bep/exhibit-3" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">located study map at Exhibit 3</a>'
   );
 
-  // Level 4 guest suites — the single bullet in section D As-Built Integration.
-  // Regex handles optional whitespace between <li> and <strong>.
-  // REMOVE THIS BLOCK when Level 4 drawings are delivered and integrated.
+  // Level 4 guest suites — bold paragraph in backlog, not a list item.
+  // Remove when Level 4 drawings are delivered and integrated.
   processedHtml = processedHtml.replace(
-    /(<li>)\s*(<strong>Level 4 guest suites\.)/,
-    '<li style="background:rgba(138,100,44,0.1);border-left:2px solid rgba(138,100,44,0.35);padding-left:6px;margin-left:-8px;list-style-position:outside">$2'
+    /<p>(<strong>Level 4 guest suites\.)/,
+    '<p style="background:rgba(138,100,44,0.1);border-left:2px solid rgba(138,100,44,0.35);padding:4px 8px">$1'
   );
   // ─────────────────────────────────────────────────────────────────────────────
 
