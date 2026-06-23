@@ -252,18 +252,12 @@ export default async function BEPPage() {
         <div style={{ maxWidth: '680px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <figure className={styles.exhibit} style={{ margin: 0 }}>
             <div className={styles.exhibitNum}>Coordination Finding</div>
-            <p className={styles.exhibitDesc} style={{ marginTop: '6px', marginBottom: '12px' }}>
+            <p className={styles.exhibitDesc} style={{ marginTop: '6px' }}>
               Routing analysis and conflict identification for the overhead MEP systems
               within the scope established by the BIM Execution Plan. Coordination
               findings document the current state at a specific typical condition and
               are updated as each study is located and confirmed by field markup.
             </p>
-            <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: '#6A6861', marginBottom: '6px' }}>
-              Available
-            </div>
-            <a href="/portal/dempsey/bep/exhibit-2" style={{ fontFamily: "'Inter Tight', 'Inter', sans-serif", fontSize: '14px', color: '#8A642C', textDecoration: 'underline', textUnderlineOffset: '2px', display: 'block' }}>
-              Level 3 typical condition, four conditions documented
-            </a>
           </figure>
           <figure className={styles.exhibit} style={{ margin: 0 }}>
             <div className={styles.exhibitNum}>Back-check Checklist</div>
