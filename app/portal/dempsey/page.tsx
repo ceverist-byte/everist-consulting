@@ -217,7 +217,7 @@ export default function DempseyPortalPage() {
               <strong>Zone 2</strong> — East end of Level 2, refrigerant bundle origin.
               Where the main line-sets rise from the Level 1 parking ceiling and enter
               the building's overhead distribution. Highest-priority routing study. Study
-              boundary pending M403–M405 drawings and scan delivery.
+              boundary pending as-built delivery.
             </li>
             <li
               style={{
@@ -230,7 +230,7 @@ export default function DempseyPortalPage() {
               <strong>Zone 3</strong> — West corridor at Level 4, terminal end of the
               refrigerant line-set run. Exhaust co-present at this location due to the
               in-unit fan routing. Two-system overhead condition at the west end of the
-              distribution route.
+              distribution route. Study boundary pending as-built delivery.
             </li>
           </ul>
 
@@ -300,7 +300,7 @@ export default function DempseyPortalPage() {
             }}
           >
             Zone boundaries derived from H+W Engineering mechanical drawings. Final
-            placement confirmed by field markup and as-built delivery.
+            placement confirmed by as-built delivery.
           </p>
         </div>
 
