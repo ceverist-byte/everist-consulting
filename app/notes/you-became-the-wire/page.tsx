@@ -141,6 +141,13 @@ export default function YouBecameTheWirePage() {
               because it never lived there.
             </p>
             <p style={bodyParaStyle}>
+              <em>
+                Running it feels like switching from a manual transmission to an automatic.
+                You&apos;re still driving. You still choose the speed, the route, every turn. But the
+                gear changes stopped being your problem.
+              </em>
+            </p>
+            <p style={bodyParaStyle}>
               None of this is automation, and that&apos;s the point most people miss. What it bought me
               wasn&apos;t a system that does the work. It was a clear enough view of the work to see which
               handoffs were worth automating and which weren&apos;t. Some carry judgment, and judgment
