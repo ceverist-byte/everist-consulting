@@ -71,6 +71,13 @@ export default async function BEPPage() {
     'swim-lane, <a href="/portal/dempsey/bep/exhibit-1" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">Exhibit 1</a>.'
   );
 
+  // Exhibit 2 — the annotation paragraph in Section D links to the dedicated
+  // exhibit page (the redirect at /portal/dempsey/bep/exhibit-2).
+  processedHtml = processedHtml.replaceAll(
+    'Exhibit 2 is the annotated vertical stack',
+    '<a href="/portal/dempsey/bep/exhibit-2" style="color:#8A642C;text-decoration:underline;text-underline-offset:2px">Exhibit 2</a> is the annotated vertical stack'
+  );
+
   // Exhibit 3 — two inline references in Section D link to the dedicated
   // exhibit page. Remove when Exhibit 3 is superseded.
   processedHtml = processedHtml.replaceAll(
@@ -223,6 +230,54 @@ export default async function BEPPage() {
               </figure>
             );
           })}
+        </div>
+      </section>
+
+      {/* Deliverables section */}
+      <section aria-labelledby="deliverables-heading" style={{ marginTop: '48px' }}>
+        <h2
+          id="deliverables-heading"
+          style={{
+            fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+            fontSize: '15px',
+            fontWeight: 700,
+            letterSpacing: 0,
+            margin: '0 0 14px',
+            paddingBottom: '10px',
+            borderBottom: '1px solid #D8D4CB',
+            maxWidth: '680px',
+          }}
+        >
+          Deliverables
+        </h2>
+        <div style={{ maxWidth: '680px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <figure className={styles.exhibit} style={{ margin: 0 }}>
+            <div className={styles.exhibitNum}>Coordination Finding</div>
+            <p className={styles.exhibitDesc} style={{ marginTop: '6px', marginBottom: '12px' }}>
+              Routing analysis and conflict identification for the overhead MEP systems
+              within the scope established by the BIM Execution Plan. Coordination
+              findings document the current state at a specific typical condition and
+              are updated as each study is located and confirmed by field markup.
+            </p>
+            <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: '#6A6861', marginBottom: '6px' }}>
+              Available
+            </div>
+            <a href="/portal/dempsey/bep/exhibit-2" style={{ fontFamily: "'Inter Tight', 'Inter', sans-serif", fontSize: '14px', color: '#8A642C', textDecoration: 'underline', textUnderlineOffset: '2px', display: 'block' }}>
+              Level 3 typical condition, four conditions documented
+            </a>
+          </figure>
+          <figure className={styles.exhibit} style={{ margin: 0 }}>
+            <div className={styles.exhibitNum}>Back-check Checklist</div>
+            <p className={styles.exhibitDesc} style={{ marginTop: '6px', marginBottom: '12px' }}>
+              A back-check checklist for field verification at install, built from the
+              confirmed coordination findings and coached through cycle one by
+              Everist Consulting.
+            </p>
+            <div className={styles.exhibitPending}>
+              No instances ready. Fills in when a coordination finding is confirmed and
+              direction is aligned.
+            </div>
+          </figure>
         </div>
       </section>
 
