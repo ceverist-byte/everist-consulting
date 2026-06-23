@@ -23,6 +23,7 @@ const links: NavLink[] = [
   { href: "/notes", label: "Notes" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/portal/login", label: "Client Portal" },
 ];
 
 function isActive(pathname: string, link: NavLink): boolean {

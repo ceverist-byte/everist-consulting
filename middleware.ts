@@ -33,11 +33,22 @@ async function portalGuard(request: NextRequest): Promise<NextResponse> {
   try {
     const secret = new TextEncoder().encode(rawSecret)
     const { payload } = await jwtVerify(token, secret)
-    const sessionClient =
-      typeof payload.client === 'string' ? payload.client : null
 
     const segments = pathname.split('/').filter(Boolean)
     const urlClient = segments[1] ?? null
+
+    // Admin inventory: gated on a role claim, not a per-client claim.
+    if (urlClient === 'admin') {
+      if (payload.role === 'admin') {
+        return NextResponse.next()
+      }
+      const res = toLogin(request)
+      res.cookies.delete(PORTAL_COOKIE)
+      return res
+    }
+
+    const sessionClient =
+      typeof payload.client === 'string' ? payload.client : null
 
     if (!sessionClient || !urlClient || sessionClient !== urlClient) {
       const res = toLogin(request)

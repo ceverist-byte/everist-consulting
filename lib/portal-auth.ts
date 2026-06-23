@@ -4,7 +4,8 @@ export const PORTAL_COOKIE = 'ec-portal-session';
 const EXPIRES_SECONDS = 60 * 60 * 24 * 7; // 7 days
 
 export interface PortalClaims extends JWTPayload {
-  client: string;
+  client?: string;
+  role?: string;
 }
 
 function getSecret(): Uint8Array {
@@ -15,6 +16,14 @@ function getSecret(): Uint8Array {
 
 export async function signSession(client: string): Promise<string> {
   return new SignJWT({ client })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setExpirationTime(`${EXPIRES_SECONDS}s`)
+    .sign(getSecret());
+}
+
+export async function signAdminSession(): Promise<string> {
+  return new SignJWT({ role: 'admin' })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime(`${EXPIRES_SECONDS}s`)

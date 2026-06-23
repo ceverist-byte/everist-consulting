@@ -2,7 +2,7 @@
 
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { signSession, PORTAL_COOKIE } from '@/lib/portal-auth';
+import { signSession, signAdminSession, PORTAL_COOKIE } from '@/lib/portal-auth';
 
 const SESSION_MAX_AGE = 60 * 60 * 24 * 7;
 
@@ -20,8 +20,13 @@ export async function loginAction(formData: FormData): Promise<void> {
     redirect('/portal/login?error=1');
   }
 
-  const envKey = `PORTAL_${client.toUpperCase()}_PASSWORD`;
-  const expected = process.env[envKey];
+  // Admin inventory uses a role-based session and a dedicated env var,
+  // distinct from the per-client password scheme below.
+  const isAdmin = client === 'admin';
+  const envKey = `PORTAL_${client.replace(/-/g, '_').toUpperCase()}_PASSWORD`;
+  const expected = isAdmin
+    ? process.env.PORTAL_ADMIN_PASSWORD
+    : process.env[envKey];
 
   if (!expected || password !== expected) {
     const params = new URLSearchParams({ error: '1' });
@@ -29,7 +34,7 @@ export async function loginAction(formData: FormData): Promise<void> {
     redirect(`/portal/login?${params.toString()}`);
   }
 
-  const token = await signSession(client);
+  const token = isAdmin ? await signAdminSession() : await signSession(client);
   // Next.js 15: cookies() is async. If on Next.js 14, remove the await.
   const jar = await cookies();
   jar.set(PORTAL_COOKIE, token, {
