@@ -185,107 +185,20 @@ export default function DempseyPortalPage() {
           </p>
 
           {/* Zone bullets */}
-          <ul
-            style={{
-              margin: '0 0 16px',
-              paddingLeft: '18px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
-            }}
-          >
-            <li
-              style={{
-                fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
-                fontSize: '14px',
-                color: '#4F4A43',
-                lineHeight: 1.55,
-              }}
-            >
-              <strong>Zone 1</strong> — Level 4 elevator lobby. Fan coil and structural
-              penetration conditions at the replicated instance of the studied Level 3
-              typical. Instance verification pending as-built delivery.
+          <ul style={{ margin: '0 0 16px', paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Corridor:</strong> refrigerant mains and fire protection coordinated through the structural beams; routing and penetration approach in coordination.{' '}<span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#6A6861' }}>In coordination</span>
             </li>
-            <li
-              style={{
-                fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
-                fontSize: '14px',
-                color: '#4F4A43',
-                lineHeight: 1.55,
-              }}
-            >
-              <strong>Zone 2</strong> — East end of Level 2, refrigerant bundle origin.
-              Where the main line-sets rise from the Level 1 parking ceiling and enter
-              the building's overhead distribution. Highest-priority routing study. Study
-              boundary pending as-built delivery.
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator lobby, south:</strong> fan coil and the vertical-to-horizontal duct transition at the shaft, coordinated around existing structure, ducts, and fire protection.{' '}<span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#6A6861' }}>In coordination</span>
             </li>
-            <li
-              style={{
-                fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
-                fontSize: '14px',
-                color: '#4F4A43',
-                lineHeight: 1.55,
-              }}
-            >
-              <strong>Zone 3</strong> — West corridor at Level 4, terminal end of the
-              refrigerant line-set run. Exhaust co-present at this location due to the
-              in-unit fan routing. Two-system overhead condition at the west end of the
-              distribution route. Study boundary pending as-built delivery.
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator lobby, north:</strong> refrigerant turning the corner where it crosses a structural beam; beam penetration under review.{' '}<span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#6A6861' }}>In coordination</span>
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>West corridor:</strong> convergence point where fan coil, exhaust, and fire protection meet; existing conditions captured; exhaust routing pending design direction.{' '}<span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#6A6861' }}>Pending design direction</span>
             </li>
           </ul>
-
-          {/* Two-column thumbnail layout */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '12px',
-              marginBottom: '14px',
-            }}
-          >
-            <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/portal/dempsey/zones/zone2-L2.png"
-                alt="Zone 2, Level 2 location study"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-              <p
-                style={{
-                  fontFamily:
-                    "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
-                  fontSize: '10px',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase' as const,
-                  color: '#6A6861',
-                  margin: '6px 0 0',
-                }}
-              >
-                Zone 2 · Level 2.
-              </p>
-            </div>
-            <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/portal/dempsey/zones/zones1-3-L4.png"
-                alt="Zones 1 and 3, Level 4 location study"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-              <p
-                style={{
-                  fontFamily:
-                    "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
-                  fontSize: '10px',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase' as const,
-                  color: '#6A6861',
-                  margin: '6px 0 0',
-                }}
-              >
-                Zones 1 and 3 · Level 4.
-              </p>
-            </div>
-          </div>
 
           {/* Disclaimer */}
           <p
@@ -299,8 +212,8 @@ export default function DempseyPortalPage() {
               lineHeight: 1.6,
             }}
           >
-            Zone boundaries derived from H+W Engineering mechanical drawings. Final
-            placement confirmed by as-built delivery.
+            Zone boundaries field-confirmed and anchored to the ARC as-built delivery;
+            final placement governed by field markup. No dimensions published.
           </p>
         </div>
 
