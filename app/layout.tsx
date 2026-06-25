@@ -3,6 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -126,6 +127,18 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9DMHNF8VQC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9DMHNF8VQC');
+          `}
+        </Script>
       </body>
     </html>
   );
