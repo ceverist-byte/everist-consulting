@@ -86,7 +86,7 @@ const secondaryCtaStyle = {
 export default function Home() {
   return (
     <>
-      {/* HERO — Section 1: Opening frame */}
+      {/* HERO */}
       <section
         style={{
           background: pageBg,
@@ -111,7 +111,6 @@ export default function Home() {
                 }}
               />
             </div>
-
             <h1
               style={{
                 fontFamily: "var(--font-sans)",
@@ -126,7 +125,6 @@ export default function Home() {
             >
               Most capital projects are advised by people who each protect one thing.
             </h1>
-
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
                 The architect protects design intent. The GC protects budget. The CM protects schedule.
@@ -204,7 +202,7 @@ export default function Home() {
         </PageShell>
       </section>
 
-      {/* Selected Work — proof slot */}
+      {/* Selected Work */}
       <section style={sectionStyle}>
         <PageShell>
           <div style={contentWrapStyle}>
@@ -265,7 +263,79 @@ export default function Home() {
         </PageShell>
       </section>
 
-      {/* Section 6: CTA — The diagnostic question */}
+      {/* Section 6: Notes by email */}
+      <section style={sectionStyle}>
+        <PageShell>
+          <div style={contentWrapStyle}>
+            <div style={eyebrowStyle}>Notes by Email</div>
+            <h2 style={{ ...h2Style, marginBottom: "12px", maxWidth: "820px" }}>
+              New notes when they publish.
+            </h2>
+            <p style={{ ...bodyTextStyle, marginBottom: "24px", maxWidth: "560px" }}>
+              Notes on VDC operating model design, governance, and the structural layer most construction firms skip.
+            </p>
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/EveristConsulting"
+              method="post"
+              style={{ maxWidth: "480px" }}
+            >
+              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  name="email"
+                  id="bd-email"
+                  placeholder="your@email.com"
+                  required
+                  style={{
+                    flex: 1,
+                    minWidth: "200px",
+                    background: pageBg,
+                    border: `1px solid ${pageRuleStrong}`,
+                    borderRadius: "3px",
+                    color: pageText,
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.9375rem",
+                    padding: "12px 14px",
+                    outline: "none",
+                  }}
+                />
+                <button
+                  type="submit"
+                  style={{
+                    background: pageFg,
+                    border: `1px solid ${pageFg}`,
+                    borderRadius: "3px",
+                    color: pageBg,
+                    cursor: "pointer",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.875rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.02em",
+                    lineHeight: 1,
+                    padding: "12px 20px",
+                    textTransform: "uppercase" as const,
+                    whiteSpace: "nowrap" as const,
+                  }}
+                >
+                  Subscribe
+                </button>
+              </div>
+              <p style={{ marginTop: "10px", fontSize: "0.75rem", color: pageMuted }}>
+                <a
+                  href="https://buttondown.com/refer/EveristConsulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: pageMuted, textDecoration: "none" }}
+                >
+                  Powered by Buttondown
+                </a>
+              </p>
+            </form>
+          </div>
+        </PageShell>
+      </section>
+
+      {/* Section 7: CTA */}
       <section style={{ ...sectionStyle, paddingBottom: "96px" }}>
         <PageShell>
           <div style={contentWrapStyle}>
