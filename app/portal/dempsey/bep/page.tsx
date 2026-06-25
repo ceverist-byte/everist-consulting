@@ -234,7 +234,7 @@ export default async function BEPPage() {
 
       {/* Document footer */}
       <p className={styles.docFooter} style={{ maxWidth: '680px' }}>
-        Everist Consulting · EVC-1.5 · La Jolla Cove Hotel · Job 25029 · {revision} · {revDate}
+        Everist Consulting · La Jolla Cove Hotel · Job 25029 · {revision} · {revDate}
       </p>
     </div>
   );
