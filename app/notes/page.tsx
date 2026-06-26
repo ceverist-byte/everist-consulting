@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 07",
+    title: "The Handover Gap",
+    description:
+      "Why building data expires after handover — and what the organizations that avoid it do differently.",
+    href: "/notes/the-handover-gap",
+  },
+  {
     number: "Note 06",
     title: "You Became the Wire",
     description:
