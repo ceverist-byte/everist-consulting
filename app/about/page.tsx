@@ -129,9 +129,22 @@ export default function AboutPage() {
                   padding: "24px",
                 }}
               >
-                <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
+                <div className="eyebrow" style={{ display: "block", marginBottom: "12px" }}>
                   Published & Speaking
                 </div>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "1.25rem",
+                    fontWeight: 800,
+                    letterSpacing: "-0.015em",
+                    color: "var(--text-primary)",
+                    lineHeight: 1.2,
+                    marginBottom: "16px",
+                  }}
+                >
+                  On the record.
+                </h2>
                 <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "12px" }}>
                   Co-author, <em>BIM with the End in Mind</em> (USIBD, 2021).
                 </p>

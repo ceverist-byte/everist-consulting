@@ -12,12 +12,8 @@ const coreEngagement = {
   name: "VDC Operating Model Design",
   description:
     "The core engagement. Diagnose the gap between the outcomes leadership expects from VDC and the structure the organization has built around it. Design the operating model — placement, authority, governance, and accountability — that closes the gap and survives personnel changes.",
-  outcomes: [
-    "A clear, leadership-legible picture of where the gap is and what's causing it",
-    "An operating model design that survives personnel changes",
-    "A sequenced implementation roadmap and change management approach",
-    "Optional implementation support — designed to transfer, not extend",
-  ],
+  prose:
+    "You get a clear, leadership-legible picture of where the gap is and what's causing it, an operating model design that survives personnel changes, and a sequenced implementation roadmap with the change management approach to match. Implementation support is available when you want it — designed to transfer capability, not extend the engagement.",
 };
 
 const complementaryLines = [
@@ -25,43 +21,29 @@ const complementaryLines = [
     name: "AI & Automation Advisory",
     description:
       "Strategic advisory on AI adoption in construction — evaluating tools against actual workflows, diagnosing why a pilot stalled, structuring the operational decisions that determine whether AI investments produce results. Not tool deployment.",
-    outcomes: [
-      "Use case identification grounded in your actual workflows",
-      "Vendor and platform evaluation against decision points that matter",
-      "Workflow redesign before tool deployment",
-      "Governance design for AI in production environments",
-    ],
+    prose:
+      "You get use case identification grounded in your actual workflows, vendor and platform evaluation against the decision points that matter, and workflow redesign before any tool gets deployed — plus governance design for running AI in production environments.",
   },
   {
     name: "Last Planner System®",
     description:
       "Implementation and governance design for Last Planner System® — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model design.",
-    outcomes: [
-      "Pull planning structure designed for your project type",
-      "Integration with prefabrication and field operations",
-      "Governance that holds across project handoffs",
-    ],
+    prose:
+      "You get a pull planning structure designed for your project type, integrated with prefabrication and field operations, and governance that holds across project handoffs.",
   },
   {
     name: "Strategic Decision Support",
     description:
       "Ad-hoc advisory for specific organizational decisions — evaluating a platform investment, structuring a new VDC role, responding to an owner's digital delivery requirements. Delivered as a defined scope, not an open-ended retainer.",
-    outcomes: [
-      "Pre-investment technology evaluation",
-      "VDC leader role design and hiring support",
-      "Owner digital deliverable requirement response",
-    ],
+    prose:
+      "You get pre-investment technology evaluation, VDC leader role design with hiring support, and a structured response to owner digital deliverable requirements.",
   },
   {
     name: "Pursuit Advisory",
     description:
       "Strategy and governance for complex public pursuits — defining what the win turns on, building the team's differentiated story, and governing the submission so the artifact set is whole before the window closes. Not proposal production. The upstream decisions that determine whether a capable team's submission reflects how well it has already thought the project through.",
-    outcomes: [
-      "A clear win thesis and the specific points the submission has to prove",
-      "A differentiated story carried by the team's own exhibits, not a template",
-      "A governed artifact set, assembled and coherent before the window closes",
-      "Interview and shortlist preparation focused on what moves the panel",
-    ],
+    prose:
+      "You get a clear win thesis and the specific points the submission has to prove, a differentiated story carried by the team's own exhibits rather than a template, and a governed artifact set that's assembled and coherent before the window closes. Interview and shortlist preparation stays focused on what actually moves the panel.",
   },
 ];
 
@@ -182,35 +164,16 @@ export default function ServicesPage() {
                 >
                   What you get
                 </div>
-                <ul
+                <p
                   style={{
-                    listStyle: "none",
-                    padding: 0,
+                    fontSize: "0.875rem",
+                    color: "var(--text-primary)",
+                    lineHeight: 1.7,
                     margin: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "8px",
                   }}
                 >
-                  {coreEngagement.outcomes.map((o) => (
-                    <li
-                      key={o}
-                      style={{
-                        fontSize: "0.875rem",
-                        color: "var(--text-primary)",
-                        lineHeight: 1.6,
-                        display: "flex",
-                        gap: "10px",
-                        alignItems: "flex-start",
-                      }}
-                    >
-                      <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
-                        ▸
-                      </span>
-                      {o}
-                    </li>
-                  ))}
-                </ul>
+                  {coreEngagement.prose}
+                </p>
               </div>
             </div>
 
@@ -271,35 +234,16 @@ export default function ServicesPage() {
                       >
                         What you get
                       </div>
-                      <ul
+                      <p
                         style={{
-                          listStyle: "none",
-                          padding: 0,
+                          fontSize: "0.875rem",
+                          color: "var(--text-primary)",
+                          lineHeight: 1.7,
                           margin: 0,
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: "8px",
                         }}
                       >
-                        {s.outcomes.map((o) => (
-                          <li
-                            key={o}
-                            style={{
-                              fontSize: "0.875rem",
-                              color: "var(--text-primary)",
-                              lineHeight: 1.6,
-                              display: "flex",
-                              gap: "10px",
-                              alignItems: "flex-start",
-                            }}
-                          >
-                            <span style={{ color: "var(--accent)", flexShrink: 0, fontSize: "0.5625rem", paddingTop: "5px" }}>
-                              ▸
-                            </span>
-                            {o}
-                          </li>
-                        ))}
-                      </ul>
+                        {s.prose}
+                      </p>
                     </div>
                   </div>
                 ))}

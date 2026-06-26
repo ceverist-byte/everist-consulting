@@ -183,6 +183,103 @@ export default function NotesPage() {
         </PageShell>
       </section>
 
+      {/* Notes by email */}
+      <section
+        style={{
+          background: "var(--bg)",
+          borderTop: "1px solid var(--rule-strong)",
+          padding: "80px 24px",
+        }}
+      >
+        <PageShell>
+          <div className="eyebrow" style={{ display: "block", marginBottom: "20px" }}>
+            Notes by Email
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              fontWeight: 800,
+              letterSpacing: "-0.025em",
+              color: "var(--text-primary)",
+              marginBottom: "12px",
+              lineHeight: 1.15,
+              maxWidth: "640px",
+            }}
+          >
+            New notes when they publish.
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--text-primary)",
+              lineHeight: 1.7,
+              marginBottom: "24px",
+              maxWidth: "560px",
+            }}
+          >
+            Notes on VDC operating model design, governance, and the structural layer most construction firms skip.
+          </p>
+          <form
+            action="https://buttondown.com/api/emails/embed-subscribe/EveristConsulting"
+            method="post"
+            style={{ maxWidth: "480px" }}
+          >
+            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                placeholder="your@email.com"
+                required
+                style={{
+                  flex: 1,
+                  minWidth: "200px",
+                  background: "var(--bg)",
+                  border: "1px solid var(--rule-strong)",
+                  borderRadius: "3px",
+                  color: "var(--text-primary)",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.9375rem",
+                  padding: "12px 14px",
+                  outline: "none",
+                }}
+              />
+              <button
+                type="submit"
+                style={{
+                  background: "var(--fg)",
+                  border: "1px solid var(--fg)",
+                  borderRadius: "3px",
+                  color: "var(--bg)",
+                  cursor: "pointer",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.875rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.02em",
+                  lineHeight: 1,
+                  padding: "12px 20px",
+                  textTransform: "uppercase" as const,
+                  whiteSpace: "nowrap" as const,
+                }}
+              >
+                Subscribe
+              </button>
+            </div>
+            <p style={{ marginTop: "10px", fontSize: "0.75rem", color: "var(--text-secondary)" }}>
+              <a
+                href="https://buttondown.com/refer/EveristConsulting"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--text-secondary)", textDecoration: "none" }}
+              >
+                Powered by Buttondown
+              </a>
+            </p>
+          </form>
+        </PageShell>
+      </section>
+
       {/* Footer link */}
       <section
         style={{
