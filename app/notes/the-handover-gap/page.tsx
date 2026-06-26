@@ -175,10 +175,20 @@ export default function TheHandoverGapPage() {
 
           <div style={{ marginTop: "56px" }}>
             <div style={sceneStyle}>
-              <p style={bodyParaStyle}>
+              <blockquote
+                style={{
+                  borderLeft: "3px solid var(--accent)",
+                  paddingLeft: "24px",
+                  margin: "8px 0",
+                  fontStyle: "italic",
+                  color: "var(--text-secondary)",
+                  fontSize: "1.0625rem",
+                  lineHeight: 1.7,
+                }}
+              >
                 The question worth asking before the files land: who in your organization is responsible
                 for this data six months from now?
-              </p>
+              </blockquote>
               <p style={bodyParaStyle}>Not who will receive it. Who will own it.</p>
               <p style={bodyParaStyle}>
                 If you can&apos;t name that person today, you&apos;re not delivering an asset. You&apos;re
