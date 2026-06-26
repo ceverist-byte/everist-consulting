@@ -26,7 +26,6 @@ const META: Record<string, RouteMeta> = {
   "/ai-automation": { priority: 0.8, changeFrequency: "monthly" },
   "/pursuit": { priority: 0.8, changeFrequency: "monthly" },
   "/about": { priority: 0.8, changeFrequency: "monthly" },
-  "/assessment": { priority: 0.7, changeFrequency: "monthly" },
   "/contact": { priority: 0.6, changeFrequency: "monthly" },
 };
 
@@ -34,7 +33,7 @@ const DEFAULT_META: RouteMeta = { priority: 0.7, changeFrequency: "monthly" };
 
 // Routes deliberately kept out of the sitemap.
 const EXCLUDE_EXACT = new Set(["/coming-soon"]);
-const EXCLUDE_PREFIXES = ["/api", "/assessment/"];
+const EXCLUDE_PREFIXES = ["/api"];
 
 function isExcluded(route: string): boolean {
   if (EXCLUDE_EXACT.has(route)) return true;
