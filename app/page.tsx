@@ -162,6 +162,9 @@ export default function Home() {
         <PageShell>
           <div style={contentWrapStyle}>
             <div style={eyebrowStyle}>Who this is for</div>
+            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
+              Three groups. One structural problem.
+            </h2>
             <div style={{ maxWidth: "820px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
                 Three groups consistently benefit from this work: general contractors rebuilding VDC capability into something operationally durable; hospital systems and university capital programs running healthcare, research, and institutional projects where coordination governance affects accreditation, opening dates, and patient care; and CM and Owner&apos;s Rep principals advising owners on project readiness before GC selection.
@@ -238,6 +241,9 @@ export default function Home() {
         <PageShell>
           <div style={contentWrapStyle}>
             <div style={eyebrowStyle}>Background</div>
+            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
+              Twenty years inside the problem.
+            </h2>
             <div style={{ maxWidth: "820px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
                 Chris Everist has spent over twenty years inside the construction technology layer of buildings — including five years at Turner Construction with international VDC and lean instruction work, followed by an extended tenure leading VDC practice at a West Coast general contractor.
