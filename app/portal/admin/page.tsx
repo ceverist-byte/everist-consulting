@@ -1,6 +1,5 @@
-import { readFileSync, readdirSync, statSync } from 'fs';
+import { readdirSync } from 'fs';
 import { join } from 'path';
-import matter from 'gray-matter';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CLIENT_DISPLAY } from '@/lib/portal-clients';
@@ -23,40 +22,20 @@ interface InventoryRow {
   display: string;
   deliverable: string;
   url: string;
-  status: string;
-  revision: string;
 }
 
-// "renovation-military-residential" -> "Renovation Military Residential"
-function prettify(slug: string): string {
-  return slug
-    .split('-')
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(' ');
-}
-
+// The inventory derives entirely from two always-current sources:
+//   1. CLIENT_DISPLAY        — slug + display name
+//   2. content/portal/[slug] — deliverable slugs (the .md/.html filenames)
+// No file content is read; status/revision/date drift and are not trusted.
 function readInventory(): InventoryRow[] {
   const base = join(process.cwd(), 'content/portal');
   const rows: InventoryRow[] = [];
 
-  let clients: string[];
-  try {
-    clients = readdirSync(base).filter((name) => {
-      try {
-        return statSync(join(base, name)).isDirectory();
-      } catch {
-        return false;
-      }
-    });
-  } catch {
-    return rows;
-  }
-
-  for (const slug of clients.sort()) {
-    const dir = join(base, slug);
+  for (const slug of Object.keys(CLIENT_DISPLAY)) {
     let files: string[];
     try {
-      files = readdirSync(dir).filter(
+      files = readdirSync(join(base, slug)).filter(
         (f) => f.endsWith('.md') || f.endsWith('.html')
       );
     } catch {
@@ -64,31 +43,12 @@ function readInventory(): InventoryRow[] {
     }
 
     for (const file of files.sort()) {
-      const ext = file.slice(file.lastIndexOf('.'));
-      const docSlug = file.slice(0, file.length - ext.length);
-      const raw = readFileSync(join(dir, file), 'utf-8');
-
-      let deliverable = prettify(docSlug);
-      let status = '—';
-      let revision = '—';
-
-      if (ext === '.md') {
-        const { data } = matter(raw);
-        deliverable = (data.title as string) || deliverable;
-        status = (data.status as string) || '—';
-        revision = (data.revision as string) || '—';
-      } else {
-        const titleMatch = raw.match(/<title>([\s\S]*?)<\/title>/i);
-        if (titleMatch) deliverable = titleMatch[1].trim();
-      }
-
+      const deliverable = file.replace(/\.(md|html)$/, '');
       rows.push({
         slug,
-        display: CLIENT_DISPLAY[slug] ?? '—',
+        display: CLIENT_DISPLAY[slug],
         deliverable,
-        url: `/portal/${slug}/${docSlug}`,
-        status,
-        revision,
+        url: `/portal/${slug}/${deliverable}`,
       });
     }
   }
@@ -182,33 +142,23 @@ export default function PortalAdminPage() {
           >
             <thead>
               <tr>
-                <th style={TH}>Client slug</th>
-                <th style={TH}>Display name</th>
+                <th style={TH}>Client</th>
                 <th style={TH}>Deliverable</th>
-                <th style={TH}>URL</th>
-                <th style={TH}>Status</th>
-                <th style={TH}>Last revision</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row) => (
                 <tr key={row.url}>
-                  <td style={{ ...TD, fontFamily: MONO, fontSize: '12px' }}>
+                  <td style={TD}>
                     <Link href={`/portal/${row.slug}`} className="inv-link">
-                      {row.slug}
+                      {row.display}
                     </Link>
                   </td>
-                  <td style={TD}>{row.display}</td>
-                  <td style={TD}>
+                  <td style={{ ...TD, fontFamily: MONO, fontSize: '12px' }}>
                     <Link href={row.url} className="inv-link">
                       {row.deliverable}
                     </Link>
                   </td>
-                  <td style={{ ...TD, fontFamily: MONO, fontSize: '12px' }}>
-                    {row.url}
-                  </td>
-                  <td style={TD}>{row.status}</td>
-                  <td style={TD}>{row.revision}</td>
                 </tr>
               ))}
             </tbody>
