@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/coming-soon", "/field-notes/", "/portal/", "/portal/admin"],
+      disallow: ["/api/", "/coming-soon", "/portal/"],
     },
     sitemap: "https://www.everistconsulting.com/sitemap.xml",
   };
