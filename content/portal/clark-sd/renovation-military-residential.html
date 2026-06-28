@@ -8,8 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!--
+    Self-contained Everist-Labs document. All styling is scoped to .doc and
+    lives in-body (not in <head>) so it survives <body> extraction inside the
+    portal and travels intact when this note migrates to everist-labs.com.
+    Scoping to .doc keeps the reset and palette from leaking onto the portal
+    shell (header, back nav, footer).
+  -->
   <style>
-    :root {
+    .doc {
       --bg: #EEEEEC;
       --fg: #111111;
       --secondary: #484B50;
@@ -19,150 +28,134 @@
       --rule-strong: #B4B3AF;
       --muted: #6A6861;
       --subtle: #E5E4E1;
-      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       --sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
+
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 40px 96px;
       background: var(--bg);
       color: var(--fg);
       font-family: var(--sans);
       font-feature-settings: "ss01", "cv11";
       -webkit-font-smoothing: antialiased;
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.5;
     }
-    @media print {
-      body { background: #fff; font-size: 11pt; }
-      .no-print { display: none; }
-      .page { max-width: 100%; padding: 0.5in 0.75in; }
-      .section-block { break-inside: avoid; }
+    .doc *, .doc *::before, .doc *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Header — border-top 2px / border-bottom 1px, 2-col grid (1fr / auto) */
+    .doc .doc-header {
+      border-top: 2px solid var(--fg);
+      border-bottom: 1px solid var(--fg);
+      padding: 20px 0 24px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: end;
     }
-    .page {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 56px 48px 80px;
+    .doc .doc-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
-    @media (max-width: 640px) {
-      .page { padding: 32px 24px 56px; }
+    .doc .doc-title {
+      font-size: clamp(26px, 3.4vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
-    .doc-header {
-      border-bottom: 1.5px solid var(--fg);
-      padding-bottom: 20px;
-      margin-bottom: 32px;
+    .doc .doc-subtitle {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--secondary);
+      max-width: 56ch;
     }
-    .doc-eyebrow {
+    .doc .doc-meta { display: grid; gap: 14px; align-content: end; }
+    .doc .doc-meta-item {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .doc .doc-meta-item span { display: block; color: var(--muted); margin-bottom: 3px; }
+    .doc .doc-meta-item strong { color: var(--fg); font-weight: 500; }
+
+    .doc .opening {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--secondary);
+      padding-bottom: 8px;
+      max-width: 72ch;
+    }
+
+    /* Section — 3-col head grid (120px / 1fr / auto) */
+    .doc .section-block { margin-top: 48px; }
+    .doc .section-head {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 16px;
+      align-items: baseline;
+      border-bottom: 1px solid var(--fg);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .doc .section-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .doc .section-kicker {
       font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .doc-title {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
       margin-bottom: 6px;
     }
-    .doc-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .doc-meta {
-      display: flex;
-      gap: 24px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 0.5px solid var(--rule);
-      flex-wrap: wrap;
-    }
-    .doc-meta-item {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-    .doc-meta-item span {
-      display: block;
-      color: var(--muted);
-      margin-bottom: 2px;
-    }
-    .doc-meta-item strong {
-      color: var(--fg);
-      font-weight: 500;
-    }
-    .opening {
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--secondary);
-      font-style: italic;
-      padding: 20px 0 28px;
-      border-bottom: 0.5px solid var(--rule);
-      margin-bottom: 32px;
-    }
-    .section-block {
-      margin-bottom: 36px;
-    }
-    .section-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .section-label::after {
-      content: "";
-      flex: 1;
-      height: 0.5px;
-      background: var(--rule);
-    }
-    .section-heading {
-      font-size: 17px;
+    .doc .section-title {
+      font-size: 19px;
       font-weight: 700;
       letter-spacing: -0.01em;
-      margin-bottom: 16px;
+      line-height: 1.25;
       color: var(--fg);
     }
-    .finding {
+    .doc .section-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* Findings — left-rail num aligned to the 120px section column */
+    .doc .finding {
       display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 0 12px;
-      margin-bottom: 18px;
-      padding-bottom: 18px;
-      border-bottom: 0.5px solid var(--rule);
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
     }
-    .finding:last-of-type {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    .finding-num {
+    .doc .finding:last-of-type { border-bottom: none; }
+    .doc .finding-num {
       font-family: var(--mono);
       font-size: 11px;
+      letter-spacing: 0.14em;
       color: var(--muted);
+      font-weight: 600;
       padding-top: 2px;
-      font-weight: 600;
     }
-    .finding-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--fg);
-    }
-    .finding-text {
-      font-size: 14px;
-      line-height: 1.65;
-      color: var(--secondary);
-    }
-    .finding-scope {
+    .doc .finding-scope {
       font-family: var(--mono);
       font-size: 9px;
       letter-spacing: 0.12em;
@@ -170,87 +163,115 @@
       color: var(--accent);
       margin-bottom: 6px;
     }
-    .avmu-section {
+    .doc .finding-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: 6px;
+    }
+    .doc .finding-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--secondary);
+      max-width: 74ch;
+    }
+
+    /* AVMU inverted panel */
+    .doc .avmu-section {
       background: var(--fg);
       color: var(--bg);
-      padding: 28px 32px;
-      margin-bottom: 28px;
+      padding: 32px 36px;
+      margin-top: 48px;
     }
-    .avmu-label {
+    .doc .avmu-label {
       font-family: var(--mono);
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--rule-strong);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
-    .avmu-heading {
-      font-size: 18px;
+    .doc .avmu-heading {
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.01em;
-      margin-bottom: 12px;
-      color: #EEEEEC;
+      line-height: 1.25;
+      color: var(--bg);
+      margin-bottom: 14px;
     }
-    .avmu-body {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #B4B3AF;
+    .doc .avmu-body {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--rule-strong);
       margin-bottom: 16px;
+      max-width: 76ch;
     }
-    .avmu-body strong {
-      color: #EEEEEC;
-      font-weight: 500;
-    }
-    .hard-close {
-      border-top: 0.5px solid #484B50;
-      padding-top: 16px;
+    .doc .avmu-body strong { color: var(--bg); font-weight: 500; }
+    .doc .hard-close {
+      border-top: 1px solid var(--secondary);
+      padding-top: 18px;
       font-size: 15px;
       font-weight: 600;
-      color: #EEEEEC;
       line-height: 1.5;
+      color: var(--bg);
+      max-width: 76ch;
     }
-    .doc-footer {
-      border-top: 0.5px solid var(--rule);
-      padding-top: 16px;
-      display: flex;
-      justify-content: space-between;
+
+    /* Footer — border-top 1px, 3-col mono grid */
+    .doc .doc-footer {
+      border-top: 1px solid var(--fg);
+      margin-top: 48px;
+      padding-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
       align-items: center;
-    }
-    .doc-footer-brand {
       font-family: var(--mono);
       font-size: 10px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
     }
-    .doc-footer-tagline {
-      font-size: 12px;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .doc-footer-brand a {
+    .doc .doc-footer-mid { text-align: center; }
+    .doc .doc-footer-end { text-align: right; }
+    .doc .doc-footer a {
       color: inherit;
       text-decoration: none;
-      border-bottom: 0.5px solid var(--rule-strong);
+      border-bottom: 1px solid var(--rule-strong);
       transition: color 0.15s ease, border-color 0.15s ease;
     }
-    .doc-footer-brand a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+    .doc .doc-footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Responsive — collapse the multi-column grids on narrow viewports
+       (the portal caps content near 720px, so this engages there too) */
+    @media (max-width: 760px) {
+      .doc .doc-header { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+      .doc .section-head { grid-template-columns: 1fr; gap: 8px; }
+      .doc .finding { grid-template-columns: 1fr; gap: 6px; }
+      .doc .doc-footer { grid-template-columns: 1fr; gap: 8px; }
+      .doc .doc-footer-mid, .doc .doc-footer-end { text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .doc { padding: 32px 24px 56px; }
+    }
+    @media print {
+      .doc { background: #fff; max-width: 100%; padding: 0.5in 0.75in; font-size: 11pt; }
+      .doc .section-block, .doc .finding, .doc .avmu-section { break-inside: avoid; }
     }
   </style>
-</head>
-<body>
-  <div class="page">
+
+  <article class="doc">
 
     <header class="doc-header">
-      <div class="doc-eyebrow">Everist Consulting &middot; Everist-Labs &middot; Field Note</div>
-      <h1 class="doc-title">Mechanically Dense Overhead<br>Conditions — Field Guide</h1>
-      <p class="doc-subtitle">Applied methodology for VDC teams on complex overhead coordination: renovation, ground-up, and military residential projects</p>
+      <div class="doc-header-main">
+        <div class="doc-eyebrow">Everist Consulting &middot; Everist-Labs &middot; Field Note</div>
+        <h1 class="doc-title">Mechanically Dense Overhead Conditions &mdash; Field Guide</h1>
+        <p class="doc-subtitle">Applied methodology for VDC teams on complex overhead coordination: renovation, ground-up, and military residential projects.</p>
+      </div>
       <div class="doc-meta">
         <div class="doc-meta-item"><span>Type</span><strong>Field Note</strong></div>
-        <div class="doc-meta-item"><span>Scope</span><strong>Renovation &middot; Ground-Up &middot; Military Residential &middot; BEQ</strong></div>
-        <div class="doc-meta-item"><span>Method</span><strong>AVMU &middot; Content Plan &middot; Assumptions Log</strong></div>
+        <div class="doc-meta-item"><span>Scope</span><strong>Reno &middot; Ground-Up &middot; BEQ</strong></div>
+        <div class="doc-meta-item"><span>Method</span><strong>AVMU</strong></div>
         <div class="doc-meta-item"><span>Issued</span><strong>2026</strong></div>
       </div>
     </header>
@@ -261,9 +282,15 @@
       The methodology in Section 03 is what I&rsquo;ve built to address them.
     </p>
 
-    <div class="section-block">
-      <div class="section-label">Section 01 &middot; Complex Overhead Coordination</div>
-      <h2 class="section-heading">What kills these projects in the ceiling &mdash; on any project type</h2>
+    <section class="section-block">
+      <div class="section-head">
+        <div class="section-num">Section 01</div>
+        <div>
+          <div class="section-kicker">Complex Overhead Coordination</div>
+          <h2 class="section-title">What kills these projects in the ceiling &mdash; on any project type</h2>
+        </div>
+        <div class="section-tag">All project types</div>
+      </div>
 
       <div class="finding">
         <div class="finding-num">01</div>
@@ -305,11 +332,17 @@
           <div class="finding-text">If the framing plan specifies new steel, get a field-verified or SEOR-confirmed bottom-of-beam elevation before modeling dependent systems. Scaling from the drawings or assuming typical depth from the section schedule is risky &mdash; the drawings themselves sometimes carry the instruction to verify. Don&rsquo;t pass that uncertainty downstream to MEP.</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-block">
-      <div class="section-label">Section 02 &middot; BEQ &amp; Military Residential</div>
-      <h2 class="section-heading">What this project type adds</h2>
+    <section class="section-block">
+      <div class="section-head">
+        <div class="section-num">Section 02</div>
+        <div>
+          <div class="section-kicker">BEQ &amp; Military Residential</div>
+          <h2 class="section-title">What this project type adds</h2>
+        </div>
+        <div class="section-tag">Military residential</div>
+      </div>
 
       <div class="finding">
         <div class="finding-num">01</div>
@@ -342,7 +375,7 @@
           <div class="finding-text">On projects with occupied overhead &mdash; mechanical chases, equipment access zones, labyrinthine plenum routing &mdash; document the access sequence. Who enters. How they locate where they are. What clearance they need to bring tools. A dimensioned section cut at the tightest access condition is the minimum deliverable. A 6&rsquo;4&rdquo; maintenance tech trying to drag tools through a 36&rdquo; plenum is a constructability failure that shows up on day one of occupancy, not during punch list.</div>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="avmu-section">
       <div class="avmu-label">Section 03 &middot; The Methodology &middot; AVMU</div>
@@ -366,9 +399,10 @@
 
     <footer class="doc-footer">
       <div class="doc-footer-brand"><a href="https://www.everistconsulting.com">Everist Consulting</a> &middot; Everist-Labs</div>
-      <div class="doc-footer-tagline">The breakdown happens at the hand-off.</div>
+      <div class="doc-footer-mid">Field Note</div>
+      <div class="doc-footer-end">The breakdown happens at the hand-off.</div>
     </footer>
 
-  </div>
+  </article>
 </body>
 </html>
