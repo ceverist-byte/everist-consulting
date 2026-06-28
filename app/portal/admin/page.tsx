@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { CLIENT_DISPLAY } from '@/lib/portal-clients';
 
 // Inventory is read from the content tree at request time.
@@ -123,6 +124,8 @@ export default function PortalAdminPage() {
 
   return (
     <div style={{ fontFamily: SANS }}>
+      {/* Inventory links inherit the cell typography/color; underline on hover only. */}
+      <style>{`.inv-link{color:inherit;text-decoration:none}.inv-link:hover{text-decoration:underline}`}</style>
       {/* Header */}
       <div
         style={{
@@ -191,10 +194,16 @@ export default function PortalAdminPage() {
               {rows.map((row) => (
                 <tr key={row.url}>
                   <td style={{ ...TD, fontFamily: MONO, fontSize: '12px' }}>
-                    {row.slug}
+                    <Link href={`/portal/${row.slug}`} className="inv-link">
+                      {row.slug}
+                    </Link>
                   </td>
                   <td style={TD}>{row.display}</td>
-                  <td style={TD}>{row.deliverable}</td>
+                  <td style={TD}>
+                    <Link href={row.url} className="inv-link">
+                      {row.deliverable}
+                    </Link>
+                  </td>
                   <td style={{ ...TD, fontFamily: MONO, fontSize: '12px' }}>
                     {row.url}
                   </td>

@@ -34,14 +34,17 @@ async function portalGuard(request: NextRequest): Promise<NextResponse> {
     const secret = new TextEncoder().encode(rawSecret)
     const { payload } = await jwtVerify(token, secret)
 
+    // Admin session is a master key: a role:admin JWT passes through to ANY
+    // /portal/* route, not just /portal/admin.
+    if (payload.role === 'admin') {
+      return NextResponse.next()
+    }
+
     const segments = pathname.split('/').filter(Boolean)
     const urlClient = segments[1] ?? null
 
-    // Admin inventory: gated on a role claim, not a per-client claim.
+    // Non-admin (client) sessions cannot reach the admin inventory.
     if (urlClient === 'admin') {
-      if (payload.role === 'admin') {
-        return NextResponse.next()
-      }
       const res = toLogin(request)
       res.cookies.delete(PORTAL_COOKIE)
       return res
