@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   robots: {
@@ -66,7 +67,9 @@ export default function PortalLayout({
           gap: '14px',
         }}
       >
-        <ECMark size={40} />
+        <Link href="/" aria-label="Everist Consulting — home">
+          <ECMark size={40} />
+        </Link>
         <span
           style={{
             fontFamily: MONO,
