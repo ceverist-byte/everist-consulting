@@ -87,7 +87,7 @@ export default async function LoginPage({ searchParams }: Props) {
             margin: '0 0 20px',
           }}
         >
-          Access code not recognized.
+          Invalid access code.
         </p>
       )}
 
