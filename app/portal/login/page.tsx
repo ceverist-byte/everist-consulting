@@ -1,12 +1,8 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { verifySession, PORTAL_COOKIE } from '@/lib/portal-auth';
+import { CLIENT_DISPLAY } from '@/lib/portal-clients';
 import { loginAction } from './actions';
-
-export const CLIENT_DISPLAY: Record<string, string> = {
-  dempsey: 'Dempsey Construction',
-  'clark-sd': 'Clark Construction',
-};
 
 function clientFromPath(path?: string): string | null {
   if (!path) return null;

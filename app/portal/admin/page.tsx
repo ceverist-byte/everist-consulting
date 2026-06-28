@@ -2,7 +2,7 @@ import { readFileSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import type { Metadata } from 'next';
-import { CLIENT_DISPLAY } from '../login/page';
+import { CLIENT_DISPLAY } from '@/lib/portal-clients';
 
 // Inventory is read from the content tree at request time.
 export const dynamic = 'force-dynamic';
