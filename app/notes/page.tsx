@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 08",
+    title: "Products, Not Projects",
+    description:
+      "A serial builder who runs a portfolio as disconnected projects has built a system that cannot improve. Stabilize before you scale.",
+    href: "/notes/products-not-projects",
+  },
+  {
     number: "Note 07",
     title: "The Handover Gap",
     description:
