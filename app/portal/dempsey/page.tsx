@@ -10,6 +10,9 @@ const MONO =
 const SANS =
   "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif";
 
+// Update this date with each Coordination Finding content dispatch.
+const COORDINATION_FINDING_UPDATED = 'July 9, 2026';
+
 export default function DempseyPortalPage() {
   // Read current BEP metadata from the source file so the index
   // stays in sync with the document without a separate manual update.
@@ -167,6 +170,19 @@ export default function DempseyPortalPage() {
             }}
           >
             Coordination Finding
+          </p>
+          {/* Dispatch date — matches the BEP row's transmittal-status treatment */}
+          <p
+            style={{
+              fontFamily: MONO,
+              fontSize: '10px',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: '#6A6861',
+              margin: '0 0 10px',
+            }}
+          >
+            Last updated {COORDINATION_FINDING_UPDATED}
           </p>
           {/* LOE intro */}
           <p
