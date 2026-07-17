@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 09",
+    title: "The Staff Is a Library",
+    description:
+      "What happens when you run a solo practice through a book about removing yourself from your business — and discover most of the work was already written down.",
+    href: "/notes/the-staff-is-a-library",
+  },
+  {
     number: "Note 08",
     title: "Products, Not Projects",
     description:
