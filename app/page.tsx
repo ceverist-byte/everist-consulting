@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import HeroMonogram from "@/components/HeroMonogram";
+import QuoteRotator from "@/components/QuoteRotator";
 
 export const metadata: Metadata = {
   title: "Everist Consulting — VDC Operating Model Design",
@@ -111,6 +113,9 @@ export default function Home() {
                 }}
               />
             </div>
+            <div style={{ marginBottom: "32px" }}>
+              <HeroMonogram size={100} />
+            </div>
             <h1
               style={{
                 fontFamily: "var(--font-sans)",
@@ -123,74 +128,126 @@ export default function Home() {
                 marginBottom: "32px",
               }}
             >
-              Most capital projects are advised by people who each protect one thing.
+              Who owns the coordination schedule, and what happens to the project if they miss it?
             </h1>
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
-                The architect protects design intent. The GC protects budget. The CM protects schedule.
+                Most capital projects are advised by people who each protect one thing. The architect protects design intent. The GC protects budget. The CM protects schedule. None of them protect the coordination window — the period before installation when changes are still cheap to make.
               </p>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
-                None of them protect the coordination window — the period before installation when changes are still cheap to make. It opens before construction. It closes well before most owners notice it was there.
+                If your GC or CM can&apos;t answer that question in one sentence, the window is already closing.
               </p>
             </div>
           </div>
         </PageShell>
       </section>
 
-      {/* Section 2: The reframe */}
-      <section style={sectionStyle}>
-        <PageShell>
-          <div style={contentWrapStyle}>
-            <div style={eyebrowStyle}>The reframe</div>
-            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
-              The right to change design before it&apos;s built has a price.
-            </h2>
-            <div style={{ maxWidth: "720px" }}>
-              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
-                Made before installation, those changes cost roughly a dollar. Made during installation, the same changes cost ten to a hundred times that — through rework, trade conflicts, schedule impact, and the change orders that follow.
-              </p>
-              <p style={{ ...bodyTextStyle }}>
-                You aren&apos;t buying coordination software or modeling services. You&apos;re buying the right to change design before it&apos;s built. That right has a duration, and there is no notice when it ends.
-              </p>
-            </div>
-          </div>
-        </PageShell>
-      </section>
+      {/* Quote rotator */}
+      <QuoteRotator />
 
-      {/* Section 3: Who this is for */}
+      {/* From the Notes */}
       <section style={sectionStyle}>
         <PageShell>
           <div style={contentWrapStyle}>
-            <div style={eyebrowStyle}>Who this is for</div>
-            <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
-              Three groups. One structural problem.
+            <div style={eyebrowStyle}>From the Notes</div>
+            <h2 style={{ ...h2Style, marginBottom: "36px", maxWidth: "820px" }}>
+              Published thinking.
             </h2>
             <div style={{ maxWidth: "820px" }}>
-              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
-                Three groups consistently benefit from this work: general contractors rebuilding VDC capability into something operationally durable; hospital systems and university capital programs running healthcare, research, and institutional projects where coordination governance affects accreditation, opening dates, and patient care; and CM and Owner&apos;s Rep principals advising owners on project readiness before GC selection.
-              </p>
+              {[
+                {
+                  num: "Note 09",
+                  title: "The Staff Is a Library",
+                  opener:
+                    "Running a solo practice through a book about removing yourself from your business.",
+                  href: "/notes/the-staff-is-a-library",
+                },
+                {
+                  num: "Note 08",
+                  title: "Products, Not Projects",
+                  opener:
+                    "A portfolio run as disconnected projects is a system that cannot improve.",
+                  href: "/notes/products-not-projects",
+                },
+                {
+                  num: "Note 07",
+                  title: "The Handover Gap",
+                  opener:
+                    "Building data expires after handover. The organizations that avoid it answer one question early.",
+                  href: "/notes/the-handover-gap",
+                },
+              ].map((note, i) => (
+                <Link
+                  key={note.href}
+                  href={note.href}
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                    padding: i === 0 ? "0 0 24px" : "24px 0",
+                    borderTop: i === 0 ? "none" : `1px solid ${pageRule}`,
+                  }}
+                >
+                  <div
+                    style={{
+                      ...eyebrowStyle,
+                      marginBottom: "10px",
+                    }}
+                  >
+                    {note.num}
+                  </div>
+                  <div
+                    style={{
+                      color: pageText,
+                      fontFamily: "var(--font-sans)",
+                      fontSize: "clamp(1.25rem, 2vw, 1.5rem)",
+                      fontWeight: 700,
+                      letterSpacing: "-0.02em",
+                      lineHeight: 1.2,
+                      marginBottom: "8px",
+                    }}
+                  >
+                    {note.title}
+                  </div>
+                  <p style={{ ...bodyTextStyle, maxWidth: "640px" }}>
+                    {note.opener}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <div style={{ marginTop: "8px" }}>
+              <Link
+                href="/notes"
+                style={{
+                  color: pageText,
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  borderBottom: `1px solid ${pageRule}`,
+                  paddingBottom: "2px",
+                  display: "inline-block",
+                }}
+              >
+                <span style={{ color: pageAccent }}>All notes</span> →
+              </Link>
             </div>
           </div>
         </PageShell>
       </section>
 
-      {/* Section 4: What Everist Consulting does */}
+      {/* The practice */}
       <section style={sectionStyle}>
         <PageShell>
           <div style={contentWrapStyle}>
-            <div style={eyebrowStyle}>What Everist Consulting does</div>
+            <div style={eyebrowStyle}>The practice</div>
             <h2 style={{ ...h2Style, marginBottom: "24px", maxWidth: "820px" }}>
               The governance layer above coordination.
             </h2>
             <div style={{ maxWidth: "720px" }}>
               <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
-                Everist Consulting is an independent VDC operating model consultancy and AI advisory practice founded by Christopher Everist in San Diego, California.
-              </p>
-              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
-                Everist Consulting designs the structure that determines whether VDC investment produces the outcomes the owner contracted for. The work spans operating model design for organizations rebuilding internal capability and AI and automation advisory for leaders deciding what to absorb and what to defer.
+                Everist Consulting is an independent VDC operating model consultancy and AI advisory practice founded by Christopher Everist in San Diego. The work designs the structure that determines whether VDC investment produces the outcomes the owner contracted for — operating model design for organizations rebuilding internal capability, and AI advisory for leaders deciding what to absorb and what to defer. Not a vendor of software, modeling, or staffing. The deliverable is structural clarity.
               </p>
               <p style={{ ...bodyTextStyle, marginBottom: "28px" }}>
-                Everist Consulting is not a vendor of software, modeling, or staffing. The deliverable is structural clarity.
+                Three groups get the most from this work: general contractors rebuilding VDC capability into something durable; hospital systems and university capital programs where coordination governance affects accreditation and opening dates; and CM and Owner&apos;s Rep principals advising owners before GC selection.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/services" style={secondaryCtaStyle}>
@@ -245,11 +302,8 @@ export default function Home() {
               Twenty years inside the problem.
             </h2>
             <div style={{ maxWidth: "820px" }}>
-              <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
-                Chris Everist has spent over twenty years inside the construction technology layer of buildings — including five years at Turner Construction with international VDC and lean instruction work, followed by an extended tenure leading VDC practice at a West Coast general contractor.
-              </p>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "28px" }}>
-                He co-authored <em>BIM with the End in Mind</em> (USIBD, 2021) and co-presented the inaugural Agentic AI in Construction webinar with Datagrid in March 2025.
+                Chris Everist has spent over twenty years inside the construction technology layer of buildings — five years at Turner Construction with international VDC and lean instruction work, then an extended tenure leading VDC practice at a West Coast general contractor. Co-author, <em>BIM with the End in Mind</em> (USIBD, 2021).
               </p>
               <Link
                 href="/about"
@@ -346,27 +400,15 @@ export default function Home() {
         <PageShell>
           <div style={contentWrapStyle}>
             <div style={eyebrowStyle}>The Diagnostic Question</div>
-            <p style={{ ...bodyTextStyle, marginBottom: "16px", maxWidth: "640px" }}>
-              Before your next preconstruction meeting, ask your GC or CM:
-            </p>
-            <blockquote
+            <p
               style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: "clamp(1.375rem, 2.5vw, 1.75rem)",
-                fontWeight: 600,
-                lineHeight: 1.3,
-                letterSpacing: "-0.02em",
-                color: pageAccent,
-                borderLeft: `2px solid ${pageAccent}`,
-                paddingLeft: "20px",
-                margin: "0 0 24px",
-                maxWidth: "780px",
+                ...bodyTextStyle,
+                fontSize: "1.0625rem",
+                marginBottom: "32px",
+                maxWidth: "640px",
               }}
             >
-              &ldquo;Who owns the coordination schedule, and what happens to the project if they miss it?&rdquo;
-            </blockquote>
-            <p style={{ ...bodyTextStyle, marginBottom: "32px", maxWidth: "640px" }}>
-              If your GC or CM cannot answer that in one sentence, your window is already closing. A confident answer means coordination is governed. The absence of one is the signal.
+              A confident answer means coordination is governed. The absence of one is the signal.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/contact" style={primaryCtaStyle}>
