@@ -11,7 +11,7 @@ const SANS =
   "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif";
 
 // Update this date with each Coordination Finding content dispatch.
-const COORDINATION_FINDING_UPDATED = 'July 9, 2026';
+const COORDINATION_FINDING_UPDATED = 'July 22, 2026';
 
 export default function DempseyPortalPage() {
   // Read current BEP metadata from the source file so the index
@@ -171,7 +171,7 @@ export default function DempseyPortalPage() {
           >
             Coordination Finding
           </p>
-          {/* Dispatch date — matches the BEP row's transmittal-status treatment */}
+          {/* Dispatch date, matches the BEP row's transmittal-status treatment */}
           <p
             style={{
               fontFamily: MONO,
@@ -231,6 +231,76 @@ export default function DempseyPortalPage() {
             Zone boundaries field-confirmed and anchored to the ARC as-built delivery;
             final placement governed by field markup. No dimensions published.
           </p>
+
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+              fontSize: '10px',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase' as const,
+              color: '#8A642C',
+              margin: '24px 0 10px',
+            }}
+          >
+            Update, July 22, 2026
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: '0 0 12px',
+            }}
+          >
+            The four locations above were the initial study areas, each scoped to a
+            typical condition. As the work progressed the modeling shifted from
+            discrete zones to a floor-plate-wide approach at Level 2, approaching what
+            a comprehensive project-wide exercise would cover within specific building
+            systems. That shift resolved several of the original questions and changed
+            what the remaining ones are.
+          </p>
+
+          <ul style={{ margin: '0 0 12px', paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Corridor.</strong> Carried the beam penetration study. The work
+              established the optimal locations to penetrate beams for fire protection
+              mains and refrigerant, and confirmed that anything not routed through a
+              beam penetration fits above the ceiling. Fire protection branch lines
+              were confirmed to fit relative to the fan coil units.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator lobby, south.</strong> The original question was routing
+              the horizontal branch out of the shaft around the adjacent electrical
+              room. That question became moot when the exhaust design moved to in-unit
+              fans, which removed the shaft routing from the scope.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator lobby, north.</strong> The corner turn question was
+              relieved by routing the fire protection mains and refrigerant above the
+              suites north of the corridor, which avoided the second beam intersection
+              entirely.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>West corridor.</strong> Covered by the floor-plate-wide modeling
+              at Level 2. No conflicts were revealed at this location.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator hall, Level 3.</strong> The study was reproduced against
+              the current documents and surfaced nothing new. It confirms the earlier
+              finding: the ducts serving the fan coil unit at the elevator hall do not
+              fit above the ceiling as designed. This is the one condition the
+              modeling confirmed as a hard negative, and it carries a design response
+              rather than a field resolution.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Level 4.</strong> The remaining scope. What existing roof piping
+              introduces to the overhead at Level 4 has not been studied, and part of
+              the plumbing design scope is to rework existing piping. Level 4
+              conditions are not assumed to repeat from the levels below.
+            </li>
+          </ul>
         </div>
 
         {/* Back-check Checklist stub */}
@@ -260,13 +330,78 @@ export default function DempseyPortalPage() {
               fontSize: '14px',
               color: '#4F4A43',
               lineHeight: 1.55,
+              margin: '0 0 14px',
+            }}
+          >
+            The back-check checklist verifies at install that what was coordinated is
+            what gets built. Because installation on this project is not driven by
+            shop drawings produced from the coordination model, each study also
+            identifies the verifying artifact: the specific contract instrument that
+            governs what is installed at that location. Naming the artifact is what
+            makes a coordination decision enforceable in the field.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: '0 0 12px',
+              fontWeight: 600,
+            }}
+          >
+            The artifacts identified to date, by study:
+          </p>
+
+          <ul style={{ margin: '0 0 12px', paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Refrigerant and fire protection mains, beam penetrations.</strong> Structural
+              engineer of record's penetration allowances at the C12 and C10 channels,
+              with the connection detail referenced on the structural details sheet,
+              carried into field markup.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Fire protection branch lines.</strong> Fire protection
+              subcontractor shop drawing showing head orientation, tap details by
+              branch, and head locations by level.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Fan coil units, elevator hall at Level 3.</strong> The request
+              for information carried by Dempsey and the design team's redesigned
+              distribution answering it.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Elevator lobby penetrations.</strong> Field markup carrying the
+              confirmed route above the suites north of the corridor.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Fan coil access panels.</strong> Approved access panel submittal
+              establishing panel type, with positioning already confirmed.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Balcony ceiling assembly.</strong> The accepted balcony ceiling
+              detail carried onto the architectural details sheet of record.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Level 4 overhead.</strong> The Level 4 existing conditions pass
+              and the plumbing rework design, coordinated against the architectural
+              note delegating Level 4 ceiling and soffit heights to field coordination.
+            </li>
+          </ul>
+
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
               margin: 0,
             }}
           >
-            A back-check checklist for field verification at install, built from the
-            confirmed coordination findings and coached through cycle one by Everist
-            Consulting. No instances ready. Fills in when a coordination finding is
-            confirmed and direction is aligned.
+            Each artifact is tracked to a named responsible party and a date derived
+            from the field install milestone it releases. Everist Consulting coaches
+            the first verification cycle; administrative ownership sits with Dempsey.
           </p>
         </div>
       </div>
