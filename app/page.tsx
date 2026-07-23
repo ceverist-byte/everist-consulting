@@ -156,6 +156,13 @@ export default function Home() {
             <div style={{ maxWidth: "820px" }}>
               {[
                 {
+                  num: "Note 10",
+                  title: "The Questions Nobody Routed",
+                  opener:
+                    "A model surfaces questions. Whether any of them bind depends on a job nobody staffed.",
+                  href: "/notes/the-questions-nobody-routed",
+                },
+                {
                   num: "Note 09",
                   title: "The Staff Is a Library",
                   opener:
@@ -168,13 +175,6 @@ export default function Home() {
                   opener:
                     "A portfolio run as disconnected projects is a system that cannot improve.",
                   href: "/notes/products-not-projects",
-                },
-                {
-                  num: "Note 07",
-                  title: "The Handover Gap",
-                  opener:
-                    "Building data expires after handover. The organizations that avoid it answer one question early.",
-                  href: "/notes/the-handover-gap",
                 },
               ].map((note, i) => (
                 <Link

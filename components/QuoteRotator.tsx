@@ -29,6 +29,11 @@ const quotes = [
     label: "Note 07",
     href: "/notes/the-handover-gap",
   },
+  {
+    text: "This industry has spent decades building better ways to see problems early, and almost no time deciding whose job it is to act on what gets seen.",
+    label: "Note 10",
+    href: "/notes/the-questions-nobody-routed",
+  },
 ];
 
 export default function QuoteRotator() {
