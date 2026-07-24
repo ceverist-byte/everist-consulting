@@ -11,7 +11,7 @@ const SANS =
   "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif";
 
 // Update this date with each Coordination Finding content dispatch.
-const COORDINATION_FINDING_UPDATED = 'July 22, 2026';
+const COORDINATION_FINDING_UPDATED = 'July 24, 2026';
 
 export default function DempseyPortalPage() {
   // Read current BEP metadata from the source file so the index
@@ -283,8 +283,15 @@ export default function DempseyPortalPage() {
               entirely.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
-              <strong>West corridor.</strong> Covered by the floor-plate-wide modeling
-              at Level 2. No conflicts were revealed at this location.
+              <strong>West corridor.</strong> Existing conditions were confirmed
+              clear through the floor-plate-wide modeling at Level 2, covering the
+              typical suite band. The west-most suite, outside that typical band,
+              was not part of this scope and has not been reviewed.
+            </li>
+            <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
+              <strong>Exhaust, representative suite.</strong> Design direction has moved
+              to an in-unit fan solution. Modeling is paused pending revised mechanical
+              drawings from the design team; verification resumes once those are issued.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
               <strong>Elevator hall, Level 3.</strong> The study was reproduced against
@@ -301,6 +308,32 @@ export default function DempseyPortalPage() {
               conditions are not assumed to repeat from the levels below.
             </li>
           </ul>
+
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+              fontSize: '10px',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase' as const,
+              color: '#8A642C',
+              margin: '24px 0 10px',
+            }}
+          >
+            Update, July 24, 2026
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: '0 0 12px',
+            }}
+          >
+            Jason Garrett now maintains the live coordination register day to day.
+            Everist Consulting coaches the first verification cycle.
+          </p>
         </div>
 
         {/* Back-check Checklist stub */}
@@ -376,8 +409,9 @@ export default function DempseyPortalPage() {
               confirmed route above the suites north of the corridor.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
-              <strong>Fan coil access panels.</strong> Approved access panel submittal
-              establishing panel type, with positioning already confirmed.
+              <strong>Fan coil access panels.</strong> Panel positioning and type
+              are established in the architectural contract documents.
+              No separate submittal is required to verify this location.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
               <strong>Balcony ceiling assembly.</strong> The accepted balcony ceiling
