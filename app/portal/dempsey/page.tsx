@@ -405,8 +405,11 @@ export default function DempseyPortalPage() {
               distribution answering it.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
-              <strong>Elevator lobby penetrations.</strong> Field markup carrying the
-              confirmed route above the suites north of the corridor.
+              <strong>Elevator lobby penetrations.</strong> Still outstanding.
+              Whether beam penetrations are required here depends on how the fan
+              coil duct routing at the elevator hall, Level 3 is resolved.
+              Verifying artifact: the design team's response to the pending
+              redesign request, once issued.
             </li>
             <li style={{ fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif", fontSize: '14px', color: '#4F4A43', lineHeight: 1.55 }}>
               <strong>Fan coil access panels.</strong> Panel positioning and type
