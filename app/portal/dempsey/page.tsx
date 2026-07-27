@@ -11,7 +11,7 @@ const SANS =
   "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif";
 
 // Update this date with each Coordination Finding content dispatch.
-const COORDINATION_FINDING_UPDATED = 'July 24, 2026';
+const COORDINATION_FINDING_UPDATED = 'July 27, 2026';
 
 export default function DempseyPortalPage() {
   // Read current BEP metadata from the source file so the index
@@ -333,6 +333,34 @@ export default function DempseyPortalPage() {
           >
             Jason Garrett now maintains the live coordination register day to day.
             Everist Consulting coaches the first verification cycle.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+              fontSize: '10px',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase' as const,
+              color: '#8A642C',
+              margin: '24px 0 10px',
+            }}
+          >
+            Update, July 27, 2026
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Inter Tight', 'Inter', 'Helvetica Neue', Arial, sans-serif",
+              fontSize: '14px',
+              color: '#4F4A43',
+              lineHeight: 1.55,
+              margin: '0 0 12px',
+            }}
+          >
+            The coordination model is final as of today. Tags are organized by
+            system, and named scenes open directly to each open coordination
+            condition, one scene per item. Work under the current letter of
+            engagement is complete.
           </p>
         </div>
 
