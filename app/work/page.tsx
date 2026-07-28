@@ -84,6 +84,64 @@ export default function WorkPage() {
                 paddingTop: "6px",
               }}
             >
+              Engagement 02
+            </div>
+            <div>
+              <h2
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "clamp(1.5rem, 2.4vw, 1.875rem)",
+                  fontWeight: 800,
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.25,
+                  color: "var(--text-primary)",
+                  marginBottom: "20px",
+                  maxWidth: "640px",
+                }}
+              >
+                What Was Coordinated Is What Gets Built
+              </h2>
+              <p
+                style={{
+                  fontSize: "1rem",
+                  color: "var(--text-primary)",
+                  lineHeight: 1.75,
+                  maxWidth: "640px",
+                  marginBottom: "24px",
+                }}
+              >
+                A four-level hotel renovation, scanned to as-built accuracy in two days where no coordination model existed. A swim-lane exhibit routed every finding to a documented decision before modeling began. A constraint log shipped seven days before rough-in, every open item carrying a name inside the client&apos;s own organization.
+              </p>
+              <Link
+                href="/work/scan-anchored-overhead-coordination"
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  letterSpacing: "-0.005em",
+                  color: "var(--text-primary)",
+                  textDecoration: "none",
+                  borderBottom: "1px solid var(--rule)",
+                  paddingBottom: "2px",
+                  display: "inline-block",
+                }}
+              >
+                <span style={{ color: "var(--accent)" }}>Read the engagement</span>{" "}
+                →
+              </Link>
+            </div>
+
+            <div
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.6875rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--text-secondary)",
+                paddingTop: "6px",
+              }}
+            >
               Engagement 01
             </div>
             <div>

@@ -272,6 +272,24 @@ export default function Home() {
             </h2>
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, marginBottom: "24px" }}>
+                A four-level hotel renovation, scanned to as-built accuracy in two days where no coordination model existed. A swim-lane exhibit routed every finding to a documented decision before modeling began. A constraint log shipped seven days before rough-in, every open item carrying a name inside the client&apos;s own organization.
+              </p>
+              <Link
+                href="/work/scan-anchored-overhead-coordination"
+                style={{
+                  color: pageText,
+                  fontSize: "0.9375rem",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  borderBottom: `1px solid ${pageRule}`,
+                  paddingBottom: "2px",
+                  display: "inline-block",
+                  marginBottom: "32px",
+                }}
+              >
+                <span style={{ color: pageAccent }}>Read the engagement</span> →
+              </Link>
+              <p style={{ ...bodyTextStyle, marginBottom: "24px" }}>
                 The first engagement is documented. Six weeks of overhead MEP coordination on an active hotel renovation — five conditions that would have failed at installation, converted into engineering decisions before the window closed.
               </p>
               <Link
