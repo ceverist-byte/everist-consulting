@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const notes = [
   {
+    number: "Note 11",
+    title: "Seeing Is Not Standing",
+    description:
+      "Why the people who see a problem first are rarely the people with the standing to fix it.",
+    href: "/notes/seeing-is-not-standing",
+  },
+  {
     number: "Note 10",
     title: "The Questions Nobody Routed",
     description:
