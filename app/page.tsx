@@ -124,18 +124,18 @@ export default function Home() {
                 lineHeight: 0.98,
                 letterSpacing: "-0.03em",
                 color: pageText,
-                maxWidth: "880px",
+                maxWidth: "820px",
                 marginBottom: "32px",
               }}
             >
-              Who owns the coordination schedule, and what happens to the project if they miss it?
+              By the time a conflict shows up on a report, it already cost you the cheap&nbsp;fix.
             </h1>
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
-                Most capital projects are advised by people who each protect one thing. The architect protects design intent. The GC protects budget. The CM protects schedule. None of them protect the coordination window — the period before installation when changes are still cheap to make.
+                A room decides. What matters is whether that decision survives the walk back to the trailer, or gets quietly overridden before anyone notices it slipped. Most capital projects are advised by people who each protect one thing. The architect protects design intent. The GC protects budget. The CM protects schedule. None of them own the room where the call gets made while it&apos;s still cheap to make.
               </p>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
-                If your GC or CM can&apos;t answer that question in one sentence, the window is already closing.
+                Who owns that room on your project, and what happens if they miss it?
               </p>
             </div>
           </div>
