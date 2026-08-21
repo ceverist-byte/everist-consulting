@@ -1,51 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import OperatingModelDiagram from "@/components/OperatingModelDiagram";
 
 export const metadata: Metadata = {
   title: "Services — VDC Operating Model Design",
   description:
-    "VDC operating model design, AI and automation advisory, Last Planner System® implementation, and strategic decision support for general contractors and owner-side capital programs.",
+    "VDC operating model design, structural diagnostics, pursuit advisory, BIM/VDC coordination with Last Planner System®, and strategic decision support for general contractors and owner-side capital programs.",
 };
 
-const coreEngagement = {
-  name: "VDC Operating Model Design",
+const strategicDecisionSupport = {
+  name: "Strategic Decision Support",
   description:
-    "The core engagement. Diagnose the gap between the outcomes leadership expects from VDC and the structure the organization has built around it. Design the operating model — placement, authority, governance, and accountability — that closes the gap and survives personnel changes.",
+    "Ad-hoc advisory for specific organizational decisions — evaluating a platform investment, structuring a new VDC role, responding to an owner's digital delivery requirements. Delivered as a defined scope, not an open-ended retainer.",
   prose:
-    "You get a clear, leadership-legible picture of where the gap is and what's causing it, an operating model design that survives personnel changes, and a sequenced implementation roadmap with the change management approach to match. Implementation support is available when you want it — designed to transfer capability, not extend the engagement.",
+    "You get pre-investment technology evaluation, VDC leader role design with hiring support, and a structured response to owner digital deliverable requirements.",
 };
-
-const complementaryLines = [
-  {
-    name: "AI & Automation Advisory",
-    description:
-      "Strategic advisory on AI adoption in construction — evaluating tools against actual workflows, diagnosing why a pilot stalled, structuring the operational decisions that determine whether AI investments produce results. Not tool deployment.",
-    prose:
-      "You get use case identification grounded in your actual workflows, vendor and platform evaluation against the decision points that matter, and workflow redesign before any tool gets deployed — plus governance design for running AI in production environments.",
-  },
-  {
-    name: "Last Planner System®",
-    description:
-      "Implementation and governance design for Last Planner System® — the production planning methodology that connects VDC digital delivery to field execution. Particularly effective when combined with VDC operating model design.",
-    prose:
-      "You get a pull planning structure designed for your project type, integrated with prefabrication and field operations, and governance that holds across project handoffs.",
-  },
-  {
-    name: "Strategic Decision Support",
-    description:
-      "Ad-hoc advisory for specific organizational decisions — evaluating a platform investment, structuring a new VDC role, responding to an owner's digital delivery requirements. Delivered as a defined scope, not an open-ended retainer.",
-    prose:
-      "You get pre-investment technology evaluation, VDC leader role design with hiring support, and a structured response to owner digital deliverable requirements.",
-  },
-  {
-    name: "Pursuit Advisory",
-    description:
-      "Strategy and governance for complex public pursuits — defining what the win turns on, building the team's differentiated story, and governing the submission so the artifact set is whole before the window closes. Not proposal production. The upstream decisions that determine whether a capable team's submission reflects how well it has already thought the project through.",
-    prose:
-      "You get a clear win thesis and the specific points the submission has to prove, a differentiated story carried by the team's own exhibits rather than a template, and a governed artifact set that's assembled and coherent before the window closes. Interview and shortlist preparation stays focused on what actually moves the panel.",
-  },
-];
 
 const audiences = [
   {
@@ -110,144 +80,71 @@ export default function ServicesPage() {
         </PageShell>
       </section>
 
-      {/* Service lines */}
+      {/* Operating model — foundation layer + timeline band */}
+      <OperatingModelDiagram />
+
+      {/* Complementary capability */}
       <section style={{ background: "var(--bg)", padding: "80px 24px" }}>
         <PageShell>
           <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
-            What I Offer
+            Complementary capabilities
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
-            {/* Core engagement */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr",
-                gap: "32px",
-              }}
-              className="md:[grid-template-columns:1fr_1fr]"
-            >
-              <div>
-                <h2
-                  style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: "1.5rem",
-                    fontWeight: 800,
-                    color: "var(--text-primary)",
-                    letterSpacing: "-0.015em",
-                    marginBottom: "16px",
-                  }}
-                >
-                  {coreEngagement.name}
-                </h2>
-                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
-                  {coreEngagement.description}
-                </p>
-              </div>
-              <div
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: "32px",
+            }}
+            className="md:[grid-template-columns:1fr_1fr]"
+          >
+            <div>
+              <h2
                 style={{
-                  background: "transparent",
-                  border: "1px solid var(--rule)",
-                  borderRadius: "2px",
-                  padding: "22px",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "1.5rem",
+                  fontWeight: 800,
+                  color: "var(--text-primary)",
+                  letterSpacing: "-0.015em",
+                  marginBottom: "16px",
                 }}
               >
-                <div
-                  style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: "0.625rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    color: "var(--text-secondary)",
-                    marginBottom: "12px",
-                  }}
-                >
-                  What you get
-                </div>
-                <p
-                  style={{
-                    fontSize: "0.875rem",
-                    color: "var(--text-primary)",
-                    lineHeight: 1.7,
-                    margin: 0,
-                  }}
-                >
-                  {coreEngagement.prose}
-                </p>
-              </div>
+                {strategicDecisionSupport.name}
+              </h2>
+              <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+                {strategicDecisionSupport.description}
+              </p>
             </div>
-
-            {/* Complementary capabilities */}
-            <div>
-              <div style={{ height: "1px", background: "var(--rule-strong)", marginBottom: "48px" }} />
-              <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
-                Complementary capabilities
+            <div
+              style={{
+                background: "transparent",
+                border: "1px solid var(--rule)",
+                borderRadius: "2px",
+                padding: "22px",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.625rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "var(--text-secondary)",
+                  marginBottom: "12px",
+                }}
+              >
+                What you get
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
-                {complementaryLines.map((s, i) => (
-                  <div
-                    key={s.name}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr",
-                      gap: "32px",
-                      paddingBottom: i < complementaryLines.length - 1 ? "48px" : "0",
-                      borderBottom: i < complementaryLines.length - 1 ? "1px solid var(--rule-strong)" : "none",
-                    }}
-                    className="md:[grid-template-columns:1fr_1fr]"
-                  >
-                    <div>
-                      <h2
-                        style={{
-                          fontFamily: "var(--font-sans)",
-                          fontSize: "1.5rem",
-                          fontWeight: 800,
-                          color: "var(--text-primary)",
-                          letterSpacing: "-0.015em",
-                          marginBottom: "16px",
-                        }}
-                      >
-                        {s.name}
-                      </h2>
-                      <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
-                        {s.description}
-                      </p>
-                    </div>
-                    <div
-                      style={{
-                        background: "transparent",
-                        border: "1px solid var(--rule)",
-                        borderRadius: "2px",
-                        padding: "22px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontFamily: "var(--font-sans)",
-                          fontSize: "0.625rem",
-                          fontWeight: 700,
-                          letterSpacing: "0.14em",
-                          textTransform: "uppercase",
-                          color: "var(--text-secondary)",
-                          marginBottom: "12px",
-                        }}
-                      >
-                        What you get
-                      </div>
-                      <p
-                        style={{
-                          fontSize: "0.875rem",
-                          color: "var(--text-primary)",
-                          lineHeight: 1.7,
-                          margin: 0,
-                        }}
-                      >
-                        {s.prose}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <p
+                style={{
+                  fontSize: "0.875rem",
+                  color: "var(--text-primary)",
+                  lineHeight: 1.7,
+                  margin: 0,
+                }}
+              >
+                {strategicDecisionSupport.prose}
+              </p>
             </div>
           </div>
         </PageShell>
