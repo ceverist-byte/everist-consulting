@@ -156,6 +156,13 @@ export default function Home() {
             <div style={{ maxWidth: "820px" }}>
               {[
                 {
+                  num: "Note 11",
+                  title: "Seeing Is Not Standing",
+                  opener:
+                    "Why the people who see a problem first are rarely the people with the standing to fix it.",
+                  href: "/notes/seeing-is-not-standing",
+                },
+                {
                   num: "Note 10",
                   title: "The Questions Nobody Routed",
                   opener:
@@ -168,13 +175,6 @@ export default function Home() {
                   opener:
                     "Running a solo practice through a book about removing yourself from your business.",
                   href: "/notes/the-staff-is-a-library",
-                },
-                {
-                  num: "Note 08",
-                  title: "Products, Not Projects",
-                  opener:
-                    "A portfolio run as disconnected projects is a system that cannot improve.",
-                  href: "/notes/products-not-projects",
                 },
               ].map((note, i) => (
                 <Link

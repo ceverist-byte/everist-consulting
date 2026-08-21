@@ -34,6 +34,11 @@ const quotes = [
     label: "Note 10",
     href: "/notes/the-questions-nobody-routed",
   },
+  {
+    text: "Standing is conferred by crisis, not foresight, among people who are all playing well.",
+    label: "Note 11",
+    href: "/notes/seeing-is-not-standing",
+  },
 ];
 
 export default function QuoteRotator() {
