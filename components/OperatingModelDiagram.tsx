@@ -69,9 +69,6 @@ function ConcurrentIcon() {
   );
 }
 
-const headerClaim =
-  "By the time a conflict shows up on a report, it already cost you the cheap fix.";
-
 const timelinePositions = [
   {
     number: "01",
@@ -108,25 +105,9 @@ export default function OperatingModelDiagram() {
   return (
     <section style={{ background: "var(--bg)", padding: "80px 24px 0" }}>
       <PageShell>
-        <div className="eyebrow" style={{ display: "block", marginBottom: "24px" }}>
+        <div className="eyebrow" style={{ display: "block", marginBottom: "40px" }}>
           What I Offer
         </div>
-
-        {/* Header claim */}
-        <p
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: "clamp(1.375rem, 2.6vw, 1.75rem)",
-            fontWeight: 500,
-            lineHeight: 1.35,
-            letterSpacing: "-0.015em",
-            color: "var(--text-primary)",
-            maxWidth: "820px",
-            marginBottom: "72px",
-          }}
-        >
-          {headerClaim}
-        </p>
 
         {/* Timeline band */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-x-8 gap-y-12">
