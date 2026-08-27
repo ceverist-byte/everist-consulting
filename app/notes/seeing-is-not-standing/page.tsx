@@ -42,6 +42,27 @@ const olStyle = {
   listStyle: "decimal",
 };
 
+const sceneRuleStyle = {
+  width: "40%",
+  maxWidth: "272px",
+  height: "1px",
+  background: "var(--rule)",
+  border: 0,
+  margin: "48px 0",
+};
+
+const pullQuoteStyle = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "1.25rem",
+  lineHeight: 1.5,
+  letterSpacing: "-0.01em",
+  color: "var(--text-primary)",
+  borderLeft: "3px solid var(--accent)",
+  paddingLeft: "24px",
+  margin: "16px 0",
+  maxWidth: "680px",
+};
+
 const footerLinkStyle = {
   fontFamily: "var(--font-sans)",
   fontSize: "0.9375rem",
@@ -107,6 +128,8 @@ export default function SeeingIsNotStandingPage() {
         }}
       >
         <PageShell>
+          <h2 style={h2Style}>Three rooms</h2>
+
           {/* Scene one — the corridor */}
           <div style={sceneStyle}>
             <p style={bodyParaStyle}>
@@ -131,8 +154,10 @@ export default function SeeingIsNotStandingPage() {
             </p>
           </div>
 
+          <hr style={sceneRuleStyle} />
+
           {/* Scene two — the conference room */}
-          <div style={{ ...sceneStyle, marginTop: "32px" }}>
+          <div style={sceneStyle}>
             <p style={bodyParaStyle}>
               Somewhere else. Four forty in the afternoon, a conference room booked for one person
               because the open floor is loud and somebody brought in a cake.
@@ -149,8 +174,10 @@ export default function SeeingIsNotStandingPage() {
             </p>
           </div>
 
+          <hr style={sceneRuleStyle} />
+
           {/* Scene three — the room with no windows */}
-          <div style={{ ...sceneStyle, marginTop: "32px" }}>
+          <div style={sceneStyle}>
             <p style={bodyParaStyle}>
               Somewhere else again. A room with no windows and a light overhead with a faint buzz in
               it that you stop hearing after twenty minutes and then start hearing again.
@@ -191,75 +218,82 @@ export default function SeeingIsNotStandingPage() {
               them play better.
             </p>
             <p style={bodyParaStyle}>I no longer think that is what happens.</p>
-            <p style={bodyParaStyle}>
-              Go back to the man who saw it in February. He was allowed to say it. Everyone is allowed
-              to say it, and being allowed to say a thing is worth almost nothing, which is why
-              organizations give it away so freely. What he did not have was the ability to make the
-              place stop and decide. To take an hour from four people who had not planned to give it.
-              To spend money nobody had budgeted. To hold something that was already moving.
-            </p>
-            <p style={bodyParaStyle}>
-              That is standing. It is not authority, it is not information, and it is not being right.
-              Every company is full of people who are authorized. They are the ones whose emails get
-              read, acknowledged, and filed.
-            </p>
-            <p style={bodyParaStyle}>
-              Filed is the whole thing. Not refused. Refusal would be information, because refusal
-              means somebody understood you and disagreed, and you can work with that. Filed means the
-              sentence was received and nothing happened, and there is no way to tell that outcome
-              apart from having said nothing at all. Do it enough times and you stop being able to
-              feel the difference either. That is usually where it ends. Not in an argument. In a
-              quiet recalibration of what is worth bringing up.
-            </p>
-            <p style={bodyParaStyle}>
-              Now watch the same organization at seven in the morning with six men standing still.
-            </p>
-            <p style={bodyParaStyle}>
-              By ten fifteen there are eleven people on a call. The project manager, the
-              superintendent, somebody from the subcontractor with authority to commit money, and the
-              engineer of record, who has not answered an email in nine days and picks up on the
-              second ring.
-            </p>
-            <p style={bodyParaStyle}>
-              Nothing about the problem changed. The duct and the beam are exactly where they were in
-              February. Same drawing, same eighteen inches. What changed is that the cost of not
-              deciding is now running, in dollars per hour, in front of somebody who can see it.
-            </p>
-            <p style={bodyParaStyle}>
-              Three hours to get eleven people into a room and out of it with an answer. He had spent
-              four months in the spring trying to get six of those same people to sit down for ninety
-              minutes. What stayed with him afterward was not the three hours. It was how easy it had
-              been. Not one of them had to be persuaded to care.
-            </p>
-            <p style={bodyParaStyle}>
-              The organization was always capable of that. It simply had no trigger for it.
-            </p>
-            <p style={bodyParaStyle}>
-              Crisis confers standing. Foresight does not. Which is a question, turned around: what
-              has to break in your company before you are allowed to fix it?
-            </p>
-            <p style={bodyParaStyle}>
-              This is also why giving the job a better title so rarely changes anything. Authorization
-              is the right to ask, and the organization keeps the right to defer, and deferring is
-              free. Promote the person and you have handed them authority they have no way to
-              occasion. None of this requires bad incentives or poor visibility. It survives everyone
-              in the room being smart, honest, and correct about the facts, which is the ordinary case
-              and the reason it is so stable.
-            </p>
-            <p style={bodyParaStyle}>
-              There is a question that flushes it out, and it works in all three rooms.
-            </p>
-            <p style={bodyParaStyle}>
-              <em>
-                Which document names the person and the date, and what stops if the date passes?
-              </em>
-            </p>
-            <p style={bodyParaStyle}>
-              The second half is the half that matters. Most organizations can produce a document. Far
-              fewer can tell you what is not allowed to happen while the question is open. A review
-              that goes ahead on schedule no matter what it finds is not a gate. It is a ceremony, and
-              ceremonies confer nothing.
-            </p>
+          </div>
+
+          {/* What he did not have */}
+          <div style={{ marginTop: "56px" }}>
+            <h2 style={h2Style}>What he did not have</h2>
+            <div style={sceneStyle}>
+              <p style={bodyParaStyle}>
+                Go back to the man who saw it in February. He was allowed to say it. Everyone is allowed
+                to say it, and being allowed to say a thing is worth almost nothing, which is why
+                organizations give it away so freely. What he did not have was the ability to make the
+                place stop and decide. To take an hour from four people who had not planned to give it.
+                To spend money nobody had budgeted. To hold something that was already moving.
+              </p>
+              <p style={bodyParaStyle}>
+                That is standing. It is not authority, it is not information, and it is not being right.
+                Every company is full of people who are authorized. They are the ones whose emails get
+                read, acknowledged, and filed.
+              </p>
+              <p style={bodyParaStyle}>
+                Filed is the whole thing. Not refused. Refusal would be information, because refusal
+                means somebody understood you and disagreed, and you can work with that. Filed means the
+                sentence was received and nothing happened, and there is no way to tell that outcome
+                apart from having said nothing at all. Do it enough times and you stop being able to
+                feel the difference either. That is usually where it ends. Not in an argument. In a
+                quiet recalibration of what is worth bringing up.
+              </p>
+              <p style={bodyParaStyle}>
+                Now watch the same organization at seven in the morning with six men standing still.
+              </p>
+              <p style={bodyParaStyle}>
+                By ten fifteen there are eleven people on a call. The project manager, the
+                superintendent, somebody from the subcontractor with authority to commit money, and the
+                engineer of record, who has not answered an email in nine days and picks up on the
+                second ring.
+              </p>
+              <p style={bodyParaStyle}>
+                Nothing about the problem changed. The duct and the beam are exactly where they were in
+                February. Same drawing, same eighteen inches. What changed is that the cost of not
+                deciding is now running, in dollars per hour, in front of somebody who can see it.
+              </p>
+              <p style={bodyParaStyle}>
+                Three hours to get eleven people into a room and out of it with an answer. He had spent
+                four months in the spring trying to get six of those same people to sit down for ninety
+                minutes. What stayed with him afterward was not the three hours. It was how easy it had
+                been. Not one of them had to be persuaded to care.
+              </p>
+              <p style={bodyParaStyle}>
+                The organization was always capable of that. It simply had no trigger for it.
+              </p>
+              <p style={bodyParaStyle}>
+                Crisis confers standing. Foresight does not. Which is a question, turned around: what
+                has to break in your company before you are allowed to fix it?
+              </p>
+              <p style={bodyParaStyle}>
+                This is also why giving the job a better title so rarely changes anything. Authorization
+                is the right to ask, and the organization keeps the right to defer, and deferring is
+                free. Promote the person and you have handed them authority they have no way to
+                occasion. None of this requires bad incentives or poor visibility. It survives everyone
+                in the room being smart, honest, and correct about the facts, which is the ordinary case
+                and the reason it is so stable.
+              </p>
+              <p style={bodyParaStyle}>
+                There is a question that flushes it out, and it works in all three rooms.
+              </p>
+              <blockquote style={pullQuoteStyle}>
+                <em>
+                  Which document names the person and the date, and what stops if the date passes?
+                </em>
+              </blockquote>
+              <p style={bodyParaStyle}>
+                The second half is the half that matters. Most organizations can produce a document. Far
+                fewer can tell you what is not allowed to happen while the question is open. A review
+                that goes ahead on schedule no matter what it finds is not a gate. It is a ceremony, and
+                ceremonies confer nothing.
+              </p>
+            </div>
           </div>
 
           {/* The conditions */}
