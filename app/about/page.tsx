@@ -182,6 +182,21 @@ export default function AboutPage() {
                   San Diego, California. Remote-first across the United States.
                 </p>
               </div>
+              <div
+                style={{
+                  background: "transparent",
+                  border: "1px solid var(--rule)",
+                  borderRadius: "2px",
+                  padding: "24px",
+                }}
+              >
+                <div className="eyebrow" style={{ display: "block", marginBottom: "16px" }}>
+                  Outside the Practice
+                </div>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+                  I spend time on trail crews with the San Diego Mountain Biking Association — currently helping with recovery work in Los Peñasquitos Canyon after the 2026 Sorrento Fire. I ride mountain bikes and gravel, locally and further afield, and in January I&apos;ll complete a StrongFirst kettlebell instructor certification (SFG-I).
+                </p>
+              </div>
             </div>
           </div>
         </PageShell>
