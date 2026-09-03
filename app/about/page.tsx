@@ -37,7 +37,7 @@ const philosophy = [
   {
     claim: "Start with authority, not tools.",
     explanation:
-      "Every failing VDC transformation I've seen was diagnosed as a technology problem and treated with more software. The actual problem — almost every time — was that VDC had responsibility without authority. You cannot buy your way out of a governance problem.",
+      "Every failing VDC transformation I've seen was diagnosed as a technology problem and treated with more software. The actual problem — almost every time — was that someone could see the decision that needed to be made and didn't have the standing to make it. You cannot buy your way out of a governance problem.",
   },
   {
     claim: "The structural answer changes everything downstream.",
@@ -106,7 +106,7 @@ export default function AboutPage() {
                 Built from inside the problem.
               </h1>
               <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "16px" }}>
-                I&apos;ve been inside the structural problem I now help organizations solve — across two decades, multiple organizations, and both sides of the owner/contractor relationship.
+                Most VDC investments don&apos;t fail on technology. They fail at the moment someone needed the standing to decide something, and didn&apos;t have it, so the decision got deferred until it was expensive. I&apos;ve been inside that problem — across two decades, multiple organizations, and both sides of the owner/contractor relationship.
               </p>
               <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "16px" }}>
                 I&apos;ve built VDC capability from the ground up: organizational design, governance frameworks, and the structures that make a practice financially durable. I&apos;ve also watched that work stall at other organizations — not because of the technology, but because of where VDC sat structurally relative to the decisions it was expected to influence. That observation, repeated across enough contexts, became the methodology.
