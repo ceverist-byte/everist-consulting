@@ -1,7 +1,8 @@
 // Operating Model Design — foundation layer + timeline band.
-// Three-position timeline (01 Seeing, 02 Pursuit, 03 concurrent delivery at double
-// width), a single unbroken rule under each position, and the Operating Model Design
-// foundation band running full-bleed beneath the whole thing.
+// Four-position timeline (01 Seeing, 02 Pursuit, 03 Design, 04 Precon through
+// Construction) laid out as a 2x2 grid, a single unbroken rule under each position,
+// and the Operating Model Design foundation band running full-bleed beneath the
+// whole thing.
 //
 // Follows the site pattern set by CoordinationSwimLane: inline styles driven by the
 // CSS custom properties in app/globals.css. Tailwind is used only for the responsive
@@ -69,6 +70,23 @@ function ConcurrentIcon() {
   );
 }
 
+function DesignIcon() {
+  return (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="4" y="4" width="20" height="20" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="4" y1="18" x2="18" y2="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const timelinePositions = [
   {
     number: "01",
@@ -88,11 +106,19 @@ const timelinePositions = [
   },
   {
     number: "03",
-    label: "Design/Precon through Construction",
+    label: "Design",
+    title: "Design Management",
+    body: "Six functions have to be managed from the day a design-build team forms. Naming them is easy. Naming who owns each one, and what stops if that person misses, is the work.",
+    Icon: DesignIcon,
+    span: "md:col-span-3",
+  },
+  {
+    number: "04",
+    label: "Precon through Construction",
     title: "BIM/VDC + Last Planner System®",
     body: "Coordination modeling and production planning, running together rather than staged. One governs what gets built where. The other governs when the room decides it.",
     Icon: ConcurrentIcon,
-    span: "md:col-span-6",
+    span: "md:col-span-3",
   },
 ];
 

@@ -17,6 +17,7 @@ const links: NavLink[] = [
       { href: "/services", label: "Overview" },
       { href: "/ai-automation", label: "AI & Automation" },
       { href: "/pursuit", label: "Pursuit Advisory" },
+      { href: "/design-management", label: "Design Management" },
     ],
   },
   { href: "/work", label: "Selected Work" },
