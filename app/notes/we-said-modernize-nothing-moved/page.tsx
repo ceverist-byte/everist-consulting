@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "We Said Modernize. Nothing Moved. — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "We Said Modernize. Nothing Moved.",
   description:
     "Governance is whether the decision survives the room it was made in. A field note on why declarations don't move work, why authority rarely travels with the ask, and why the hero on the hard job is the symptom, not the save.",
-};
+  path: "/notes/we-said-modernize-nothing-moved",
+});
 
 const dek =
   "A field note on governance, and why the people who live inside it can't always name it.";

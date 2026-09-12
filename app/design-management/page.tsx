@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Design Management for Design-Build Teams",
   description:
     "Design management for design-build and progressive design-build teams — defining what must be managed and establishing ownership for each function. San Diego.",
-};
+  path: "/design-management",
+});
 
 const whatGetsManaged = [
   {

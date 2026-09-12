@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "You Became the Wire — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "You Became the Wire",
   description:
     "Run more than two or three LLM chats at once and you become the integration layer — the wire shuttling context between sessions that can't see each other. The fix isn't a bigger tool.",
-};
+  path: "/notes/you-became-the-wire",
+});
 
 const bodyParaStyle = {
   fontSize: "1rem",

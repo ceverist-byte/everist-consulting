@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Seeing Is Not Standing — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Seeing Is Not Standing",
   description:
     "Why the people who see a problem first are rarely the people with the standing to fix it, and what that means across construction, software, and AI governance.",
-};
+  path: "/notes/seeing-is-not-standing",
+});
 
 const h2Style = {
   fontFamily: "var(--font-sans)",

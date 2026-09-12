@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Products, Not Projects — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Products, Not Projects",
   description:
     "A serial builder who runs a portfolio as disconnected projects has built a system that cannot improve. Stabilize before you scale.",
-};
+  path: "/notes/products-not-projects",
+});
 
 const h2Style = {
   fontFamily: "var(--font-sans)",

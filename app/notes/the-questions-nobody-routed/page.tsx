@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Questions Nobody Routed — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "The Questions Nobody Routed",
   description:
     "A model surfaces questions. Whether any of them bind depends on a job nobody staffed.",
-};
+  path: "/notes/the-questions-nobody-routed",
+});
 
 const h2Style = {
   fontFamily: "var(--font-sans)",

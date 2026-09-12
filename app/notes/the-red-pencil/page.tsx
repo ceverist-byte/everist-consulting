@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Red Pencil — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "The Red Pencil",
   description:
     "A first job in the late nineties — blueprints, redlines, and a stamp that never carried my name. The platforms changed for twenty years. The cycles survived every one.",
-};
+  path: "/notes/the-red-pencil",
+});
 
 const dek = "The platforms changed for twenty years. The cycles didn't.";
 

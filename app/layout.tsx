@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Chris Everist" }],
   openGraph: {
     type: "website",
-    url: "https://everistconsulting.com",
+    url: "https://www.everistconsulting.com",
     siteName: "Everist Consulting",
     title: "Everist Consulting — VDC Operating Model Design",
     description:
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "VDC operating model design and AI advisory for general contractors and owner-side capital programs.",
   },
-  metadataBase: new URL("https://everistconsulting.com"),
+  metadataBase: new URL("https://www.everistconsulting.com"),
 };
 
 export default function RootLayout({

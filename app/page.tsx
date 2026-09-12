@@ -1,14 +1,15 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 import HeroMonogram from "@/components/HeroMonogram";
 import QuoteRotator from "@/components/QuoteRotator";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Everist Consulting — VDC Operating Model Design",
   description:
     "VDC operating model design and AI advisory for general contractors and owner-side capital programs. Based in San Diego.",
-};
+  path: "/",
+});
 
 const pageBg = "var(--bg)";
 const pageFg = "var(--fg)";

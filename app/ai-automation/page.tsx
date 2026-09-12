@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "AI & Automation Advisory",
   description:
     "AI & Automation Advisory for construction firms, capital programs, and technology partners evaluating tools, diagnosing stalled pilots, and redesigning the operational structure around how AI is actually adopted.",
-};
+  path: "/ai-automation",
+});
 
 const problemStatements = [
   {

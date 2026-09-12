@@ -1,13 +1,14 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 import OperatingModelDiagram from "@/components/OperatingModelDiagram";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Services — VDC Operating Model Design",
   description:
     "VDC operating model design, structural diagnostics, pursuit advisory, BIM/VDC coordination with Last Planner System®, and strategic decision support for general contractors and owner-side capital programs.",
-};
+  path: "/services",
+});
 
 const strategicDecisionSupport = {
   name: "Strategic Decision Support",

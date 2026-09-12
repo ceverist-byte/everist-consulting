@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Pursuit Advisory",
   description:
     "Strategy and governance for complex public pursuits — defining what the win turns on, building a team's differentiated story, and governing the submission before the window closes. For mid-market general contractors in Southern California.",
-};
+  path: "/pursuit",
+});
 
 const problemStatements = [
   {

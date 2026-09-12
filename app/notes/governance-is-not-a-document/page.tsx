@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Governance Is Not a Document — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Governance Is Not a Document",
   description:
     "A coordination plan can name every risk and still change nothing. Governance isn't the plan — it's who can make the field answer when the plan and the field disagree.",
-};
+  path: "/notes/governance-is-not-a-document",
+});
 
 const epigraphQuote =
   "\"Questions are places in your mind where answers fit. If you haven't asked the question, the answer has nowhere to go.\"";

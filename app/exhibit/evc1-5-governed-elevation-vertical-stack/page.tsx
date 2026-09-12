@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
 import ModelViewer from './ModelViewer';
+import { pageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Governed-Elevation Vertical Stack — Everist Consulting',
+export const metadata = pageMetadata({
+  title: 'Governed-Elevation Vertical Stack',
   description:
     "The project's system priority structure rendered as a representative section at governed elevations, for field confirmation.",
+  path: '/exhibit/evc1-5-governed-elevation-vertical-stack',
   robots: { index: true, follow: true },
-};
+});
 
 const MONO =
   "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";

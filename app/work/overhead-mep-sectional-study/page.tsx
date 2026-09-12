@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Engagement 01: Overhead MEP Coordination — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Engagement 01: Overhead MEP Coordination",
   description:
     "A six-week overhead MEP coordination engagement on an active hotel renovation. The studies built the dimensioned record that turned field observations into documented engineering decisions in time to matter.",
-};
+  path: "/work/overhead-mep-sectional-study",
+});
 
 const moments = [
   {

@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About Chris Everist — VDC Consulting",
   description:
     "Founder of Everist Consulting. Over twenty years inside the construction technology layer of buildings, including Turner Construction and an extended tenure leading VDC practice at a West Coast general contractor. Based in San Diego.",
-};
+  path: "/about",
+});
 
 const timeline = [
   {

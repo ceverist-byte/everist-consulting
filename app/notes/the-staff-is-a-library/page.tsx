@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Staff Is a Library — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "The Staff Is a Library",
   description:
     "What happens when you run a solo practice through a book about removing yourself from your business — and discover most of the work was already written down.",
-};
+  path: "/notes/the-staff-is-a-library",
+});
 
 const h2Style = {
   fontFamily: "var(--font-sans)",

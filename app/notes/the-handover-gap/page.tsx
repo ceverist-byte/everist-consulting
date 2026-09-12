@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Handover Gap — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "The Handover Gap",
   description:
     "Why building data expires after handover — and what the organizations that avoid it do differently.",
-};
+  path: "/notes/the-handover-gap",
+});
 
 const bodyParaStyle = {
   fontSize: "1rem",

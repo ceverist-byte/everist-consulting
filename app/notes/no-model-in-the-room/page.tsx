@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "No Model in the Room — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "No Model in the Room",
   description:
     "A coordination session with no 3D model — and what the problem-solving that happened anyway revealed about where governance actually lives.",
-};
+  path: "/notes/no-model-in-the-room",
+});
 
 const bodyParaStyle = {
   fontSize: "1rem",

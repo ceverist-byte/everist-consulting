@@ -1,13 +1,14 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 import CoordinationSwimLane from "@/components/CoordinationSwimLane";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Engagement 02: Scan-Anchored Overhead Coordination — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Engagement 02: Scan-Anchored Overhead Coordination",
   description:
     "A four-level hotel renovation scanned to as-built accuracy where no coordination model existed. A swim-lane exhibit routed every finding to a documented decision, and a constraint log shipped seven days before rough-in with every open item carrying a name inside the client's organization.",
-};
+  path: "/work/scan-anchored-overhead-coordination",
+});
 
 const lead =
   "The framing crews were not waiting on me. Every day of metal stud that went up closed another sight line to the overhead, and the overhead was the whole job: a four-level hotel renovation, structure exposed, rough-in dates staggered floor by floor. Two clocks. One printed on the schedule. The other moving down the corridor.";

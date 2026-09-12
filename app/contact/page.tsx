@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
 import ContactClient from "./ContactClient";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact — Book a Discovery Call",
   description:
     "Book a 30-minute VDC Structural Diagnostic with Chris Everist. Based in San Diego, CA. Remote-first.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Coordination Window — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "The Coordination Window",
   description:
     "The coordination window is the period before installation when changes are still cheap to make. Why no one is watching it, what protected looks like, and the diagnostic question to take into your next preconstruction meeting.",
-};
+  path: "/notes/the-coordination-window",
+});
 
 const heroLead =
   "There is a window in most capital projects that the project's advisors are not watching — and it closes before anyone names it.";

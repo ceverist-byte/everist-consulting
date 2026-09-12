@@ -1,11 +1,12 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Selected Work — Everist Consulting",
+export const metadata = pageMetadata({
+  title: "Selected Work",
   description: "Engagement case studies in VDC operating model design.",
-};
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (
