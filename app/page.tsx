@@ -157,6 +157,13 @@ export default function Home() {
             <div style={{ maxWidth: "820px" }}>
               {[
                 {
+                  num: "Note 12",
+                  title: "The Same Ledger",
+                  opener:
+                    "Constructability review and value engineering are the same discipline, run as two separate exercises, both too late.",
+                  href: "/notes/the-same-ledger",
+                },
+                {
                   num: "Note 11",
                   title: "Seeing Is Not Standing",
                   opener:
@@ -169,13 +176,6 @@ export default function Home() {
                   opener:
                     "A model surfaces questions. Whether any of them bind depends on a job nobody staffed.",
                   href: "/notes/the-questions-nobody-routed",
-                },
-                {
-                  num: "Note 09",
-                  title: "The Staff Is a Library",
-                  opener:
-                    "Running a solo practice through a book about removing yourself from your business.",
-                  href: "/notes/the-staff-is-a-library",
                 },
               ].map((note, i) => (
                 <Link
