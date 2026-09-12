@@ -11,6 +11,13 @@ export const metadata = pageMetadata({
 
 const notes = [
   {
+    number: "Note 12",
+    title: "The Same Ledger",
+    description:
+      "Constructability review and value engineering are the same discipline, run as two separate exercises, both too late.",
+    href: "/notes/the-same-ledger",
+  },
+  {
     number: "Note 11",
     title: "Seeing Is Not Standing",
     description:
