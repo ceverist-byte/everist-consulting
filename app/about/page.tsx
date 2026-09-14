@@ -15,7 +15,7 @@ const timeline = [
     role: "Founder",
     company: "Everist Consulting",
     detail:
-      "VDC operating model design and AI advisory for general contractors and owner-side capital programs.",
+      "Independent practice advising general contractors and owner-side capital programs on how VDC work is structured, governed, and owned.",
     highlight: true,
   },
   {

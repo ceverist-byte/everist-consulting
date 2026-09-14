@@ -35,7 +35,7 @@ export default function Footer() {
                 maxWidth: "240px",
               }}
             >
-              VDC operating model design and AI advisory for general
+              The governance layer above coordination. For general
               contractors and owner-side capital programs.
             </p>
             <div
