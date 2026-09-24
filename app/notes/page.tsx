@@ -11,6 +11,13 @@ export const metadata = pageMetadata({
 
 const notes = [
   {
+    number: "Note 13",
+    title: "Whose Decision Is It, Actually",
+    description:
+      "When a contractor punts its own means-and-methods decision to the owner, the delay isn't caution — it's a conviction nobody has formed yet.",
+    href: "/notes/whose-decision-is-it-actually",
+  },
+  {
     number: "Note 12",
     title: "The Same Ledger",
     description:

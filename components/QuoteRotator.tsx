@@ -44,6 +44,11 @@ const quotes = [
     label: "Note 11",
     href: "/notes/seeing-is-not-standing",
   },
+  {
+    text: "Punting the decision is itself the decision, it just doesn't look like one.",
+    label: "Note 13",
+    href: "/notes/whose-decision-is-it-actually",
+  },
 ];
 
 export default function QuoteRotator() {

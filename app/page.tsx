@@ -157,6 +157,13 @@ export default function Home() {
             <div style={{ maxWidth: "820px" }}>
               {[
                 {
+                  num: "Note 13",
+                  title: "Whose Decision Is It, Actually",
+                  opener:
+                    "When a contractor punts its own means-and-methods decision to the owner, the delay isn't caution — it's a conviction nobody has formed yet.",
+                  href: "/notes/whose-decision-is-it-actually",
+                },
+                {
                   num: "Note 12",
                   title: "The Same Ledger",
                   opener:
@@ -169,13 +176,6 @@ export default function Home() {
                   opener:
                     "Why the people who see a problem first are rarely the people with the standing to fix it.",
                   href: "/notes/seeing-is-not-standing",
-                },
-                {
-                  num: "Note 10",
-                  title: "The Questions Nobody Routed",
-                  opener:
-                    "A model surfaces questions. Whether any of them bind depends on a job nobody staffed.",
-                  href: "/notes/the-questions-nobody-routed",
                 },
               ].map((note, i) => (
                 <Link
