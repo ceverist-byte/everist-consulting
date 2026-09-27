@@ -8,7 +8,9 @@
 // CSS custom properties in app/globals.css. Tailwind is used only for the responsive
 // grid, which inline styles cannot express.
 
+import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
+import KeelholdMark from "@/components/KeelholdMark";
 
 function SeeingIcon() {
   return (
@@ -214,35 +216,36 @@ export default function OperatingModelDiagram() {
           phase. Untitled, unnumbered: not a fifth timeline position. */}
       <PageShell>
         <div style={{ marginTop: "56px", maxWidth: "42rem" }}>
+          <KeelholdMark animated={false} maxWidth={280} />
           <p
             style={{
               fontSize: "0.9375rem",
               color: "var(--text-secondary)",
               lineHeight: 1.75,
-              marginBottom: "20px",
+              marginTop: "20px",
+              marginBottom: "16px",
             }}
           >
-            Between the diagnostic and construction, most teams skip a step: getting the owner's conditions for satisfaction on paper, on day one, each one written so it can be answered yes or no. A condition that can't be answered yes or no isn't a condition yet — it's an aspiration. Those conditions become gates the design can't pass until every one of them checks out. A gate closes on satisfaction, not on the calendar.
+            Keelhold(TM) holds the owner&apos;s conditions from design into
+            construction.
           </p>
-          <p
+          <Link
+            href="/keelhold"
             style={{
+              fontFamily: "var(--font-sans)",
               fontSize: "0.9375rem",
-              color: "var(--text-secondary)",
-              lineHeight: 1.75,
-              marginBottom: "20px",
+              fontWeight: 600,
+              letterSpacing: "-0.005em",
+              color: "var(--text-primary)",
+              textDecoration: "none",
+              borderBottom: "1px solid var(--rule)",
+              paddingBottom: "2px",
+              display: "inline-block",
             }}
           >
-            I set it up directly with the team, then coach it through a running cycle until it holds on its own — at which point I close my own involvement rather than staying attached to something that no longer needs me. On a design-build project, the same conditions carry across the handoff into construction, to whoever holds the schedule next, so the owner's yes or no doesn't get renegotiated the day the trades show up. The same approach works inside a single organization, applied to a decision instead of a project.
-          </p>
-          <p
-            style={{
-              fontSize: "0.9375rem",
-              color: "var(--text-secondary)",
-              lineHeight: 1.75,
-            }}
-          >
-            Model-based coordination and Last Planner System® scheduling attach naturally once the conditions are set — they're easier to track and defend in the room with them in place. They're not the point. The point is that the owner's answer got decided once, in writing, before anyone spent money finding out the hard way.
-          </p>
+            <span style={{ color: "var(--accent)" }}>See how it holds</span>{" "}
+            →
+          </Link>
         </div>
       </PageShell>
 

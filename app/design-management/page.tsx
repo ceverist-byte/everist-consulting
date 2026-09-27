@@ -153,6 +153,24 @@ export default function DesignManagementPage() {
               >
                 <strong style={{ fontWeight: 700 }}>{item.term}.</strong>{" "}
                 {item.body}
+                {item.term === "Team Alignment" && (
+                  <>
+                    {" "}
+                    <Link
+                      href="/keelhold"
+                      style={{
+                        color: "var(--text-primary)",
+                        fontWeight: 700,
+                        textDecoration: "underline",
+                        textDecorationColor: "var(--rule)",
+                        textUnderlineOffset: "3px",
+                      }}
+                    >
+                      Keelhold
+                    </Link>{" "}
+                    is how that alignment is set and held.
+                  </>
+                )}
               </p>
             ))}
           </div>

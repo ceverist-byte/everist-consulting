@@ -25,6 +25,7 @@ const META: Record<string, RouteMeta> = {
   "/work": { priority: 0.8, changeFrequency: "weekly" },
   "/ai-automation": { priority: 0.8, changeFrequency: "monthly" },
   "/pursuit": { priority: 0.8, changeFrequency: "monthly" },
+  "/keelhold": { priority: 0.8, changeFrequency: "monthly" },
   "/about": { priority: 0.8, changeFrequency: "monthly" },
   "/contact": { priority: 0.6, changeFrequency: "monthly" },
 };
