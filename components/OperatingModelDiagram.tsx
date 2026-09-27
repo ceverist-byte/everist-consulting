@@ -1,6 +1,7 @@
 // Operating Model Design — foundation layer + timeline band.
-// Four-position timeline (01 Seeing, 02 Pursuit, 03 Design, 04 Precon through
-// Construction) laid out as a 2x2 grid, a single unbroken rule under each position,
+// Five-position timeline (01 Seeing, 02 Pursuit, 03 Design, 04 Precon through
+// Construction, 05 Alignment) laid out as a 2x2 grid with the fifth position
+// spanning full width beneath it, a single unbroken rule under each position,
 // and the Operating Model Design foundation band running full-bleed beneath the
 // whole thing.
 //
@@ -10,7 +11,6 @@
 
 import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
-import KeelholdMark from "@/components/KeelholdMark";
 
 function SeeingIcon() {
   return (
@@ -89,6 +89,24 @@ function DesignIcon() {
   );
 }
 
+function AlignmentIcon() {
+  return (
+    <svg
+      width="30"
+      height="16"
+      viewBox="0 0 30 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="22" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.5" />
+      <rect x="8" y="6.5" width="14" height="3" rx="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
 const timelinePositions = [
   {
     number: "01",
@@ -113,6 +131,7 @@ const timelinePositions = [
     body: "Six functions have to be managed from the day a design-build team forms. Naming them is easy. Naming who owns each one, and what stops if that person misses, is the work.",
     Icon: DesignIcon,
     span: "md:col-span-3",
+    link: { text: "Team alignment runs on Keelhold™.", href: "/keelhold", arrow: false },
   },
   {
     number: "04",
@@ -122,12 +141,34 @@ const timelinePositions = [
     Icon: ConcurrentIcon,
     span: "md:col-span-3",
   },
+  {
+    number: "05",
+    label: "Alignment",
+    title: "Keelhold™",
+    body: "Before anyone designs anything, the owner's conditions for satisfaction go on paper, each answerable yes or no, and every gate is held to them into construction. It works inside a single organization too, applied to a decision instead of a project.",
+    Icon: AlignmentIcon,
+    span: "md:col-span-6",
+    link: { text: "How Keelhold works", href: "/keelhold", arrow: true },
+  },
 ];
 
 const foundation = {
   label: "Operating Model Design",
   body: "A room decides. This is what makes sure the room's decision doesn't quietly get overridden before the next meeting.",
 };
+
+const cardLinkStyle = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "0.875rem",
+  fontWeight: 600,
+  letterSpacing: "-0.005em",
+  color: "var(--text-primary)",
+  textDecoration: "none",
+  borderBottom: "1px solid var(--rule)",
+  paddingBottom: "2px",
+  display: "inline-block",
+  width: "fit-content",
+} as const;
 
 export default function OperatingModelDiagram() {
   return (
@@ -139,7 +180,9 @@ export default function OperatingModelDiagram() {
 
         {/* Timeline band */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-x-8 gap-y-12">
-          {timelinePositions.map(({ number, label, title, body, Icon, span }) => (
+          {timelinePositions.map(({ number, label, title, body, Icon, span, link }) => {
+            const isFullWidth = span === "md:col-span-6";
+            return (
             <div
               key={number}
               className={span}
@@ -192,11 +235,22 @@ export default function OperatingModelDiagram() {
                   fontSize: "0.9375rem",
                   color: "var(--text-secondary)",
                   lineHeight: 1.7,
-                  maxWidth: "34rem",
+                  maxWidth: isFullWidth ? "48rem" : "34rem",
                 }}
               >
                 {body}
               </p>
+              {link && (
+                <Link href={link.href} style={cardLinkStyle}>
+                  {link.arrow ? (
+                    <>
+                      <span style={{ color: "var(--accent)" }}>{link.text}</span> →
+                    </>
+                  ) : (
+                    link.text
+                  )}
+                </Link>
+              )}
               {/* Timeline rule — single unbroken line under each position.
                   marginTop:auto bottom-aligns the rules across a row so the band
                   still reads as one timeline when body copy runs uneven. */}
@@ -208,44 +262,8 @@ export default function OperatingModelDiagram() {
                 }}
               />
             </div>
-          ))}
-        </div>
-      </PageShell>
-
-      {/* Connective prose — bridges the diagnostic phase and the BIM/VDC + LPS
-          phase. Untitled, unnumbered: not a fifth timeline position. */}
-      <PageShell>
-        <div style={{ marginTop: "56px", maxWidth: "42rem" }}>
-          <KeelholdMark animated={false} maxWidth={280} />
-          <p
-            style={{
-              fontSize: "0.9375rem",
-              color: "var(--text-secondary)",
-              lineHeight: 1.75,
-              marginTop: "20px",
-              marginBottom: "16px",
-            }}
-          >
-            Keelhold&trade; holds the owner&apos;s conditions from design into
-            construction.
-          </p>
-          <Link
-            href="/keelhold"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.9375rem",
-              fontWeight: 600,
-              letterSpacing: "-0.005em",
-              color: "var(--text-primary)",
-              textDecoration: "none",
-              borderBottom: "1px solid var(--rule)",
-              paddingBottom: "2px",
-              display: "inline-block",
-            }}
-          >
-            <span style={{ color: "var(--accent)" }}>See how it holds</span>{" "}
-            →
-          </Link>
+            );
+          })}
         </div>
       </PageShell>
 

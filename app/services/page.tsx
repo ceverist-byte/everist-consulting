@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Services — VDC Operating Model Design",
   description:
-    "VDC operating model design, structural diagnostics, pursuit advisory, BIM/VDC coordination with Last Planner System®, and strategic decision support for general contractors and owner-side capital programs.",
+    "VDC operating model design, structural diagnostics, pursuit advisory, design management, BIM/VDC coordination with Last Planner System®, Keelhold™ owner alignment, and strategic decision support for general contractors and owner-side capital programs.",
   path: "/services",
 });
 
