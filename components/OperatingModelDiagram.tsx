@@ -92,7 +92,7 @@ const timelinePositions = [
     number: "01",
     label: "Seeing",
     title: "The Structural Diagnostic",
-    body: "Before anyone can fund a fix, someone has to see the gap. A structured conversation that names where a project's coordination problem will surface, and who won't have the authority to stop it.",
+    body: "Before anyone can fund a fix, someone has to see the gap. A structured conversation that names where a project's coordination problem will surface, and who won't have the authority to stop it. What it finds becomes a written condition the design has to satisfy — not just a name on a slide.",
     Icon: SeeingIcon,
     span: "md:col-span-3",
   },
@@ -116,7 +116,7 @@ const timelinePositions = [
     number: "04",
     label: "Precon through Construction",
     title: "BIM/VDC + Last Planner System®",
-    body: "Coordination modeling and production planning, running together rather than staged. One governs what gets built where. The other governs when the room decides it.",
+    body: "The conditions set upstream carry into this phase, where the model and the schedule are what prove — or disprove — that they've held. Coordination modeling and production planning, running together rather than staged. One governs what gets built where. The other governs when the room decides it.",
     Icon: ConcurrentIcon,
     span: "md:col-span-3",
   },
@@ -207,6 +207,42 @@ export default function OperatingModelDiagram() {
               />
             </div>
           ))}
+        </div>
+      </PageShell>
+
+      {/* Connective prose — bridges the diagnostic phase and the BIM/VDC + LPS
+          phase. Untitled, unnumbered: not a fifth timeline position. */}
+      <PageShell>
+        <div style={{ marginTop: "56px", maxWidth: "42rem" }}>
+          <p
+            style={{
+              fontSize: "0.9375rem",
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+              marginBottom: "20px",
+            }}
+          >
+            Between the diagnostic and construction, most teams skip a step: getting the owner's conditions for satisfaction on paper, on day one, each one written so it can be answered yes or no. A condition that can't be answered yes or no isn't a condition yet — it's an aspiration. Those conditions become gates the design can't pass until every one of them checks out. A gate closes on satisfaction, not on the calendar.
+          </p>
+          <p
+            style={{
+              fontSize: "0.9375rem",
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+              marginBottom: "20px",
+            }}
+          >
+            I set it up directly with the team, then coach it through a running cycle until it holds on its own — at which point I close my own involvement rather than staying attached to something that no longer needs me. On a design-build project, the same conditions carry across the handoff into construction, to whoever holds the schedule next, so the owner's yes or no doesn't get renegotiated the day the trades show up. The same approach works inside a single organization, applied to a decision instead of a project.
+          </p>
+          <p
+            style={{
+              fontSize: "0.9375rem",
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+            }}
+          >
+            Model-based coordination and Last Planner System® scheduling attach naturally once the conditions are set — they're easier to track and defend in the room with them in place. They're not the point. The point is that the owner's answer got decided once, in writing, before anyone spent money finding out the hard way.
+          </p>
         </div>
       </PageShell>
 
