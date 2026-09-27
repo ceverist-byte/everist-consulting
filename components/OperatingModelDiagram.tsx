@@ -226,7 +226,7 @@ export default function OperatingModelDiagram() {
               marginBottom: "16px",
             }}
           >
-            Keelhold(TM) holds the owner&apos;s conditions from design into
+            Keelhold&trade; holds the owner&apos;s conditions from design into
             construction.
           </p>
           <Link

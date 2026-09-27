@@ -3,7 +3,7 @@ import KeelholdMark from "@/components/KeelholdMark";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Keelhold(TM)",
+  title: "Keelhold™",
   description:
     "Owner conditions for satisfaction, set before design and held into construction.",
   path: "/keelhold",
@@ -49,7 +49,7 @@ export default function KeelholdPage() {
               marginBottom: "12px",
             }}
           >
-            Keelhold(TM)
+            Keelhold&trade;
           </h1>
           <p
             style={{
