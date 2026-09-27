@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
 import KeelholdMark from "@/components/KeelholdMark";
 import { pageMetadata } from "@/lib/metadata";
@@ -12,7 +13,27 @@ export const metadata = pageMetadata({
 const sections = [
   {
     heading: "Who it's for",
-    body: "Design-build teams at the start of a project, and the owners whose satisfaction the project exists to meet. It works inside a single organization too, applied to a decision instead of a project.",
+    body: (
+      <>
+        Design-build teams at the start of a project, and the owners whose
+        satisfaction the project exists to meet. For the team, it sets and
+        holds the first of the{" "}
+        <Link
+          href="/design-management"
+          style={{
+            color: "var(--text-primary)",
+            fontWeight: 700,
+            textDecoration: "underline",
+            textDecorationColor: "var(--rule)",
+            textUnderlineOffset: "3px",
+          }}
+        >
+          six functions of Design Management
+        </Link>
+        , the one the other five are built on. It works inside a single
+        organization too, applied to a decision instead of a project.
+      </>
+    ),
   },
   {
     heading: "What you keep",
