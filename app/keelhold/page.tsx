@@ -80,7 +80,17 @@ export default function KeelholdPage() {
               marginBottom: "40px",
             }}
           >
-            by Everist-Labs
+            <a
+              href="https://www.everist-labs.com"
+              style={{
+                color: "var(--text-secondary)",
+                textDecoration: "underline",
+                textDecorationColor: "var(--rule)",
+                textUnderlineOffset: "3px",
+              }}
+            >
+              by Everist-Labs
+            </a>
           </p>
 
           <div style={{ marginBottom: "40px" }}>
