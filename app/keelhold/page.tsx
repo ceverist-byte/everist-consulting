@@ -186,6 +186,31 @@ export default function KeelholdPage() {
           >
             Start with a diagnostic conversation
           </a>
+          <div style={{ marginTop: "12px" }}>
+            <style>{`
+              .kh-brief-link {
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+                text-decoration: underline;
+                text-decoration-color: var(--rule);
+                text-underline-offset: 3px;
+              }
+              .kh-brief-link:hover {
+                color: var(--text-primary);
+              }
+              .kh-brief-link:focus-visible {
+                outline: 2px solid var(--text-primary);
+                outline-offset: 2px;
+              }
+            `}</style>
+            <a
+              className="kh-brief-link"
+              href="/downloads/Keelhold_Owner_Brief.pdf"
+              download
+            >
+              Download the owner brief (PDF, 1 page)
+            </a>
+          </div>
         </div>
       </section>
     </>
