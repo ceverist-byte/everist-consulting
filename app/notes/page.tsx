@@ -11,6 +11,13 @@ export const metadata = pageMetadata({
 
 const notes = [
   {
+    number: "Note 14",
+    title: "Stop Trying to Convince the Owner",
+    description:
+      "Leadership that won't change usually believes you already. It is bound by a constraint upstream, and that constraint is what to work on.",
+    href: "/notes/stop-trying-to-convince-the-owner",
+  },
+  {
     number: "Note 13",
     title: "Whose Decision Is It, Actually",
     description:
