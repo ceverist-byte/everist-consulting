@@ -129,15 +129,31 @@ export default function Home() {
                 marginBottom: "32px",
               }}
             >
-              By the time a conflict shows up on a report, it already cost you the cheap&nbsp;fix.
+              You can win the argument with leadership and still lose, because the argument was never what stood in the&nbsp;way.
             </h1>
             <div style={{ maxWidth: "640px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "16px" }}>
-                A room decides. What matters is whether that decision survives the walk back to the trailer, or gets quietly overridden before anyone notices it slipped. Most capital projects are advised by people who each protect one thing. The architect protects design intent. The GC protects budget. The CM protects schedule. None of them own the room where the call gets made while it&apos;s still cheap to make.
+                People who push for better delivery spend years trying to convince owners and executives. The executive usually believes them already. What blocks the change sits upstream: a burn rate already approved, a fee that pays for hours, a contract that rewards guarding the schedule.
               </p>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem" }}>
-                Who owns that room on your project, and what happens if they miss it?
+                What is the person you&apos;re trying to convince already on the hook for?
               </p>
+              <div style={{ marginTop: "24px" }}>
+                <Link
+                  href="/notes/stop-trying-to-convince-the-owner"
+                  style={{
+                    color: pageText,
+                    fontSize: "0.9375rem",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    borderBottom: `1px solid ${pageRule}`,
+                    paddingBottom: "2px",
+                    display: "inline-block",
+                  }}
+                >
+                  <span style={{ color: pageAccent }}>Read Note 14</span> →
+                </Link>
+              </div>
             </div>
           </div>
         </PageShell>
@@ -157,6 +173,13 @@ export default function Home() {
             <div style={{ maxWidth: "820px" }}>
               {[
                 {
+                  num: "Note 14",
+                  title: "Stop Trying to Convince the Owner",
+                  opener:
+                    "Leadership that won't change usually believes you already. It is bound by a constraint upstream, and that constraint is what to work on.",
+                  href: "/notes/stop-trying-to-convince-the-owner",
+                },
+                {
                   num: "Note 13",
                   title: "Whose Decision Is It, Actually",
                   opener:
@@ -169,13 +192,6 @@ export default function Home() {
                   opener:
                     "Constructability review and value engineering are the same discipline, run as two separate exercises, both too late.",
                   href: "/notes/the-same-ledger",
-                },
-                {
-                  num: "Note 11",
-                  title: "Seeing Is Not Standing",
-                  opener:
-                    "Why the people who see a problem first are rarely the people with the standing to fix it.",
-                  href: "/notes/seeing-is-not-standing",
                 },
               ].map((note, i) => (
                 <Link
@@ -244,18 +260,12 @@ export default function Home() {
               The governance layer above coordination.
             </h2>
             <div style={{ maxWidth: "720px" }}>
-              <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
-                Everist Consulting is an independent VDC operating model consultancy and AI advisory practice founded by Christopher Everist in San Diego. The work designs the structure that determines whether VDC investment produces the outcomes the owner contracted for — operating model design for organizations rebuilding internal capability, and AI advisory for leaders deciding what to absorb and what to defer. Not a vendor of software, modeling, or staffing. The deliverable is structural clarity.
-              </p>
               <p style={{ ...bodyTextStyle, marginBottom: "28px" }}>
-                Three groups get the most from this work: general contractors rebuilding VDC capability into something durable; hospital systems and university capital programs where coordination governance affects accreditation and opening dates; and CM and Owner&apos;s Rep principals advising owners before GC selection.
+                Everist Consulting is the independent practice of Christopher Everist, based in San Diego. The work sits on the layer most capital projects leave unowned: who makes the call while it is still cheap to make, and whether that call holds once the meeting ends. That means designing how VDC and AI programs are governed for general contractors, health systems, university capital programs, and CM and owner&apos;s rep principals. It is not software, modeling, or staffing.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/services" style={secondaryCtaStyle}>
                   Services
-                </Link>
-                <Link href="/ai-automation" style={secondaryCtaStyle}>
-                  AI &amp; Automation Advisory
                 </Link>
               </div>
             </div>
@@ -322,7 +332,7 @@ export default function Home() {
             </h2>
             <div style={{ maxWidth: "820px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "28px" }}>
-                Chris Everist has spent over twenty years inside the construction technology layer of buildings — five years at Turner Construction with international VDC and lean instruction work, then an extended tenure leading VDC practice at a West Coast general contractor. Co-author, <em>BIM with the End in Mind</em> (USIBD, 2021).
+                More than twenty years in construction technology, most of it leading VDC programs from inside general contractors. That includes five years at Turner Construction on international VDC and lean work, and more than a decade leading VDC at a West Coast general contractor. Co-author of <em>BIM with the End in Mind</em> (USIBD, 2021).
               </p>
               <Link
                 href="/about"
@@ -431,7 +441,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/contact" style={primaryCtaStyle}>
-                Book a Discovery Call
+                Get in touch
               </Link>
               <a
                 href="mailto:chris@everistconsulting.com"

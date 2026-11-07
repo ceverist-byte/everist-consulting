@@ -5,6 +5,11 @@ import { useEffect, useState } from "react";
 
 const quotes = [
   {
+    text: "The method was identical. What changed was who carried the pressure.",
+    label: "Note 14",
+    href: "/notes/stop-trying-to-convince-the-owner",
+  },
+  {
     text: "Retiring a risk early and capturing value from a design decision are the same act applied to opposite sides of one ledger.",
     label: "Note 12",
     href: "/notes/the-same-ledger",

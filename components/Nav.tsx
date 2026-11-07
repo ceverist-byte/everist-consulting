@@ -174,7 +174,7 @@ export default function Nav() {
               textDecoration: "none",
             }}
           >
-            Book a Call
+            Get in touch
           </Link>
         </div>
 
@@ -296,7 +296,7 @@ export default function Nav() {
                 textDecoration: "none",
               }}
             >
-              Book a Call
+              Get in touch
             </Link>
           </PageShell>
         </div>

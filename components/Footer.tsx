@@ -61,7 +61,7 @@ export default function Footer() {
               {[
                 { href: "/services", label: "Services" },
                 { href: "/about", label: "About Chris" },
-                { href: "/contact", label: "Book a Call" },
+                { href: "/contact", label: "Contact" },
               ].map((l) => (
                 <Link
                   key={l.href}
@@ -104,7 +104,7 @@ export default function Footer() {
                 marginBottom: "16px",
               }}
             >
-              Schedule a Discovery Call
+              Contact form
             </Link>
             <div style={{ fontSize: "0.8125rem", color: "var(--text-secondary)" }}>
               <a
