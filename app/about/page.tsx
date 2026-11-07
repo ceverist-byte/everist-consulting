@@ -5,32 +5,38 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "About Chris Everist — VDC Consulting",
   description:
-    "Founder of Everist Consulting. Over twenty years inside the construction technology layer of buildings, including Turner Construction and an extended tenure leading VDC practice at a West Coast general contractor. Based in San Diego.",
+    "Founder of Everist Consulting. More than twenty-five years in design and construction, with VDC since 2009, including Turner Construction and BNBuilders. Based in San Diego.",
   path: "/about",
 });
 
 const timeline = [
   {
-    period: "2026 →",
-    role: "Founder",
+    period: "2026 – present",
+    role: "Founder & Principal",
     company: "Everist Consulting",
     detail:
       "Independent practice advising general contractors and owner-side capital programs on how VDC work is structured, governed, and owned.",
     highlight: true,
   },
   {
-    period: "Extended tenure",
-    role: "VDC Practice Leader",
-    company: "West Coast general contractor",
+    period: "2015 – 2026",
+    role: "Innovation / VDC Executive",
+    company: "BNBuilders",
     detail:
-      "Built VDC capability from the ground up — organizational design, governance frameworks, and the structures that made the practice operationally durable.",
+      "Built the VDC practice from zero into an enterprise capability: eight staff, zero voluntary turnover.",
   },
   {
-    period: "Five years",
-    role: "Construction Technology Leadership",
+    period: "2009 – 2015",
+    role: "Manager, Integrated Building Solutions; Senior VDC Engineer",
     company: "Turner Construction",
     detail:
-      "Field technology, design integration, and digital delivery — including a year leading international VDC and lean instruction across Southeast Asia.",
+      "Co-founded the Southern California VDC practice and coached more than 15 project teams in VDC and lean across five countries.",
+  },
+  {
+    period: "2000 – 2009",
+    role: "Design practice",
+    company: "",
+    detail: "Healthcare, lab, and federal buildings. Previously licensed in Arizona.",
   },
 ];
 
@@ -107,13 +113,13 @@ export default function AboutPage() {
                 Built from inside the problem.
               </h1>
               <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "16px" }}>
-                Most VDC investments don&apos;t fail on technology. They fail at the moment someone needed the standing to decide something, and didn&apos;t have it, so the decision got deferred until it was expensive. I&apos;ve been inside that problem — across two decades, multiple organizations, and both sides of the owner/contractor relationship.
+                Most VDC investments don&apos;t fail on technology. They fail at the moment someone needed the standing to decide something, and didn&apos;t have it, so the decision got deferred until it was expensive. I&apos;ve been inside that problem — across more than twenty-five years, multiple organizations, and both sides of the owner/contractor relationship.
               </p>
               <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "16px" }}>
                 I&apos;ve built VDC capability from the ground up: organizational design, governance frameworks, and the structures that make a practice financially durable. I&apos;ve also watched that work stall at other organizations — not because of the technology, but because of where VDC sat structurally relative to the decisions it was expected to influence. That observation, repeated across enough contexts, became the methodology.
               </p>
               <p style={{ fontSize: "1.0625rem", color: "var(--text-primary)", lineHeight: 1.75, marginBottom: "20px" }}>
-                Before founding Everist Consulting, I spent five years at Turner Construction — including a year leading international VDC and lean instruction across Southeast Asia — followed by an extended tenure leading VDC practice at a West Coast general contractor.
+                At Turner Construction, from 2009 to 2015, I co-founded the Southern California VDC practice and coached more than 15 project teams in VDC and lean across five countries. At BNBuilders, from 2015 to 2026, I built the VDC practice from zero into an enterprise capability and led it as Innovation / VDC Executive: eight staff, zero voluntary turnover.
               </p>
               <p style={{ fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
                 I launched Everist Consulting in 2026 to work directly with GC executives and owner-side capital programs — hospital campuses, universities, data centers — on the organizational design decisions that determine whether VDC creates competitive advantage or just costs money.
@@ -149,8 +155,17 @@ export default function AboutPage() {
                 <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "12px" }}>
                   Co-author, <em>BIM with the End in Mind</em> (USIBD, 2021).
                 </p>
-                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "12px" }}>
                   Co-presenter, inaugural Agentic AI in Construction webinar with Datagrid (March 2025).
+                </p>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "12px" }}>
+                  BIM seminar instructor, Woodbury University, San Diego, 2009
+                </p>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "12px" }}>
+                  Bachelor of Architecture, University of Arizona
+                </p>
+                <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+                  Bachelor of Arts in Architecture, Washington University in St. Louis
                 </p>
               </div>
               <div
@@ -165,7 +180,7 @@ export default function AboutPage() {
                   Background
                 </div>
                 <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
-                  Time in architecture and sustainability before moving into construction (background only, not active credentials). That trajectory shapes how the practice reads the seam between authored intent and built outcome — the territory where coordination decisions either preserve or unwind what was drawn.
+                  I&apos;m an architect by training. Before construction I spent nine years in design practice on healthcare, lab and federal buildings, and I was previously licensed in Arizona (background only, not active credentials). That trajectory shapes how the practice reads the seam between authored intent and built outcome — the territory where coordination decisions either preserve or unwind what was drawn.
                 </p>
               </div>
               <div
@@ -218,7 +233,7 @@ export default function AboutPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
             {timeline.map((t, i) => (
               <div
-                key={t.company}
+                key={t.period}
                 style={{
                   display: "grid",
                   gridTemplateColumns: "160px 1fr",
@@ -252,15 +267,19 @@ export default function AboutPage() {
                     >
                       {t.role}
                     </span>
-                    <span style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>·</span>
-                    <span
-                      style={{
-                        fontSize: "0.9375rem",
-                        color: t.highlight ? "var(--accent)" : "var(--text-secondary)",
-                      }}
-                    >
-                      {t.company}
-                    </span>
+                    {t.company && (
+                      <>
+                        <span style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>·</span>
+                        <span
+                          style={{
+                            fontSize: "0.9375rem",
+                            color: t.highlight ? "var(--accent)" : "var(--text-secondary)",
+                          }}
+                        >
+                          {t.company}
+                        </span>
+                      </>
+                    )}
                   </div>
                   <p style={{ fontSize: "0.875rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
                     {t.detail}
@@ -431,7 +450,7 @@ export default function AboutPage() {
               lineHeight: 1.2,
             }}
           >
-            Ready to have the structural conversation?
+            Get in touch.
           </h2>
           <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7, marginBottom: "36px" }}>
             The 30-minute VDC Structural Diagnostic maps your actual decision authority against your stated expectations. No pitch, no proposal — just a clear picture of where the gap is.
@@ -453,7 +472,7 @@ export default function AboutPage() {
               display: "inline-block",
             }}
           >
-            Book a Discovery Call
+            Get in touch
           </Link>
         </PageShell>
       </section>
