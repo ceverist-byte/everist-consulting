@@ -4,8 +4,8 @@ export const alt = "Everist Consulting";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Same rect geometry as the nav wordmark's EC monogram (components/Nav.tsx,
-// components/HeroMonogram.tsx) — kept identical so the mark reads the same
+// Same rect geometry as the nav wordmark's EC monogram (components/Nav.tsx)
+// — kept identical so the mark reads the same
 // everywhere it appears.
 const monogramRects = [
   { x: 0, y: 0, width: 170, height: 1000 },

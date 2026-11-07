@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
-import HeroMonogram from "@/components/HeroMonogram";
 import QuoteRotator from "@/components/QuoteRotator";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -113,9 +112,6 @@ export default function Home() {
                   display: "inline-block",
                 }}
               />
-            </div>
-            <div style={{ marginBottom: "32px" }}>
-              <HeroMonogram size={100} />
             </div>
             <h1
               style={{
@@ -328,11 +324,11 @@ export default function Home() {
           <div style={contentWrapStyle}>
             <div style={eyebrowStyle}>Background</div>
             <h2 style={{ ...h2Style, marginBottom: "20px", maxWidth: "820px" }}>
-              Twenty years inside the problem.
+              Twenty-five years inside the problem.
             </h2>
             <div style={{ maxWidth: "820px" }}>
               <p style={{ ...bodyTextStyle, fontSize: "1.0625rem", marginBottom: "28px" }}>
-                More than twenty years in construction technology, most of it leading VDC programs from inside general contractors. That includes five years at Turner Construction on international VDC and lean work, and more than a decade leading VDC at a West Coast general contractor. Co-author of <em>BIM with the End in Mind</em> (USIBD, 2021).
+                More than twenty-five years in design and construction. Nine of them in architecture practice, then VDC from 2009 on: first at Turner Construction on international VDC and lean work, then more than a decade building and leading the VDC practice at a West Coast general contractor. Co-author of <em>BIM with the End in Mind</em> (USIBD, 2021).
               </p>
               <Link
                 href="/about"
