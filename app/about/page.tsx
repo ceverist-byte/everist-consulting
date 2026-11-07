@@ -180,7 +180,7 @@ export default function AboutPage() {
                   Background
                 </div>
                 <p style={{ fontSize: "0.9375rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
-                  I&apos;m an architect by training. Before construction I spent nine years in design practice on healthcare, lab and federal buildings, and I was previously licensed in Arizona (background only, not active credentials). That trajectory shapes how the practice reads the seam between authored intent and built outcome — the territory where coordination decisions either preserve or unwind what was drawn.
+                  I&apos;m an architect by training. Before construction I spent nine years in design practice on healthcare, lab and federal buildings, and I was previously licensed in Arizona. That trajectory shapes how the practice reads the seam between authored intent and built outcome — the territory where coordination decisions either preserve or unwind what was drawn.
                 </p>
               </div>
               <div
