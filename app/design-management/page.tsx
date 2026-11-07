@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Design Management for Design-Build Teams",
   description:
-    "Design management for design-build and progressive design-build teams — defining what must be managed and establishing ownership for each function. San Diego.",
+    "Design management for design-build and progressive design-build teams: which decisions get made, by whom and when, and who owns each function. San Diego.",
   path: "/design-management",
 });
 
@@ -16,7 +16,7 @@ const whatGetsManaged = [
   },
   {
     term: "Design Planning",
-    body: "The criteria the design is developed against — how complete it has to be at each stage, and the cost and quality commitments it is expected to hold. How the finished building will be operated is one of those criteria, set here rather than discovered at turnover.",
+    body: "The criteria the design is developed against — how complete it has to be at each stage, and the cost and quality commitments it is expected to hold. How the finished building will be operated is one of those criteria, set here rather than discovered at turnover. It also sets the order of design decisions and the latest point each one can be made before it costs schedule.",
   },
   {
     term: "Constructability",
@@ -91,6 +91,17 @@ export default function DesignManagementPage() {
                 lineHeight: 1.75,
               }}
             >
+              Design management sets which decisions get made, by whom and by
+              when, so the work can be released.
+            </p>
+            <p
+              style={{
+                fontSize: "1.0625rem",
+                fontWeight: 400,
+                color: "var(--text-primary)",
+                lineHeight: 1.75,
+              }}
+            >
               On a design-build project, six functions have to be managed from
               the moment the team forms. Most teams can name all six. Fewer
               can say, function by function, which party owns it, which party
@@ -122,8 +133,8 @@ export default function DesignManagementPage() {
                 margin: "12px 0 0",
               }}
             >
-              Who owns the design risk inventory, and what happens when an
-              item on it is noted but never retired?
+              Which decisions have to be made this month to release work, and
+              who is making them?
             </blockquote>
           </div>
         </PageShell>
@@ -225,7 +236,9 @@ export default function DesignManagementPage() {
                 side, value capture on the other. The value a team captures
                 by designing well is what closes the gap that unretired risk
                 would otherwise consume. Treat either one as a scheduled
-                checkpoint and both bills arrive together, late.
+                checkpoint and both bills arrive together, late. Make the
+                decisions early and the same ledger pays out in schedule,
+                because work gets released while the design is still moving.
               </p>
             </div>
           </div>
@@ -252,9 +265,10 @@ export default function DesignManagementPage() {
               maxWidth: "760px",
             }}
           >
-            A written design management plan that names, for each function,
-            who owns it, who executes it, and what stops if the owner
-            misses. Ownership stated in writing survives personnel change.
+            A written plan for each function: who owns it, who does the
+            work, what happens if the owner misses, and the measure that
+            shows it worked. The team names the owners. The person with the
+            authority to hold them to it signs. Ownership stated in writing survives personnel change.
             Ownership assumed does not.
           </p>
         </PageShell>
